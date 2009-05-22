@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="bugsim" default="build-osx-app">    
+<project name="bugsim" default="build-osx-app">
+    <property name="build.dir" value="${basedir}/build" />
     <property name="src.dir" value="${basedir}/src" />
     <property name="lib.dir" value="${basedir}/lib" />
     <property name="target.dir" value="${basedir}/target" />
@@ -8,8 +9,8 @@
     <property name="lib.build.dir" value="${lib.dir}/build" />
     <property name="lib.test.dir" value="${lib.dir}/test" />
 
-    <property name="ivy.dependency.file" value="${basedir}/ivy-dependencies.xml" />
-    <import file="${basedir}/ivy-tasks.xml"/>
+    <property name="ivy.dependency.file" value="${build.dir}/ivy-production-dependencies.xml" />
+    <import file="${build.dir}/ivy-tasks.xml"/>
 
     <target name="build-osx-app" depends="clean, ivy.download.dependencies" >
 
