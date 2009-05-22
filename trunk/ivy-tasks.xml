@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ivy-targets" xmlns:ivy="antlib:org.apache.ivy.ant">
+    <property name="ivy.install.version" value="2.0.0-beta1" />   
+    <property name="ivy.jar.dir" value="${lib.build.dir}/ivy" />   
+    <property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+
+    <property name="ivy.download.url" value="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" />
+
+
+    <path id="ivy.classpath">
+        <fileset dir="${ivy.jar.dir}" includes="*.jar"/>
+    </path>
+
+    <!-- ======================================================================================================== -->
+    <!-- ivy targets (ivy.download, ivy.install, ivy.download.dependancies) -->
+    <!-- ======================================================================================================== -->
+    <target name="ivy.download" unless="skip.download">
+        <mkdir dir="${ivy.jar.dir}"/>
+        <echo message="Downloading ivy from ${ivy.download.url}..."/>
+    	<get src="${ivy.download.url}"
+    		 dest="${ivy.jar.file}" usetimestamp="true"/>
+    </target>
+
+    <target name="ivy.install" depends="ivy.download" description="--> install ivy">        
+        <taskdef resource="org/apache/ivy/ant/antlib.xml"
+    	          uri="antlib:org.apache.ivy.ant" classpathref="ivy.classpath"/>        
+    </target>
+
+	<target name="ivy.download.dependencies" depends="ivy.install">
+        <ivy:retrieve file="${ivy.dependency.file}"
+                      pattern="${lib.production.dir}/[type]/[artifact]-[revision].[ext]" />			    
+	</target>
+
+    <target name="ivy.clean" description="--> clean the ivy installation">
+		<delete file="${ivy.jar.file}"/>
+	</target>
+
+    <target name="ivy.clean.cache" depends="ivy.install" description="--> clean the ivy cache">
+		<ivy:cleancache />
+	</target>
+
+</project>
