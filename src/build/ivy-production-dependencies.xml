@@ -1,0 +1,6 @@
+<ivy-module version="1.0">
+    <info organisation="org.ixcode" module="bugsim"/>
+    <dependencies>
+        <dependency org="log4j" name="log4j" rev="1.2.15" transitive="false"/>
+    </dependencies>
+</ivy-module>
