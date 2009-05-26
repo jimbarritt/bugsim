@@ -5,6 +5,7 @@
     <property name="lib.dir" value="lib.dir ${override.message}" />
     <property name="lib.build.dir" value="lib.build.dir ${override.message}" />
     <property name="ivy.dependency.file" value="ivy.dependency.file ${override.message}" />
+    <property name="ivy.dependency.file" value="ivy.settings.file ${override.message}" />
     <property name="lib.production.dir" value="lib.production.dir ${override.message}" />
 
 
@@ -30,9 +31,11 @@
     		 dest="${ivy.jar.file}" usetimestamp="true"/>
     </target>
 
-    <target name="ivy.install">
+
+    <target name="ivy.install" >
         <taskdef resource="org/apache/ivy/ant/antlib.xml"
-    	          uri="antlib:org.apache.ivy.ant" classpathref="ivy.classpath"/>        
+    	          uri="antlib:org.apache.ivy.ant" classpathref="ivy.classpath"/>
+        <ivy:settings file="${ivy.settings.file}" />
     </target>
 
 
@@ -41,12 +44,19 @@
                       pattern="${lib.production.dir}/[type]/[artifact]-[revision].[ext]" />			    
 	</target>
 
+    <!-- Looks at your dependency file and builds classpath from there, but its a bit slow -->
+    <target name="ivy.cache.path" depends="ivy.install">
+        <ivy:cachepath  file="${ivy.dependency.file}" conf="main" type="jar"
+                        pathid="classpath.main"/>
+    </target>
+
     <available file="${lib.dir}" property="lib.dir.exists"/>
 
     <target name="ivy.echo.lib.dir" if="lib.dir.exists">
         <echo message="lib dir [${lib.dir}] exists, not downloading libs." />
         <echo message="Use the lib.update target to download the libs." />
     </target>
+
     <target name="ivy.check.configure" depends="ivy.echo.lib.dir" unless="lib.dir.exists">
         <antcall target="ivy.download"/>
         <antcall target="lib.update" />

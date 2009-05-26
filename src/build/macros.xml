@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ant-macros">
+
+    <macrodef name="echo-classpath">
+       <attribute name="refid" default="NOT SET"/>
+       <sequential>
+          <property name="classpath.out" refid="@{refid}" />
+          <echo message="@{refid}: ${classpath.out}" />
+       </sequential>
+    </macrodef>
+
+</project>

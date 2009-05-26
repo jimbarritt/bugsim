@@ -1,0 +1,3 @@
+/Library/Java/Home/bin/java -Dbugsim.debug=false -Xmx900M -Xss2048k 
+interactive=false 
+Iexp=com.ixcode.bugsim.model.experiment.experiment1b.Experiment1bFactory prog=com.ixcode.bugsim.view.experiment.meandispersal.MeanDispersalProgressFactory lscp=com.ixcode.bugsim.view.experiment.meandispersal.MeanDispersalLandscapeViewFactory
