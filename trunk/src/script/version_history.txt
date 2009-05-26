@@ -1,0 +1,417 @@
+bugsim-experiment-1-v1.0.jar
+----------------------------
+
+First release which has some memory issues can only run up to 24 iterations of Experiment 1, this
+is with java settings of -Xms500M -Xmx500M -Xss2048k
+
+getting heap space OutOfMemoryException
+
+-Xms<size> set initial Java heap size
+-Xmx<size> set maximum Java heap size
+-Xss<size> set java thread stack size
+
+
+
+bugsim-experiment-1-v1.1.jar
+----------------------------
+
+BugFix:
+
+- Bug with the remove all agents - it wasnt removing dead agents - hopefully this will sort it out.
+
+
+Features:
+
+- Added a butterfly history report so you see the state of the BF at every timestep for every butterffly!
+
+- Added Garbage collection to ExperimentController hopefully aleviate some memory issues
+
+
+bugsim-experiment-1-v1.2.jar
+----------------------------
+
+Features:
+
+- Added experiment plan name to output directory so you can have them all in the same place and dont get confused.
+
+- Implemented a debug mode for the experiment set by system property bugsim.debug=true|false
+
+Reports:
+
+It took 1h55mins to get to iteration 25 and still fails with out of memory.
+going to try and up the available memory. ANd use new version
+
+
+bugsim-experiment-1-v1.3.jar
+----------------------------
+
+Features:
+
+- Configurable Butterfly Life history reporting - this takes ages and creates massive files. maybe we dont always need it.
+
+- Added a memory usage statistic to the status bar.
+
+- Added version number to status bar.
+
+- Added max egg count to eggs.
+
+- Removed Debug message from ToStringFormat.
+
+- Added a logfile output from log4j
+
+- Added percentage complete to current iteration display.
+
+Problems:
+Still get out of memory errors at iteration 25!!
+
+bugsim-experiment-1-v1.4.jar
+----------------------------
+
+- Changed Population size to 100 to try and resolve out of memory problem
+
+
+bugsim-experiment-1-v1.5.jar
+----------------------------
+
+- Added agent count to status bar
+
+- Tidied up simulation.clean() so it cleans the landscape aswell.
+
+- Found and fixed bug with removing dead agents - causing the memory leak!! wahey!! Problem was 2 removeDeadAgent methods
+  Should have been "remove from live list" and a separate one for cleaning.
+
+- Attempted to fix the DEAD event.
+
+
+
+bugsim-experiment-1-v1.6.jar
+----------------------------
+
+Bugs:
+
+Problem with Movelength - its not being incrmented!!
+
+It was very stupid - just added the manipulation with the wrong parameter!
+FIXED in this release
+
+Features:
+
+- added number of butterflies escaped to summary stats - so you can see which ones out of the dead ones died in the sim.
+
+- changed the summary file name so it includes all the experiment stuff so you can put more than one of them in the same folder.
+
+
+bugsim-experiment-1-v1.7.jar
+----------------------------
+
+- Fixed problem with reporting of number of butterflies that died in-sim (problem was that it updated the number of
+  escaped agents before killing the agent which then fires the events which update the display - which means its always one out.
+
+- Added the iteration Id and replicant Id to the debug.
+
+
+- Added Not Initialised state to experiment controller incase you dont call "reset" to begin with.
+
+- created multiple parameter manipulation - you can now manipulate more than 1 paramerter per iteration manipulation.
+  e.g. set both move length and angle of turn.
+
+- Added support for derived parameter manipulations - so you can choose to manipulate a parameter based on the value of another one
+
+- This is to support the setting of the landscape and boundary sizes so that they increase proportionally with the size of the cabbage patch
+
+- Added distanced expanding of border plus fixed border.
+
+- Added cabbage radius manipulation. bumps up the number of iterations - but some of them should be very fast.
+
+
+- Added support for derived parameters - so you can now have a parameter which is calculated based on the value of one or more other parameters.
+
+
+- Ran out of memory again - possibly due to the history objects.... it was getting up to massive timestep sizes
+
+bugsim-experiment-1-v1.8.jar
+----------------------------
+
+- only put in 2 iterations of boundary changing and didnt change the radius size.
+- should get same results as before but with boundary changing.
+
+
+
+bugsim-experiment-1-v1.9.jar
+----------------------------
+- There is s bug with some centre cabbages getting hit even with 0 separation!
+
+- Fixed it it was to do with the method getClosestCabbage which is called inside the butterfly agent.
+   - It was looping around seeing which one was closest but never updating the current closest distance!! DOH!
+   HAVE TO RUN EVERYTHING AGAIN!!!
+
+- outof memory occurs due to buttefly history - i have taken this out for now. It only happens when you have very long
+runs - problem is proportional border - it gets massive and when you have a movelength of only 1 it takes too many moves
+to get there.
+
+- Added some toStrings to cabbage and butterfly agents so you can see their locations
+
+- going to try running it all again!
+
+
+
+bugsim-experiment-1-v1.10.jar
+----------------------------
+
+- Got a problem with changing the algorithms around - makes the parameters different so you need to start a new summarty stats file
+- until fix this need to just run 1 at a time - this version has just the fixed border but with cabbage radius 5 and 10
+
+
+
+bugsim-experiment-1-v1.11.jar
+-----------------------------
+
+- fixed bug with reporting when the structure changes - you can tell it when a manipulation is going to change
+the structure - it might be nicer for it to work it out but this will be quite costly and may be a future enahancemant
+
+
+- going to run the other 2 border types with cabbage radius between 5 and 10
+
+
+
+bugsim-experiment-1-v1.12.jar
+-----------------------------
+
+- still running out of memory for S=80 Proportional border, L = 1
+
+- re-ordered the manipulations so that this one should be the last one - should at least get results for the rest
+- also will give it more memory which might help
+
+bugsim-experiment-1-v1.13.jar
+-----------------------------
+
+- should have fixed bug with out of memory for proportional border - problem was it was still recording the
+locations history. seems to not increase mem now.
+ did it by adding "recordHistory" parameter to MotileAgentbase.
+
+bugsim-experiment-1-v2.0.jar
+-----------------------------
+
+- New version with all new stuff
+
+- Circular Release border, Circular Landscape border - make landscape and release border the same
+- New layout - remove edge cabbages.
+
+- Refactored the parameters so that they are easier to debug
+
+
+- nice output in log fiiles for current parameters.
+
+- fixed bug with changing parameter structure - it wasnt taking account of replicants.
+
+bugsim-experiment-1-v2.1.jar
+-----------------------------
+swapped L and S L=10 S=5
+
+bugsim-experiment-1-v2.2.jar
+-----------------------------
+- tidied up drawing so that lines are thinner.
+
+- fixed bug with landscape properties so now you can zoom in and stuff again.
+
+- test intersection line works again.
+
+- made status go green when its complete.
+
+- added some toStrings for RandomWalkAgent
+
+- tidying up butterflies so that new ones get added at the end of a timestep - this means you see them appear and then they move. 
+
+
+- messed around witht the movement algorithm - so that now the current direction is set at the begining of each move - then it moves.
+
+
+for the first move it doesnt work out a new generated direction
+
+- fixed a bug in the calculateAngleTo method in IxMath - if in the upper right quadrant the angel we get is actually
+- from the 90 mark so we need to subtract it from 90 to get the actual heading.
+
+- not sure how this will affect the simulation but will run everything again to see.
+
+- fixed propblem with life histories - allowed agents to live 1 more timestep in which they "die"
+- so when you "kill: them it means kill in the next iteration.
+
+- also added a parameter to filter out escaped agents from the results of life histories. can choose wether or not to have this.
+- maybe set it up so that the parameter is the actual filter that way you could put whatever you like in there.
+
+- added parameter summary to status bar of landscape view
+- added cabbage to history of butterfly agents.
+
+
+- Added "output iteration details" to experiment controller so you can choose wethere these get printed out
+
+- Added handling to change color of editing fields when they get disabled.
+
+bugsim-experiment-1-v2.3.jar
+-----------------------------
+
+- added mortality strategy to butterfly agents - can be by age or eggs now.
+
+- added Mean Dispersal Distance Experiment.
+
+- Problem with the last run ! - had 2x 200 for the distance!!!
+
+bugsim-experiment-1-v2.4.jar
+-----------------------------
+
+DOH! added the same manipulation twice!! got to do it all again!
+
+bugsim-experiment-1-v2.5.jar
+-----------------------------
+
+Refactored everything! so that you can set up different exsperiments - now have 2:
+
+EdgeEffectExperiment and MeanDispersalDIstanceExperiment.
+
+Ultimately hopefully it will all be in the parameters, but for now....
+
+
+Implemented arguments and turned BugsimMain into the main class
+
+
+bugsim-experiment-1-v2.6.jar
+-----------------------------
+
+Setup to run MeandDispersal experiment.
+
+Added ability to runas a command line and created an .sh batch file so that hopefully we can find
+a server somehwere to run it on.
+
+
+
+bugsim-experiment-1-v2.6.jar
+-----------------------------
+
+Added random first movelength so its set up for this - running with 50 replicants.
+
+bugsim-experiment-1-v2.7.jar
+-----------------------------
+missed out - i thought had lready buiilt it.
+
+bugsim-experiment-1-v2.8.jar
+-----------------------------
+Had a re-run of the mdd experiment except varying step length - wierd results - the L-1 A-20 should have been the same a
+s on the previous run but it wasnt.
+
+bugsim-experiment-1-v2.9.jar
+-----------------------------
+
+Re running L=1 A=20 to see what happens 4 times.
+
+Added some overloaded constructors to set long values into a parameter
+
+
+
+bugsim-experiment-1-v2.10.jar
+-----------------------------
+Discovered why the bias exists - have to run 1 butterfly at a time - takes to0 long - going to try it with 1000 butterflies instead
+
+Implemented new batch file "edge.sh" to allow 2 simulatneous runs.
+
+Fixed a problem with the argument processor - if you pass ARG= and nothing it fell over now it accepts it as default.
+
+- Added new log 4j properties files for test, mdd and edge experiments :
+
+specify :
+
+-Dlog4j.configuration=log4j_test.xml
+
+
+bugsim-experiment-1-v2.11.jar
+-----------------------------
+
+- Added some more sophisticated control of what gets executed.
+
+- Introduced the concept of a "Trial" which is a particular configuration for an experiment plan
+
+- These can be executed with the argumen "trial=" then pass the trial number.
+
+- also added a plan summary to the output directory for an experimental trial.
+
+- changed the names of the folders and summary files to reflect trial
+
+- change logging so that now it logs to a seperate log file for each trial - named after the directory in which the results will be
+
+- startup logging is always to the same file and then it redirects -  meaning you can have several running at the same time.
+
+- this might even allow us to start using the grid!
+
+bugsim-experiment-1-v2.12.jar
+-----------------------------
+
+- added butterfly statistics for mean dispersal distance so we dont have to have massive files
+
+- Set up mean dispersal experiment with new trial system so that itsM easy to configure
+
+- set it up to run with 30,000 butterflies - hopefully this is enough to remove the error,
+
+- but now its not so important as we can leave it running.
+
+- Upped the number of replicants to 1000 for the edge effect experiment.
+
+- MDD is still not right!!
+
+bugsim-experiment-1-v2.13.jar
+-----------------------------
+
+- Fixed a slight bug with the random walk generator - it was not using the initial direction for the
+first move.
+
+
+- Set up MDD so that it calculates the dispersal distance as it goes - now you only need to run 1 lot of
+50,000 instead of 20! should enable us to run massive volumes.
+
+bugsim-experiment-1-v2.14.jar
+-----------------------------
+
+- MDD ran out of memory!
+
+- This is because it was recording all th edead butterflies! fixed this now so should be able to do 50 000
+
+
+- Added a border crossing agent so now we can record what the angles of turn and distances of the bugs are
+as they cross the zero boundary when they come from outside it.
+
+- many problems with this! first discovered that the calculations to decide wether a line is in a circle or not were slightly
+inaccurate so replaced them with BigDecimals and this seems fine now.
+
+- Looks like the distribution of angles of turn is uniform but the distances are normal around a mean of half the step length - maybe the mean is related in someway to the distance between the release boundary and zero which would mean that you just choose the "real" release boundary you want and then work out the distance to the "zero" boundary and set the mean accordingly.
+
+- going to run it anyway and see. 
+
+- MDD with 50 000 gets closer but still a bit out so running with 100 000
+
+bugsim-experiment-1-v2.15.jar
+-----------------------------
+
+Needed this as the MDD was still running.
+
+It sems that the further away you go the more you see a normal distribution of step lengths crossing the boundary
+
+so going to try a step length of 80 but really far away and see if the ratio of centre eggs actually decreases!
+
+All kinds of little problems with listeners and the release boundary and ACCURACY again - have ended up rounding up 
+
+want to go through and thoroughly test everything for use of Big decimal - maybe implement BigDecimal everywhere.
+
+Its the only way to get "clean" numbers where you have control of the accuracy.
+
+It seems to matter that you do calculations to a higher number of places than you need and then round up - this means things work out to be the same. at some level there is an unnescessary level of accuracy.
+
+problems with the border crossings included not including them in the border - ive fixed this now so you can run it for 0 and everything that is ON the border is not regarded as bieng IN the area which means that if one happens to land exactly on the border it will be counted as a crossing (before it wouldnt have been i think).
+
+bugsim-experiment-1-v2.16.jar
+-----------------------------
+
+- Made loading of birth parameters happen when building parameters rather than when strategy is initialised. more flexible and will allow
+
+the initial move length to be loaded up by the Random walk strategy
+
+
+
+

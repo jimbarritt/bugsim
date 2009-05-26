@@ -1,0 +1,25 @@
+So a couple of other things you should know.  After you have registered
+your account you should be able to log on to one of our servers to
+run your program.  A couple of intel machines running NetBSD that are
+good choices are barretts.mcs.vuw.ac.nz and greta-pt.mcs.vuw.ac.nz. 
+Alternatively if you want a sparc running solaris you could try
+debretts.mcs.vuw.ac.nz.
+
+You'll need to set various environment variables to get an appropriate
+version of java.  On our system you can do this with the locally written
+"need" command.  This should be put in your .cshrc file so it gets run
+each time you log on.  There are examples in the standard .cshrc file
+that we set your account up with.  (If you choose to run a different
+shell than tcsh you'll be on your own as far as figuring out how to
+properly configure your account in our environment).
+
+Running "need java2" will set things up to give you java 1.4.2 on both
+Solaris and NetBSD.  Running 'need java2-latest' will give you java
+1.5.0 (aka 5.0) on NetBSD.  Both of the NetBSD versions of Java are
+actually linux binaries running on our NetBSD systems in an emulation
+mode.  As an alternative you could 'need java2-native' which will give
+you a non-emulated version 1.4.2 java.  I'm not a java expert so I don't
+know the trade-offs of running the native vs non-native version.  Andrew
+Mellanby knows more about this stuff than me and so might be able to
+give you some advice.
+

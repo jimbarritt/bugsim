@@ -13,7 +13,8 @@
     <property name="lib.build.dir" value="${lib.dir}/build" />
     <property name="lib.test.dir" value="${lib.dir}/test" />
 
-    <property name="ivy.dependency.file" value="${src.build.dir}/ivy-production-dependencies.xml" />
+    <property name="ivy.dependency.file" value="${basedir}/dependencies.xml" />
+    <property name="ivy.settings.file" value="${src.build.dir}/ivy-settings.xml" />
     <import file="${src.build.dir}/macros.xml"/>
     <import file="${src.build.dir}/ivy-tasks.xml"/>
 
@@ -23,7 +24,7 @@
 
     <path id="classpath.main">
         <fileset dir="${lib.production.dir}/jar/">
-            <include name="**/*.jar" /> 
+            <include name="**/*.jar" />
         </fileset>
     </path>
 
@@ -38,18 +39,17 @@
         <mkdir dir="${target.classes.main.dir}" />
     </target>
 
-    <property name="compile.java.version" value="1.5"/>
+    <property name="compile.java.version" value="1.4"/>
 
     <target name="compile" depends="compile.java.main" />
 
     
 
-    <target name="compile.java.main" depends="ivy.cache.path, make.target.structure">
-
-        <echo-classpath refid="classpath.ivy" />
+    <target name="compile.java.main" depends="make.target.structure">
+        <echo-classpath refid="classpath.main" />
         <javac srcdir="${src.java.main.dir}" target="${compile.java.version}"
-             debug="true" destdir="${target.classes.main.dir}">
-          <classpath refid="classpath.ivy" />
+             debug="true" nowarn="true" destdir="${target.classes.main.dir}">
+          <classpath refid="classpath.main" />
         </javac>
     </target>
 

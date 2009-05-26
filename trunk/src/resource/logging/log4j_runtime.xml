@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "http://jakarta.apache.org/log4j/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- %d{hh:mm:ss}  [%t] -->
+            <param name="ConversionPattern" value="%p : [%c{1}] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="BugsimStartupFileAppender" class="org.apache.log4j.RollingFileAppender">
+
+        <param name="File" value="./logs/bugsim-startup.log"/>
+        <param name="MaxFileSize" value="1024KB"/>
+        <param name="MaxBackupIndex" value="1"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yyyy hh:mm:ss} [%c{2}] %p - %m%n"/>
+        </layout>
+    </appender>
+
+    <category name="org.apache.commons">
+        <priority value="warn"/>
+        <!--
+        <appender-ref ref="ConsoleAppender"/>
+        <appender-ref ref="BugsimStartupAppender"/>
+        -->
+    </category>
+
+
+    <root>
+        <priority value="info"/>
+        <appender-ref ref="ConsoleAppender"/>
+        <appender-ref ref="BugsimStartupFileAppender"/>
+    </root>
+
+
+</log4j:configuration>
