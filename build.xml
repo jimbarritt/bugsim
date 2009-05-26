@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="bugsim" default="build-osx-app">
 
-
     <property name="src.dir" value="${basedir}/src" />
     <property name="lib.dir" value="${basedir}/lib" />
     <property name="target.dir" value="${basedir}/target" />
 
     <property name="src.build.dir" value="${src.dir}/build" />
     <property name="src.java.dir" value="${src.dir}/java" />
+    <property name="src.java.main.dir" value="${src.java.dir}/main" />
 
     <property name="lib.production.dir" value="${lib.dir}/production" />
     <property name="lib.build.dir" value="${lib.dir}/build" />
     <property name="lib.test.dir" value="${lib.dir}/test" />
 
     <property name="ivy.dependency.file" value="${src.build.dir}/ivy-production-dependencies.xml" />
-
+    <import file="${src.build.dir}/macros.xml"/>
     <import file="${src.build.dir}/ivy-tasks.xml"/>
 
-    <path id="classpath.production">
-        <pathelement location="${lib.production.dir}/jar/" />
+
+    <property name="target.classes.dir" value="${target.dir}/classes" />
+    <property name="target.classes.main.dir" value="${target.classes.dir}/main" />
+
+    <path id="classpath.main">
+        <fileset dir="${lib.production.dir}/jar/">
+            <include name="**/*.jar" /> 
+        </fileset>
     </path>
 
     <target name="report.config">
@@ -26,11 +32,25 @@
         <echo message="basedir   : ${basedir}" />
     </target>
 
+    <target name="make.target.structure">
+        <mkdir dir="${target.dir}" />
+        <mkdir dir="${target.classes.dir}" />
+        <mkdir dir="${target.classes.main.dir}" />
+    </target>
 
-    <target name="compile">
-          <javac srcdir="${src.java.dir}">
-              <classpath refid="classpath.production" />
-          </javac>
+    <property name="compile.java.version" value="1.5"/>
+
+    <target name="compile" depends="compile.java.main" />
+
+    
+
+    <target name="compile.java.main" depends="ivy.cache.path, make.target.structure">
+
+        <echo-classpath refid="classpath.ivy" />
+        <javac srcdir="${src.java.main.dir}" target="${compile.java.version}"
+             debug="true" destdir="${target.classes.main.dir}">
+          <classpath refid="classpath.ivy" />
+        </javac>
     </target>
 
 
