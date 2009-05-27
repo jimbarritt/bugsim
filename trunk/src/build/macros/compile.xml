@@ -4,7 +4,7 @@
         <attribute name="path.refid"/>
         <sequential>
             <property name="classpath.out" refid="@{path.refid}"/>
-            <echo message="@{path.refid}      : ${classpath.out}"/>
+            <echo message="@{path.refid}     : ${classpath.out}"/>
         </sequential>
     </macrodef>
 
