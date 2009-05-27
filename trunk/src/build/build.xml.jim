@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="bugsim" default="build-osx-app">
+
+    <property name="src.dir" value="${basedir}/src" />
+    <property name="lib.dir" value="${basedir}/lib" />
+    <property name="target.dir" value="${basedir}/target" />
+
+    <property name="src.build.dir" value="${src.dir}/build" />
+
+    <property name="lib.production.dir" value="${lib.dir}/production" />
+    <property name="lib.build.dir" value="${lib.dir}/build" />
+    <property name="lib.test.dir" value="${lib.dir}/test" />
+
+    <property name="ivy.dependency.file" value="${src.build.dir}/ivy-production-dependencies.xml" />
+    <import file="${src.build.dir}/ivy-tasks.xml"/>
+
+    <target name="build-osx-app" depends="clean, ivy.download.dependencies" description="--> does everything nescessary to create a .app package in the target directory">
+
+    </target>
+
+    <target name="clean" description="--> remove all files created with this build script">
+        <delete includeemptydirs="true" quiet="true">
+            <fileset dir="${target.dir}" />
+        </delete>
+    </target>
+
+    <target name="clean.lib" description="--> remove all files created with this build script">
+            <delete includeemptydirs="true" quiet="true">
+                <fileset dir="${lib.dir}" />
+            </delete>
+            <mkdir dir="${lib.dir}" />
+        </target>
+
+</project>
