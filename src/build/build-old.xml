@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="bugsim" default="distribute">
+
+
+    <!-- Compiler options -->
+
+    <property name="compiler.debug" value="on"/>
+    <property name="compiler.generate.no.warnings" value="off"/>
+    <property name="compiler.args" value=""/>
+    <property name="compiler.max.memory" value="128m"/>
+    <patternset id="ignored.files">
+        <exclude name="**/CVS/**"/>
+        <exclude name="**/SCCS/**"/>
+        <exclude name="**/RCS/**"/>
+        <exclude name="**/rcs/**"/>
+        <exclude name="**/.DS_Store/**"/>
+        <exclude name="**/.svn/**"/>
+    </patternset>
+    <patternset id="compiler.resources">
+        <include name="**/?*.properties"/>
+        <include name="**/?*.xml"/>
+        <include name="**/?*.gif"/>
+        <include name="**/?*.png"/>
+        <include name="**/?*.jpeg"/>
+        <include name="**/?*.jpg"/>
+        <include name="**/?*.html"/>
+        <include name="**/?*.dtd"/>
+        <include name="**/?*.tld"/>
+        <include name="**/?*.csv"/>
+    </patternset>
+
+    <!-- JDK definitions -->
+    <property name="project.jdk.home" value="/Library/Java/Home"/>
+    <path id="jdk.classpath.java_version_1.4.2_05">
+        <fileset dir="${project.jdk.home}">
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/dt.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/jaws.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/jce.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/netscape.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/charsets.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/classes.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/jsse.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/laf.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/sunrsasign.jar"/>
+            <include name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Classes/ui.jar"/>
+            <include
+                    name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/ext/apple_provider.jar"/>
+            <include
+                    name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/ext/ldapsec.jar"/>
+            <include
+                    name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/ext/localedata.jar"/>
+            <include
+                    name="../../../System/Library/Frameworks/JavaVM.framework/Versions/1.4.2/Home/lib/ext/sunjce_provider.jar"/>
+            <include name="../../../System/Library/Java/Extensions/j3daudio.jar"/>
+            <include name="../../../System/Library/Java/Extensions/j3dcore.jar"/>
+            <include name="../../../System/Library/Java/Extensions/j3dsupport.jar"/>
+            <include name="../../../System/Library/Java/Extensions/j3dutils.jar"/>
+            <include name="../../../System/Library/Java/Extensions/QTJSupport.jar"/>
+            <include name="../../../System/Library/Java/Extensions/CoreAudio.jar"/>
+            <include name="../../../System/Library/Java/Extensions/dns_sd.jar"/>
+            <include name="../../../System/Library/Java/Extensions/MRJToolkit.jar"/>
+        </fileset>
+    </path>
+
+
+    <property name="project.jdk.classpath" value="jdk.classpath.java_version_1.4.2_05"/>
+
+
+    <!-- Global Libraries -->
+
+    <path id="library.junit.classpath">
+        <pathelement location="/Users/jim/code/external/junit/3.8.1/junit.jar"/>
+    </path>
+    <path id="library.jfreechart.classpath">
+        <pathelement location="/Users/jim/code/external/jfreechart/jfreechart-1.0.0/lib/jfreechart-1.0.0.jar"/>
+        <pathelement location="/Users/jim/code/external/jfreechart/jfreechart-1.0.0/lib/jcommon-1.0.0.jar"/>
+    </path>
+    <path id="library.j2ee_1.3.classpath">
+        <pathelement location="/Users/jim/code/external/jfreechart/jfreechart-1.0.0/lib/servlet.jar"/>
+    </path>
+    <path id="library.log4j.classpath">
+        <pathelement location="/Users/jim/code/external/logging-log4j-1.2.13/dist/lib/log4j-1.2.13.jar"/>
+    </path>
+    <path id="library.struts.classpath">
+        <pathelement location="/Users/jim/code/external/apache/struts-1.2.8-bin/lib/struts.jar"/>
+    </path>
+    <path id="library.commons-logging.classpath">
+        <pathelement location="/Users/jim/code/external/apache/jakarta/commons-logging-1.0.4/commons-logging-api.jar"/>
+        <pathelement location="/Users/jim/code/external/apache/jakarta/commons-logging-1.0.4/commons-logging.jar"/>
+    </path>
+    <path id="library.commons-jxpath.classpath">
+        <pathelement location="/Users/jim/code/external/apache/jakarta/commons-jxpath-1.2/commons-jxpath-1.2.jar"/>
+    </path>
+    <path id="library.commons-beanutils.classpath">
+        <pathelement location="/Users/jim/code/external/apache/jakarta/commons-beanutils-1.7.0/commons-beanutils.jar"/>
+        <pathelement
+                location="/Users/jim/code/external/apache/jakarta/commons-beanutils-1.7.0/commons-beanutils-core.jar"/>
+    </path>
+    <path id="library.commons-math.classpath">
+        <pathelement location="/Users/jim/code/external/apache/jakarta/commons-math-1.1/commons-math-1.1.jar"/>
+    </path>
+    <path id="library.xerces.classpath">
+        <pathelement location="/Users/jim/code/external/apache/xerces-2_5_0/xercesImpl.jar"/>
+        <pathelement location="/Users/jim/code/external/apache/xerces-2_5_0/xml-apis.jar"/>
+        <pathelement location="/Users/jim/code/external/apache/xerces-2_5_0/xmlParserAPIs.jar"/>
+    </path>
+
+
+    <property name="base.dir" value="${basedir}"/>
+    <property name="framework.dir" value="/Users/jim/code/framework"/>
+
+    <!-- Source directories -->
+    <property name="src.dir" value="${base.dir}/src"/>
+    <property name="src.java.dir" value="${src.dir}/java"/>
+    <property name="src.junit.dir" value="${src.dir}/junit"/>
+    <property name="src.r.dir" value="${src.dir}/R"/>
+    <property name="src.thesis.dir" value="/Users/jim/Documents/Projects/bugsim/documentation/masters-thesis"/>
+    <property name="src.thesis.data.dir" value="/Users/jim/Documents/Projects/bugsim/experimental-data/published"/>
+
+
+    <property name="src.script.dir" value="${src.dir}/script"/>
+    <property name="src.script.deploy" value="${src.script.dir}/testparam.sh"/>
+    <property name="src.script.application.1" value="${src.script.dir}/sense.sh"/>
+    <property name="src.script.application.2" value="${src.script.dir}/editparameters.sh"/>
+    <property name="src.script.application.3" value="${src.script.dir}/runinteractive.sh"/>
+    <property name="src.script.application.4" value="${src.script.dir}/editparameters.cmd"/>
+    <property name="src.script.application.5" value="${src.script.dir}/runinteractive.cmd"/>
+    <property name="src.script.application.6" value="${src.script.dir}/deploy.sh"/>
+    <property name="src.script.application.7" value="${src.script.dir}/multi.sh"/>
+    <property name="src.script.complete.sh" value="${src.script.dir}/complete.sh"/>
+    <property name="src.script.complete.txt" value="${src.script.dir}/complete.txt"/>
+
+
+    <property name="src.framework.dir" value="${framework.dir}/src"/>
+    <property name="src.framework.java.dir" value="${src.dir}/java"/>
+    <property name="src.framework.junit.dir" value="${src.dir}/junit"/>
+
+
+    <!-- Resource directories -->
+    <property name="resource.dir" value="${base.dir}/resource"/>
+    <property name="resource.application.dir" value="${resource.dir}/application"/>
+    <property name="resource.application.properties"
+              value="${resource.application.dir}/application.properties"/>
+    <property name="resource.application.manifestfile" value="${resource.application.dir}/MANIFEST.MF"/>
+
+    <property file="${resource.application.properties}"/>
+
+    <property name="resource.framework.dir" value="${framework.dir}/resources"/>
+
+    <property name="resource.experiment.dir" value="${resource.dir}/experiments"/>
+    <property name="resource.experiment.1" value="${resource.experiment.dir}/exp-plan-exp2-TrX.xml"/>
+    <property name="resource.experiment.2" value="${resource.experiment.dir}/exp-plan-exp2-TrX-ME.xml"/>
+    <property name="resource.experiment.3" value="${resource.experiment.dir}/exp-plan-exp2-TrXA.xml"/>
+
+    <property name="resource.layouts.dir"
+              value="/Users/jim/Documents/Projects/bugsim/experimental-data/published/chapter-3/"/>
+
+
+    <!-- Target directories -->
+    <property name="target.dir" value="${base.dir}/target"/>
+    <property name="target.classes.dir" value="${target.dir}/classes"/>
+    <property name="target.dist.dir" value="${target.dir}/dist"/>
+    <property name="target.dist.jarfile"
+              value="${target.dist.dir}/bugsim-application-${application.version}-${application.distnumber}.jar"/>
+    <property name="target.dist.srczipfile"
+              value="${target.dist.dir}/bugsim-application-${application.version}-${application.distnumber}-src.zip"/>
+    <property name="target.dist.thesiszipfile"
+              value="${target.dist.dir}/bugsim-application-${application.version}-${application.distnumber}-thesis.zip"/>
+    <property name="target.dist.thesis.datazipfile"
+              value="${target.dist.dir}/bugsim-application-${application.version}-${application.distnumber}-thesis-data.zip"/>
+    <property name="target.dist.r.srczipfile"
+              value="${target.dist.dir}/bugsim-application-${application.version}-${application.distnumber}-r-src.zip"/>
+
+
+    <property name="target.dist.layouts.dir" value="${target.dist.dir}/layouts"/>
+
+    <property name="target.framework.dir" value="${framework.dir}/target"/>
+    <property name="target.framework.classes.dir" value="${target.framework.dir}/classes"/>
+
+
+    <property name="target.script.dir" value="${target.dir}/script"/>
+    <property name="target.script.application.1" value="${target.script.dir}/sense.sh"/>
+    <property name="target.script.application.2" value="${target.script.dir}/editparameters.sh"/>
+    <property name="target.script.application.3" value="${target.script.dir}/runinteractive.sh"/>
+    <property name="target.script.application.4" value="${target.script.dir}/editparameters.cmd"/>
+    <property name="target.script.application.5" value="${target.script.dir}/runinteractive.cmd"/>
+    <property name="target.script.application.6" value="${target.script.dir}/deploy.sh"/>
+    <property name="target.script.application.7" value="${target.script.dir}/multi.sh"/>
+
+    <property name="target.script.complete.txt" value="${target.script.dir}/complete.txt"/>
+
+
+    <!-- Distribution Directories -->
+    <property name="dist.dir" value="/Users/jim/Documents/Projects/bugsim/distribution"/>
+
+    <property name="dist.layouts.dir" value="${dist.dir}/layouts"/>
+    <property name="dist.experiments.dir" value="${dist.dir}/experiments"/>
+    <!-- Deployment Properties -->
+    <property name="deploy.server.1" value="barretts.mcs.vuw.ac.nz"/>
+    <property name="deploy.server.1.username" value="set-this-when-you-call-ant"/>
+    <property name="deploy.server.1.password" value="set-this-when-you-call-ant"/>
+    <property name="deploy.server.1.dir" value="/home/rialto2/barritjame/bugsim"/>
+
+    <!-- Deploy to caladan -->
+    <property name="deploy.server.2" value="192.168.10.24"/>
+    <property name="deploy.server.2.username" value="set-this-when-you-call-ant"/>
+    <property name="deploy.server.2.password" value="set-this-when-you-call-ant"/>
+    <property name="deploy.server.2.dir" value="/home/jim/bugsim"/>
+
+    <target name="all" depends="clean, build-all, test, distribute, deploy-all-1, deploy-all-2"/>
+
+    <target name="clean">
+        <delete dir="${target.dir}"/>
+        <mkdir dir="${target.dir}"/>
+    </target>
+
+    <target name="build-all" depends="build-jar, build-scripts,build-resource-layouts, build-r-src-zip, build-src-zip, build-thesis-zip"
+            description="Builds everything that needs building">
+
+    </target>
+
+    <target name="test">
+
+    </target>
+
+    <target name="increment-buildnumber">
+        <propertyfile file="${resource.application.properties}">
+            <entry key="application.lastdistributed" type="date" default="now" pattern="HH.mm dd-MM-yyyy"/>
+            <entry key="application.distnumber" type="int" default="0000" operation="+" pattern="0000"/>
+        </propertyfile>
+
+    </target>
+
+    <target name="distribute"
+            depends="build-all, increment-buildnumber, distribute-scripts, distribute-experiments, distribute-resource-layouts">
+
+        <copy file="${target.dist.jarfile}" todir="${dist.dir}"/>
+        <copy file="${target.dist.srczipfile}" todir="${dist.dir}"/>
+        <copy file="${target.dist.r.srczipfile}" todir="${dist.dir}"/>
+        <copy file="${target.dist.thesiszipfile}" todir="${dist.dir}"/>
+        <!--<copy file="${target.dist.thesis.datazipfile}" todir="${dist.dir}"/>-->
+
+
+    </target>
+    <target name="distribute-scripts">
+        <copy todir="${dist.dir}">
+            <fileset dir="${target.script.dir}" includes="*.sh"/>
+            <fileset dir="${target.script.dir}" includes="*.cmd"/>
+        </copy>
+
+    </target>
+
+    <target name="distribute-experiments">
+        <delete dir="${dist.experiments.dir}"/>        
+        <mkdir dir="${dist.experiments.dir}"/>
+        <copy todir="${dist.experiments.dir}">
+                <fileset dir="${resource.experiment.dir}" includes="*.xml"/>
+        </copy>
+
+
+
+
+
+
+    </target>
+    <target name="distribute-resource-layouts">
+        <mkdir dir="${dist.layouts.dir}"/>
+        <copy todir="${dist.layouts.dir}">
+            <fileset dir="${target.dist.layouts.dir}" includes="**/Resource*.csv"/>
+        </copy>
+
+    </target>
+
+    <target name="build-src-zip">
+        <zip destfile="${target.dist.srczipfile}">
+            <fileset dir="${src.dir}"/>
+            <fileset dir="${resource.dir}"/>
+            <fileset dir="${src.framework.dir}"/>
+        </zip>
+    </target>
+
+    <target name="build-thesis-data-zip">
+        <zip destfile="${target.dist.thesis.datazipfile}">
+            <fileset dir="${src.thesis.data.dir}"/>
+
+        </zip>
+    </target>
+
+    <target name="build-thesis-zip">
+        <zip destfile="${target.dist.thesiszipfile}">
+            <fileset dir="${src.thesis.dir}"/>
+        </zip>
+    </target>
+
+    <target name="build-r-src-zip">
+        <zip destfile="${target.dist.r.srczipfile}">
+            <fileset dir="${src.r.dir}"/>
+        </zip>
+    </target>
+
+    <target name="build-jar">
+        <mkdir dir="${target.dist.dir}"/>
+        <delete file="${target.dist.jarfile}"/>
+        <jar destfile="${target.dist.jarfile}" manifest="${resource.application.manifestfile}">
+            <fileset dir="${target.classes.dir}" excludes="**/TestCase.class"/>
+            <fileset dir="${target.framework.classes.dir}" excludes="**/TestCase.class"/>
+            <fileset dir="${resource.dir}"/>
+            <fileset dir="${resource.framework.dir}"/>
+        </jar>
+    </target>
+
+    <target name="build-scripts">
+        <delete dir="${target.script.dir}"/>
+        <mkdir dir="${target.script.dir}"/>
+        <copy file="${src.script.application.1}" todir="${target.script.dir}"/>
+
+        <replace
+                file="${target.script.application.1}"
+                propertyFile="${resource.application.properties}">
+            <replacefilter
+                    token="@version@"
+                    value="${application.version}"/>
+
+            <replacefilter
+                    token="@distribution@"
+                    value="${application.distnumber}"/>
+        </replace>
+
+        <copy file="${src.script.application.2}" todir="${target.script.dir}"/>
+        <replace
+                file="${target.script.application.2}"
+                propertyFile="${resource.application.properties}">
+            <replacefilter
+                    token="@version@"
+                    value="${application.version}"/>
+
+            <replacefilter
+                    token="@distribution@"
+                    value="${application.distnumber}"/>
+        </replace>
+
+        <copy file="${src.script.application.3}" todir="${target.script.dir}"/>
+        <replace
+                file="${target.script.application.3}"
+                propertyFile="${resource.application.properties}">
+            <replacefilter
+                    token="@version@"
+                    value="${application.version}"/>
+
+            <replacefilter
+                    token="@distribution@"
+                    value="${application.distnumber}"/>
+        </replace>
+
+
+        <copy file="${src.script.application.4}" todir="${target.script.dir}"/>
+        <replace
+                file="${target.script.application.4}"
+                propertyFile="${resource.application.properties}">
+            <replacefilter
+                    token="@version@"
+                    value="${application.version}"/>
+
+            <replacefilter
+                    token="@distribution@"
+                    value="${application.distnumber}"/>
+        </replace>
+
+        <copy file="${src.script.application.5}" todir="${target.script.dir}"/>
+        <replace
+                file="${target.script.application.5}"
+                propertyFile="${resource.application.properties}">
+            <replacefilter
+                    token="@version@"
+                    value="${application.version}"/>
+
+            <replacefilter
+                    token="@distribution@"
+                    value="${application.distnumber}"/>
+        </replace>
+
+        <copy file="${src.script.application.6}" todir="${target.script.dir}"/>
+               <replace
+                       file="${target.script.application.6}"
+                       propertyFile="${resource.application.properties}">
+                   <replacefilter
+                           token="@version@"
+                           value="${application.version}"/>
+
+                   <replacefilter
+                           token="@distribution@"
+                           value="${application.distnumber}"/>
+               </replace>
+
+        <copy file="${src.script.application.7}" todir="${target.script.dir}"/>
+                    <replace
+                            file="${target.script.application.7}"
+                            propertyFile="${resource.application.properties}">
+                        <replacefilter
+                                token="@version@"
+                                value="${application.version}"/>
+
+                        <replacefilter
+                                token="@distribution@"
+                                value="${application.distnumber}"/>
+                    </replace>
+
+        <copy file="${src.script.complete.sh}" todir="${target.script.dir}"/>
+
+        <copy file="${src.script.complete.txt}" todir="${target.script.dir}"/>
+
+    </target>
+
+    <target name="build-resource-layouts">
+        <mkdir dir="${target.dist.layouts.dir}" />
+        <copy todir="${target.dist.layouts.dir}">
+            <fileset dir="${resource.layouts.dir}" includes="**/Resource*.csv"/>
+        </copy>
+    </target>
+
+    <target name="build-and-deploy" description="Build the Jars, distribute and deploy to the server."
+            depends="build-all, distribute, deploy-all-1, deploy-all-2">
+
+
+    </target>
+
+    <target name="deploy-all-1" depends="deploy-experiments-1, deploy-jar-1, deploy-scripts-1">
+
+    </target>
+
+    <target name="deploy-all-2" depends="deploy-experiments-2, deploy-jar-2, deploy-scripts-2">
+
+    </target>
+    <target name="deploy-jar-1">
+        <scp file="${target.dist.jarfile}"
+             todir="${deploy.server.1.username}:${deploy.server.1.password}@${deploy.server.1}:${deploy.server.1.dir}"/>
+
+    </target>
+    <target name="deploy-experiments-1" description="Just uploads experiment plans."
+            depends="">
+
+
+        <scp todir="${deploy.server.1.username}:${deploy.server.1.password}@${deploy.server.1}:${deploy.server.1.dir}/experiments">
+            <fileset dir="${resource.experiment.dir}" includes="**/*.xml"/>
+        </scp>
+
+
+    </target>
+    <target name="deploy-scripts-1" description="Just uploads scripts."
+            depends="">
+
+
+        <scp todir="${deploy.server.1.username}:${deploy.server.1.password}@${deploy.server.1}:${deploy.server.1.dir}">
+            <fileset dir="${target.script.dir}" includes="*.sh"/>
+        </scp>
+
+
+    </target>
+    <target name="deploy-jar-2">
+        <scp file="${target.dist.jarfile}"
+             todir="${deploy.server.2.username}:${deploy.server.2.password}@${deploy.server.2}:${deploy.server.2.dir}"/>
+
+    </target>
+    <target name="deploy-experiments-2" description="Just uploads experiment plans."
+            depends="">
+
+
+        <scp todir="${deploy.server.2.username}:${deploy.server.2.password}@${deploy.server.2}:${deploy.server.2.dir}/experiments">
+            <fileset dir="${resource.experiment.dir}" includes="**/*.xml"/>
+        </scp>
+
+
+    </target>
+    <target name="deploy-scripts-2" description="Just uploads scripts."
+            depends="">
+
+
+        <scp todir="${deploy.server.2.username}:${deploy.server.2.password}@${deploy.server.2}:${deploy.server.2.dir}">
+            <fileset dir="${target.script.dir}" includes="*.sh"/>
+        </scp>
+
+
+    </target>
+</project>
