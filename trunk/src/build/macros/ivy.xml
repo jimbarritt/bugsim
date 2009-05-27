@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ivy" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+    <property name="ivy.install.version" value="2.0.0-beta1"/>
+
+    <property name="ivy.download.url"
+              value="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar"/>
+
+    <macrodef name="ivy-update-lib">
+        <attribute name="lib.dir"/>
+        <attribute name="ivy.install.dir"/>
+        <attribute name="dependency.file"/>
+        <attribute name="settings.file"/>
+
+        <sequential>
+            <property name="ivy.lib.dir" value="@{ivy.install.dir}/ivy"/>
+            <property name="ivy.jar.file" value="${ivy.lib.dir}/ivy.jar"/>
+
+            <available file="@{lib.dir}" property="skip.dir"/>
+            <antcall target="ivy.download" />
+            <antcall target="ivy.skip.download" />
+
+            <echo message="Using Ivy to retrieve dependencies to [@{lib.dir}]"/>
+            <taskdef resource="org/apache/ivy/ant/antlib.xml"
+                     uri="antlib:org.apache.ivy.ant">
+                <classpath>
+                    <fileset dir="${ivy.lib.dir}" includes="*.jar"/>
+                </classpath>
+            </taskdef>
+            
+            <ivy:settings file="@{settings.file}"/>
+            <ivy:retrieve file="@{dependency.file}"
+                          pattern="@{lib.dir}/[conf]/[type]/[artifact]-[revision].[ext]"/>
+        </sequential>
+    </macrodef>
+
+    <target name="ivy.skip.download" if="skip.download">
+        <echo message="lib dir [${ivy.lib.dir}] exists, not downloading libs."/>
+        <echo message="Use the lib.update target to download the libs."/>
+    </target>
+
+    <target name="ivy.download" unless="skip.download">
+        <mkdir dir="${ivy.lib.dir}"/>
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="Downloading ivy from ${ivy.download.url}..."/>
+        <get src="${ivy.download.url}"
+             dest="${ivy.jar.file}" usetimestamp="true"/>
+    </target>
+
+</project>

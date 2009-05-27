@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="clean">
+
+    <macrodef name="clean-dir">
+       <attribute name="target.dir" />
+       <sequential>
+            <delete includeemptydirs="true" quiet="true">
+                <fileset dir="@{target.dir}" />
+            </delete>
+           <echo message="Directory [@{target.dir}] cleaned." />
+       </sequential>
+    </macrodef>
+
+</project>

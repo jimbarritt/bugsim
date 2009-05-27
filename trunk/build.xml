@@ -1,78 +1,74 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="bugsim" default="build-osx-app">
 
-    <property name="src.dir" value="${basedir}/src" />
-    <property name="lib.dir" value="${basedir}/lib" />
-    <property name="target.dir" value="${basedir}/target" />
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="lib.dir" value="${basedir}/lib"/>
+    <property name="target.dir" value="${basedir}/target"/>
 
-    <property name="src.build.dir" value="${src.dir}/build" />
-    <property name="src.java.dir" value="${src.dir}/java" />
-    <property name="src.java.main.dir" value="${src.java.dir}/main" />
+    <property name="dependency.file" value="${basedir}/dependencies.xml"/>
 
-    <property name="lib.production.dir" value="${lib.dir}/production" />
-    <property name="lib.build.dir" value="${lib.dir}/build" />
-    <property name="lib.test.dir" value="${lib.dir}/test" />
+    <property name="src.build.dir" value="${src.dir}/build"/>
+    <property name="src.build.ivy.settings.file" value="${src.build.dir}/ivy-settings.xml"/>
 
-    <property name="ivy.dependency.file" value="${basedir}/dependencies.xml" />
-    <property name="ivy.settings.file" value="${src.build.dir}/ivy-settings.xml" />
-    <import file="${src.build.dir}/macros.xml"/>
-    <import file="${src.build.dir}/ivy-tasks.xml"/>
+    <property name="src.java.dir" value="${src.dir}/java"/>
+    <property name="src.java.main.dir" value="${src.java.dir}/main"/>
+
+    <property name="lib.build.dir" value="${lib.dir}/build"/>
+    <property name="lib.main.dir" value="${lib.dir}/main"/>    
+    <property name="lib.test.dir" value="${lib.dir}/test"/>
+
+    <property name="target.classes.dir" value="${target.dir}/classes"/>
+    <property name="target.classes.main.dir" value="${target.classes.dir}/main"/>
 
 
-    <property name="target.classes.dir" value="${target.dir}/classes" />
-    <property name="target.classes.main.dir" value="${target.classes.dir}/main" />
+    <!-- macro files -->
+    <import file="src/build/macros/report.xml"/>
+    <import file="src/build/macros/clean.xml"/>
+    <import file="src/build/macros/compile.xml"/>
+    <import file="src/build/macros/ivy.xml"/>
 
     <path id="classpath.main">
-        <fileset dir="${lib.production.dir}/jar/">
-            <include name="**/*.jar" />
+        <fileset dir="${lib.main.dir}/jar/">
+            <include name="**/*.jar"/>
         </fileset>
     </path>
 
-    <target name="report.config">
-        <echo message="ant.home  : ${ant.home}" />
-        <echo message="basedir   : ${basedir}" />
-    </target>
-
-    <target name="make.target.structure">
-        <mkdir dir="${target.dir}" />
-        <mkdir dir="${target.classes.dir}" />
-        <mkdir dir="${target.classes.main.dir}" />
-    </target>
-
-    <property name="compile.java.version" value="1.4"/>
-
-    <target name="compile" depends="compile.java.main" />
-
-    
-
-    <target name="compile.java.main" depends="make.target.structure">
-        <echo-classpath refid="classpath.main" />
-        <javac srcdir="${src.java.main.dir}" target="${compile.java.version}"
-             debug="true" nowarn="true" destdir="${target.classes.main.dir}">
-          <classpath refid="classpath.main" />
-        </javac>
-    </target>
-
-
-    <target name="build-osx-app" depends="report.config, clean, ivy.check.configure" description="--> does everything nescessary to create a .app package in the target directory">
-
-    </target>
-
     <target name="clean" description="--> remove all files created with this build script">
-        <delete includeemptydirs="true" quiet="true">
-            <fileset dir="${target.dir}" />
-        </delete>
+        <clean-dir target.dir="${target.dir}"/>
     </target>
 
     <target name="clean.lib" description="--> remove all libraries that have been downloaded">
-        <delete includeemptydirs="true" quiet="true">
-            <fileset dir="${lib.dir}" />
-        </delete>
+        <clean-dir target.dir="${lib.dir}"/>
     </target>
-    
-    <target name="clean.install" depends="clean, clean.ivy, clean.lib" 
-            description="--> cleans everything, including ivy and libs" />
 
-   
+    <target name="clean.everything" depends="clean, clean.lib"
+            description="--> cleans everything, including ivy and libs"/>
+
+    <target name="update.lib" description="--> updates the lib folder with new dependencies">
+        <ivy-update-lib lib.dir="${lib.dir}"
+                        ivy.install.dir="${lib.build.dir}"
+                        dependency.file="${dependency.file}"
+                        settings.file="${src.build.ivy.settings.file}"/>
+    </target>
+
+
+    <target name="compile" depends="compile.java.main" description="--> compiles all sources"/>
+
+    <target name="compile.java.main">
+        <compile-java configuration="main"
+                      src.dir="${src.java.main.dir}"
+                      classpath.refid="classpath.main"
+                      target.classes.dir="${target.classes.main.dir}"
+                      java.version="1.4"/>
+    </target>
+
+    <target name="report.config">
+        <echo message="ant.home  : ${ant.home}"/>
+        <echo message="basedir   : ${basedir}"/>
+    </target>
+
+    <target name="build-osx-app" depends="report.config, clean"
+            description="--> does everything nescessary to create a .app package in the target directory">
+    </target>
 
 </project>
