@@ -26,6 +26,7 @@
             <echo message="src.dir            : @{src.dir}"/>
             <echo message="target.classes.dir : @{target.classes.dir}"/>
             <echo message="java.version       : @{java.version}"/>
+            <echo message="classpath.refid    : @{classpath.refid}"/>
 
             <echo-classpath path.refid="@{classpath.refid}"/>
 

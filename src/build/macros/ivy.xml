@@ -16,7 +16,7 @@
             <property name="ivy.lib.dir" value="@{ivy.install.dir}/ivy"/>
             <property name="ivy.jar.file" value="${ivy.lib.dir}/ivy.jar"/>
 
-            <available file="@{lib.dir}" property="skip.dir"/>
+            <available file="@{lib.dir}" property="skip.download"/>
             <antcall target="ivy.download" />
             <antcall target="ivy.skip.download" />
 
@@ -27,16 +27,16 @@
                     <fileset dir="${ivy.lib.dir}" includes="*.jar"/>
                 </classpath>
             </taskdef>
-            
+
             <ivy:settings file="@{settings.file}"/>
             <ivy:retrieve file="@{dependency.file}"
-                          pattern="@{lib.dir}/[conf]/[type]/[artifact]-[revision].[ext]"/>
+                          pattern="@{lib.dir}/[conf]/[type]/[artifact]-[revision].[ext]" />
         </sequential>
     </macrodef>
 
     <target name="ivy.skip.download" if="skip.download">
-        <echo message="lib dir [${ivy.lib.dir}] exists, not downloading libs."/>
-        <echo message="Use the lib.update target to download the libs."/>
+        <echo message="lib dir [${ivy.lib.dir}] exists, not downloading"/>
+        <echo message="" />
     </target>
 
     <target name="ivy.download" unless="skip.download">
