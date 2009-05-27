@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iws" afterPath="$PROJECT_DIR$/bugsim.iws" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml" />
       <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/compile.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/compile.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/dependencies.xml" afterPath="/Users/Jim/Work/code/bugsim/dependencies.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/build.xml" afterPath="/Users/Jim/Work/code/bugsim/build.xml" />
     </list>
     <ignored path="bugsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,19 +64,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="32" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.19384615">
+            <state line="38" column="24" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.58153844">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compile.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="44" selection-start="277" selection-end="277" vertical-scroll-proportion="0.18947369">
+            <state line="20" column="27" selection-start="772" selection-end="772" vertical-scroll-proportion="0.12631579">
               <folding />
             </state>
           </provider>
@@ -100,7 +103,7 @@
       <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="65" selection-start="624" selection-end="624" vertical-scroll-proportion="0.4846154">
+            <state line="18" column="67" selection-start="721" selection-end="776" vertical-scroll-proportion="0.28923076">
               <folding />
             </state>
           </provider>
@@ -109,7 +112,7 @@
       <file leaf-file-name="dependencies.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/dependencies.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="45" selection-start="347" selection-end="347" vertical-scroll-proportion="0.25846153">
+            <state line="40" column="17" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.3876923">
               <folding />
             </state>
           </provider>
@@ -562,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/dependencies.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="347" selection-end="347" vertical-scroll-proportion="0.25846153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/clean.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="178" selection-end="178" vertical-scroll-proportion="0.18947369">
@@ -583,23 +579,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/dependencies.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="65" selection-start="624" selection-end="624" vertical-scroll-proportion="0.4846154">
+        <state line="40" column="17" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.3876923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.19384615">
+        <state line="18" column="67" selection-start="721" selection-end="776" vertical-scroll-proportion="0.28923076">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="44" selection-start="277" selection-end="277" vertical-scroll-proportion="0.18947369">
+        <state line="20" column="27" selection-start="772" selection-end="772" vertical-scroll-proportion="0.12631579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="24" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.58153844">
           <folding />
         </state>
       </provider>

@@ -7,31 +7,39 @@
 
     <property name="dependency.file" value="${basedir}/dependencies.xml"/>
 
+
     <property name="src.build.dir" value="${src.dir}/build"/>
     <property name="src.build.ivy.settings.file" value="${src.build.dir}/ivy-settings.xml"/>
 
     <property name="src.java.dir" value="${src.dir}/java"/>
     <property name="src.java.main.dir" value="${src.java.dir}/main"/>
+    <property name="src.java.test.dir" value="${src.java.dir}/test"/>
+    <property name="src.java.test.unit.dir" value="${src.java.test.dir}/unit"/>
 
     <property name="lib.build.dir" value="${lib.dir}/build"/>
     <property name="lib.main.dir" value="${lib.dir}/main"/>    
-    <property name="lib.test.dir" value="${lib.dir}/test"/>
+    <property name="lib.test.unit.dir" value="${lib.dir}/test.unit"/>
 
     <property name="target.classes.dir" value="${target.dir}/classes"/>
     <property name="target.classes.main.dir" value="${target.classes.dir}/main"/>
+    <property name="target.classes.test.dir" value="${target.classes.dir}/test"/>
+    <property name="target.classes.test.unit.dir" value="${target.classes.test.dir}/unit"/>
 
-
-    <!-- macro files -->
     <import file="src/build/macros/report.xml"/>
     <import file="src/build/macros/clean.xml"/>
     <import file="src/build/macros/compile.xml"/>
     <import file="src/build/macros/ivy.xml"/>
 
     <path id="classpath.main">
-        <fileset dir="${lib.main.dir}/jar/">
-            <include name="**/*.jar"/>
-        </fileset>
+        <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>            
     </path>
+
+    <path id="classpath.test.unit">
+        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar" />
+        <path location="${target.classes.main.dir}" />
+        <path refid="classpath.main" />
+    </path>
+
 
     <target name="clean" description="--> remove all files created with this build script">
         <clean-dir target.dir="${target.dir}"/>
@@ -51,8 +59,18 @@
                         settings.file="${src.build.ivy.settings.file}"/>
     </target>
 
+    <available file="${lib.dir}" property="skip.update.lib"/>
+    <target name="update.lib.guarded" unless="skip.update.lib">
+        <antcall target="update.lib" />
+    </target>
 
-    <target name="compile" depends="compile.java.main" description="--> compiles all sources"/>
+    <target name="update.lib.if.required" depends="update.lib.guarded"  if="skip.update.lib">
+        <echo message="lib.dir [${lib.dir}] already exists" />
+        <echo message="Not updating libs, use [update.lib] to force update" />
+    </target>
+
+    <target name="compile" depends="update.lib.if.required, compile.java.main, compile.java.test.unit"
+            description="--> compiles all sources"/>
 
     <target name="compile.java.main">
         <compile-java configuration="main"
@@ -62,9 +80,19 @@
                       java.version="1.4"/>
     </target>
 
+
+    <target name="compile.java.test.unit">
+        <compile-java configuration="test.unit"
+                      src.dir="${src.java.test.unit.dir}"
+                      classpath.refid="classpath.test.unit"
+                      target.classes.dir="${target.classes.test.unit.dir}"
+                      java.version="1.4"/>
+    </target>
+
     <target name="report.config">
-        <echo message="ant.home  : ${ant.home}"/>
-        <echo message="basedir   : ${basedir}"/>
+        <echo message="ant.home        : ${ant.home}"/>
+        <echo message="basedir         : ${basedir}"/>
+        <echo message="skip.update.lib : ${skip.update.lib}" />
     </target>
 
     <target name="build-osx-app" depends="report.config, clean"

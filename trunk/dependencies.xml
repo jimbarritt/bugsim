@@ -1,18 +1,57 @@
-<ivy-module version="1.0">
+<ivy-module version="1.0" xmlns:m="http://ant.apache.org/ivy/maven">
     <info organisation="org.ixcode" module="bugsim"/>
-     <configurations>
-      <conf name="main" visibility="private" description="production jars" />
+    <configurations>
+        <conf name="main" visibility="private" description="production jars"/>
+        <conf name="test.unit" visibility="private" description="unit testing jars"/>
     </configurations>
 
     <dependencies>
-        <dependency org="log4j" name="log4j" rev="1.2.15" transitive="false"/>
-        <dependency org="jfree" name="jcommon" rev="1.0.9" transitive="false"/>
-        <dependency org="jfree" name="jfreechart" rev="1.0.9" transitive="false"/>
-        <dependency org="javax.servlet" name="servlet-api" rev="2.4" transitive="false" />
-        <dependency org="javax.servlet" name="jsp-api" rev="2.0" transitive="false" />
-        <dependency org="commons-beanutils" name="commons-beanutils" rev="1.4.1" transitive="false"/>
-        <dependency org="commons-logging" name="commons-logging" rev="1.1" transitive="false"/>
-        <dependency org="commons-jxpath" name="commons-jxpath" rev="1.2" transitive="false"/>
-        <dependency org="struts" name="struts" rev="1.2.9" transitive="false" />
+        <dependency conf="main->default" org="log4j" name="log4j" rev="1.2.15" transitive="false">
+            <artifact name="log4j" type="jar" ext="jar"/>
+            <artifact name="log4j" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+        
+        <dependency conf="main->default" org="jfree" name="jcommon" rev="1.0.9" transitive="false">
+            <artifact name="jcommon" type="jar" ext="jar"/>
+            <artifact name="jcommon" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
+        <dependency conf="main->default" org="jfree" name="jfreechart" rev="1.0.9" transitive="false">
+            <artifact name="jfreechart" type="jar" ext="jar"/>
+            <artifact name="jfreechart" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
+        <dependency conf="main->default" org="javax.servlet" name="servlet-api" rev="2.4" transitive="false">
+            <artifact name="servlet-api" type="jar" ext="jar"/>
+            <artifact name="servlet-api" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
+        <dependency conf="main->default" org="javax.servlet" name="jsp-api" rev="2.0" transitive="false">
+            <artifact name="jsp-api" type="jar" ext="jar"/>            
+        </dependency>
+
+        <dependency conf="main->default" org="commons-beanutils" name="commons-beanutils" rev="1.4.1" transitive="false">
+            <artifact name="commons-beanutils" type="jar" ext="jar"/>            
+        </dependency>
+
+        <dependency conf="main->default" org="commons-logging" name="commons-logging" rev="1.1" transitive="false">
+            <artifact name="commons-logging" type="jar" ext="jar"/>
+            <artifact name="commons-logging" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
+        <dependency conf="main->default" org="commons-jxpath" name="commons-jxpath" rev="1.2" transitive="false">
+            <artifact name="commons-jxpath" type="jar" ext="jar"/>            
+        </dependency>
+
+        <dependency conf="main->default" org="struts" name="struts" rev="1.2.9" transitive="false">
+            <artifact name="struts" type="jar" ext="jar"/>
+            <artifact name="struts" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
+        <!-- common test jars -->
+        <dependency conf="test.unit->default" org="junit" name="junit" rev="4.6" transitive="false">
+            <artifact name="junit" type="jar" ext="jar"/>
+            <artifact name="junit" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
     </dependencies>
 </ivy-module>
