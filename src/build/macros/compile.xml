@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="compile">
+    <macrodef name="echo-classpath">
+        <attribute name="path.refid"/>
+        <sequential>
+            <property name="classpath.out" refid="@{path.refid}"/>
+            <echo message="@{path.refid}      : ${classpath.out}"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="compile-java">
+        <attribute name="configuration" default="main"/>
+        <attribute name="classpath.refid"/>
+        <attribute name="src.dir"/>
+        <attribute name="target.classes.dir"/>
+
+        <attribute name="java.version" default="1.5"/>
+        <attribute name="debug" default="true"/>
+        <attribute name="nowarn" default="true"/>
+        <attribute name="print.classpath" default="true"/>
+
+
+        <sequential>
+            <property name="print.classpath" value="@{print.classpath}" />
+            <echo message="Compiling classes for configuration [@{configuration}]"/>
+            <echo message="src.dir            : @{src.dir}"/>
+            <echo message="target.classes.dir : @{target.classes.dir}"/>
+            <echo message="java.version       : @{java.version}"/>
+
+            <echo-classpath path.refid="@{classpath.refid}"/>
+
+            <echo message="" />
+            <mkdir dir="@{target.classes.dir}" />
+            
+            <javac srcdir="@{src.dir}"
+                   target="@{java.version}"
+                   source="@{java.version}"
+                   debug="@{debug}"
+                   nowarn="@{nowarn}"
+                   destdir="@{target.classes.dir}">
+                <classpath refid="@{classpath.refid}"/>
+            </javac>
+        </sequential>
+    </macrodef>
+
+</project>
