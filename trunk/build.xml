@@ -111,6 +111,7 @@
 
     <target name="report.config">
         <echo message="ant.home        : ${ant.home}"/>
+        <echo message="os.name         : ${os.name}"/>
         <echo message="basedir         : ${basedir}"/>
         <echo message="skip.update.lib : ${skip.update.lib}" />
     </target>
