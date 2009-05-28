@@ -2,8 +2,11 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iml" afterPath="$PROJECT_DIR$/bugsim.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iws" afterPath="$PROJECT_DIR$/bugsim.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.ipr" afterPath="$PROJECT_DIR$/bugsim.ipr" />
       <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/build.xml" afterPath="/Users/Jim/Work/code/bugsim/build.xml" />
     </list>
     <ignored path="bugsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +67,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="46" selection-start="4664" selection-end="4664" vertical-scroll-proportion="0.64615387">
+            <state line="113" column="50" selection-start="4836" selection-end="4836" vertical-scroll-proportion="0.5753846">
               <folding />
             </state>
           </provider>
@@ -82,7 +85,25 @@
       <file leaf-file-name="junit.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="22" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.38615385">
+            <state line="33" column="43" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.3876923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CabbageStatisticEntryTestCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/bugsim/model/experiment/report/cabbage/CabbageStatisticEntryTestCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="46" selection-start="494" selection-end="494" vertical-scroll-proportion="0.32894737">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContextInstrument.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/Jim/Work/code/bugsim/src/java/main/com/ixcode/framework/web/taglib/ContextInstrument.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="25" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.031390134">
               <folding />
             </state>
           </provider>
@@ -91,16 +112,7 @@
       <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="0" selection-end="69" vertical-scroll-proportion="0.06315789">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="67" selection-start="721" selection-end="776" vertical-scroll-proportion="0.28923076">
+            <state line="2" column="0" selection-start="0" selection-end="69" vertical-scroll-proportion="0.031578947">
               <folding />
             </state>
           </provider>
@@ -267,7 +279,7 @@
     </subPane>
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="0.11111111" version="1" splitterProportion="0.5">
@@ -295,7 +307,32 @@
     <RUBY_DOC NAME="DEFAULTS" VALUE="true" />
     <RUBY_DOC NAME="NUMBER" VALUE="0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CabbageStatisticEntryTestCase.testAverageNumberOfEggs">
+    <tempConfiguration default="false" name="CabbageStatisticEntryTestCase.testAverageNumberOfEggs" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <pattern value="com.ixcode.bugsim.model.experiment.report.cabbage.*" />
+      <module name="bugsim" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ixcode.bugsim.model.experiment.report.cabbage" />
+      <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatisticEntryTestCase" />
+      <option name="METHOD_NAME" value="testAverageNumberOfEggs" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </tempConfiguration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e STDOUT.sync=true;STDERR.sync=true;load($0=ARGV.shift)" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
@@ -384,7 +421,9 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CabbageStatisticEntryTestCase.testAverageNumberOfEggs" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -476,19 +515,6 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file:///Users/Jim/Work/code/bugsim/src/build/build.xml">
-      <antCommandLine value="" />
-      <runInBackground value="true" />
-      <targetFilters>
-        <filter targetName="build-osx-app" isVisible="true" />
-        <filter targetName="clean" isVisible="true" />
-        <filter targetName="compile" isVisible="false" />
-        <filter targetName="report-config" isVisible="false" />
-      </targetFilters>
-      <treeView value="true" />
-      <verbose value="true" />
-      <viewClosedWhenNoErrors value="false" />
-    </buildFile>
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///Users/Jim/Work/code/bugsim/go">
@@ -521,14 +547,14 @@
     </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="67" selection-start="721" selection-end="776" vertical-scroll-proportion="0.28923076">
+        <state line="18" column="67" selection-start="721" selection-end="776" vertical-scroll-proportion="0.46766168">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="0" selection-end="69" vertical-scroll-proportion="0.06315789">
+        <state line="113" column="50" selection-start="4836" selection-end="4836" vertical-scroll-proportion="0.5753846">
           <folding />
         </state>
       </provider>
@@ -540,16 +566,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/bugsim/model/experiment/report/cabbage/CabbageStatisticEntryTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="46" selection-start="4664" selection-end="4664" vertical-scroll-proportion="0.64615387">
+        <state line="17" column="46" selection-start="494" selection-end="494" vertical-scroll-proportion="0.32894737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="0" selection-end="69" vertical-scroll-proportion="0.031578947">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/java/main/com/ixcode/framework/web/taglib/ContextInstrument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="25" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.031390134">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="22" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.38615385">
+        <state line="33" column="43" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.3876923">
           <folding />
         </state>
       </provider>
