@@ -7,14 +7,14 @@
 
     <property name="dependency.file" value="${basedir}/dependencies.xml"/>
 
-
     <property name="src.build.dir" value="${src.dir}/build"/>
+    <property name="src.build.macros.dir" value="${src.build.dir}/macros" />
     <property name="src.build.ivy.settings.file" value="${src.build.dir}/ivy-settings.xml"/>
 
     <property name="src.java.dir" value="${src.dir}/java"/>
     <property name="src.java.main.dir" value="${src.java.dir}/main"/>
     <property name="src.java.test.dir" value="${src.java.dir}/test"/>
-    <property name="src.java.test.unit.dir" value="${src.java.test.dir}/unit"/>
+    <property name="src.test.java.unit.dir" value="${src.java.test.dir}/unit"/>
 
     <property name="lib.build.dir" value="${lib.dir}/build"/>
     <property name="lib.main.dir" value="${lib.dir}/main"/>    
@@ -25,10 +25,16 @@
     <property name="target.classes.test.dir" value="${target.classes.dir}/test"/>
     <property name="target.classes.test.unit.dir" value="${target.classes.test.dir}/unit"/>
 
-    <import file="src/build/macros/report.xml"/>
-    <import file="src/build/macros/clean.xml"/>
-    <import file="src/build/macros/compile.xml"/>
-    <import file="src/build/macros/ivy.xml"/>
+    <property name="target.report.dir" value="${target.dir}/report"/>
+    <property name="target.report.test.dir" value="${target.report.dir}/test"/>
+    <property name="target.report.test.unit" value="${target.report.test.dir}/unit"/>
+
+    <import file="${src.build.macros.dir}/ivy.xml"/>
+    <import file="${src.build.macros.dir}/report.xml"/>
+    <import file="${src.build.macros.dir}/clean.xml"/>
+    <import file="${src.build.macros.dir}/compile.xml"/>
+    <import file="${src.build.macros.dir}/junit.xml"/>
+
 
     <path id="classpath.main">
         <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>            
@@ -39,6 +45,12 @@
         <path location="${target.classes.main.dir}" />
         <path refid="classpath.main" />
     </path>
+
+    <path id="classpath.test.unit.run">
+        <path location="${target.classes.test.unit.dir}" />
+        <path refid="classpath.test.unit" />
+    </path>
+
 
 
     <target name="clean" description="--> remove all files created with this build script">
@@ -82,11 +94,19 @@
 
 
     <target name="compile.unit.test">
-        <compile-java configuration="test.unit"
-                      src.dir="${src.java.test.unit.dir}"
+        <compile-java configuration="unit.test"
+                      src.dir="${src.test.java.unit.dir}"
                       classpath.refid="classpath.test.unit"
                       target.classes.dir="${target.classes.test.unit.dir}"
                       java.version="1.4"/>
+    </target>
+
+
+    <target name="run.unit.test">
+         <run-junit configuration="unit.test"
+                    classpath.refid="classpath.test.unit.run"
+                    report.dir="${target.report.test.unit}"
+                    src.test.dir="${src.test.java.unit.dir}"/>
     </target>
 
     <target name="report.config">

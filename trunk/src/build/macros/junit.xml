@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="compile">
+
+    <macrodef name="run-junit">
+        <attribute name="configuration" />
+        <attribute name="classpath.refid" />
+        <attribute name="report.dir" />
+        <attribute name="src.test.dir" />
+
+        <sequential>
+            <property name="junit.configuration" value="@{configuration}" />
+            <property name="junit.report.dir" value="@{report.dir}" />
+            <mkdir dir="@{report.dir}" />
+            <junit printsummary="yes" >
+                <classpath refid="@{classpath.refid}" />
+
+                <formatter type="brief"/>
+
+                <batchtest fork="yes"
+                           todir="@{report.dir}"
+                           failureproperty="junit.failed"
+                           haltonfailure="no"
+                           haltonerror="no">
+                    
+                    <fileset dir="@{src.test.dir}">
+                        <include name="**/*.java"/>                        
+                    </fileset>
+                </batchtest>
+            </junit>
+
+            <fail taskname="run.junit.@{configuration}"
+              message="\n\nOne or more tests failed or produced errors!\nSee output in @{report.dir}\n"              
+              status="66"
+              if="junit.failed"/>
+        </sequential>
+    </macrodef>
+
+
+</project>
