@@ -29,7 +29,7 @@ public class VonMisesAzimuthGeneratorTestCase extends TestCase {
         double n = 360;
         double sd = 80;
         int[] TEST_N = new int[]{100,500,  1000, 5000, 10000};//,5000, 10000};
-        int REPLICATES = 1000;
+        int REPLICATES = 100;
 
         IAzimuthGenerator g1 = new VonMisesAzimuthGenerator(new Random(), k, n, true);
         IAzimuthGenerator g2 = new GaussianAzimuthGenerator(new Random(), sd);

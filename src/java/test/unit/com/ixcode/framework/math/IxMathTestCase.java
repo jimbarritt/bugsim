@@ -52,7 +52,7 @@ public class IxMathTestCase extends TestCase {
         }
     }
     public void testUniformRandomDouble() {
-        final int ITERATIONS = 100000;
+        final int ITERATIONS = 100;
 
         double results[] = new double[ITERATIONS];
         for (int i = 0; i < ITERATIONS; ++i) {
@@ -65,7 +65,7 @@ public class IxMathTestCase extends TestCase {
     }
 
     public void testUniformRandomAngleDouble() {
-        final int ITERATIONS = 1000000;
+        final int ITERATIONS = 1000;
 
         double results[] = new double[ITERATIONS];
         for (int i = 0; i < ITERATIONS; ++i) {
@@ -227,7 +227,7 @@ public class IxMathTestCase extends TestCase {
 
     public void testSpeedOfBigDecimal() {
 
-        final long N = 10000;
+        final long N = 100;
         double testValueA = 567.456785434;
         double testValueB = 34.5678732;
         long start = System.currentTimeMillis();
@@ -316,7 +316,7 @@ public class IxMathTestCase extends TestCase {
     }
 
     public void testRandomGaussian() {
-        int replicants = 1000000;
+        int replicants = 100;
         double standardDeviation = 20;
         double mean = 0;
         double[] results = new double[replicants];
@@ -420,7 +420,7 @@ public class IxMathTestCase extends TestCase {
     public void testPoisson() {
 
         double mu = 4d;
-        final int N = 10000000;
+        final int N = 10000;
         Map results = new HashMap();
         for (int i = 0; i < N; ++i) {
             Integer p = new Integer(PoissonRandom.generatePoissonRandom(RANDOM, mu));
