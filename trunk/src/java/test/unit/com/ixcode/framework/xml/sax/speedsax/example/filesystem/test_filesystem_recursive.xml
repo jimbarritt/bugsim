@@ -1,0 +1,19 @@
+<directory name="root">
+    <directories>
+        <directory name="level1">
+            <directories>
+                <directory name="level2">
+                    <directories>
+                        <directory name="level3">
+                            <directories>
+                                <directory name="level4">
+                                </directory>
+                            </directories>
+                        </directory>
+                    </directories>
+                </directory>
+            </directories>
+        </directory>
+    </directories>
+
+</directory>

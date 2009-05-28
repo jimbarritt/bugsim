@@ -1,0 +1,11 @@
+<directory name="root">
+    <description>
+        <title style="h1">
+            This is some file system.
+        </title>
+        <message>
+            This is my message to you.
+        </message>
+    </description>
+    
+</directory>

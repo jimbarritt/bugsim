@@ -1,0 +1,52 @@
+<directory name="root">
+    <description>
+        <title style="h1">
+            This is some file system.
+        </title>
+        <message>
+            This is my message to you.
+        </message>
+    </description>
+    <files>
+        <file name="file1.txt">This is the content of file at the top level</file>
+        <file name="file2.txt">This is the content of file at the top level</file>
+        <file name="file3.txt">This is the content of file at the top level</file>
+        <file name="file4.txt">This is the content of file at the top level</file>
+    </files>
+    <directories>
+        <directory name="level1">
+            <description>
+                <title>
+            This is some file system.
+                </title>
+                <message>
+            This is my message to you.
+                </message>
+            </description>
+            <files>
+                <file name="file5.txt">This is some other file</file>
+                <file name="file6.txt">This is some other file</file>
+                <file name="file7.txt">This is some other file</file>
+                <file name="file8.txt">This is some other file</file>
+            </files>
+            <security>
+                <permissions>
+                    <user id="jim">
+                        <read/>
+                        <write/>
+                        <create/>
+                    </user>
+                </permissions>
+            </security>
+        </directory>
+    </directories>
+    <security>
+        <permissions>
+            <user id="jim">
+                <read/>
+                <write>false</write>
+                <create/>
+            </user>
+        </permissions>
+    </security>
+</directory>
