@@ -2,38 +2,62 @@
 <project name="compile">
 
     <macrodef name="run-junit">
-        <attribute name="configuration" />
-        <attribute name="classpath.refid" />
-        <attribute name="report.dir" />
-        <attribute name="src.test.dir" />
+        <attribute name="configuration"/>
+        <attribute name="classpath.refid"/>
+        <attribute name="report.dir"/>
+        <attribute name="src.test.dir"/>
+        <attribute name="printsummary" default="off" /> <!-- can also be "on" which prints stats, "withOutAndErr" which sends everything to the stdout and stderr-->
 
         <sequential>
-            <property name="junit.configuration" value="@{configuration}" />
-            <property name="junit.report.dir" value="@{report.dir}" />
-            <mkdir dir="@{report.dir}" />
-            <junit printsummary="yes" >
-                <classpath refid="@{classpath.refid}" />
+            <property name="junit.report.xml.dir" value="@{report.dir}/xml"/>
+            <property name="junit.report.html.dir" value="@{report.dir}/html"/>
+            <delete dir="@{report.dir}" />
+            <mkdir dir="${junit.report.xml.dir}"/>
+            <mkdir dir="${junit.report.html.dir}"/>
 
-                <formatter type="brief"/>
+            <junit printsummary="@{printsummary}">
+                <classpath refid="@{classpath.refid}"/>
+
+                <formatter type="xml"/>
 
                 <batchtest fork="yes"
-                           todir="@{report.dir}"
+                           todir="${junit.report.xml.dir}"
                            failureproperty="junit.failed"
                            haltonfailure="no"
                            haltonerror="no">
-                    
+
                     <fileset dir="@{src.test.dir}">
-                        <include name="**/*.java"/>                        
+                        <include name="**/*.java"/>
                     </fileset>
                 </batchtest>
             </junit>
 
-            <fail taskname="run.junit.@{configuration}"
-              message="\n\nOne or more tests failed or produced errors!\nSee output in @{report.dir}\n"              
-              status="66"
-              if="junit.failed"/>
+            <junitreport todir="${junit.report.html.dir}">
+                <fileset dir="${junit.report.xml.dir}">
+                    <include name="*.xml"/>
+                </fileset>
+                <report format="frames" todir="${junit.report.html.dir}"/>
+            </junitreport>
+
+            <antcall target="fail.build.if.tests.fail" />
         </sequential>
     </macrodef>
 
+    <target name="fail.build.if.tests.fail" if="junit.failed">
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" />
+        <echo message="" />
+        <echo message="   ATTENTION!! Tests are failing or have errors!" />
+        <echo message="   Reports in html can be found by going to ${junit.report.html.dir}/index.html" />
+        <echo message="" />
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" />
+
+        <exec command="open ${junit.report.html.dir}/index.html" failonerror="no" spawn="yes"/>
+
+        <fail taskname="run.junit.@{configuration}"
+                  message="One or more tests failed or produced errors (LOOK UP ^^^^^^^)!"
+                  status="66"
+                  if="junit.failed"/>
+
+    </target>
 
 </project>

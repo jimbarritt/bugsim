@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iws" afterPath="$PROJECT_DIR$/bugsim.iws" />
-      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/framework/math/IxMathTestCase.java" afterPath="/Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/framework/math/IxMathTestCase.java" />
-      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/framework/simulation/model/agent/motile/movement/VonMisesAzimuthGeneratorTestCase.java" afterPath="/Users/Jim/Work/code/bugsim/src/java/test/unit/com/ixcode/framework/simulation/model/agent/motile/movement/VonMisesAzimuthGeneratorTestCase.java" />
-      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/build.xml" afterPath="/Users/Jim/Work/code/bugsim/build.xml" />
-      <change type="NEW" beforePath="" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" />
     </list>
     <ignored path="bugsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +82,7 @@
       <file leaf-file-name="junit.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="71" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.71076924">
+            <state line="45" column="22" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.38615385">
               <folding />
             </state>
           </provider>
@@ -552,7 +549,7 @@
     </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="71" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.71076924">
+        <state line="45" column="22" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.38615385">
           <folding />
         </state>
       </provider>
