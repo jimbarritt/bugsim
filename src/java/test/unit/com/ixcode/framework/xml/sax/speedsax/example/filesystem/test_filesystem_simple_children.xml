@@ -1,0 +1,10 @@
+<directory name="root">
+    
+    <security description="this is my security policy">
+        <!-- Note that we currently only support unique node names within the structure so you cannot have
+        <description></description>
+        here unless it is exactly the same as the one for <directory/>
+        This can be fixed by using the xpath.
+        -->
+    </security>
+</directory>

@@ -69,10 +69,10 @@
         <echo message="Not updating libs, use [update.lib] to force update" />
     </target>
 
-    <target name="compile" depends="update.lib.if.required, compile.java.main, compile.java.test.unit"
+    <target name="compile" depends="update.lib.if.required, compile.main, compile.unit.test"
             description="--> compiles all sources"/>
 
-    <target name="compile.java.main">
+    <target name="compile.main">
         <compile-java configuration="main"
                       src.dir="${src.java.main.dir}"
                       classpath.refid="classpath.main"
@@ -81,7 +81,7 @@
     </target>
 
 
-    <target name="compile.java.test.unit">
+    <target name="compile.unit.test">
         <compile-java configuration="test.unit"
                       src.dir="${src.java.test.unit.dir}"
                       classpath.refid="classpath.test.unit"
