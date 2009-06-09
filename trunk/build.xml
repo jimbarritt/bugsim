@@ -11,12 +11,12 @@
     <property name="src.build.macros.dir" value="${src.build.dir}/macros" />
     <property name="src.build.ivy.settings.file" value="${src.build.dir}/ivy-settings.xml"/>
 
-    <property name="src.java.dir" value="${src.dir}/java"/>
-    <property name="src.java.main.dir" value="${src.java.dir}/main"/>
-    <property name="src.java.test.dir" value="${src.java.dir}/test"/>
-    <property name="src.test.java.unit.dir" value="${src.java.test.dir}/unit"/>
+    <property name="src.java.dir" value="${src.dir}/main"/>
+    <property name="src.java.main.dir" value="${src.java.dir}/java"/>
+    <property name="src.java.test.dir" value="${src.dir}/test"/>
+    <property name="src.test.java.unit.dir" value="${src.java.test.dir}/java/unit"/>
 
-    <property name="src.resource.dir" value="${src.dir}/resource"/>
+    <property name="src.resource.dir" value="${src.dir}/main/resource"/>
 
     <property name="lib.build.dir" value="${lib.dir}/build"/>
     <property name="lib.main.dir" value="${lib.dir}/main"/>    
