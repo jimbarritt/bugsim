@@ -12,7 +12,7 @@
 
         <sequential>
             <echo-classpath path.refid="@{classpath.refid}"/>
-            
+
             <property name="open.failure.reports" value="@{open.failure.reports}"/>
 
             <property name="junit.configuration" value="@{configuration}"/>
@@ -22,6 +22,7 @@
             <mkdir dir="${junit.report.xml.dir}"/>
             <mkdir dir="${junit.report.html.dir}"/>
 
+            <echo message="Running unit tests ..." />
             <junit printsummary="@{show.test.output}">
                 <classpath refid="@{classpath.refid}"/>
 
@@ -29,7 +30,7 @@
 
                 <batchtest fork="yes"
                            todir="${junit.report.xml.dir}"
-                           failureproperty="junit.failed"
+                           failureproperty="junit.failed"                           
                            haltonfailure="off"
                            haltonerror="off">
 
@@ -50,13 +51,14 @@
         </sequential>
     </macrodef>
 
-    <macrodef name="junit-open-reports">
+    <macrodef name="junit-open-reports" description="Shows last junit reports in a browser.">
         <attribute name="configuration" />
         <attribute name="report.dir" />
         <sequential>            
             <property name="junit.report.html.dir" value="@{report.dir}/html"/>
             <property name="open.failure.reports" value="true" />
-            <antcall target="open.reports.in.browser" />
+            <antcall target="open.failure.reports.in.browser" />
+            <antcall target="open.error.reports.in.browser" />
         </sequential>
     </macrodef>
 
@@ -71,7 +73,8 @@
         <echo message=""/>
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
 
-        <antcall target="open.reports.in.browser"/>
+        <antcall target="open.failure.reports.in.browser"/>
+        <antcall target="open.error.reports.in.browser"/>
 
         <fail taskname="run.junit.@{configuration}"
               message="Tests failed - LOOK UP ^^^^^^^!"
@@ -80,19 +83,26 @@
 
     </target>
 
-    <target name="open.reports.in.browser" if="open.failure.reports">
+    <target name="open.failure.reports.in.browser" if="open.failure.reports">
         <echo message="Opening failure reports in browser ..."/>
 
         <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
             <arg value="${junit.report.html.dir}/alltests-fails.html"/>
         </exec>
-        <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
-            <arg value="${junit.report.html.dir}/alltests-errors.html"/>
-        </exec>
 
         <exec os="Windows" executable="cmd.exe" failifexecutionfails="no" failonerror="no">
             <arg value="${junit.report.html.dir}/alltests-fails.html"/>
         </exec>
+
+    </target>
+
+    <target name="open.error.reports.in.browser" if="open.failure.reports">
+        <echo message="Opening Error reports in browser ..."/>
+
+        <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
+            <arg value="${junit.report.html.dir}/alltests-errors.html"/>
+        </exec>
+
         <exec os="Windows" executable="cmd.exe" failifexecutionfails="no" failonerror="no">
             <arg value="${junit.report.html.dir}/alltests-errors.html"/>
         </exec>

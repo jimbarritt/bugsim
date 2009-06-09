@@ -3,8 +3,7 @@
  */
 package com.ixcode.bugsim.model.experiment.report.cabbage;
 
-import junit.framework.TestCase;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatisticEntry;
+import junit.framework.*;
 
 /**
  * TestCase for class : CabbageStatisticEntry
@@ -18,7 +17,7 @@ public class CabbageStatisticEntryTestCase extends TestCase {
         entry.addEggs(10);
         entry.addEggs(10);
 
-        assertEquals("Average should be 10", 10d, entry.getEggsPerPlant(), 0.0000);
+        assertEquals("Average", 10d, entry.getEggsPerPlant(), 0.0000);
 
     }
     public void testAverageNumberOfEggs_2() {
@@ -28,7 +27,7 @@ public class CabbageStatisticEntryTestCase extends TestCase {
         entry.addEggs(92);
         entry.addEggs(93);
 
-        assertEquals("Average should be 10", 10d, entry.getEggsPerPlant(), 0.0000);
+        assertEquals("Average", 49.5d, entry.getEggsPerPlant(), 0.0000);
 
     }
 }

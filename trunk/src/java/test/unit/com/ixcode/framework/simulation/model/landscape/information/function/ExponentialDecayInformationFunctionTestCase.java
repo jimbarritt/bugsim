@@ -14,11 +14,6 @@ import junit.framework.TestCase;
 public class ExponentialDecayInformationFunctionTestCase extends TestCase {
 
 
-    public void testCalculateForceOfAttraction_1() {
-
-        runTest(2, 1000, 1, 1, 1);
-    }
-
     public void testCalculateForceOfAttraction_2() {
 
 //        runTest(2, 100000, 1, 10, 10);

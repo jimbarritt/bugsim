@@ -197,25 +197,6 @@ public class StrategyDefinitionParameter extends Parameter implements IParameter
             parameter.reparentChildren();
         }
     }
-//    private void replaceParameter_old(Parameter oldParameter, Parameter newParameter) {
-//        if (log.isInfoEnabled()) {
-//           log.info("[replaceParameter] : strategy=" + getFullyQualifiedName() + " : old=" + oldParameter.getFullyQualifiedName() + " : new=" + newParameter.getFullyQualifiedName() );
-//        }
-//        int index = _parameters.indexOf(oldParameter);
-//        if (index == -1) {
-//            throw new IllegalArgumentException("Tried to replace a newParameter that does not exist!");
-//        }
-//        Parameter oldP = (Parameter)_parameters.remove(index);
-//
-//        _parameters.add(index, newParameter);
-//        newParameter.setParentStrategyS(this);
-//
-//        //@todo should really do this first but it might break stuff:)
-//        oldP.disconnect();
-//
-//        // Need this - we ddon't nescessarily listen to all the children in a derived parameter...
-//        fireParameterReplacedEvent(oldP, newParameter);
-//    }
 
     public void removeParameter(String name) {
         Parameter toRemove = null;
@@ -314,15 +295,6 @@ public class StrategyDefinitionParameter extends Parameter implements IParameter
         return found;
     }
 
-//    public void addEventForwarder(Parameter destination) {
-//        super.addEventForwarder(destination);
-//        for (Iterator itr = _parameters.iterator(); itr.hasNext();) {
-//            Parameter parameter = (Parameter)itr.next();
-//            parameter.addEventForwarder(destination);
-//        }
-//    }
-
-
     public IParameterModel getParent() {
         if (_parentParameter != null) {
             return _parentParameter;
@@ -381,21 +353,10 @@ public class StrategyDefinitionParameter extends Parameter implements IParameter
     }
 
 
-
-    //        boolean disconnected = isConnectedToParameterMap();
-//
-//        String fullyQualifiedName =  getFullyQualifiedName();
-//        if (log.isInfoEnabled()) {
-//            log.info("[disconnect] " + fullyQualifiedName);
-//        }
-//        super.removeParents();
-//        if (disconnected) {
-//            fireParameterDisconnectedEvent(fullyQualifiedName, new Stack());
-//        }
     private List _containerListeners = new ArrayList();
     private List _parameters = new ArrayList();
 
     private Parameter _parentParameter;
-         private static final Logger log = Logger.getLogger(StrategyDefinitionParameter.class);
+    private static final Logger log = Logger.getLogger(StrategyDefinitionParameter.class);
 }
  

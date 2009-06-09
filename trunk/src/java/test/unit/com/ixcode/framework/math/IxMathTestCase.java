@@ -311,13 +311,13 @@ public class IxMathTestCase extends TestCase {
         double[] testValues = new double[]{2.5, 7.5, 2.5, 7.5, 2.5, 7.5};
 
         double stdDeviation = SummaryStatistics.calculateStdDeviationDouble(testValues);
-        assertEquals("stdDeviation", 2.5, stdDeviation, 0.0);
+        assertEquals("stdDeviation", 2.738613d, stdDeviation, 0.00001);
 
     }
 
     public void testRandomGaussian() {
-        int replicants = 100;
-        double standardDeviation = 20;
+        int replicants = 10000;
+        double standardDeviation = 5;
         double mean = 0;
         double[] results = new double[replicants];
         for (int i = 0; i < replicants; ++i) {
@@ -327,12 +327,13 @@ public class IxMathTestCase extends TestCase {
 
         double actualMean = SummaryStatistics.calculateMeanDouble(results);
         double actualSD = SummaryStatistics.calculateStdDeviationDouble(results);
-        assertEquals("mean", 0, actualMean, 0.055);
-        assertEquals("Standard Deviation", standardDeviation, actualSD, 0.05);
+        assertEquals("mean", 0d, actualMean, 0.1);
+        assertEquals("Standard Deviation", standardDeviation, actualSD, 0.5);
 
 
     }
 
+    
     public void testAssertEqualsDouble() {
         assertEquals("test double assert equals", 2.5, 2.5, 0.0);
     }
@@ -349,7 +350,7 @@ public class IxMathTestCase extends TestCase {
         double cy = center.getDoubleY();
 
         for (int degree = 0; degree < 359; ++degree) {
-            for (double subdegree = 0; subdegree <= 1; subdegree+= 1e-2) {
+            for (double subdegree = 0; subdegree <= 1; subdegree+= 1e-1) {
                 double theta = degree + subdegree;
                 runGeneratedHeadingTest(center, theta, radius, cx, cy, dimensions);
             }

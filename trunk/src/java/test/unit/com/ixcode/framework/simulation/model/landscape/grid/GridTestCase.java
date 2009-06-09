@@ -82,20 +82,6 @@ public class GridTestCase extends TestCase {
 
     }
 
-    /**
-     * x=23.230870 : y=102.251120), b =(x=-56.761550 : y=101.149838), bb=(x=-0.07 : y=-0.07 : w=113.14 : h=113.14
-     */
-    public void testLineIntersectsCircle() {
-
-        RectangularCoordinate a = new RectangularCoordinate(23.230870, 102.251120);
-        RectangularCoordinate b = new RectangularCoordinate(-56.761550, 101.149838);
-        CartesianBounds bb = new CartesianBounds(-0.068542, -0.068542, 113.137085, 113.137085);
-//        CartesianBounds bb = new CartesianBounds(0 ,0 ,113,113);
-
-        boolean intersects = Geometry.lineInstersectsCircle(a.getDoubleX(), a.getDoubleY(), b.getDoubleX(), b.getDoubleY(), bb.getDoubleCentreX(), bb.getDoubleCentreY(), bb.getRadiusOfInnerCircle());
-        assertFalse(intersects);
-
-    }
 
 
     public void testEnteredOrExitedBoundary() {
@@ -106,7 +92,7 @@ public class GridTestCase extends TestCase {
         double radius = b.getRadiusOfInnerCircle();
 
         for (int degree = 0; degree < 359; ++degree) {
-            for (double subdegree = 0; subdegree <= 1; subdegree += 1e-2) {
+            for (double subdegree = 0; subdegree <= 1; subdegree += 1e-1) {
                 double azimuth = degree + subdegree;
                 RectangularCoordinate start = centre.moveTo(new AzimuthCoordinate(azimuth, radius));
                 RectangularCoordinate endOutside = centre.moveTo(new AzimuthCoordinate(azimuth, radius + 1e-6));
@@ -140,45 +126,6 @@ public class GridTestCase extends TestCase {
     }
 
 
-    public void testEnteredBoundary_specific() {
-        CartesianBounds b = new CartesianBounds(0, 0, 10000, 10000);
-        boolean isCircular = true;
-        Grid g = GridFactory.createGrid(null, "testGrid", b.getDoubleX(), b.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight(), 1, 1, isCircular);
-        RectangularCoordinate centre = b.getCentre();
-        double radius = b.getRadiusOfInnerCircle();
-
-        double theta = 0.01;
-        RectangularCoordinate start = centre.moveTo(new AzimuthCoordinate(theta, radius));
-        RectangularCoordinate end = centre.moveTo(new AzimuthCoordinate(theta, radius + 1e-6));
-
-        Intersection ix = g.enteredBoundary(start, end);
-        assertNotNull(ix);
-        assertTrue("should intersect at start! theta=" + theta + ", " + start, ix.intersects());
-        RectangularCoordinate ixCoord = ix.getCoordinate();
-        assertEquals(start, ixCoord);
-
-
-    }
-
-    public void testEnteredBoundary_specific_1() {
-        CartesianBounds b = new CartesianBounds(0, 0, 10000, 10000);
-        boolean isCircular = true;
-        Grid g = GridFactory.createGrid(null, "testGrid", b.getDoubleX(), b.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight(), 1, 1, isCircular);
-        RectangularCoordinate centre = b.getCentre();
-        double radius = b.getRadiusOfInnerCircle();
-
-        double azimuth = 0.07;
-        RectangularCoordinate start = centre.moveTo(new AzimuthCoordinate(azimuth, radius));
-        RectangularCoordinate end = centre.moveTo(new AzimuthCoordinate(azimuth, radius + 1e-6));
-
-        Intersection ix = g.enteredBoundary(start, end);
-        assertNotNull(ix);
-        assertTrue("should intersect at start! azimuth=" + azimuth + ", " + start, ix.intersects());
-        RectangularCoordinate ixCoord = ix.getCoordinate();
-        assertEquals(start, ixCoord);
-
-
-    }
 
     private static final Random RANDOM = new Random();
 

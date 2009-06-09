@@ -23,11 +23,7 @@ public class GravitationalCalculatorTestCase extends TestCase {
     }
 
 
-    public void testCalculateNetDisplacement_single_2() {
-        AzimuthCoordinate expected = new AzimuthCoordinate(0, 0.01);
-        runSingleAttractorTest(30, 30, 90, 90, expected);
-    }
-
+   
 
     private void runSingleAttractorTest(double xAttractor, double yAttractor, double xAgent, double yAgent, AzimuthCoordinate expected) {
         List attractors = new ArrayList();
