@@ -9,7 +9,7 @@ import com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class TestPlanTemplate {
+public class FakePlanTemplate {
 
 
     public static final String TEMPLATE_NAME = "expX-trX";
@@ -20,7 +20,7 @@ public class TestPlanTemplate {
 
     public static void registerTemplate() {
         ExperimentTemplateRegistry REGISTRY = ExperimentTemplateRegistry.getInstance();
-        REGISTRY.registerTemplate(TEMPLATE_NAME, TEMPLATE_DESCRIPTION, TEMPLATE_LONG_DESCRIPTION, TestPlanTemplate.class, TEMPLATE_FACTORY_METHOD, TestPlanTemplate.class,  TEMPLATE_CONFIGURATION_METHOD);
+        REGISTRY.registerTemplate(TEMPLATE_NAME, TEMPLATE_DESCRIPTION, TEMPLATE_LONG_DESCRIPTION, FakePlanTemplate.class, TEMPLATE_FACTORY_METHOD, FakePlanTemplate.class,  TEMPLATE_CONFIGURATION_METHOD);
     }
 
     public static ExperimentPlan createDefaultPlan() {

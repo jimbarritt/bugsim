@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class TestCSVHandler implements ICSVHandler {
+public class FakeCSVHandler implements ICSVHandler {
 
     public void handleHeadings(String[] headings) {
         _headings = headings;

@@ -23,7 +23,7 @@ import java.beans.PropertyChangeListener;
  * TestCase for class : BoundaryPanel
  * Created     : Jan 28, 2007 @ 2:25:00 PM by jim
  */
-public class BoundaryPanelTestCase {
+public class BoundaryPanelMain {
 
     public static void main(String[] args) {
         testPanel();
@@ -128,6 +128,6 @@ public class BoundaryPanelTestCase {
         private String _name;
     }
 
-    private static final Logger log = Logger.getLogger(BoundaryPanelTestCase.class);
+    private static final Logger log = Logger.getLogger(BoundaryPanelMain.class);
 
 }

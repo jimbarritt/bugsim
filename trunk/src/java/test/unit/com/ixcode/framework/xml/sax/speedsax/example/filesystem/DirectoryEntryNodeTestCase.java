@@ -3,8 +3,8 @@ package com.ixcode.framework.xml.sax.speedsax.example.filesystem;
 /**
  */
 
-import com.ixcode.framework.xml.sax.speedsax.NodeHandler;
-import com.ixcode.framework.xml.sax.speedsax.NodeHandlerTestHelper;
+import com.ixcode.framework.xml.sax.speedsax.NodeHandlerFixture;
+import com.ixcode.framework.xml.sax.speedsax.*;
 import com.ixcode.framework.xml.sax.speedsax.example.filesystem.model.DirectoryEntry;
 import junit.framework.TestCase;
 
@@ -21,7 +21,7 @@ public class DirectoryEntryNodeTestCase extends TestCase {
     }
 
     public void testParseSimpleCollection() throws Exception {
-        NodeHandlerTestHelper.executeParse(this, "test_filesystem_simple_collection.xml", _nodeHandler);
+        NodeHandlerFixture.executeParse(this, "test_filesystem_simple_collection.xml", _nodeHandler);
         DirectoryEntry actual = (DirectoryEntry)_nodeHandler.getRootNode().getCreatedObject();
 
         assertNotNull("Root Directory", actual);
@@ -29,7 +29,7 @@ public class DirectoryEntryNodeTestCase extends TestCase {
     }
 
     public void testParseComplex() throws Exception {
-        NodeHandlerTestHelper.executeParse(this, "test_filesystem.xml", _nodeHandler);
+        NodeHandlerFixture.executeParse(this, "test_filesystem.xml", _nodeHandler);
         DirectoryEntry actual = (DirectoryEntry)_nodeHandler.getRootNode().getCreatedObject();
 
         assertNotNull("Root Directory", actual);
@@ -38,7 +38,7 @@ public class DirectoryEntryNodeTestCase extends TestCase {
 
     public void testParseRecursive() throws Exception {
 
-        NodeHandlerTestHelper.executeParse(this, "test_filesystem_recursive.xml", _nodeHandler);
+        NodeHandlerFixture.executeParse(this, "test_filesystem_recursive.xml", _nodeHandler);
         DirectoryEntry actual = (DirectoryEntry)_nodeHandler.getRootNode().getCreatedObject();
 
         assertNotNull("Root Directory", actual);

@@ -17,9 +17,9 @@ import java.beans.PropertyChangeListener;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class ExperimentTestFrame extends JFrameExtension {
+public class ExperimentControllerFrame extends JFrameExtension {
 
-    public ExperimentTestFrame(ExperimentController experimentController) throws HeadlessException {
+    public ExperimentControllerFrame(ExperimentController experimentController) throws HeadlessException {
         super("Test Experiment Control");
 
         createContent(experimentController);

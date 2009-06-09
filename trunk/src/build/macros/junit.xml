@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="junit">
-    
+
     <macrodef name="run-junit">
         <attribute name="configuration"/>
         <attribute name="classpath.refid"/>
         <attribute name="report.dir"/>
         <attribute name="src.test.dir"/>
-        <attribute name="show.test.output" default="off" /> <!-- can also be "on" which prints stats, "withOutAndErr" which sends everything to the stdout and stderr-->
-        <attribute name="open.failure.reports" default="true" />
+        <attribute name="show.test.output" default="off"/>
+        <!-- can also be "on" which prints stats, "withOutAndErr" which sends everything to the stdout and stderr-->
+        <attribute name="open.failure.reports" default="true"/>
 
         <sequential>
+            <echo-classpath path.refid="@{classpath.refid}"/>
+            
             <property name="open.failure.reports" value="@{open.failure.reports}"/>
 
             <property name="junit.configuration" value="@{configuration}"/>
             <property name="junit.report.xml.dir" value="@{report.dir}/xml"/>
             <property name="junit.report.html.dir" value="@{report.dir}/html"/>
-            <delete dir="@{report.dir}" />
+            <delete dir="@{report.dir}"/>
             <mkdir dir="${junit.report.xml.dir}"/>
             <mkdir dir="${junit.report.html.dir}"/>
 
@@ -27,11 +30,11 @@
                 <batchtest fork="yes"
                            todir="${junit.report.xml.dir}"
                            failureproperty="junit.failed"
-                           haltonfailure="no"
-                           haltonerror="no">
+                           haltonfailure="off"
+                           haltonerror="off">
 
                     <fileset dir="@{src.test.dir}">
-                        <include name="**/*.java"/>
+                        <include name="**/*Test*.java"/>
                     </fileset>
                 </batchtest>
             </junit>
@@ -39,42 +42,61 @@
             <junitreport todir="${junit.report.html.dir}">
                 <fileset dir="${junit.report.xml.dir}">
                     <include name="*.xml"/>
-                </fileset>                
+                </fileset>
                 <report format="frames" todir="${junit.report.html.dir}"/>
             </junitreport>
 
-            <antcall target="fail.build.if.tests.fail" />
+            <antcall target="fail.build.if.tests.fail"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="junit-open-reports">
+        <attribute name="configuration" />
+        <attribute name="report.dir" />
+        <sequential>            
+            <property name="junit.report.html.dir" value="@{report.dir}/html"/>
+            <property name="open.failure.reports" value="true" />
+            <antcall target="open.reports.in.browser" />
         </sequential>
     </macrodef>
 
 
     <target name="fail.build.if.tests.fail" if="junit.failed">
-        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" />
-        <echo message="" />
-        <echo message="   ATTENTION!! Tests [${junit.configuration}] are failing or have errors!" />
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+        <echo message=""/>
+        <echo message="   ATTENTION!! Tests [${junit.configuration}] are failing or have errors!"/>
         <echo message="   Reports in html can be found by going to:"/>
-        <echo message="   ${junit.report.html.dir}/index.html" />
-        <echo message="   These should pop up in a browser window for your pleasure." />
-        <echo message="" />
-        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" />
+        <echo message="   ${junit.report.html.dir}/index.html"/>
+        <echo message="   These should pop up in a browser window for your pleasure."/>
+        <echo message=""/>
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
 
-        <antcall target="open.reports.in.browser" />
-        
+        <antcall target="open.reports.in.browser"/>
+
         <fail taskname="run.junit.@{configuration}"
-                  message="Tests failed - LOOK UP ^^^^^^^!"
-                  status="66"
-                  if="junit.failed"/>
+              message="Tests failed - LOOK UP ^^^^^^^!"
+              status="66"
+              if="junit.failed"/>
 
     </target>
 
     <target name="open.reports.in.browser" if="open.failure.reports">
-        <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
-            <arg value="${junit.report.html.dir}/alltests-errors.html" />
-        </exec>
+        <echo message="Opening failure reports in browser ..."/>
 
         <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
-            <arg value="${junit.report.html.dir}/alltests-fails.html" />
+            <arg value="${junit.report.html.dir}/alltests-fails.html"/>
         </exec>
+        <exec os="Mac OS X" executable="open" failifexecutionfails="no" failonerror="no">
+            <arg value="${junit.report.html.dir}/alltests-errors.html"/>
+        </exec>
+
+        <exec os="Windows" executable="cmd.exe" failifexecutionfails="no" failonerror="no">
+            <arg value="${junit.report.html.dir}/alltests-fails.html"/>
+        </exec>
+        <exec os="Windows" executable="cmd.exe" failifexecutionfails="no" failonerror="no">
+            <arg value="${junit.report.html.dir}/alltests-errors.html"/>
+        </exec>
+
     </target>
 
 </project>

@@ -13,7 +13,7 @@ import junit.framework.TestCase;
 import java.net.URL;
 
 /**
- * TestCase for class : ExperimentPlanXML
+ * @FunctionalTest for class : ExperimentPlanXML
  *
  * @todo this needs to get split up and moved into Bugsim cos we are using the CabbageInitialisationParameter classes
  */
@@ -21,7 +21,7 @@ public class ExperimentPlanXMLTestCase extends TestCase {
 
 
     protected void setUp() throws Exception {
-        TestPlanTemplate.registerTemplate();
+        FakePlanTemplate.registerTemplate();
         BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
     }
 

@@ -21,7 +21,7 @@ public class DerivedParameterTestCase extends TestCase {
         DerivedParameter derivedP = new DerivedParameter(P_DERIVED, sp, DirectDerivationCalculation.INSTANCE);
 
 
-        TestParameterListener l =new TestParameterListener();
+        FakeParameterListener l =new FakeParameterListener();
         derivedP.addParameterListener(l);
 
         sourceP.setValue(333d);

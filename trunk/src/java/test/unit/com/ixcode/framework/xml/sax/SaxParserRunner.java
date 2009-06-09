@@ -19,29 +19,29 @@ import java.io.*;
  * Time: 05:00:36
  * To change this template use File | Settings | File Templates.
  */
-public class TestSaxParser {
+public class SaxParserRunner {
 
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: com.ixcode.framework.xml.sax.TestSaxParser filename.xml");
+            System.out.println("Usage: com.ixcode.framework.xml.sax.SaxParserRunner filename.xml");
             System.exit(-1);
         }
-        TestSaxParser parser = new TestSaxParser();
+        SaxParserRunner parserRunner = new SaxParserRunner();
         try {
             File testFile = new File(args[0]);
-            parser.parse(testFile);
+            parserRunner.parse(testFile);
         } catch (Throwable t) {
             t.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.exit(-1);
         }
     }
 
-    public TestSaxParser() {
+    public SaxParserRunner() {
     }
 
     public void parse(File inputFile) throws IOException, SAXException {
         SAXParser parser = new SAXParser();
-        parser.setContentHandler(new TestContentHandler());
+        parser.setContentHandler(new StubContentHandler());
         FileReader in = null;
         try {
             in = new FileReader(inputFile);

@@ -38,7 +38,7 @@ public class BugsimParameterMapTestCase extends TestCase {
         Parameter outerDimensionP = params.findParameter(R_OUTER_DIMENSION);
         assertNotNull(R_OUTER_DIMENSION, outerDimensionP);
 
-        TestParameterListener l = new TestParameterListener();
+        FakeParameterListener l = new FakeParameterListener();
         outerDimensionP.addParameterListener(l);
 
 //        innerDimensionP.setValue(new CartesianDimensions(500));

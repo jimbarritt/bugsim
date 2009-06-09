@@ -14,13 +14,13 @@ public class CartesianBoundsFormatTestCase extends TestCase {
     public void testFormat() {
         CartesianBounds b = new CartesianBounds(10, 20, 30, 40);
         String actual = _format.format(b);
-        String expected = "x:10.0 y:20.0 w:30.0 h:40.0";
+        String expected = "x=10.00000 : y=20.00000 : w=30.00000 : h=40.00000";
         assertEquals(expected, actual);
     }
 
 
     public void testParse() throws JavaBeanParseException {
-        CartesianBounds b = (CartesianBounds)_format.parse("x:10.0 y:20.0 w:30.0 h:40.0");
+        CartesianBounds b = (CartesianBounds)_format.parse("x=10.00000 : y=20.00000 : w=30.00000 : h=40.00000");
         assertEquals(10.0, b.getDoubleX(), 0.0000001);
         assertEquals(20.0, b.getDoubleY(), 0.0000001);
         assertEquals(30.0, b.getDoubleWidth(), 0.0000001);

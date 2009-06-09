@@ -18,11 +18,11 @@ import java.io.IOException;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class TestExperiment implements IExperiment, ISummaryStatisticsReporter {
+public class FakeExperiment implements IExperiment, ISummaryStatisticsReporter {
 
-    public TestExperiment() {
-        _plan = new TestExperimentPlan(2);
-        _endTimestep = _plan.getNumberOfTimesteps();
+    public FakeExperiment() {
+        _planWithManipulations = new FakeExperimentPlanWithManipulations(2);
+        _endTimestep = _planWithManipulations.getNumberOfTimesteps();
     }
 
     public void reportProgress(ExperimentProgress progress) {
@@ -83,13 +83,13 @@ public class TestExperiment implements IExperiment, ISummaryStatisticsReporter {
     public void initialiseIteration(ExperimentProgress progress, ParameterMap params) {
 
         ParameterMapDebug.debugParams(params);
-        String param1 = params.findParameter(TestExperimentPlan.MANIPULATED_PARAM_1).getStringValue();
-        String param2 = params.findParameter(TestExperimentPlan.MANIPULATED_PARAM_2).getStringValue();
-        String param3 = params.findParameter(TestExperimentPlan.MANIPULATED_PARAM_3).getStringValue();
-        long param4 = params.findParameter(TestExperimentPlan.MANIPULATED_PARAM_4).getLongValue();
-        long derived = params.findParameter(TestExperimentPlan.DERIVED_PARAM).getLongValue();
+        String param1 = params.findParameter(FakeExperimentPlanWithManipulations.MANIPULATED_PARAM_1).getStringValue();
+        String param2 = params.findParameter(FakeExperimentPlanWithManipulations.MANIPULATED_PARAM_2).getStringValue();
+        String param3 = params.findParameter(FakeExperimentPlanWithManipulations.MANIPULATED_PARAM_3).getStringValue();
+        long param4 = params.findParameter(FakeExperimentPlanWithManipulations.MANIPULATED_PARAM_4).getLongValue();
+        long derived = params.findParameter(FakeExperimentPlanWithManipulations.DERIVED_PARAM).getLongValue();
 
-        Parameter algorithmContainer = (Parameter)params.findParameter(TestExperimentPlan.ALGORITHM_PARAM);
+        Parameter algorithmContainer = (Parameter)params.findParameter(FakeExperimentPlanWithManipulations.ALGORITHM_PARAM);
         StrategyDefinitionParameter algorithm = (StrategyDefinitionParameter)algorithmContainer.getValue();
 
 
@@ -97,12 +97,12 @@ public class TestExperiment implements IExperiment, ISummaryStatisticsReporter {
             log.info("Initialise Iteration : param1=" + param1+ ", param2=" + param2 + ", param3=" + param3 + ", param4=" + param4 + ", param4X1000=" + derived);
             log.info("AlgorithmContainer : " + algorithmContainer.getName() + " contains: " + algorithm.getName() + ", implemented by " + algorithm.getImplementingClassName());
             if (algorithm.getName().equals("algorithm1")) {
-                String parameter1 = params.findParameter(TestExperimentPlan.ALGORITHM1_PARAM_1).getStringValue();
+                String parameter1 = params.findParameter(FakeExperimentPlanWithManipulations.ALGORITHM1_PARAM_1).getStringValue();
                  if (log.isInfoEnabled()) {
                      log.info("Algorithm1 Parameter1= " + parameter1);
                  }
             }  else if (algorithm.getName().equals("algorithm2")) {
-                String parameter1 = params.findParameter(TestExperimentPlan.ALGORITHM2_PARAM_1).getStringValue();
+                String parameter1 = params.findParameter(FakeExperimentPlanWithManipulations.ALGORITHM2_PARAM_1).getStringValue();
                  if (log.isInfoEnabled()) {
                      log.info("Algorithm2 Parameter1= " + parameter1);
                  }
@@ -141,7 +141,7 @@ public class TestExperiment implements IExperiment, ISummaryStatisticsReporter {
 
 
     public ExperimentPlan getExperimentPlan() {
-        return _plan;
+        return _planWithManipulations;
     }
 
     public void executeTimestep() {
@@ -160,8 +160,8 @@ public class TestExperiment implements IExperiment, ISummaryStatisticsReporter {
     }
 
 
-    private static final Logger log = Logger.getLogger(TestExperiment.class);
-    private TestExperimentPlan _plan;
+    private static final Logger log = Logger.getLogger(FakeExperiment.class);
+    private FakeExperimentPlanWithManipulations _planWithManipulations;
 
     private long _currentTimestep;
     private long _endTimestep;

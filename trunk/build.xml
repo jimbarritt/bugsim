@@ -16,6 +16,8 @@
     <property name="src.java.test.dir" value="${src.java.dir}/test"/>
     <property name="src.test.java.unit.dir" value="${src.java.test.dir}/unit"/>
 
+    <property name="src.resource.dir" value="${src.dir}/resource"/>
+
     <property name="lib.build.dir" value="${lib.dir}/build"/>
     <property name="lib.main.dir" value="${lib.dir}/main"/>    
     <property name="lib.test.unit.dir" value="${lib.dir}/test.unit"/>
@@ -27,7 +29,7 @@
 
     <property name="target.report.dir" value="${target.dir}/report"/>
     <property name="target.report.test.dir" value="${target.report.dir}/test"/>
-    <property name="target.report.test.unit" value="${target.report.test.dir}/unit"/>
+    <property name="target.report.test.unit.dir" value="${target.report.test.dir}/unit"/>
 
     <import file="${src.build.macros.dir}/ivy.xml"/>
     <import file="${src.build.macros.dir}/report.xml"/>
@@ -37,7 +39,8 @@
 
 
     <path id="classpath.main">
-        <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>            
+        <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>
+        <path location="${src.resource.dir}/" />
     </path>
 
     <path id="classpath.test.unit">
@@ -51,7 +54,17 @@
         <path refid="classpath.test.unit" />
     </path>
 
+    <target name="report.config" description="--> lists some important configuration information">
+        <echo message="ant.home        : ${ant.home}"/>
+        <echo message="os.name         : ${os.name}"/>
+        <echo message="basedir         : ${basedir}"/>
+        <echo message="skip.update.lib : ${skip.update.lib}" />
+    </target>
 
+    <target name="report.unit.test.failures" description="--> opens the unit test failures in a browser">
+        <junit-open-reports configuration="unit.test"
+                            report.dir="${target.report.test.unit.dir}" />
+    </target>
 
     <target name="clean" description="--> remove all files created with this build script">
         <clean-dir target.dir="${target.dir}"/>
@@ -89,7 +102,8 @@
                       src.dir="${src.java.main.dir}"
                       classpath.refid="classpath.main"
                       target.classes.dir="${target.classes.main.dir}"
-                      java.version="1.4"/>
+                      java.version="1.4"
+                      hide.warnings="false"/>
     </target>
 
 
@@ -101,20 +115,15 @@
                       java.version="1.4"/>
     </target>
 
-
-    <target name="run.unit.test">
+    <target name="run.unit.tests" depends="compile.main, compile.unit.test" 
+            description="--> compiles and runs the unit tests">
          <run-junit configuration="unit.test"
                     classpath.refid="classpath.test.unit.run"
-                    report.dir="${target.report.test.unit}"
-                    src.test.dir="${src.test.java.unit.dir}"/>
+                    report.dir="${target.report.test.unit.dir}"
+                    src.test.dir="${src.test.java.unit.dir}" />
     </target>
 
-    <target name="report.config">
-        <echo message="ant.home        : ${ant.home}"/>
-        <echo message="os.name         : ${os.name}"/>
-        <echo message="basedir         : ${basedir}"/>
-        <echo message="skip.update.lib : ${skip.update.lib}" />
-    </target>
+
 
     <target name="build-osx-app" depends="report.config, clean"
             description="--> does everything nescessary to create a .app package in the target directory">

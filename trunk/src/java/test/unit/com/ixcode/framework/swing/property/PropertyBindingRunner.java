@@ -18,10 +18,10 @@ import java.awt.event.ActionListener;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class TestPropertyBindingFrame extends JFrame {
+public class PropertyBindingRunner extends JFrame {
 
 
-    public TestPropertyBindingFrame() throws HeadlessException, JavaBeanException {
+    public PropertyBindingRunner() throws HeadlessException, JavaBeanException {
         super("Test Property Binding");
 
         _model = new TestModel();

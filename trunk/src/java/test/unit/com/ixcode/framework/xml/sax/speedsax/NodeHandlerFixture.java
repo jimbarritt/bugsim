@@ -13,11 +13,11 @@ import java.io.InputStreamReader;
 
 /**
  */
-public class NodeHandlerTestHelper {
+public class NodeHandlerFixture {
     public static void executeParse(TestCase testCase, String inputResource, ContentHandler handlerToTest) throws IOException, SAXException {
 
         InputStreamReader in = new InputStreamReader(testCase.getClass().getResourceAsStream(inputResource));
-        Assert.assertNotNull("Could not find resource '" + inputResource + "' it should be on the classpath in the same location as this testcase, " + NodeHandlerTestHelper.class.getName(), in);
+        Assert.assertNotNull("Could not find resource '" + inputResource + "' it should be on the classpath in the same location as this testcase, " + NodeHandlerFixture.class.getName(), in);
 
         SAXParser parser = new SAXParser();
         parser.setContentHandler(handlerToTest);
@@ -39,5 +39,5 @@ public class NodeHandlerTestHelper {
         }
     }
 
-    private static final Logger log = Logger.getLogger(NodeHandlerTestHelper.class);
+    private static final Logger log = Logger.getLogger(NodeHandlerFixture.class);
 }

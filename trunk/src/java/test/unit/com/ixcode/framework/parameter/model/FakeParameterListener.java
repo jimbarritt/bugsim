@@ -10,7 +10,7 @@ import java.util.List;
  *  Description : ${CLASS_DESCRIPTION}
  *  Created     : Jan 29, 2007 @ 2:57:24 PM by jim
  */
-public class TestParameterListener implements IParameterListener, IParameterContainerListener {
+public class FakeParameterListener implements IParameterListener, IParameterContainerListener {
 
 
     public void parameterDisconnected(ParameterDisconnectedEvent event) {
