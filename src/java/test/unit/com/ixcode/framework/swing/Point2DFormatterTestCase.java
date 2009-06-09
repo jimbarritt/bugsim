@@ -16,7 +16,7 @@ public class Point2DFormatterTestCase extends TestCase {
     public void testDoubleformat() {
         Point2D point = new Point2D.Double(23.4567d, 68574.4565767787d);
         String actual = Point2DFormatter.Double.format(point);
-        assertEquals("doubleFormat", "(23.4567,68574.4565767787)", actual);
+        assertEquals("doubleFormat", "(23.46,68574.46)", actual);
 
     }
 
