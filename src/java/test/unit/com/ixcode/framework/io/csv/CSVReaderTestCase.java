@@ -22,7 +22,7 @@ public class CSVReaderTestCase extends TestCase {
 
         CSVReader reader = new CSVReader(2, true);
 
-        TestCSVHandler handler= new TestCSVHandler();
+        FakeCSVHandler handler= new FakeCSVHandler();
 
         URL url = this.getClass().getResource("/test/TestImport.csv");
         assertNotNull("Could not load test data!", url);
@@ -33,7 +33,7 @@ public class CSVReaderTestCase extends TestCase {
 
         List rows = handler.getRows();
         for (Iterator itr = rows.iterator(); itr.hasNext();) {
-            TestCSVHandler.Row row = (TestCSVHandler.Row)itr.next();
+            FakeCSVHandler.Row row = (FakeCSVHandler.Row)itr.next();
             assertEquals("RowId", handler.getRows().indexOf(row) +1, row.getId());
             for (int i=0;i<row.getData().length;++i) {
                 String value = row.getData()[i];

@@ -300,26 +300,36 @@ public class ExperimentController extends ModelBase {
             if (log.isInfoEnabled()) {
                 log.info("Log File output is being redirected to '" + logFile.getAbsolutePath() + "'");
             }
+
+            detatchFromStartupLogAppender();
+
+            initialiseFileAppender(logFile);
+        }
+    }
+
+    private void initialiseFileAppender(File logFile) {
+        try {
+            String pattern = "%d{dd-MM-yyyy hh:mm:ss} [%c{2}] %p - %m%n";
+            PatternLayout layout = new PatternLayout(pattern);
+
+            _log4JAppender = new RollingFileAppender(layout, logFile.getAbsolutePath(), false);
+            Logger.getRootLogger().addAppender(_log4JAppender);
+
+            if (log.isInfoEnabled()) {
+                log.info("Log output redirected from startup log.");
+            }
+        } catch (IOException e) {
+            _exceptionHandler.handle(e);
+        }
+    }
+
+    private void detatchFromStartupLogAppender() {
+        if (_startupLogAppenderName != null) {
             Appender a = Logger.getRootLogger().getAppender(_startupLogAppenderName);
             if (a == null) {
                 _exceptionHandler.handle(new IOException("No appender called '" + _startupLogAppenderName + "' found to detatch from."));
             }
             Logger.getRootLogger().removeAppender(a);
-
-
-            try {
-                String pattern = "%d{dd-MM-yyyy hh:mm:ss} [%c{2}] %p - %m%n";
-                PatternLayout layout = new PatternLayout(pattern);
-
-                _log4JAppender = new RollingFileAppender(layout, logFile.getAbsolutePath(), false);
-                Logger.getRootLogger().addAppender(_log4JAppender);
-
-                if (log.isInfoEnabled()) {
-                    log.info("Log output redirected from startup log.");
-                }
-            } catch (IOException e) {
-                _exceptionHandler.handle(e);
-            }
         }
     }
 

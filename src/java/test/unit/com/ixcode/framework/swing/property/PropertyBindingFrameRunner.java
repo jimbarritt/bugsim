@@ -3,17 +3,17 @@
  */
 package com.ixcode.framework.swing.property;
 
-import com.ixcode.framework.junit.SwingUnitTestHelper;
+import com.ixcode.framework.junit.SwingUnitRunner;
 import junit.framework.TestCase;
 
 /**
  * TestCase for class : PropertyBinding
  */
-public class PropertyBindingTestCase extends TestCase {
+public class PropertyBindingFrameRunner extends TestCase {
 
 
     public void testPropertyBinding() throws Exception {
-        SwingUnitTestHelper.runFrame(new TestPropertyBindingFrame());
+        SwingUnitRunner.runFrame(new PropertyBindingRunner());
 
     }
 

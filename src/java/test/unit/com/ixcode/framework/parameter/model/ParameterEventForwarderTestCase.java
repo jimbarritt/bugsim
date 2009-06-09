@@ -29,7 +29,7 @@ public class ParameterEventForwarderTestCase extends TestCase {
         List derivedPSourceParams = DerivedStrategyCalculation.createSourceParameters(strategyContainerP);
         DerivedParameter derivedP = new DerivedParameter(P_DERIVED_PARAMETER, derivedPSourceParams, new DerivedStrategyCalculation());
 
-        TestParameterListener l = new TestParameterListener();
+        FakeParameterListener l = new FakeParameterListener();
 
         derivedP.addParameterListener(l);
 
@@ -80,23 +80,23 @@ public class ParameterEventForwarderTestCase extends TestCase {
         Parameter calculatedFromDerivedP = new Parameter(P_CALCULATED_FROM_DERIVED, calculatedS);
 
         // Add the listeners....
-        TestParameterListener sourceBoundsListener = new TestParameterListener();
+        FakeParameterListener sourceBoundsListener = new FakeParameterListener();
         sourceBoundsDP.addParameterListener(sourceBoundsListener);
 
-        TestParameterListener parentSPListener = new TestParameterListener();
+        FakeParameterListener parentSPListener = new FakeParameterListener();
         parentSP.addParameterListener(parentSPListener);
         parentSP.addParameterContainerListener(parentSPListener);
 
-        TestParameterListener sourceContainerListener = new TestParameterListener();
+        FakeParameterListener sourceContainerListener = new FakeParameterListener();
         paramP.addParameterListener(sourceContainerListener);
 
-        TestParameterListener derivedPListener = new TestParameterListener();
+        FakeParameterListener derivedPListener = new FakeParameterListener();
         derivedP.addParameterListener(derivedPListener);
 
-        TestParameterListener calculatedPListener = new TestParameterListener();
+        FakeParameterListener calculatedPListener = new FakeParameterListener();
         calculatedFromDerivedP.addParameterListener(calculatedPListener);
 
-        TestParameterListener locListener = new TestParameterListener();
+        FakeParameterListener locListener = new FakeParameterListener();
         locationP.addParameterListener(locListener);
 
         // Change something...

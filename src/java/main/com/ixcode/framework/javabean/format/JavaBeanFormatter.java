@@ -175,7 +175,10 @@ public class JavaBeanFormatter {
         _formats.putAll(EXTENSION_FORMATS);
     }
 
-
+    public static boolean isExtensionFormatRegistered(Locale locale, Class valueClass) {
+        ValueFormatKey key = new ValueFormatKey(locale, valueClass);
+        return EXTENSION_FORMATS.containsKey(key);
+    }
 
     public static void registerExtensionFormat(Locale locale, Class valueClass, IJavaBeanValueFormat format) {
         ValueFormatKey key = new ValueFormatKey(locale, valueClass);
@@ -190,4 +193,6 @@ public class JavaBeanFormatter {
 
     private static final Locale DEFAULT_LOCALE = Locale.UK;
     private Map _formats = new HashMap();
+
+
 }

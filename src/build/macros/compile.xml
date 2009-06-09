@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="compile">
-    <macrodef name="echo-classpath">
-        <attribute name="path.refid"/>
+
+    <macrodef name="copy-resources">
+        <attribute name="src.dir"/>
+        <attribute name="dest.dir"/>
         <sequential>
-            <property name="classpath.out" refid="@{path.refid}"/>
-            <echo message="@{path.refid}     : ${classpath.out}"/>
+            <echo message="copying resources from java source dir..." />
+            <copy todir="@{dest.dir}">
+                <fileset dir="@{src.dir}">
+                    <exclude name="**/*.java" />
+                </fileset>
+            </copy>
         </sequential>
     </macrodef>
 
@@ -16,7 +22,7 @@
 
         <attribute name="java.version" default="1.5"/>
         <attribute name="debug" default="true"/>
-        <attribute name="nowarn" default="true"/>
+        <attribute name="hide.warnings" default="true"/>
         <attribute name="print.classpath" default="true"/>
 
 
@@ -37,10 +43,13 @@
                    target="@{java.version}"
                    source="@{java.version}"
                    debug="@{debug}"
-                   nowarn="@{nowarn}"
+                   nowarn="@{hide.warnings}"
                    destdir="@{target.classes.dir}">
                 <classpath refid="@{classpath.refid}"/>
             </javac>
+
+            <copy-resources src.dir="@{src.dir}"
+                            dest.dir="@{target.classes.dir}" />
         </sequential>
     </macrodef>
 

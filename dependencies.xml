@@ -48,6 +48,11 @@
             <artifact name="struts" type="source" ext="jar" m:classifier="sources"/>
         </dependency>
 
+        <dependency conf="main->default" org="xerces" name="xercesImpl" rev="2.4.0" transitive="false">
+            <artifact name="xercesImpl" type="jar" ext="jar"/>
+            <artifact name="xercesImpl" type="source" ext="jar" m:classifier="sources"/>
+        </dependency>
+
         <!-- common test jars -->
         <dependency conf="test.unit->default" org="junit" name="junit" rev="4.6" transitive="false">
             <artifact name="junit" type="jar" ext="jar"/>

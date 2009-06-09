@@ -3,17 +3,13 @@
  */
 package com.ixcode.framework.experiment.model;
 
-import junit.framework.TestCase;
+import com.ixcode.framework.parameter.model.*;
+import junit.framework.*;
 
-import java.text.Format;
-import java.text.SimpleDateFormat;
-
-import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
-import com.ixcode.framework.parameter.model.Parameter;
-import com.ixcode.framework.experiment.model.ExperimentController;
+import java.text.*;
 
 /**
- * TestCase for class : Experiment
+ * @FunctionalTest for class : Experiment
  */
 public class ExperimentControllerTestCase extends TestCase {
 
@@ -21,13 +17,13 @@ public class ExperimentControllerTestCase extends TestCase {
     /**
      * Launches a simple gui through which you can test the control of the experiment.
      */
-    public void testControl() throws InterruptedException {
-        TestExperiment experiment = new TestExperiment();
+    public void disabledTestControl() throws InterruptedException {
+        FakeExperiment experiment = new FakeExperiment();
         ExperimentController experimentController = new ExperimentController(experiment, MultipleProcessController.SINGLE_PROCESS);
         experimentController.setOutputResults(true);
         experimentController.reset();
 
-        final ExperimentTestFrame f = new ExperimentTestFrame(experimentController);
+        final ExperimentControllerFrame f = new ExperimentControllerFrame(experimentController);
 
         Thread t = new Thread(new Runnable() {
             public void run() {

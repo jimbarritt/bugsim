@@ -8,7 +8,7 @@ import javax.swing.*;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class SwingUnitTestHelper {
+public class SwingUnitRunner {
 
     public static void runFrame(final JFrame f) throws InterruptedException {
 

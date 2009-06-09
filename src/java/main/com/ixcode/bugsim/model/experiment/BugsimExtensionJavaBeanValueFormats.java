@@ -3,14 +3,11 @@
  */
 package com.ixcode.bugsim.model.experiment;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParametersFormat;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
-import com.ixcode.framework.javabean.format.JavaBeanFormatter;
-import com.ixcode.framework.javabean.format.TypeSafeEnumFormat;
-import com.ixcode.framework.math.geometry.ShapeLocationType;
+import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.*;
+import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.*;
+import com.ixcode.framework.javabean.format.*;
 
-import java.util.Locale;
+import java.util.*;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
@@ -22,8 +19,12 @@ public class BugsimExtensionJavaBeanValueFormats {
     }
 
     public static void registerBugsimExtensionFormats() {
-        JavaBeanFormatter.registerExtensionFormat(Locale.UK, CabbageInitialisationParameters.class,  new CabbageInitialisationParametersFormat());
-        JavaBeanFormatter.registerExtensionFormat(Locale.UK, CalculatedResourceLayoutType.class,  new TypeSafeEnumFormat(CalculatedResourceLayoutType.class));
+        if (!JavaBeanFormatter.isExtensionFormatRegistered(Locale.UK, CabbageInitialisationParameters.class)) {
+            JavaBeanFormatter.registerExtensionFormat(Locale.UK, CabbageInitialisationParameters.class,  new CabbageInitialisationParametersFormat());
+        }
+        if (!JavaBeanFormatter.isExtensionFormatRegistered(Locale.UK, CalculatedResourceLayoutType.class)) {
+            JavaBeanFormatter.registerExtensionFormat(Locale.UK, CalculatedResourceLayoutType.class,  new TypeSafeEnumFormat(CalculatedResourceLayoutType.class));
+        }
 
     }
 }

@@ -12,7 +12,7 @@ import org.xml.sax.SAXException;
  * Time: 05:09:13
  * To change this template use File | Settings | File Templates.
  */
-public class TestContentHandler extends DefaultHandler {
+public class StubContentHandler extends DefaultHandler {
 
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 //        System.out.print("<" + localName + ">");

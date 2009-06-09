@@ -11,7 +11,7 @@ import java.util.List;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class TestExperimentPlan extends ExperimentPlan {
+public class FakeExperimentPlan extends ExperimentPlan {
     public static final String MANIPULATED_PARAM_1 = "basic.manipulatedParam1";
     public static final String MANIPULATED_PARAM_2 = "basic.manipulatedParam2";
     public static final String MANIPULATED_PARAM_3 = "basic.manipulatedParam3";
@@ -24,8 +24,9 @@ public class TestExperimentPlan extends ExperimentPlan {
     public static final String ALGORITHM2_PARAM_1 = ALGORITHM2 + ".algParam1";
 
 
-    public TestExperimentPlan(long numberOfTimesteps) {
+    public FakeExperimentPlan(long numberOfTimesteps) {
         super("TestExp");
+        setTrialName("Test trial");
         ParameterMap params = super.getParameterTemplate();
         Category basic = new Category("basic");
         params.addCategory(basic);
