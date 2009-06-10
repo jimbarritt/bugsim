@@ -10,5 +10,4 @@ package com.ixcode.bugsim.controller.experiment.properties.agent;
 public abstract class BirthProperties {
 
 
-
 }
