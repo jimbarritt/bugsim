@@ -8,6 +8,7 @@ import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.ParameterMapDebug;
 import com.ixcode.framework.parameter.model.ParameterMapFactory;
+import com.ixcode.framework.math.geometry.*;
 import junit.framework.TestCase;
 
 import java.net.URL;
@@ -33,6 +34,7 @@ public class ExperimentPlanXMLTestCase extends TestCase {
         if (testFileURL == null) {
             throw new IllegalStateException("Could not find resource 'test/test-plan-import.xml'");
         }
+
         ExperimentPlan actual = ExperimentPlanXML.INSTANCE.importPlan(testFileURL);
         assertNotNull("Should have loaded a plan!", actual);
 

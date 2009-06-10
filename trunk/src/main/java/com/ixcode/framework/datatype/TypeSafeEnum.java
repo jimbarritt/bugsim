@@ -40,6 +40,9 @@ public abstract class TypeSafeEnum {
 
     public static TypeSafeEnum resolve(Class enumClass, String name) {
         List values = (List)ENUMERATIONS.get(enumClass.getName());
+        if (values == null) {
+            throw new IllegalStateException("Could not load enumeration [" + enumClass.getName() + "]");
+        }
         TypeSafeEnum enumRet = null;
         for (Iterator itr = values.iterator(); (itr.hasNext() && enumRet==null);) {
             TypeSafeEnum enumeration= (TypeSafeEnum)itr.next();

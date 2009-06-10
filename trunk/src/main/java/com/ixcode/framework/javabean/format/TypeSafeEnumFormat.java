@@ -15,7 +15,11 @@ public class TypeSafeEnumFormat implements IJavaBeanValueFormat {
     }
 
     public Object parse(String value) throws JavaBeanParseException {
-        return TypeSafeEnum.resolve(_enumClass, value);
+        try {
+            return TypeSafeEnum.resolve(_enumClass, value);
+        } catch (Throwable t) {
+            throw new JavaBeanParseException("foobar", "Could not parse TypeSafeEnum value[{0}] for enum class " + _enumClass.getName() + "]",  value, t);
+        }
     }
 
     public String format(Object value) {

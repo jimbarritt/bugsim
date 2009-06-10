@@ -139,7 +139,7 @@
     <target name="compile.test.fixtures">
         <compile-java configuration="test.fixtures"
             src.dir="${src.test.java.fixture.dir}"
-            classpath.refid="classpath.test.fixture"
+            classpath.refid="classpath.test.fixture.compile"
             target.classes.dir="${target.classes.test.fixture.dir}"
             java.version="1.5"/>
     </target>

@@ -3,29 +3,25 @@
  */
 package com.ixcode.framework.experiment.model.xml;
 
-import com.ixcode.framework.experiment.model.ExperimentPlan;
-import com.ixcode.framework.experiment.model.ExperimentPlanFile;
-import com.ixcode.framework.javabean.format.JavaBeanFormatter;
+import com.ixcode.bugsim.*;
+import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.*;
+import com.ixcode.framework.experiment.model.*;
+import com.ixcode.framework.javabean.format.*;
+import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.parameter.model.*;
-import com.ixcode.framework.xml.XMLAttributes;
-import com.ixcode.framework.xml.XMLWriter;
-import com.ixcode.framework.xml.sax.speedsax.NodeHandler;
-import com.ixcode.framework.xml.sax.speedsax.format.JavaBeanXMLFormatter;
-import com.ixcode.bugsim.BugsimMain;
-import org.apache.log4j.Logger;
-import org.apache.xerces.parsers.SAXParser;
+import com.ixcode.framework.xml.*;
+import com.ixcode.framework.xml.sax.speedsax.*;
+import com.ixcode.framework.xml.sax.speedsax.format.*;
+import org.apache.log4j.*;
+import org.apache.xerces.parsers.*;
 import org.xml.sax.ContentHandler;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.xml.sax.*;
 
 import java.io.*;
-import java.net.URL;
-import java.text.DateFormat;
+import java.net.*;
+import java.text.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Description : Exports an ExperimentPlan to XML.
@@ -37,6 +33,8 @@ public class ExperimentPlanXML extends XMLWriter {
     public static final String PLAN_FILE_EXTENSION = "xml";
 
     public ExperimentPlanXML() {
+        ShapeLocationType s = ShapeLocationType.BOTTOM_LEFT;  // Dodgy! this is because of our old TypeSafeenum instead of using Java's built in one. will go away once replace all uses.
+        CalculatedResourceLayoutType t = CalculatedResourceLayoutType.CORNER_EDGE_CENTRE;
     }
 
     public List readPlanFiles(File directory) throws IOException, SAXException {
