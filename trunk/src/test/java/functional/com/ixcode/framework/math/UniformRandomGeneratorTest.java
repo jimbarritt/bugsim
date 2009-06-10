@@ -2,12 +2,14 @@ package com.ixcode.framework.math;
 
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.math.random.*;
+import com.ixcode.bugsim.fixture.*;
 import org.junit.*;
 import static org.junit.Assert.assertTrue;
 import org.apache.log4j.*;
 
 import java.util.*;
 
+@FunctionalTest
 public class UniformRandomGeneratorTest {
 
     private static final Logger log = Logger.getLogger(UniformRandomGeneratorTest.class);

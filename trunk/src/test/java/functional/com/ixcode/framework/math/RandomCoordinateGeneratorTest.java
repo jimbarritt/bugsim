@@ -1,10 +1,12 @@
 package com.ixcode.framework.math;
 
 import com.ixcode.framework.math.geometry.*;
+import com.ixcode.bugsim.fixture.*;
 import org.junit.*;import static org.junit.Assert.fail;
 
 import java.util.*;
 
+@FunctionalTest
 public class RandomCoordinateGeneratorTest {
 
     private static final Random RANDOM = new Random();
@@ -29,5 +31,7 @@ public class RandomCoordinateGeneratorTest {
 
 
     }
+
+   
 
 }

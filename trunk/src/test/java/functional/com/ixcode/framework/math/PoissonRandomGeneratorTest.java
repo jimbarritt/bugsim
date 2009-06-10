@@ -1,10 +1,12 @@
 package com.ixcode.framework.math;
 
 import com.ixcode.framework.math.random.*;
+import com.ixcode.bugsim.fixture.*;
 import org.junit.*;import static org.junit.Assert.assertEquals;import static org.junit.Assert.fail;
 
 import java.util.*;
 
+@FunctionalTest
 public class PoissonRandomGeneratorTest {
 
     private static final Random RANDOM = new Random();
