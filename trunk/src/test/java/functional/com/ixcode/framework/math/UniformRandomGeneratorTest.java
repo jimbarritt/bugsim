@@ -16,7 +16,6 @@ public class UniformRandomGeneratorTest {
     private static final Random RANDOM = new Random();
 
 
-    
     @Test
     public void generatesUniformRandomDouble() {
         final int ITERATIONS = 100;
