@@ -3,9 +3,8 @@ package com.ixcode.framework.math;
 import com.ixcode.bugsim.fixture.*;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.math.random.*;
-import static junit.framework.Assert.fail;
 import org.apache.log4j.*;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import org.junit.*;
 
 import java.util.*;
@@ -17,10 +16,7 @@ public class UniformRandomGeneratorTest {
     private static final Random RANDOM = new Random();
 
 
-    @Test
-    public void testFail() {
-        fail("BANG!");
-    }
+    
     @Test
     public void generatesUniformRandomDouble() {
         final int ITERATIONS = 100;

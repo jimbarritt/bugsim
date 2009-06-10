@@ -113,16 +113,16 @@
     </target>
 
     <available file="${lib.dir}" property="skip.update.lib"/>
-    <target name="update.lib.guarded" unless="skip.update.lib">
+    <target name="update.lib.if.required" unless="skip.update.lib">
         <antcall target="update.lib" />
     </target>
 
-    <target name="update.lib.if.required" depends="update.lib.guarded"  if="skip.update.lib">
+    <target name="update.lib.skipped" depends="update.lib.if.required"  if="skip.update.lib">
         <echo message="lib.dir [${lib.dir}] already exists" />
         <echo message="Not updating libs, use [update.lib] to force update" />
     </target>
 
-    <target name="compile" depends="update.lib.if.required, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
+    <target name="compile" depends="update.lib.skipped, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
             description="--> compiles all sources, including tests"/>
 
     <target name="compile.main">
@@ -134,7 +134,7 @@
                       hide.warnings="false"/>
     </target>
 
-    <target name="test" description="--> runs all the tests" depends="compile.main, compile.test.fixtures, run.unit.tests, run.functional.tests"/>
+    <target name="test" description="--> runs all the tests" depends="compile, run.unit.tests, run.functional.tests"/>
 
     <target name="compile.test.fixtures">
         <compile-java configuration="test.fixtures"

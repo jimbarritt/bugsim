@@ -4,8 +4,7 @@
     <macrodef name="copy-resources">
         <attribute name="src.dir"/>
         <attribute name="dest.dir"/>
-        <sequential>
-            <echo message="copying resources from java source dir..." />
+        <sequential>           
             <copy todir="@{dest.dir}">
                 <fileset dir="@{src.dir}">
                     <exclude name="**/*.java" />
@@ -31,13 +30,7 @@
             <property name="compile.classpath.refid" value="@{classpath.refid}" />
             -->
             <property name="print.classpath" value="@{print.classpath}" />
-            <echo message="Compiling classes for configuration [@{configuration}]"/>
-            <echo message="src.dir            : @{src.dir}"/>
-            <echo message="target.classes.dir : @{target.classes.dir}"/>
-            <echo message="java.version       : @{java.version}"/>
-            <echo message="classpath.refid    : @{classpath.refid}"/>
-
-            <echo message="" />
+            <echo message="Compiling classes for configuration [@{configuration}]"/>            
             <mkdir dir="@{target.classes.dir}" />
             
             <javac 
@@ -55,18 +48,22 @@
             <copy-resources src.dir="@{src.dir}"
                             dest.dir="@{target.classes.dir}" />
 
-            <antcall target="compilation.complete">                
+            <antcall target="compile.complete">
                 <param name="compile.classpath.refid" value="@{classpath.refid}" />
                 <param name="compile.configuration" value="@{configuration}" />
             </antcall>
         </sequential>
     </macrodef>
 
-    <target name="compilation.complete" if="compile.failed">
+    <target name="compile.complete" if="compile.failed">
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message=""/>
         <echo message="   ATTENTION!! Compilation of [${compile.configuration}] Failed!"/>
-        <echo message=""/>
+        <echo message="src.dir            : @{src.dir}"/>
+        <echo message="target.classes.dir : @{target.classes.dir}"/>
+        <echo message="java.version       : @{java.version}"/>
+        <echo message="classpath.refid    : @{classpath.refid}"/>
+
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message="" />
         <echo message="   The classpath used was: " />

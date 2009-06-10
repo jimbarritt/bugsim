@@ -16,20 +16,18 @@
 
             <property name="junit.classpath.refid" value="@{classpath.refid}"/>
             <property name="junit.configuration" value="@{configuration}"/>
-            <property name="junit.report.xml.dir" value="@{report.dir}/xml"/>
-            <property name="junit.report.html.dir" value="@{report.dir}/html"/>
             <delete dir="@{report.dir}"/>
-            <mkdir dir="${junit.report.xml.dir}"/>
-            <mkdir dir="${junit.report.html.dir}"/>
+            <mkdir dir="@{report.dir}/xml"/>
+            <mkdir dir="@{report.dir}/html"/>
 
-            <echo message="Running ${junit.configuration} tests ..." />
+            <echo message="Running @{configuration} tests ..." />
             <junit printsummary="@{show.test.output}">
                 <classpath refid="@{classpath.refid}"/>
 
                 <formatter type="xml"/>
 
                 <batchtest fork="yes"
-                           todir="${junit.report.xml.dir}"
+                           todir="@{report.dir}/xml"
                            failureproperty="junit.failed"                           
                            haltonfailure="off"
                            haltonerror="off">
@@ -40,16 +38,20 @@
                 </batchtest>
             </junit>
 
-            <junitreport todir="${junit.report.html.dir}">                
-                <fileset dir="${junit.report.xml.dir}">
+            <junitreport todir="@{report.dir}/html">
+                <fileset dir="@{report.dir}/xml">
                     <include name="*.xml"/>
                 </fileset>
-                <report format="frames" todir="${junit.report.html.dir}">
-                    <param name="TITLE" expression="${junit.configuration} test results." />
+                <report format="frames" todir="@{report.dir}/html">
+                    <param name="TITLE" expression="@{configuration} test results." />
                 </report>
             </junitreport>
 
-            <antcall target="test.run.complete"/>
+            <antcall target="test.run.complete">
+                <param name="junit.configuration" value="@{configuration}" />
+                <param name="junit.report.html.dir" value="@{report.dir}/html" />
+                <param name="junit.classpath.refid" value="@{classpath.refid}" />
+            </antcall>
         </sequential>
     </macrodef>
 
@@ -61,6 +63,7 @@
             <property name="open.failure.reports" value="true" />
             <antcall target="open.failure.reports.in.browser" />
             <antcall target="open.error.reports.in.browser" />
+
         </sequential>
     </macrodef>
 
@@ -82,8 +85,8 @@
         <antcall target="open.failure.reports.in.browser"/>
         <antcall target="open.error.reports.in.browser"/>
 
-        <fail taskname="run.junit.@{configuration}"
-              message="Tests failed - LOOK UP ^^^^^^^!"
+        <fail taskname="run.junit.${junit.configuration}"
+              message="Tests for [${junit.configuration}] failed - LOOK UP ^^^^^^^!"
               status="66"
               if="junit.failed"/>
 
