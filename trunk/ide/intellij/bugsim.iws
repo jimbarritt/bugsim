@@ -4,6 +4,10 @@
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/UniformRandomGeneratorTest.java" afterPath="/Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/UniformRandomGeneratorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iws" afterPath="$PROJECT_DIR$/bugsim.iws" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/PoissonRandomGeneratorTest.java" afterPath="/Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/PoissonRandomGeneratorTest.java" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/compile.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/compile.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" afterPath="/Users/Jim/Work/code/bugsim/src/build/macros/junit.xml" />
+      <change type="MODIFICATION" beforePath="/Users/Jim/Work/code/bugsim/build.xml" afterPath="/Users/Jim/Work/code/bugsim/build.xml" />
     </list>
     <ignored path="bugsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,28 +65,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RandomCoordinateGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/RandomCoordinateGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="210" selection-end="210" vertical-scroll-proportion="0.21973094">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UniformRandomGeneratorTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UniformRandomGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/UniformRandomGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="97" selection-start="684" selection-end="684" vertical-scroll-proportion="0.42982456">
+            <state line="18" column="4" selection-start="473" selection-end="473" vertical-scroll-proportion="0.51754385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="8" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.19384615">
+            <state line="124" column="47" selection-start="5811" selection-end="5811" vertical-scroll-proportion="0.85263157">
               <folding />
             </state>
           </provider>
@@ -91,16 +86,25 @@
       <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="51" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.4">
+            <state line="50" column="18" selection-start="1906" selection-end="1906" vertical-scroll-proportion="-0.010526316">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/ivy.xml">
+      <file leaf-file-name="PoissonRandomGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/PoissonRandomGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="708" selection-end="708" vertical-scroll-proportion="0.31578946">
+            <state line="43" column="2" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.75438595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="junit.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="81" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.21052632">
               <folding />
             </state>
           </provider>
@@ -645,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="5" selection-start="3455" selection-end="3455" vertical-scroll-proportion="0.45076925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/unit/com/ixcode/framework/simulation/model/agent/motile/movement/VonMisesAzimuthGeneratorTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="13" selection-start="643" selection-end="643" vertical-scroll-proportion="0.33333334">
@@ -687,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/PoissonRandomGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="252" selection-end="252" vertical-scroll-proportion="0.21491228">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/RandomCoordinateGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="15" selection-start="210" selection-end="210" vertical-scroll-proportion="0.21973094">
@@ -715,23 +705,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/junit.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="51" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.4">
+        <state line="52" column="81" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.21052632">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/build/macros/compile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="8" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.19384615">
+        <state line="50" column="18" selection-start="1906" selection-end="1906" vertical-scroll-proportion="-0.010526316">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/PoissonRandomGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="2" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.75438595">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/Jim/Work/code/bugsim/src/test/java/functional/com/ixcode/framework/math/UniformRandomGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="97" selection-start="684" selection-end="684" vertical-scroll-proportion="0.42982456">
+        <state line="18" column="4" selection-start="473" selection-end="473" vertical-scroll-proportion="0.51754385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/Jim/Work/code/bugsim/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="47" selection-start="5811" selection-end="5811" vertical-scroll-proportion="0.85263157">
           <folding />
         </state>
       </provider>

@@ -1,8 +1,9 @@
 package com.ixcode.framework.math;
 
-import com.ixcode.framework.math.random.*;
 import com.ixcode.bugsim.fixture.*;
-import org.junit.*;import static org.junit.Assert.assertEquals;import static org.junit.Assert.fail;
+import com.ixcode.framework.math.random.*;
+import static org.junit.Assert.*;
+import org.junit.*;
 
 import java.util.*;
 
@@ -40,8 +41,5 @@ public class PoissonRandomGeneratorTest {
         assertEquals("total", N, total);
     }
 
-    @Test
-    public void fails() {
-        fail("bang!");
-    }
+  
 }
