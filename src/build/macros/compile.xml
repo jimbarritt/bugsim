@@ -51,6 +51,10 @@
             <antcall target="compile.complete">
                 <param name="compile.classpath.refid" value="@{classpath.refid}" />
                 <param name="compile.configuration" value="@{configuration}" />
+                <param name="compile.src.dir" value="@{src.dir}" />
+                <param name="compile.target.classes.dir" value="@{target.classes.dir}" />
+                <param name="compile.java.version" value="@{java.version}" />
+                
             </antcall>
         </sequential>
     </macrodef>
@@ -59,11 +63,12 @@
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message=""/>
         <echo message="   ATTENTION!! Compilation of [${compile.configuration}] Failed!"/>
-        <echo message="src.dir            : @{src.dir}"/>
-        <echo message="target.classes.dir : @{target.classes.dir}"/>
-        <echo message="java.version       : @{java.version}"/>
-        <echo message="classpath.refid    : @{classpath.refid}"/>
-
+        <echo message=""/>
+        <echo message="   src.dir            : ${compile.src.dir}"/>
+        <echo message="   target.classes.dir : ${compile.target.classes.dir}"/>
+        <echo message="   java.version       : ${compile.java.version}"/>
+        <echo message="   classpath.refid    : ${compile.classpath.refid}"/>
+        <echo message=""/>
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message="" />
         <echo message="   The classpath used was: " />
