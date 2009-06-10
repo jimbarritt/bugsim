@@ -3,26 +3,19 @@
  */
 package com.ixcode.bugsim.view.experiment.editor;
 
-import com.ixcode.framework.experiment.model.ExperimentPlanFile;
-import com.ixcode.framework.experiment.model.xml.ExperimentPlanXML;
-import com.ixcode.framework.swing.BorderFactoryExtension;
-import com.ixcode.framework.swing.JFrameExtension;
-import com.ixcode.framework.swing.property.FileChooserPropertyEditor;
-import com.ixcode.framework.swing.property.IPropertyValueEditor;
-import com.ixcode.framework.swing.property.ReadOnlyPropertyEditor;
-import org.apache.log4j.Logger;
+import com.ixcode.framework.experiment.model.*;
+import com.ixcode.framework.experiment.model.xml.*;
+import com.ixcode.framework.swing.*;
+import com.ixcode.framework.swing.property.*;
+import org.apache.log4j.*;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.ArrayList;
+import java.awt.event.*;
+import java.io.*;
+import java.util.*;
 import java.util.List;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
 
 /**
  * Description : ${CLASS_DESCRIPTION}

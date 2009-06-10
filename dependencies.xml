@@ -36,6 +36,10 @@
             <artifact name="commons-beanutils" type="jar" ext="jar"/>            
         </dependency>
 
+        <dependency conf="main->default" org="commons-collections" name="commons-collections" rev="3.2.1" transitive="false">
+            <artifact name="commons-collections" type="jar" ext="jar"/>            
+        </dependency>
+
         <dependency conf="main->default" org="commons-logging" name="commons-logging" rev="1.1" transitive="false">
             <artifact name="commons-logging" type="jar" ext="jar"/>
             <artifact name="commons-logging" type="source" ext="jar" />

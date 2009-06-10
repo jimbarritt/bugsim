@@ -41,7 +41,7 @@
                    debug="@{debug}"
                    nowarn="@{hide.warnings}"
                    destdir="@{target.classes.dir}"
-                    failonerror="false">
+                   failonerror="false">
                 <classpath refid="@{classpath.refid}"/>
             </javac>
 
