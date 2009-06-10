@@ -11,10 +11,10 @@
         <attribute name="open.failure.reports" default="true"/>
 
         <sequential>
-            <echo-classpath path.refid="@{classpath.refid}"/>
 
             <property name="open.failure.reports" value="@{open.failure.reports}"/>
 
+            <property name="junit.classpath.refid" value="@{classpath.refid}"/>
             <property name="junit.configuration" value="@{configuration}"/>
             <property name="junit.report.xml.dir" value="@{report.dir}/xml"/>
             <property name="junit.report.html.dir" value="@{report.dir}/html"/>
@@ -22,7 +22,7 @@
             <mkdir dir="${junit.report.xml.dir}"/>
             <mkdir dir="${junit.report.html.dir}"/>
 
-            <echo message="Running unit tests ..." />
+            <echo message="Running ${junit.configuration} tests ..." />
             <junit printsummary="@{show.test.output}">
                 <classpath refid="@{classpath.refid}"/>
 
@@ -40,11 +40,13 @@
                 </batchtest>
             </junit>
 
-            <junitreport todir="${junit.report.html.dir}">
+            <junitreport todir="${junit.report.html.dir}">                
                 <fileset dir="${junit.report.xml.dir}">
                     <include name="*.xml"/>
                 </fileset>
-                <report format="frames" todir="${junit.report.html.dir}"/>
+                <report format="frames" todir="${junit.report.html.dir}">
+                    <param name="TITLE" expression="${junit.configuration} test results." />
+                </report>
             </junitreport>
 
             <antcall target="fail.build.if.tests.fail"/>
@@ -72,6 +74,10 @@
         <echo message="   These should pop up in a browser window for your pleasure."/>
         <echo message=""/>
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+        <echo message="" />
+        <echo message="   The classpath used was: " />
+        <echo-classpath path.refid="${junit.classpath.refid}"/>
+        <echo message="" />
 
         <antcall target="open.failure.reports.in.browser"/>
         <antcall target="open.error.reports.in.browser"/>

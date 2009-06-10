@@ -25,8 +25,9 @@
         <attribute name="hide.warnings" default="true"/>
         <attribute name="print.classpath" default="true"/>
 
-
         <sequential>
+            <property name="compile.configuration" value="@{configuration}" />
+            <property name="compile.classpath.refid" value="@{classpath.refid}" />
             <property name="print.classpath" value="@{print.classpath}" />
             <echo message="Compiling classes for configuration [@{configuration}]"/>
             <echo message="src.dir            : @{src.dir}"/>
@@ -34,23 +35,41 @@
             <echo message="java.version       : @{java.version}"/>
             <echo message="classpath.refid    : @{classpath.refid}"/>
 
-            <echo-classpath path.refid="@{classpath.refid}"/>
-
             <echo message="" />
             <mkdir dir="@{target.classes.dir}" />
             
-            <javac srcdir="@{src.dir}"
+            <javac 
+                   errorProperty="compile.failed"
+                   srcdir="@{src.dir}"
                    target="@{java.version}"
                    source="@{java.version}"
                    debug="@{debug}"
                    nowarn="@{hide.warnings}"
-                   destdir="@{target.classes.dir}">
+                   destdir="@{target.classes.dir}"
+                    failonerror="false">
                 <classpath refid="@{classpath.refid}"/>
             </javac>
 
             <copy-resources src.dir="@{src.dir}"
                             dest.dir="@{target.classes.dir}" />
+
+            <antcall target="fail.build.if.compile.failed" />
         </sequential>
     </macrodef>
+
+    <target name="fail.build.if.compile.failed" if="compile.failed">
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+        <echo message=""/>
+        <echo message="   ATTENTION!! Compilation of [${compile.configuration}] Failed!"/>
+        <echo message=""/>
+        <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+        <echo message="" />
+        <echo message="   The classpath used was: " />
+        <echo-classpath path.refid="${compile.classpath.refid}"/>
+
+        <echo message="" />
+
+        <fail message="Compilation failed. Look Up ^^^^^^^^ !" />
+    </target>
 
 </project>

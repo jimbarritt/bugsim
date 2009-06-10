@@ -28,8 +28,8 @@ public class DebugContextTag extends TagSupport {
 
         StringBuffer sb = new StringBuffer();
         outputStartTable(sb);
-        for(Enumeration enum = pageContext.getAttributeNamesInScope(scopeId);enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for(Enumeration enumeration = pageContext.getAttributeNamesInScope(scopeId);enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, pageContext.getAttribute(name, scopeId));
         }
 

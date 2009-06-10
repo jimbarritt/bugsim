@@ -17,6 +17,8 @@ import java.util.*;
  */
 public class IxMathTestCase extends TestCase {
 
+    
+    private static final Logger log = Logger.getLogger(IxMathTestCase.class);
 
     public void testSequenceDouble_1() {
         double[] expected = new double[] {1, 2, 3, 4, 5, 6};
@@ -51,41 +53,7 @@ public class IxMathTestCase extends TestCase {
             assertEquals(expected[i], actual[i], delta);
         }
     }
-    public void testUniformRandomDouble() {
-        final int ITERATIONS = 100;
 
-        double results[] = new double[ITERATIONS];
-        for (int i = 0; i < ITERATIONS; ++i) {
-            results[i] = UniformRandom.generateUniformRandomDouble(6, 1, RANDOM);
-        }
-
-        double max = DoubleMath.maxOf(results);
-        double min = DoubleMath.minOf(results);
-        System.out.println("N=" + ITERATIONS + ", max=" + max + ", min=" + min);
-    }
-
-    public void testUniformRandomAngleDouble() {
-        final int ITERATIONS = 1000;
-
-        double results[] = new double[ITERATIONS];
-        for (int i = 0; i < ITERATIONS; ++i) {
-            results[i] = Geometry.generateUniformRandomAzimuthChange(RANDOM);
-
-        }
-
-        double max = DoubleMath.maxOf(results);
-
-        double min = DoubleMath.minOf(results);
-
-          if (log.isInfoEnabled()) {
-            log.info("N=" + ITERATIONS + ", max=" + max + ", min=" + min);
-        }
-        assertTrue(max > min);
-        assertTrue(DoubleMath.precisionLessThanEqual(max, Math.toDegrees(2 * Math.PI), DoubleMath.DOUBLE_PRECISION_DELTA));
-
-
-
-    }
 
     public void testNextBeta() {
         RandomNumberGenerator random = new RandomNumberGenerator(System.currentTimeMillis());
@@ -315,25 +283,7 @@ public class IxMathTestCase extends TestCase {
 
     }
 
-    public void testRandomGaussian() {
-        int replicants = 10000;
-        double standardDeviation = 5;
-        double mean = 0;
-        double[] results = new double[replicants];
-        for (int i = 0; i < replicants; ++i) {
-            double random = GaussianRandom.generateGaussian(RANDOM, standardDeviation, mean);
-            results[i] = random;
-        }
-
-        double actualMean = SummaryStatistics.calculateMeanDouble(results);
-        double actualSD = SummaryStatistics.calculateStdDeviationDouble(results);
-        assertEquals("mean", 0d, actualMean, 0.1);
-        assertEquals("Standard Deviation", standardDeviation, actualSD, 0.5);
-
-
-    }
-
-    
+ 
     public void testAssertEqualsDouble() {
         assertEquals("test double assert equals", 2.5, 2.5, 0.0);
     }
@@ -397,55 +347,9 @@ public class IxMathTestCase extends TestCase {
         assertFalse("Should inside!: " + point, isOutside);
     }
 
-    public void testGenerateRandomCoordOnPerimeter() {
-        CartesianBounds b = new CartesianBounds(0, 0, 10000, 10000);
-        boolean isCircular = true;
-        final int MAX_COORDS = 100;
-        List coords = new ArrayList();
+   
 
-        for (int iCoord = 0; iCoord < MAX_COORDS; ++iCoord) {
-            RectangularCoordinate coord = Geometry.generateRandomCoordOnPerimeter(RANDOM, b, isCircular);
-            coords.add(coord);
-            if (!Geometry.isPointInCircleDouble(coord.getDoubleX(), coord.getDoubleY(), b.getDoubleCentreX(), b.getDoubleCentreY(), b.getRadiusOfInnerCircle())){
-                fail("Coordinate: " + coord + " is NOT in circle!");
-            }
-
-            System.out.println("Coord: " + coord);
-
-        }
+   
 
 
-    }
-
-
-    public void testPoisson() {
-
-        double mu = 4d;
-        final int N = 10000;
-        Map results = new HashMap();
-        for (int i = 0; i < N; ++i) {
-            Integer p = new Integer(PoissonRandom.generatePoissonRandom(RANDOM, mu));
-            if (!results.containsKey(p)) {
-                results.put(p, new Integer(0));
-            }
-            Integer freq = (Integer)results.get(p);
-            results.put(p, new Integer(freq.intValue() + 1));
-        }
-
-        System.out.println("p, frequency");
-        List sortedKeys = new ArrayList(results.keySet());
-        Collections.sort(sortedKeys);
-        long total = 0;
-        for (Iterator itr = sortedKeys.iterator(); itr.hasNext();) {
-            Integer key = (Integer)itr.next();
-            Integer freq = (Integer)results.get(key);
-            System.out.println(key + "," + freq);
-            total += freq.intValue();
-        }
-
-        assertEquals("total", N, total);
-    }
-
-    private static final Random RANDOM = new Random();
-    private static final Logger log = Logger.getLogger(IxMathTestCase.class);
 }

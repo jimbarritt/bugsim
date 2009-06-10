@@ -61,15 +61,15 @@ public class ContextInstrument {
 
     public void dumpContext(StringBuffer sb, ServletRequest request) {
         outputStartTable(sb, "Request Attributes:");
-        for (Enumeration enum = request.getAttributeNames(); enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for (Enumeration enumeration = request.getAttributeNames(); enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, request.getAttribute(name));
         }
         outputEndTable(sb);
         sb.append("&nbsp");
         outputStartTable(sb, "Request Parameters :");
-        for (Enumeration enum = request.getParameterNames(); enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for (Enumeration enumeration = request.getParameterNames(); enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, request.getParameter(name));
         }
         outputEndTable(sb);
@@ -77,8 +77,8 @@ public class ContextInstrument {
 
     public void dumpContext(StringBuffer sb, ServletContext servletContext) {
         outputStartTable(sb, "ServletContext Attributes:");
-        for (Enumeration enum = servletContext.getAttributeNames(); enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for (Enumeration enumeration = servletContext.getAttributeNames(); enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, servletContext.getAttribute(name));
         }
         outputEndTable(sb);
@@ -87,8 +87,8 @@ public class ContextInstrument {
 
     public void dumpContext(StringBuffer sb, HttpSession session) {
         outputStartTable(sb, "Session Attributes:");
-        for (Enumeration enum = session.getAttributeNames(); enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for (Enumeration enumeration = session.getAttributeNames(); enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, session.getAttribute(name));
         }
         outputEndTable(sb);
@@ -97,8 +97,8 @@ public class ContextInstrument {
 
     public void dumpContext(StringBuffer sb, PageContext pageContext) {
         outputStartTable(sb, "Page Attributes:");
-        for (Enumeration enum = pageContext.getAttributeNamesInScope(PageContext.PAGE_SCOPE); enum.hasMoreElements();) {
-            String name = (String)enum.nextElement();
+        for (Enumeration enumeration = pageContext.getAttributeNamesInScope(PageContext.PAGE_SCOPE); enumeration.hasMoreElements();) {
+            String name = (String)enumeration.nextElement();
             outputTableRow(sb, name, pageContext.getAttribute(name));
         }
         outputEndTable(sb);
