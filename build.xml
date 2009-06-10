@@ -16,24 +16,28 @@
 
     <property name="src.test.dir" value="${src.dir}/test"/>
     <property name="src.test.java.dir" value="${src.test.dir}/java"/>
+    <property name="src.test.java.fixture.dir" value="${src.test.java.dir}/fixture"/>
     <property name="src.test.java.unit.dir" value="${src.test.java.dir}/unit"/>
     <property name="src.test.java.functional.dir" value="${src.test.java.dir}/functional"/>
 
     <property name="src.resource.dir" value="${src.dir}/main/resource"/>
 
     <property name="lib.build.dir" value="${lib.dir}/build"/>
-    <property name="lib.main.dir" value="${lib.dir}/main"/>    
+    <property name="lib.main.dir" value="${lib.dir}/main"/>
+    <property name="lib.test.fixture.dir" value="${lib.dir}/test.fixture"/>
     <property name="lib.test.unit.dir" value="${lib.dir}/test.unit"/>
     <property name="lib.test.functional.dir" value="${lib.dir}/test.functional"/>
 
     <property name="target.classes.dir" value="${target.dir}/classes"/>
     <property name="target.classes.main.dir" value="${target.classes.dir}/main"/>
     <property name="target.classes.test.dir" value="${target.classes.dir}/test"/>
+    <property name="target.classes.test.fixture.dir" value="${target.classes.test.dir}/fixture"/>
     <property name="target.classes.test.unit.dir" value="${target.classes.test.dir}/unit"/>
     <property name="target.classes.test.functional.dir" value="${target.classes.test.dir}/functional"/>
 
     <property name="target.report.dir" value="${target.dir}/report"/>
     <property name="target.report.test.dir" value="${target.report.dir}/test"/>
+    <property name="target.report.test.fixture.dir" value="${target.report.test.dir}/fixture"/>
     <property name="target.report.test.unit.dir" value="${target.report.test.dir}/unit"/>
     <property name="target.report.test.functional.dir" value="${target.report.test.dir}/functional"/>
 
@@ -44,32 +48,41 @@
     <import file="${src.build.macros.dir}/junit.xml"/>
 
 
-    <path id="classpath.main">
+    <path id="classpath.main.compile">
         <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>
         <path location="${src.resource.dir}/" />
     </path>
 
-    <path id="classpath.test.unit">
-        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar" />
+    <path id="classpath.test.fixture.compile">
+        <fileset dir="${lib.test.fixture.dir}/jar/" includes="**/*.jar" />
+        <path refid="classpath.main.compile" />
+    </path>
+
+    <path id="classpath.test.unit.compile">
         <path location="${target.classes.main.dir}" />
-        <path refid="classpath.main" />
+        <path location="${target.classes.test.fixture.dir}" />
+        
+        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar" />
+        <path refid="classpath.main.compile" />
+        <path refid="classpath.test.fixture.compile" />
     </path>
 
     <path id="classpath.test.unit.run">
         <path location="${target.classes.test.unit.dir}" />
-        <path refid="classpath.test.unit" />
+        <path refid="classpath.test.unit.compile" />
     </path>
 
-    <path id="classpath.test.functional">
-        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar" />
+    <path id="classpath.test.functional.compile">
         <path location="${target.classes.main.dir}" />
-        <path refid="classpath.main" />
-        <path refid="classpath.test.unit" />
+        <path location="${target.classes.test.fixture.dir}" />
+        <path refid="classpath.test.fixture.compile" />
+        <path refid="classpath.main.compile" />
+        <fileset dir="${lib.test.functional.dir}/jar/" includes="**/*.jar" />
     </path>
 
     <path id="classpath.test.functional.run">
         <path location="${target.classes.test.functional.dir}" />
-        <path refid="classpath.test.functional" />
+        <path refid="classpath.test.functional.compile" />
     </path>
 
 
@@ -109,28 +122,37 @@
         <echo message="Not updating libs, use [update.lib] to force update" />
     </target>
 
-    <target name="compile" depends="update.lib.if.required, compile.main, compile.unit.test"
-            description="--> compiles all sources"/>
+    <target name="compile" depends="update.lib.if.required, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
+            description="--> compiles all sources, including tests"/>
 
     <target name="compile.main">
         <compile-java configuration="main"
                       src.dir="${src.main.java.dir}"
-                      classpath.refid="classpath.main"
+                      classpath.refid="classpath.main.compile"
                       target.classes.dir="${target.classes.main.dir}"
                       java.version="1.5"
                       hide.warnings="false"/>
     </target>
 
+    <target name="test" description="--> runs all the tests" depends="compile.main, compile.test.fixtures, run.unit.tests, run.functional.tests"/>
 
-    <target name="compile.unit.test">
-        <compile-java configuration="unit.test"
-                      src.dir="${src.test.java.unit.dir}"
-                      classpath.refid="classpath.test.unit"
-                      target.classes.dir="${target.classes.test.unit.dir}"
-                      java.version="1.5"/>
+    <target name="compile.test.fixtures">
+        <compile-java configuration="test.fixtures"
+            src.dir="${src.test.java.fixture.dir}"
+            classpath.refid="classpath.test.fixture"
+            target.classes.dir="${target.classes.test.fixture.dir}"
+            java.version="1.5"/>
     </target>
 
-    <target name="run.unit.tests" depends="compile.main, compile.unit.test" 
+    <target name="compile.unit.tests">
+        <compile-java configuration="unit.test"
+        src.dir="${src.test.java.unit.dir}"
+        classpath.refid="classpath.test.unit.compile"
+        target.classes.dir="${target.classes.test.unit.dir}"
+        java.version="1.5"/>
+    </target>
+
+    <target name="run.unit.tests" depends="compile.unit.tests"
             description="--> compiles and runs the unit tests">
          <run-junit configuration="unit.test"
                     classpath.refid="classpath.test.unit.run"
@@ -146,12 +168,12 @@
     <target name="compile.functional.tests">
             <compile-java configuration="functional.test"
                           src.dir="${src.test.java.functional.dir}"
-                          classpath.refid="classpath.test.functional"
+                          classpath.refid="classpath.test.functional.compile"
                           target.classes.dir="${target.classes.test.functional.dir}"
                           java.version="1.5"/>
         </target>
 
-        <target name="run.functional.tests" depends="compile.main, compile.functional.tests"
+        <target name="run.functional.tests" depends="compile.functional.tests"
                 description="--> compiles and runs the functional tests">
              <run-junit configuration="functional.test"
                         classpath.refid="classpath.test.functional.run"

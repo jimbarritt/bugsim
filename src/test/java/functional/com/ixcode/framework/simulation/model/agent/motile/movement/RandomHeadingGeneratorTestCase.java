@@ -3,17 +3,15 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement;
 
-import com.ixcode.framework.math.stats.SummaryStatistics;
+import com.ixcode.bugsim.fixture.*;
+import com.ixcode.framework.math.*;
+import com.ixcode.framework.math.geometry.*;
+import com.ixcode.framework.math.stats.*;
+import junit.framework.*;
 
-import com.ixcode.framework.math.DoubleMath;
-import com.ixcode.framework.math.geometry.CourseChange;
-import junit.framework.TestCase;
+import java.util.*;
 
-import java.util.Random;
-
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
+@FunctionalTest
 public class RandomHeadingGeneratorTestCase extends TestCase {
 
     public void testGenerateCorrelatedRandomDirection() {

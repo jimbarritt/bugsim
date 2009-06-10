@@ -2,11 +2,13 @@ package com.ixcode.framework.math;
 
 import com.ixcode.framework.math.random.*;
 import com.ixcode.framework.math.stats.*;
+import com.ixcode.bugsim.fixture.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 
 import java.util.*;
 
+@FunctionalTest
 public class GaussianRandomGeneratorTest {
 
     private static final Random RANDOM = new Random();

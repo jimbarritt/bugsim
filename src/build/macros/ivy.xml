@@ -29,7 +29,7 @@
             </taskdef>
 
             <ivy:settings file="@{settings.file}"/>
-            <ivy:retrieve file="@{dependency.file}"
+            <ivy:retrieve file="@{dependency.file}" 
                           pattern="@{lib.dir}/[conf]/[type]/[artifact]-[revision].[ext]" />
         </sequential>
     </macrodef>

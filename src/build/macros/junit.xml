@@ -49,7 +49,7 @@
                 </report>
             </junitreport>
 
-            <antcall target="fail.build.if.tests.fail"/>
+            <antcall target="test.run.complete"/>
         </sequential>
     </macrodef>
 
@@ -65,7 +65,7 @@
     </macrodef>
 
 
-    <target name="fail.build.if.tests.fail" if="junit.failed">
+    <target name="test.run.complete" if="junit.failed">
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message=""/>
         <echo message="   ATTENTION!! Tests [${junit.configuration}] are failing or have errors!"/>

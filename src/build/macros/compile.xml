@@ -15,7 +15,7 @@
     </macrodef>
 
     <macrodef name="compile-java">
-        <attribute name="configuration" default="main"/>
+        <attribute name="configuration" />
         <attribute name="classpath.refid"/>
         <attribute name="src.dir"/>
         <attribute name="target.classes.dir"/>
@@ -26,8 +26,10 @@
         <attribute name="print.classpath" default="true"/>
 
         <sequential>
-            <property name="compile.configuration" value="@{configuration}" />
+            <!--
+            <property name="compile.configuration" value="@{configuration}" userproperty="true"/>
             <property name="compile.classpath.refid" value="@{classpath.refid}" />
+            -->
             <property name="print.classpath" value="@{print.classpath}" />
             <echo message="Compiling classes for configuration [@{configuration}]"/>
             <echo message="src.dir            : @{src.dir}"/>
@@ -53,11 +55,14 @@
             <copy-resources src.dir="@{src.dir}"
                             dest.dir="@{target.classes.dir}" />
 
-            <antcall target="fail.build.if.compile.failed" />
+            <antcall target="compilation.complete">                
+                <param name="compile.classpath.refid" value="@{classpath.refid}" />
+                <param name="compile.configuration" value="@{configuration}" />
+            </antcall>
         </sequential>
     </macrodef>
 
-    <target name="fail.build.if.compile.failed" if="compile.failed">
+    <target name="compilation.complete" if="compile.failed">
         <echo message="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
         <echo message=""/>
         <echo message="   ATTENTION!! Compilation of [${compile.configuration}] Failed!"/>
