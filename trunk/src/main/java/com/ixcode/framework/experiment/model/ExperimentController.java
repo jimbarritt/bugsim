@@ -326,10 +326,9 @@ public class ExperimentController extends ModelBase {
     private void detatchFromStartupLogAppender() {
         if (_startupLogAppenderName != null) {
             Appender a = Logger.getRootLogger().getAppender(_startupLogAppenderName);
-            if (a == null) {
-                _exceptionHandler.handle(new IOException("No appender called '" + _startupLogAppenderName + "' found to detatch from."));
+            if (a != null) {
+                Logger.getRootLogger().removeAppender(a);
             }
-            Logger.getRootLogger().removeAppender(a);
         }
     }
 
