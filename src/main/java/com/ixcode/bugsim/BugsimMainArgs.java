@@ -3,23 +3,19 @@
  */
 package com.ixcode.bugsim;
 
-import com.ixcode.bugsim.model.experiment.experiment1a.Experiment1aFactory;
-import com.ixcode.bugsim.view.experiment.SimulationLandscapeViewFactory;
-import com.ixcode.bugsim.view.experiment.experiment1a.EdgeEffectProgressFactory;
-import com.ixcode.framework.experiment.model.ExperimentController;
-import com.ixcode.framework.experiment.model.MultipleProcessController;
-import com.ixcode.framework.util.ArgsBase;
-import org.apache.log4j.Logger;
+import com.ixcode.bugsim.model.experiment.experimentX.*;
+import com.ixcode.bugsim.view.experiment.experimentX.*;
+import com.ixcode.framework.experiment.model.*;
+import com.ixcode.framework.util.*;
+import org.apache.log4j.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
- * Description : ${CLASS_DESCRIPTION}
+ * Description : These are all the arguments that can be provided to bugsim.
+ * 
  */
 public class BugsimMainArgs extends ArgsBase {
-
-
 
     private static final String ARG_INTERACTIVE_MODE = "interactive";
     private static final String ARG_EDIT_PLAN = "editPlan";
@@ -33,27 +29,21 @@ public class BugsimMainArgs extends ArgsBase {
     private static final String ARG_STATUS_SERVER = "statusServer";
     private static final String ARG_MULTIPLE_PROCESS = "multipleProcess";
 
-
-
-
     private static Map DEFAULTS = new HashMap();
 
     static {
         DEFAULTS.put(ARG_INTERACTIVE_MODE, "true");
         DEFAULTS.put(ARG_EDIT_PLAN, "false");
-        DEFAULTS.put(ARG_EXPERIMENT_FACTORY, Experiment1aFactory.class.getName());
-        DEFAULTS.put(ARG_PROGRESS_PANEL_FACTORY, EdgeEffectProgressFactory.class.getName());
-        DEFAULTS.put(ARG_LANDSCAPE_VIEW_FACTORY, SimulationLandscapeViewFactory.class.getName());
+        DEFAULTS.put(ARG_EXPERIMENT_FACTORY, ExperimentXFactory.class.getName());
+        DEFAULTS.put(ARG_PROGRESS_PANEL_FACTORY, ExperimentXProgressFactory.class.getName());
+        DEFAULTS.put(ARG_LANDSCAPE_VIEW_FACTORY, ExperimentXLandscapeViewFactory.class.getName());
         DEFAULTS.put(ARG_OUTPUT_PATH, ExperimentController.getDefaultOutputPath());
         DEFAULTS.put(ARG_OUTPUT_ITERATION_DETAILS, "" + ExperimentController.getDefaultOutputIterationDetails());
         DEFAULTS.put(ARG_TRIAL_NAME, "");
         DEFAULTS.put(ARG_PLAN_FILE_NAME, "");
         DEFAULTS.put(ARG_STATUS_SERVER, "true");
         DEFAULTS.put(ARG_MULTIPLE_PROCESS, "1of1");
-
     }
-
-
 
     public BugsimMainArgs(String[] args) {
         super(args, DEFAULTS);
