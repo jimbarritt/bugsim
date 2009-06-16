@@ -13,30 +13,40 @@ import java.io.IOException;
 public class BugsimVersion {
 
     public static String getVersion() {
-        Properties p = new Properties();
-        ClassLoader cl = Thread.currentThread().getContextClassLoader();
-        InputStream in =  cl.getResourceAsStream("application/application.properties");
-        if (in == null) {
-            throw new RuntimeException("No properties file 'application.application.version'"); 
-        }
-        String version  = "";
-        try {
-            p.load(in);
-            version = p.getProperty("application.version") + " dist(" + p.getProperty("application.distnumber") +")";
-        } catch (IOException e) {
-            throw new RuntimeException("Could not load version from properties file 'application.application.version' on the classpath.");
-        } finally {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
+        Properties properties = loadPropertiesFromClasspath("application/application.properties");
 
+        String version = properties.getProperty("application.version")
+                         + " dist(" + properties.getProperty("application.distnumber") +")";
 
         return version.trim();
 
+    }
+
+    private static Properties loadPropertiesFromClasspath(String propertiesFilename) {
+        Properties properties = new Properties();
+
+        InputStream in =  Thread.currentThread().getContextClassLoader().getResourceAsStream(propertiesFilename);
+        if (in == null) {
+            throw new RuntimeException("No properties file 'application.application.version'");
+        }
+
+        try {
+            properties.load(in);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not load version from properties file 'application.application.version' on the classpath.");
+        } finally {
+            tryToClose(in);
+        }
+        return properties;
+    }
+
+    private static void tryToClose(InputStream in) {
+        if (in != null) {
+            try {
+                in.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

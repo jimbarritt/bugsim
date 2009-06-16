@@ -361,6 +361,16 @@
     <option name="cycleTableSpecificationString" value="" />
     <option name="shortCycleTableSpecificationString" value="" />
   </component>
+  <component name="libraryTable">
+    <library name="main">
+      <CLASSES>
+        <root url="file:///Users/jim/work/code/bugsim/lib/main/jar" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file:///Users/jim/work/code/bugsim/lib/main/jar" recursive="false" />
+    </library>
+  </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>
       <option name="birdViewUpdateDelay" value="2000" />
