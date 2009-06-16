@@ -9,6 +9,7 @@
         <attribute name="show.test.output" default="off"/>
         <!-- can also be "on" which prints stats, "withOutAndErr" which sends everything to the stdout and stderr-->
         <attribute name="open.failure.reports" default="true"/>
+        <attribute name="stylesheet.dir"/>
 
         <sequential>
 
@@ -42,8 +43,10 @@
                 <fileset dir="@{report.dir}/xml">
                     <include name="*.xml"/>
                 </fileset>
-                <report format="frames" todir="@{report.dir}/html">
-                    <param name="TITLE" expression="@{configuration} test results." />
+                <report format="frames"
+                        todir="@{report.dir}/html"
+                        styledir="@{stylesheet.dir}">                    
+                    <param name="CONFIGURATION" expression="@{configuration}" />
                 </report>
             </junitreport>
 

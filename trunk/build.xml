@@ -8,7 +8,8 @@
     <property name="dependency.file" value="${basedir}/dependencies.xml"/>
 
     <property name="src.build.dir" value="${src.dir}/build"/>
-    <property name="src.build.macros.dir" value="${src.build.dir}/macros" />
+    <property name="src.build.macros.dir" value="${src.build.dir}/macros"/>
+    <property name="src.build.junit.stylesheet.dir" value="${src.build.macros.dir}"/>
     <property name="src.build.ivy.settings.file" value="${src.build.dir}/ivy-settings.xml"/>
 
     <property name="src.main.dir" value="${src.dir}/main"/>
@@ -50,48 +51,47 @@
 
     <path id="classpath.main.compile">
         <fileset dir="${lib.main.dir}/jar/" includes="**/*.jar"/>
-        <path location="${src.resource.dir}/" />
+        <path location="${src.resource.dir}/"/>
     </path>
 
     <path id="classpath.test.fixture.compile">
-        <fileset dir="${lib.test.fixture.dir}/jar/" includes="**/*.jar" />
-        <path refid="classpath.main.compile" />
+        <fileset dir="${lib.test.fixture.dir}/jar/" includes="**/*.jar"/>
+        <path refid="classpath.main.compile"/>
     </path>
 
     <path id="classpath.test.unit.compile">
-        <path location="${target.classes.main.dir}" />
-        <path location="${target.classes.test.fixture.dir}" />
-        
-        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar" />
-        <path refid="classpath.main.compile" />
-        <path refid="classpath.test.fixture.compile" />
+        <path location="${target.classes.main.dir}"/>
+        <path location="${target.classes.test.fixture.dir}"/>
+
+        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar"/>
+        <path refid="classpath.main.compile"/>
+        <path refid="classpath.test.fixture.compile"/>
     </path>
 
     <path id="classpath.test.unit.run">
-        <path location="${target.classes.test.unit.dir}" />
-        <path refid="classpath.test.unit.compile" />
+        <path location="${target.classes.test.unit.dir}"/>
+        <path refid="classpath.test.unit.compile"/>
     </path>
 
     <path id="classpath.test.functional.compile">
-        <path location="${target.classes.main.dir}" />
-        <path location="${target.classes.test.fixture.dir}" />
-        <path refid="classpath.test.fixture.compile" />
-        <path refid="classpath.main.compile" />
-        <fileset dir="${lib.test.functional.dir}/jar/" includes="**/*.jar" />
+        <path location="${target.classes.main.dir}"/>
+        <path location="${target.classes.test.fixture.dir}"/>
+        <path refid="classpath.test.fixture.compile"/>
+        <path refid="classpath.main.compile"/>
+        <fileset dir="${lib.test.functional.dir}/jar/" includes="**/*.jar"/>
     </path>
 
     <path id="classpath.test.functional.run">
-        <path location="${target.classes.test.functional.dir}" />
-        <path refid="classpath.test.functional.compile" />
+        <path location="${target.classes.test.functional.dir}"/>
+        <path refid="classpath.test.functional.compile"/>
     </path>
-
 
 
     <target name="report.config" description="--> lists some important configuration information">
         <echo message="ant.home        : ${ant.home}"/>
         <echo message="os.name         : ${os.name}"/>
         <echo message="basedir         : ${basedir}"/>
-        <echo message="skip.update.lib : ${skip.update.lib}" />
+        <echo message="skip.update.lib : ${skip.update.lib}"/>
     </target>
 
     <target name="clean" description="--> remove all files created with this build script">
@@ -114,15 +114,16 @@
 
     <available file="${lib.dir}" property="skip.update.lib"/>
     <target name="update.lib.if.required" unless="skip.update.lib">
-        <antcall target="update.lib" />
+        <antcall target="update.lib"/>
     </target>
 
-    <target name="update.lib.skipped" depends="update.lib.if.required"  if="skip.update.lib">
-        <echo message="lib.dir [${lib.dir}] already exists" />
-        <echo message="Not updating libs, use [update.lib] to force update" />
+    <target name="update.lib.skipped" depends="update.lib.if.required" if="skip.update.lib">
+        <echo message="lib.dir [${lib.dir}] already exists"/>
+        <echo message="Not updating libs, use [update.lib] to force update"/>
     </target>
 
-    <target name="compile" depends="update.lib.skipped, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
+    <target name="compile"
+            depends="update.lib.skipped, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
             description="--> compiles all sources, including tests"/>
 
     <target name="compile.main">
@@ -138,54 +139,57 @@
 
     <target name="compile.test.fixtures">
         <compile-java configuration="test.fixtures"
-            src.dir="${src.test.java.fixture.dir}"
-            classpath.refid="classpath.test.fixture.compile"
-            target.classes.dir="${target.classes.test.fixture.dir}"
-            java.version="1.5"/>
+                      src.dir="${src.test.java.fixture.dir}"
+                      classpath.refid="classpath.test.fixture.compile"
+                      target.classes.dir="${target.classes.test.fixture.dir}"
+                      java.version="1.5"/>
     </target>
 
     <target name="compile.unit.tests">
         <compile-java configuration="unit.test"
-        src.dir="${src.test.java.unit.dir}"
-        classpath.refid="classpath.test.unit.compile"
-        target.classes.dir="${target.classes.test.unit.dir}"
-        java.version="1.5"/>
+                      src.dir="${src.test.java.unit.dir}"
+                      classpath.refid="classpath.test.unit.compile"
+                      target.classes.dir="${target.classes.test.unit.dir}"
+                      java.version="1.5"/>
     </target>
+
+
+    <target name="compile.functional.tests">
+        <compile-java configuration="functional.test"
+                      src.dir="${src.test.java.functional.dir}"
+                      classpath.refid="classpath.test.functional.compile"
+                      target.classes.dir="${target.classes.test.functional.dir}"
+                      java.version="1.5"/>
+    </target>
+
 
     <target name="run.unit.tests" depends="compile.unit.tests"
             description="--> compiles and runs the unit tests">
-         <run-junit configuration="unit.test"
-                    classpath.refid="classpath.test.unit.run"
-                    report.dir="${target.report.test.unit.dir}"
-                    src.test.dir="${src.test.java.unit.dir}" />
+        <run-junit configuration="unit.test"
+                   classpath.refid="classpath.test.unit.run"
+                   report.dir="${target.report.test.unit.dir}"
+                   src.test.dir="${src.test.java.unit.dir}"
+                   stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
+    </target>
+
+    <target name="run.functional.tests" depends="compile.functional.tests"
+            description="--> compiles and runs the functional tests">
+        <run-junit configuration="functional.test"
+                   classpath.refid="classpath.test.functional.run"
+                   report.dir="${target.report.test.functional.dir}"
+                   src.test.dir="${src.test.java.functional.dir}"
+                   stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
 
     <target name="report.unit.test.failures" description="--> opens the unit test failures in a browser">
-            <junit-open-reports configuration="unit.test"
-                                report.dir="${target.report.test.unit.dir}" />
+        <junit-open-reports configuration="unit.test"
+                            report.dir="${target.report.test.unit.dir}"/>
     </target>
 
-    <target name="compile.functional.tests">
-            <compile-java configuration="functional.test"
-                          src.dir="${src.test.java.functional.dir}"
-                          classpath.refid="classpath.test.functional.compile"
-                          target.classes.dir="${target.classes.test.functional.dir}"
-                          java.version="1.5"/>
-        </target>
-
-        <target name="run.functional.tests" depends="compile.functional.tests"
-                description="--> compiles and runs the functional tests">
-             <run-junit configuration="functional.test"
-                        classpath.refid="classpath.test.functional.run"
-                        report.dir="${target.report.test.functional.dir}"
-                        src.test.dir="${src.test.java.functional.dir}" />
-        </target>
-
-        <target name="report.functional.test.failures" description="--> opens the functional test failures in a browser">
-                <junit-open-reports configuration="functional.test"
-                                    report.dir="${target.report.test.unit.dir}" />
-        </target>
-
+    <target name="report.functional.test.failures" description="--> opens the functional test failures in a browser">
+        <junit-open-reports configuration="functional.test"
+                            report.dir="${target.report.test.unit.dir}"/>
+    </target>
 
     <target name="build-osx-app" depends="report.config, clean"
             description="--> does everything nescessary to create a .app package in the target directory">

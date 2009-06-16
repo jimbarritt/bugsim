@@ -34,11 +34,12 @@ public class RandomHeadingGeneratorTestCase extends TestCase {
         double min = DoubleMath.minOf(results);
 
         System.out.println("Max: " + max + ", min: " + min);
-        assertTrue("Max<359.999 actual is " + max, (max<359.9999));
+        assertEquals("Max" , max, 359.999, 0.001);
         assertTrue("Min>0", (min>0));
     }
 
 
+   
 
     public void testGenerateCorrelatedRandomDirectionIsNormal() {
         int replicants = 1000000;
