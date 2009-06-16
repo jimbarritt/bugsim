@@ -10,7 +10,7 @@ echo Building [$projectName] ...
 echo -----------------------------------------------------------------------------
 echo Using ant from [$antPath] in directory [$PWD] with command [$1]
 
-ant -f ./build.xml -Dbasedir=$PWD $1 $2 $3 $4 $5
+ant -f ./build.xml -Dbasedir=$PWD -Dproject.name=bugsim $1 $2 $3 $4 $5
 
 #type man strftime to see full list of date formatting options.
 curdate=`date "+%a %d %b %Y"`
