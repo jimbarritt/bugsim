@@ -29,16 +29,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/../../lib/test.unit/jar" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../lib/test.unit/jar" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="module-resources">
         <CLASSES>
           <root url="file://$MODULE_DIR$/../../src/main/resource" />
@@ -48,6 +38,24 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="main" level="project" />
+    <orderEntry type="module-library">
+      <library name="test-jars">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../lib/test.acceptance/jar" />
+          <root url="file://$MODULE_DIR$/../../lib/test.fixture/jar" />
+          <root url="file://$MODULE_DIR$/../../lib/test.functional/jar" />
+          <root url="file://$MODULE_DIR$/../../lib/test.unit/jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../lib/test.fixture/source/junit-4.6.jar!/" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../lib/test.acceptance/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../lib/test.fixture/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../lib/test.functional/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../lib/test.unit/jar" recursive="false" />
+      </library>
+    </orderEntry>
     <orderEntryProperties />
   </component>
   <component name="RSpecModuleSettingsStorage">
