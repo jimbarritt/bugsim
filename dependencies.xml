@@ -5,6 +5,7 @@
         <conf name="test.fixture" visibility="private" description="test fixtures"/>
         <conf name="test.unit" visibility="private" description="unit testing jars"/>
         <conf name="test.functional" visibility="private" description="functional testing jars"/>
+        <conf name="test.acceptance" visibility="private" description="acceptance testing jars"/>
     </configurations>
 
     <dependencies>
@@ -61,8 +62,7 @@
             <artifact name="xercesImpl" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
-        <!-- common test jars -->
-        <dependency conf="test.unit->default;test.functional->default;test.fixture->default" org="junit" name="junit" rev="4.6" transitive="false">
+        <dependency conf="test.fixture->default" org="junit" name="junit" rev="4.6" transitive="false">
             <artifact name="junit" type="jar" ext="jar"/>
             <artifact name="junit" type="source" ext="jar" m:classifier="sources"  />
         </dependency>

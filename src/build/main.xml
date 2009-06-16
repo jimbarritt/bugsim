@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="main">
-    <property name="base.dir" value="${basedir}" />
-    
     <property name="src.dir" value="${base.dir}/src"/>
     <property name="lib.dir" value="${base.dir}/lib"/>
     <property name="target.dir" value="${base.dir}/target"/>
@@ -21,7 +19,8 @@
     <property name="src.test.java.fixture.dir" value="${src.test.java.dir}/fixture"/>
     <property name="src.test.java.unit.dir" value="${src.test.java.dir}/unit"/>
     <property name="src.test.java.functional.dir" value="${src.test.java.dir}/functional"/>
-
+    <property name="src.test.java.acceptance.dir" value="${src.test.java.dir}/acceptance"/>
+                          
     <property name="src.resource.dir" value="${src.dir}/main/resource"/>
     <property file="${src.resource.dir}/application/application.properties"/>
 
@@ -30,6 +29,7 @@
     <property name="lib.test.fixture.dir" value="${lib.dir}/test.fixture"/>
     <property name="lib.test.unit.dir" value="${lib.dir}/test.unit"/>
     <property name="lib.test.functional.dir" value="${lib.dir}/test.functional"/>
+    <property name="lib.test.acceptance.dir" value="${lib.dir}/test.acceptance"/>
 
     <property name="target.classes.dir" value="${target.dir}/classes"/>
     <property name="target.classes.main.dir" value="${target.classes.dir}/main"/>
@@ -37,12 +37,14 @@
     <property name="target.classes.test.fixture.dir" value="${target.classes.test.dir}/fixture"/>
     <property name="target.classes.test.unit.dir" value="${target.classes.test.dir}/unit"/>
     <property name="target.classes.test.functional.dir" value="${target.classes.test.dir}/functional"/>
+    <property name="target.classes.test.acceptance.dir" value="${target.classes.test.dir}/acceptance"/>
 
     <property name="target.report.dir" value="${target.dir}/report"/>
     <property name="target.report.test.dir" value="${target.report.dir}/test"/>
     <property name="target.report.test.fixture.dir" value="${target.report.test.dir}/fixture"/>
     <property name="target.report.test.unit.dir" value="${target.report.test.dir}/unit"/>
     <property name="target.report.test.functional.dir" value="${target.report.test.dir}/functional"/>
+    <property name="target.report.test.acceptance.dir" value="${target.report.test.dir}/acceptance"/>
 
     <import file="${src.build.macros.dir}/ivy.xml"/>
     <import file="${src.build.macros.dir}/report.xml"/>
@@ -65,7 +67,6 @@
         <path location="${target.classes.main.dir}"/>
         <path location="${target.classes.test.fixture.dir}"/>
 
-        <fileset dir="${lib.test.unit.dir}/jar/" includes="**/*.jar"/>
         <path refid="classpath.main.compile"/>
         <path refid="classpath.test.fixture.compile"/>
     </path>
@@ -88,12 +89,25 @@
         <path refid="classpath.test.functional.compile"/>
     </path>
 
+    <path id="classpath.test.acceptance.compile">
+         <path location="${target.classes.main.dir}"/>
+         <path location="${target.classes.test.fixture.dir}"/>
+         <path refid="classpath.test.fixture.compile"/>
+         <path refid="classpath.main.compile"/>
+         <fileset dir="${lib.test.acceptance.dir}/jar/" includes="**/*.jar"/>
+     </path>
+
+     <path id="classpath.test.acceptance.run">
+         <path location="${target.classes.test.acceptance.dir}"/>
+         <path refid="classpath.test.functional.compile"/>
+     </path>
 
     <target name="report.config" description="--> lists some important configuration information">
         <echo message="application.name    : ${application.name}"/>
         <echo message="ant.home            : ${ant.home}"/>
         <echo message="os.name             : ${os.name}"/>
-        <echo message="basedir             : ${base.dir}"/>
+        <echo message="base.dir            : ${base.dir}"/>
+        <echo message="lib.dir             : ${lib.dir}"/>
         <echo message="ivy.install.version : ${ivy.install.version}"/>
     </target>
 
@@ -103,6 +117,11 @@
 
     <target name="clean.lib" description="--> remove all libraries that have been downloaded">
         <clean-dir target.dir="${lib.dir}"/>
+
+        <mkdir dir="${lib.test.fixture.dir}/jar" />
+        <mkdir dir="${lib.test.unit.dir}/jar" />
+        <mkdir dir="${lib.test.functional.dir}/jar" />
+        <mkdir dir="${lib.test.acceptance.dir}/jar" />
     </target>
 
     <target name="clean.everything" depends="clean, clean.lib"
@@ -126,7 +145,7 @@
     </target>
 
     <target name="compile"
-            depends="update.lib.skipped, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests"
+            depends="update.lib.skipped, compile.main, compile.test.fixtures, compile.unit.tests, compile.functional.tests, compile.acceptance.tests"
             description="--> compiles all sources, including tests"/>
 
     <target name="compile.main">
@@ -138,7 +157,7 @@
                       hide.warnings="false"/>
     </target>
 
-    <target name="test" description="--> runs all the tests" depends="compile, run.unit.tests, run.functional.tests"/>
+    <target name="test" description="--> runs all the tests" depends="compile, run.unit.tests, run.functional.tests, run.acceptance.tests"/>
 
     <target name="compile.test.fixtures">
         <compile-java configuration="test.fixtures"
@@ -165,6 +184,14 @@
                       java.version="1.5"/>
     </target>
 
+    <target name="compile.acceptance.tests">
+           <compile-java configuration="acceptance.test"
+                         src.dir="${src.test.java.acceptance.dir}"
+                         classpath.refid="classpath.test.acceptance.compile"
+                         target.classes.dir="${target.classes.test.acceptance.dir}"
+                         java.version="1.5"/>
+       </target>
+
 
     <target name="run.unit.tests" depends="compile.unit.tests"
             description="--> compiles and runs the unit tests">
@@ -184,16 +211,15 @@
                    stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
 
-    <target name="report.unit.test.failures" description="--> opens the unit test failures in a browser">
-        <junit-open-reports configuration="unit.test"
-                            report.dir="${target.report.test.unit.dir}"/>
+    <target name="run.acceptance.tests" depends="compile.acceptance.tests"
+            description="--> compiles and runs the acceptance tests">
+        <run-junit configuration="acceptance.test"
+                   classpath.refid="classpath.test.acceptance.run"
+                   report.dir="${target.report.test.acceptance.dir}"
+                   src.test.dir="${src.test.java.acceptance.dir}"
+                   stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
-
-    <target name="report.functional.test.failures" description="--> opens the functional test failures in a browser">
-        <junit-open-reports configuration="functional.test"
-                            report.dir="${target.report.test.unit.dir}"/>
-    </target>
-
+    
     <target name="build-osx-app" depends="report.config, clean"
             description="--> does everything nescessary to create a .app package in the target directory">
     </target>

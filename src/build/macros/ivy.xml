@@ -13,13 +13,23 @@
         <attribute name="settings.file"/>
 
         <sequential>
-            <property name="ivy.lib.dir" value="@{ivy.install.dir}/ivy"/>
-            <property name="ivy.jar.file" value="${ivy.lib.dir}/ivy.jar"/>
 
-            <available file="@{lib.dir}" property="skip.download"/>
-            <antcall target="ivy.download" />
-            <antcall target="ivy.skip.download" />
 
+            <available file="@{ivy.install.dir}/ivy" property="skip.download.property"/>
+
+            <echo message="Checking for existance of @{ivy.install.dir}/ivy skip=${skip.download.property}" />
+            <antcall target="ivy.download">
+
+                <param name="ivy.lib.dir" value="@{ivy.install.dir}/ivy" />
+                <param name="ivy.jar.file" value="@{ivy.install.dir}/ivy/ivy.jar"/>
+            </antcall>
+            <antcall target="ivy.skip.download" >
+
+                <param name="ivy.lib.dir" value="@{ivy.install.dir}/ivy" />
+                <param name="ivy.jar.file" value="@{ivy.install.dir}/ivy/ivy.jar"/>
+            </antcall>
+
+            <property name="ivy.lib.dir" value="@{ivy.install.dir}/ivy" />
             <echo message="Using Ivy to retrieve dependencies to [@{lib.dir}]"/>
             <taskdef resource="org/apache/ivy/ant/antlib.xml"
                      uri="antlib:org.apache.ivy.ant">
@@ -34,12 +44,12 @@
         </sequential>
     </macrodef>
 
-    <target name="ivy.skip.download" if="skip.download">
+    <target name="ivy.skip.download" if="skip.download.property">
         <echo message="lib dir [${ivy.lib.dir}] exists, not downloading"/>
         <echo message="" />
     </target>
 
-    <target name="ivy.download" unless="skip.download">
+    <target name="ivy.download" unless="skip.download.property">
         <mkdir dir="${ivy.lib.dir}"/>
         <mkdir dir="${ivy.lib.dir}"/>
         <echo message="Downloading ivy from ${ivy.download.url}..."/>
