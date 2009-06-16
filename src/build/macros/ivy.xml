@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="ivy" xmlns:ivy="antlib:org.apache.ivy.ant">
 
-    <property name="ivy.install.version" value="2.0.0-beta1"/>
+    <property name="ivy.install.version" value="2.0.0"/>
 
     <property name="ivy.download.url"
               value="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar"/>

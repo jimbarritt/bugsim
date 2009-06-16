@@ -57,10 +57,6 @@ public class BugsimParameterMapTestCase extends TestCase {
         Parameter resourceBoundaryP = addResourceCategory(environmentC);
         addLandscapeCategory(environmentC, resourceBoundaryP);
 
-
-
-
-
         params.addCategory(environmentC);
         return params;
     }

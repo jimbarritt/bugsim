@@ -8,24 +8,26 @@
     </configurations>
 
     <dependencies>
-        <dependency conf="main->default" org="log4j" name="log4j" rev="1.2.15" transitive="false">
-            <artifact name="log4j" type="jar" ext="jar"/>
-            <artifact name="log4j" type="source" ext="jar"/>
+        <dependency conf="main->default"
+                    org="log4j" name="log4j" rev="1.2.15"
+                    transitive="false">
+            <artifact name="log4j" type="jar" ext="jar" />
+            <artifact name="log4j" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
         
         <dependency conf="main->default" org="jfree" name="jcommon" rev="1.0.9" transitive="false">
             <artifact name="jcommon" type="jar" ext="jar"/>
-            <artifact name="jcommon" type="source" ext="jar"/>
+            <artifact name="jcommon" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <dependency conf="main->default" org="jfree" name="jfreechart" rev="1.0.9" transitive="false">
             <artifact name="jfreechart" type="jar" ext="jar"/>
-            <artifact name="jfreechart" type="source" ext="jar" />
+            <artifact name="jfreechart" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <dependency conf="main->default" org="javax.servlet" name="servlet-api" rev="2.4" transitive="false">
             <artifact name="servlet-api" type="jar" ext="jar"/>
-            <artifact name="servlet-api" type="source" ext="jar"/>
+            <artifact name="servlet-api" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <dependency conf="main->default" org="javax.servlet" name="jsp-api" rev="2.0" transitive="false">
@@ -42,7 +44,7 @@
 
         <dependency conf="main->default" org="commons-logging" name="commons-logging" rev="1.1" transitive="false">
             <artifact name="commons-logging" type="jar" ext="jar"/>
-            <artifact name="commons-logging" type="source" ext="jar" />
+            <artifact name="commons-logging" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <dependency conf="main->default" org="commons-jxpath" name="commons-jxpath" rev="1.2" transitive="false">
@@ -51,18 +53,18 @@
 
         <dependency conf="main->default" org="struts" name="struts" rev="1.2.9" transitive="false">
             <artifact name="struts" type="jar" ext="jar"/>
-            <artifact name="struts" type="source" ext="jar" />
+            <artifact name="struts" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <dependency conf="main->default" org="xerces" name="xercesImpl" rev="2.4.0" transitive="false">
             <artifact name="xercesImpl" type="jar" ext="jar"/>
-            <artifact name="xercesImpl" type="source" ext="jar" />
+            <artifact name="xercesImpl" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
 
         <!-- common test jars -->
         <dependency conf="test.unit->default;test.functional->default;test.fixture->default" org="junit" name="junit" rev="4.6" transitive="false">
             <artifact name="junit" type="jar" ext="jar"/>
-            <artifact name="junit" type="source" ext="jar" />
+            <artifact name="junit" type="source" ext="jar" m:classifier="sources"  />
         </dependency>
         
     </dependencies>

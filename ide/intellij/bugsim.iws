@@ -15,20 +15,7 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iws" afterPath="$PROJECT_DIR$/bugsim.iws" />
-      <change type="NEW" beforePath="" afterPath="/Users/jim/work/code/bugsim/src/test/java/acceptance" />
-      <change type="MODIFICATION" beforePath="/Users/jim/work/code/bugsim/readme.txt" afterPath="/Users/jim/work/code/bugsim/readme.txt" />
-      <change type="MODIFICATION" beforePath="/Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement/RandomHeadingGeneratorTestCase.java" afterPath="/Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement/RandomHeadingGeneratorTestCase.java" />
-      <change type="MODIFICATION" beforePath="/Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimVersion.java" afterPath="/Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimVersion.java" />
-      <change type="MODIFICATION" beforePath="/Users/jim/work/code/bugsim/src/build/macros/junit.xml" afterPath="/Users/jim/work/code/bugsim/src/build/macros/junit.xml" />
-      <change type="NEW" beforePath="" afterPath="/Users/jim/work/code/bugsim/src/test/java/acceptance/com/ixcode/bugsim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.iml" afterPath="$PROJECT_DIR$/bugsim.iml" />
-      <change type="NEW" beforePath="" afterPath="/Users/jim/work/code/bugsim/src/test/java/acceptance/com/ixcode" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim.ipr" afterPath="$PROJECT_DIR$/bugsim.ipr" />
-      <change type="MODIFICATION" beforePath="/Users/jim/work/code/bugsim/build.xml" afterPath="/Users/jim/work/code/bugsim/build.xml" />
-      <change type="NEW" beforePath="" afterPath="/Users/jim/work/code/bugsim/src/test/java/acceptance/com" />
-    </list>
+    <list default="true" name="Default" comment="" />
     <ignored path="bugsim.iws" />
     <ignored path=".idea/workspace.xml" />
   </component>
@@ -90,15 +77,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExperimentController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/framework/experiment/model/ExperimentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="46" selection-start="338" selection-end="338" vertical-scroll-proportion="0.02937063">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BugsimVersion.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimVersion.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,34 +89,43 @@
       <file leaf-file-name="RandomHeadingGeneratorTestCase.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement/RandomHeadingGeneratorTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="3" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.3041096">
+            <state line="14" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.3328767">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BugsimParameterMapTestCase.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ivy-settings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/jim/work/code/bugsim/src/build/ivy-settings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="42" selection-start="906" selection-end="906" vertical-scroll-proportion="0.5907173">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dependencies.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file:///Users/jim/work/code/bugsim/dependencies.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="83" selection-start="3810" selection-end="3810" vertical-scroll-proportion="0.9396552">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/jim/work/code/bugsim/src/build/macros/ivy.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="53" selection-start="157" selection-end="157" vertical-scroll-proportion="0.09051724">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BugsimParameterMapTestCase.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment/parameter/BugsimParameterMapTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="2567" selection-end="2567" vertical-scroll-proportion="0.3034965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="junit.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/jim/work/code/bugsim/src/build/macros/junit.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="50" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.54310346">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/jim/work/code/bugsim/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="69" selection-start="8520" selection-end="8520" vertical-scroll-proportion="0.60775864">
+            <state line="23" column="13" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.33286715">
               <folding />
             </state>
           </provider>
@@ -213,292 +200,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/view" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment/parameter" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiClass:BugsimParameterMapTestCase" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/functional" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiClass:RandomHeadingGeneratorTestCase" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/functional" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/fixture" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/test/java/acceptance" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -947,27 +648,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/model/agent/butterfly/population/SimplePopulationFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.3318584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/model/agent/butterfly/population/IPopulationWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="934" selection-end="934" vertical-scroll-proportion="0.71100914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/model/experiment/experimentX/configuration/PopulationWebConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="12" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.456057">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/framework/simulation/model/agent/motile/release/ReleaseFixedLocationStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="53" selection-start="787" selection-end="787" vertical-scroll-proportion="0.27522936">
@@ -1024,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimVersion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="224" selection-end="224" vertical-scroll-proportion="0.38181818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/jim/work/code/bugsim/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="180" column="69" selection-start="8520" selection-end="8520" vertical-scroll-proportion="0.60775864">
@@ -1045,16 +718,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement/RandomHeadingGeneratorTestCase.java">
+    <entry file="file:///Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment/parameter/BugsimParameterMapTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="3" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.3041096">
+        <state line="23" column="13" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.33286715">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/test/java/unit/com/ixcode/bugsim/model/experiment/parameter/BugsimParameterMapTestCase.java">
+    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimVersion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2567" selection-end="2567" vertical-scroll-proportion="0.3034965">
+        <state line="13" column="4" selection-start="224" selection-end="224" vertical-scroll-proportion="0.38181818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/src/test/java/functional/com/ixcode/framework/simulation/model/agent/motile/movement/RandomHeadingGeneratorTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.3328767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/src/build/ivy-settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="42" selection-start="906" selection-end="906" vertical-scroll-proportion="0.5907173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/src/build/macros/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="53" selection-start="157" selection-end="157" vertical-scroll-proportion="0.09051724">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/dependencies.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="83" selection-start="3810" selection-end="3810" vertical-scroll-proportion="0.9396552">
           <folding />
         </state>
       </provider>
