@@ -3,29 +3,27 @@
  */
 package com.ixcode.bugsim;
 
-import com.ixcode.bugsim.model.experiment.BugsimExperimentTemplateRegistry;
-import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
-import com.ixcode.bugsim.view.experiment.ExperimentControllerFrame;
-import com.ixcode.bugsim.view.experiment.IExperimentProgressFactory;
-import com.ixcode.bugsim.view.experiment.editor.ExperimentPlanEditorDialog;
-import com.ixcode.bugsim.view.experiment.editor.OpenExperimentPlanDialog;
-import com.ixcode.bugsim.view.landscape.ILandscapeViewFactory;
-import com.ixcode.bugsim.server.BugsimSocketServer;
+import com.ixcode.bugsim.model.experiment.*;
+import com.ixcode.bugsim.server.*;
+import com.ixcode.bugsim.view.experiment.*;
+import com.ixcode.bugsim.view.experiment.editor.*;
+import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.experiment.model.*;
-import com.ixcode.framework.experiment.model.xml.ExperimentPlanXML;
-import com.ixcode.framework.javabean.JavaBeanException;
-import com.ixcode.framework.parameter.model.ParameterMapDebug;
-import com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry;
-import com.ixcode.framework.swing.JFrameExtension;
-import com.ixcode.framework.io.CommandExec;
-import org.apache.log4j.Logger;
-import org.xml.sax.SAXException;
+import com.ixcode.framework.experiment.model.xml.*;
+import com.ixcode.framework.io.*;
+import com.ixcode.framework.javabean.*;
+import com.ixcode.framework.parameter.model.*;
+import com.ixcode.framework.simulation.experiment.*;
+import com.ixcode.framework.swing.*;
+import org.apache.log4j.*;
+import org.apache.log4j.xml.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import javax.xml.parsers.*;
+import java.io.*;
+import java.net.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
@@ -35,6 +33,7 @@ public class BugsimMain {
     public static final String VERSION = BugsimVersion.getVersion();
 
     public static void main(String[] args) {
+        loadLog4JConfig();
         if (log.isInfoEnabled()) {
             log.info("Welcome to bugsim version " + getVersion() + "");
             log.info("Logs will be output to : " + new File("logs").getAbsolutePath());
@@ -48,6 +47,44 @@ public class BugsimMain {
         BugsimMainArgs ba = new BugsimMainArgs(args);
 
         BugsimMain.initialiseExperiment(ba);
+    }
+
+    private static void loadLog4JConfig() {
+		URL log4jUri = null;
+        InputStream inputStream = null;
+        try {
+			log4jUri = Thread.currentThread().getContextClassLoader().getResource("logging/log4j.xml");
+			inputStream = log4jUri.openConnection().getInputStream();
+
+			DocumentBuilderFactory newInstance = DocumentBuilderFactory.newInstance();
+			newInstance.setValidating(false);
+			DocumentBuilder newDocumentBuilder = newInstance.newDocumentBuilder();
+
+			Document doc = newDocumentBuilder.parse(inputStream);
+			DOMConfigurator conf = new DOMConfigurator();
+			conf.doConfigure(doc.getDocumentElement(), new Hierarchy(Logger.getRootLogger()));
+            
+            log.info("Log4J initialised with log configuration [" + log4jUri.toExternalForm() + "]");
+            log.info("Log4J Logging Level = " + Logger.getRootLogger().getLevel());
+        } catch (Exception e) {
+            e.printStackTrace();
+            String uri = (log4jUri!= null) ? log4jUri.toExternalForm() : "not found";
+			throw new RuntimeException("Could not initialise log4j @ " + uri, e);
+		} finally {
+             tryToClose(inputStream);
+        }
+
+
+    }
+
+    private static void tryToClose(InputStream inputStream) {
+        if (inputStream != null) {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException("Could not close input stream.", e);
+            }
+        }
     }
 
 
