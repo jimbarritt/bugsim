@@ -3,29 +3,17 @@
  */
 package com.ixcode.bugsim.model.experiment.experimentX;
 
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
-import com.ixcode.framework.experiment.model.ExperimentPlan;
-import com.ixcode.framework.experiment.model.IExperiment;
-import com.ixcode.framework.experiment.model.ILoadedExperimentFactory;
-import com.ixcode.framework.parameter.model.Category;
-import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
-import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.framework.simulation.model.Simulation;
+import com.ixcode.bugsim.model.experiment.parameter.*;
+import com.ixcode.framework.experiment.model.*;
+import com.ixcode.framework.parameter.model.*;
+import com.ixcode.framework.simulation.model.*;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.reflect.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
 public class ExperimentXFactory implements ILoadedExperimentFactory {
-
 
     public ExperimentXFactory() {
     }
@@ -35,20 +23,13 @@ public class ExperimentXFactory implements ILoadedExperimentFactory {
         return new ExperimentX(simulation, plan);
     }
 
-
     public IExperiment createExperiment(String trialName) {
-
-
         Simulation simulation = new Simulation();
         ExperimentPlan plan = createDefaultPlan();
 
         addManipulations(ExperimentXTrials.class,  trialName, plan);
 
-
-
         return new ExperimentX(simulation, plan);
-
-
     }
 
     public static void addManipulations(Class trialsClass, String trialCode, ExperimentPlan plan) {
@@ -81,10 +62,6 @@ public class ExperimentXFactory implements ILoadedExperimentFactory {
 
         BugsimParameterMap.addDefaultParameters(params);
 
-
-//        if (BugsimMain.isDebug()) {
-//            ParameterMapDebug.debugParams(plan.getParameterTemplate());
-//        }
         return plan;
     }
 

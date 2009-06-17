@@ -6,6 +6,7 @@ public class ProducesOutputStatisticsTest {
 
     @Test
     public void producesSomeCSVFIles() {
-        
+        BugsimMain bugsimMain = new BugsimMain();
+
     }
 }

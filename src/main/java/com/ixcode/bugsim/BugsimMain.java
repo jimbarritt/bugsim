@@ -38,7 +38,6 @@ public class BugsimMain {
         if (log.isInfoEnabled()) {
             log.info("Welcome to bugsim version " + getVersion() + "");
             log.info("Logs will be output to : " + new File("logs").getAbsolutePath());
-
         }
 
         JFrameExtension.setSystemLookAndFeel();
@@ -49,14 +48,11 @@ public class BugsimMain {
         BugsimMainArgs ba = new BugsimMainArgs(args);
 
         BugsimMain.initialiseExperiment(ba);
-
-
     }
 
 
     public static void initialiseExperiment(BugsimMainArgs ba) {
         try {
-
             IExperimentFactory experimentFactory = (IExperimentFactory)instantiateClass(ba.getExperimentFactoryName());
             IExperimentProgressFactory progressPanelFactory = (IExperimentProgressFactory)instantiateClass(ba.getProgressPanelFactoryName());
             ILandscapeViewFactory landscapeViewFactory = (ILandscapeViewFactory)instantiateClass(ba.getLandscapeViewFactoryName());
@@ -78,7 +74,6 @@ public class BugsimMain {
                     }
                     System.exit(0);
                 }
-
             }
 
             if (experiment == null) {
@@ -103,7 +98,6 @@ public class BugsimMain {
 
             controller.reset();
 
-
             if (ba.isInteractiveMode()) {
                 controller.setAutopauseOn(true); // could just set this to teh value of interactiveMode but its weak because it is bound to that variable so if something changes it will break later
                 initialiseUI(progressPanelFactory, experiment, controller, landscapeViewFactory);
@@ -111,9 +105,6 @@ public class BugsimMain {
                 controller.setAutopauseOn(false);
                 controller.run();
             }
-
-
-
         } catch (Throwable e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.exit(-1);
@@ -250,7 +241,7 @@ public class BugsimMain {
 
 
     public static boolean isDebug() {
-        return Boolean.getBoolean("bugsim.debug");
+        return true;
     }
 
 
