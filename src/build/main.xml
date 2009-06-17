@@ -20,9 +20,11 @@
     <property name="src.test.java.unit.dir" value="${src.test.java.dir}/unit"/>
     <property name="src.test.java.functional.dir" value="${src.test.java.dir}/functional"/>
     <property name="src.test.java.acceptance.dir" value="${src.test.java.dir}/acceptance"/>
-                          
+
     <property name="src.resource.dir" value="${src.dir}/main/resource"/>
-    <property file="${src.resource.dir}/application/application.properties"/>
+    <property name="src.resource.application.dir" value="${src.resource.dir}/application"/>
+    <property file="${src.resource.application.dir}/application.properties"/>
+    <property name="src.resource.application.manifest" value="${src.resource.application.dir}/MANIFEST.MF"/>
 
     <property name="lib.build.dir" value="${lib.dir}/build"/>
     <property name="lib.main.dir" value="${lib.dir}/main"/>
@@ -38,6 +40,11 @@
     <property name="target.classes.test.unit.dir" value="${target.classes.test.dir}/unit"/>
     <property name="target.classes.test.functional.dir" value="${target.classes.test.dir}/functional"/>
     <property name="target.classes.test.acceptance.dir" value="${target.classes.test.dir}/acceptance"/>
+
+    <property name="target.application.dir" value="${target.dir}/application"/>
+    <property name="target.application.jar"
+              value="${target.application.dir}/${application.name}-${application.version}-${application.distnumber}.jar"/>
+    <property name="target.application.lib.dir" value="${target.application.dir}/lib"/>
 
     <property name="target.report.dir" value="${target.dir}/report"/>
     <property name="target.report.test.dir" value="${target.report.dir}/test"/>
@@ -90,17 +97,17 @@
     </path>
 
     <path id="classpath.test.acceptance.compile">
-         <path location="${target.classes.main.dir}"/>
-         <path location="${target.classes.test.fixture.dir}"/>
-         <path refid="classpath.test.fixture.compile"/>
-         <path refid="classpath.main.compile"/>
-         <fileset dir="${lib.test.acceptance.dir}/jar/" includes="**/*.jar"/>
-     </path>
+        <path location="${target.classes.main.dir}"/>
+        <path location="${target.classes.test.fixture.dir}"/>
+        <path refid="classpath.test.fixture.compile"/>
+        <path refid="classpath.main.compile"/>
+        <fileset dir="${lib.test.acceptance.dir}/jar/" includes="**/*.jar"/>
+    </path>
 
-     <path id="classpath.test.acceptance.run">
-         <path location="${target.classes.test.acceptance.dir}"/>
-         <path refid="classpath.test.functional.compile"/>
-     </path>
+    <path id="classpath.test.acceptance.run">
+        <path location="${target.classes.test.acceptance.dir}"/>
+        <path refid="classpath.test.functional.compile"/>
+    </path>
 
     <target name="report.config" description="--> lists some important configuration information">
         <echo message="application.name    : ${application.name}"/>
@@ -118,10 +125,10 @@
     <target name="clean.lib" description="--> remove all libraries that have been downloaded">
         <clean-dir target.dir="${lib.dir}"/>
 
-        <mkdir dir="${lib.test.fixture.dir}/jar" />
-        <mkdir dir="${lib.test.unit.dir}/jar" />
-        <mkdir dir="${lib.test.functional.dir}/jar" />
-        <mkdir dir="${lib.test.acceptance.dir}/jar" />
+        <mkdir dir="${lib.test.fixture.dir}/jar"/>
+        <mkdir dir="${lib.test.unit.dir}/jar"/>
+        <mkdir dir="${lib.test.functional.dir}/jar"/>
+        <mkdir dir="${lib.test.acceptance.dir}/jar"/>
     </target>
 
     <target name="clean.everything" depends="clean, clean.lib"
@@ -157,7 +164,8 @@
                       hide.warnings="false"/>
     </target>
 
-    <target name="test" description="--> runs all the tests" depends="compile, run.unit.tests, run.functional.tests, run.acceptance.tests"/>
+    <target name="test" description="--> runs all the tests"
+            depends="compile, run.unit.tests, run.functional.tests, run.acceptance.tests"/>
 
     <target name="compile.test.fixtures">
         <compile-java configuration="test.fixtures"
@@ -185,12 +193,12 @@
     </target>
 
     <target name="compile.acceptance.tests">
-           <compile-java configuration="acceptance.test"
-                         src.dir="${src.test.java.acceptance.dir}"
-                         classpath.refid="classpath.test.acceptance.compile"
-                         target.classes.dir="${target.classes.test.acceptance.dir}"
-                         java.version="1.5"/>
-       </target>
+        <compile-java configuration="acceptance.test"
+                      src.dir="${src.test.java.acceptance.dir}"
+                      classpath.refid="classpath.test.acceptance.compile"
+                      target.classes.dir="${target.classes.test.acceptance.dir}"
+                      java.version="1.5"/>
+    </target>
 
 
     <target name="run.unit.tests" depends="compile.unit.tests"
@@ -219,7 +227,57 @@
                    src.test.dir="${src.test.java.acceptance.dir}"
                    stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
-    
+
+    <target name="package.application" depends="compile.main, package.application.jar" 
+            description="--> packages all the classes into a jar file" />
+
+    <target name="package.application.jar">
+        <fileset id="lib.jars" dir="${lib.main.dir}/jar" includes="**/*.jar"/>
+
+        <mkdir dir="${target.application.lib.dir}"/>
+        <copy todir="${target.application.lib.dir}">
+            <fileset refid="lib.jars"/>
+        </copy>
+
+        <pathconvert property="manifest.classpath" pathsep=" ">
+            <mapper>
+                <chainedmapper>
+                    <flattenmapper/>
+                    <globmapper from="*" to="lib/*"/>
+                </chainedmapper>
+            </mapper>
+            <path>
+                <fileset refid="lib.jars"/>
+            </path>
+        </pathconvert>
+
+        <echo message="main-class: ${application.mainclass}"/>
+        <echo message="class-path: ${manifest.classpath}"/>
+
+        <mkdir dir="${target.application.dir}"/>
+        <delete file="${target.application.jar}"/>
+        <jar destfile="${target.application.jar}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="${application.mainclass}"/>
+                <section name="common">
+                    <attribute name="Specification-Title" value="${application.name}"/>
+                    <attribute name="Specification-Version" value="${application.version}"/>
+                    <attribute name="Specification-Vendor" value="${application.vendor}"/>
+                    <attribute name="Implementation-Title" value="${application.name}"/>
+                    <attribute name="Implementation-Version" value="${application.version} ${application.distnumber}"/>
+                    <attribute name="Implementation-Vendor" value="${application.vendor}"/>
+                </section>
+                <attribute name="Class-Path" value="${manifest.classpath}"/>
+            </manifest>
+            <fileset dir="${target.classes.main.dir}" includes="**/*.*"/>
+            <fileset dir="${src.resource.dir}"/>
+        </jar>
+
+
+    </target>
+
+
     <target name="build-osx-app" depends="report.config, clean"
             description="--> does everything nescessary to create a .app package in the target directory">
     </target>
