@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.experiment1d;
+package com.ixcode.bugsim.model.experiment.matchstick;
 
 import com.ixcode.bugsim.model.experiment.parameter.MatchstickParameters;
 import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
@@ -18,7 +18,7 @@ import com.ixcode.framework.simulation.model.landscape.boundary.BoundaryShape;
  * <p/>
  * Revision: $Revision$
  */
-public class Experiment1dTrials {
+public class MatchstickExperimentTrials {
 
     public static final String TRIAL_DEBUG = "TrDEBUG";
     public static final String TRIAL_A = "TrA";
@@ -41,7 +41,7 @@ public class Experiment1dTrials {
 
 
     public static void addManipulationsTrialDebug(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_DEBUG);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_DEBUG);
         plan.setDescription("Used to try stuff out.");
 
         long replicates = 1;
@@ -51,7 +51,7 @@ public class Experiment1dTrials {
 
 
     public static void addManipulationsTrialA(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_A);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_A);
         plan.setDescription("Vary dropping distance - keep L=40");
 
         double D[] = new double[]{20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
@@ -68,7 +68,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialB(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_B);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_B);
         plan.setDescription("Varying dropping distance with Circular boundary");
 
         long replicates = 1;
@@ -91,7 +91,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialC(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_C);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_C);
         plan.setDescription("Circular boundar with same dimensions as in simulation");
 
 
@@ -115,7 +115,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialD(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_D);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_D);
         plan.setDescription("Random matchsticks released within a release 'zone' of 1 step length around the border.");
 
 
@@ -145,7 +145,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialE(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_E);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_E);
         plan.setDescription("Changing Angle of turn - Recording angle of turn and distance as the butterflies cross the zero boundary.");
 
         long replicants = 1;
@@ -153,7 +153,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialF(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_F);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_F);
         plan.setDescription("Compare initial move for Zero and Random First Move Length against B=800 no random first move length L=80 A=20.");
 
         long replicants = 20;
@@ -163,7 +163,7 @@ public class Experiment1dTrials {
 
 
     public static void addManipulationsTrialG(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_G);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_G);
         plan.setDescription("Using pre recorded boundary crossings to initialise the first step length, heading and position around the boundary.");
 
         long replicants = 1;
@@ -172,7 +172,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialH(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_H);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_H);
         plan.setDescription("Line of sight from release boundary. Max Age of 1 move - generate starting points systematically from 0 through 90 degrees around the border first move length is M and into the centre we need to record wether this butterfly hit a centre - corner or missed a cabbage.");
 
         long replicants = 1;
@@ -180,7 +180,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialI(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_I);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_I);
         plan.setDescription("Line of sight from release boundary. no max age - just normal lay egg - generate starting points systematically from 0 through 90 degrees around the border first move length is same as L and into the centre we need to record wether this butterfly hit a centre - corner or missed a cabbage. Then moves randomly as per usual");
 
         long replicants = 5;
@@ -189,7 +189,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialJ1(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_J1);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_J1);
         plan.setDescription("Random walkers release from the boundary initialised from the recorded buterflies at B=800 I is generated rather than determistic");
 
         long replicants = 50;
@@ -198,7 +198,7 @@ public class Experiment1dTrials {
     }
 
     public static void addManipulationsTrialJ2(ExperimentPlan plan) {
-        plan.setTrialName(Experiment1dTrials.TRIAL_J1);
+        plan.setTrialName(MatchstickExperimentTrials.TRIAL_J1);
         plan.setDescription("Real Random walkers released from zero boundary with RFML to compare to the pre recorded ones the location is randomly rather than deterministically generated");
 
         long replicants = 5;

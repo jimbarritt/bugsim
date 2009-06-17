@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.experiment1d;
+package com.ixcode.bugsim.model.experiment.matchstick;
 
 import com.ixcode.bugsim.BugsimMain;
 import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgentFactory;
@@ -27,9 +27,9 @@ import java.util.Map;
 /**
  * Description : COntains all the information specific to our edge effect experiment.
  */
-public class Experiment1d extends SimulationExperimentBase {
+public class MatchstickExperiment extends SimulationExperimentBase {
 
-    public Experiment1d(Simulation simulation, ExperimentPlan plan) {
+    public MatchstickExperiment(Simulation simulation, ExperimentPlan plan) {
         super(simulation, plan, null, new MatchstickSummaryReporter());
     }
 
@@ -82,8 +82,8 @@ public class Experiment1d extends SimulationExperimentBase {
 
         fireIterationInitialisedEvent(_currentParameters, progress);
 
-        if (Experiment1d.log.isInfoEnabled()) {
-            Experiment1d.log.info("ITR: " + progress.getCurrentIterationFormatted() + ", REP: " + progress.getCurrentReplicateFormatted() + " - " + getParameterSummary());
+        if (MatchstickExperiment.log.isInfoEnabled()) {
+            MatchstickExperiment.log.info("ITR: " + progress.getCurrentIterationFormatted() + ", REP: " + progress.getCurrentReplicateFormatted() + " - " + getParameterSummary());
         }
 
 
@@ -114,7 +114,7 @@ public class Experiment1d extends SimulationExperimentBase {
     }
 
 
-    private static final Logger log = Logger.getLogger(Experiment1d.class);
+    private static final Logger log = Logger.getLogger(MatchstickExperiment.class);
 
     private ParameterMap _currentParameters;
     private IMatchstickFactory _matchstickFactory;
