@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+    <dict>
+        <key>CFBundleName</key>
+        <string>bugsim</string>
+        <key>CFBundleVersion</key>
+        <string>100.0</string>
+        <key>CFBundleAllowMixedLocalizations</key>
+        <string>true</string>
+        <key>CFBundleExecutable</key>
+        <string>JavaApplicationStub</string>
+        <key>CFBundleDevelopmentRegion</key>
+        <string>English</string>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>CFBundleSignature</key>
+        <string>????</string>
+        <key>CFBundleInfoDictionaryVersion</key>
+        <string>6.0</string>
+        <key>CFBundleIconFile</key>
+        <string>bugsim.icns</string>
+        <key>Java</key>
+        <dict>
+            <key>MainClass</key>
+            <string>com.ixcode.bugsim.BugsimMain</string>
+            <key>JVMVersion</key>
+            <string>1.5+</string>
+            <key>ClassPath</key>
+            <array>
+                <string>$JAVAROOT/bugsim-8.0-0008.jar</string>
+                <string>$JAVAROOT/commons-beanutils-1.4.1.jar</string>
+                <string>$JAVAROOT/commons-collections-3.2.1.jar</string>
+                <string>$JAVAROOT/commons-jxpath-1.2.jar</string>
+                <string>$JAVAROOT/commons-logging-1.1.jar</string>
+                <string>$JAVAROOT/jcommon-1.0.9.jar</string>
+                <string>$JAVAROOT/jfreechart-1.0.9.jar</string>
+                <string>$JAVAROOT/jsp-api-2.0.jar</string>
+                <string>$JAVAROOT/log4j-1.2.15.jar</string>
+                <string>$JAVAROOT/servlet-api-2.4.jar</string>
+                <string>$JAVAROOT/struts-1.2.9.jar</string>
+                <string>$JAVAROOT/xercesImpl-2.4.0.jar</string>
+            </array>
+        </dict>
+    </dict>
+</plist>

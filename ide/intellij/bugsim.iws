@@ -80,7 +80,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.21052632">
+            <state line="4" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.14141414">
               <folding />
             </state>
           </provider>
@@ -89,7 +89,16 @@
       <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/jim/work/code/bugsim/src/build/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="60" selection-start="11310" selection-end="11310" vertical-scroll-proportion="0.234375">
+            <state line="230" column="85" selection-start="11335" selection-end="11335" vertical-scroll-proportion="0.34715027">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Info.plist" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Users/jim/work/code/bugsim/src/main/osx-app/Contents/Info.plist">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="62" selection-start="1078" selection-end="1124" vertical-scroll-proportion="0.22222222">
               <folding />
             </state>
           </provider>
@@ -98,7 +107,7 @@
       <file leaf-file-name="application.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/main/resource/application/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.3014354">
+            <state line="6" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.2055465">
               <folding />
             </state>
           </provider>
@@ -107,7 +116,7 @@
       <file leaf-file-name="BugsimMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="83" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.2605459">
+            <state line="30" column="13" selection-start="841" selection-end="841" vertical-scroll-proportion="-0.19732441">
               <folding />
             </state>
           </provider>
@@ -116,16 +125,7 @@
       <file leaf-file-name="log4j.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///Users/jim/work/code/bugsim/src/main/resource/logging/log4j.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="395" selection-end="395" vertical-scroll-proportion="0.5263158">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Users/jim/work/code/bugsim/src/main/resource/application/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="38" selection-start="34" selection-end="344" vertical-scroll-proportion="0.25119618">
+            <state line="10" column="17" selection-start="395" selection-end="395" vertical-scroll-proportion="0.35353535">
               <folding />
             </state>
           </provider>
@@ -325,11 +325,11 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/java" />
+          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/osx-app" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/java/com/ixcode" />
+          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/osx-app/Contents" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -355,15 +355,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/java" />
+          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/osx-app" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/java/com/ixcode" />
+          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/osx-app/Contents" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim" />
+          <option name="myItemId" value="PsiDirectory:/Users/jim/work/code/bugsim/src/main/osx-app/Contents/Resources" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -716,7 +716,7 @@
       <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="4" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" order="10" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39102563" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14102565" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39918256" order="4" />
@@ -818,13 +818,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/view/experiment/experimentX/ExperimentXLandscapeViewFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="65" selection-start="986" selection-end="986" vertical-scroll-proportion="0.17358491">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/view/experiment/SimulationLandscapeViewFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="29" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.7283019">
@@ -897,35 +890,42 @@
     </entry>
     <entry file="file:///Users/jim/work/code/bugsim/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.21052632">
+        <state line="4" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.14141414">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/jim/work/code/bugsim/src/main/resource/application/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.3014354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="83" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.2605459">
+        <state line="6" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.2055465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/jim/work/code/bugsim/src/main/resource/logging/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="395" selection-end="395" vertical-scroll-proportion="0.5263158">
+        <state line="10" column="17" selection-start="395" selection-end="395" vertical-scroll-proportion="0.35353535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/src/main/java/com/ixcode/bugsim/BugsimMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="841" selection-end="841" vertical-scroll-proportion="-0.19732441">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Users/jim/work/code/bugsim/src/main/osx-app/Contents/Info.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="62" selection-start="1078" selection-end="1124" vertical-scroll-proportion="0.22222222">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Users/jim/work/code/bugsim/src/build/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="60" selection-start="11310" selection-end="11310" vertical-scroll-proportion="0.234375">
+        <state line="230" column="85" selection-start="11335" selection-end="11335" vertical-scroll-proportion="0.34715027">
           <folding />
         </state>
       </provider>

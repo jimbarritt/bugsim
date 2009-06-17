@@ -228,10 +228,10 @@
                    stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
 
-    <target name="package.application" depends="compile.main, package.application.jar" 
-            description="--> packages all the classes into a jar file" />
+    <target name="package.application" depends="compile.main, package.application.app"
+            description="--> packages all the classes into a jar file"/>
 
-    <target name="package.application.jar">
+    <target name="package.application.app">
         <fileset id="lib.jars" dir="${lib.main.dir}/jar" includes="**/*.jar"/>
 
         <mkdir dir="${target.application.lib.dir}"/>
@@ -239,7 +239,7 @@
             <fileset refid="lib.jars"/>
         </copy>
 
-        <pathconvert property="manifest.classpath" pathsep=" ">
+        <pathconvert property="manifest.classpath" pathsep="&#013;&#010;">
             <mapper>
                 <chainedmapper>
                     <flattenmapper/>
@@ -251,8 +251,42 @@
             </path>
         </pathconvert>
 
+        <pathconvert property="plist.classpath" pathsep="&#013;&#010;">
+            <mapper>
+                <chainedmapper>
+                    <flattenmapper/>
+                    <globmapper from="*" to="&lt;string&gt;$JAVAROOT/*&lt;/string&gt;"/>
+                </chainedmapper>
+            </mapper>
+            <path>
+                <fileset refid="lib.jars"/>
+            </path>
+        </pathconvert>
+
+        <pathconvert property="shell.classpath" pathsep="&#013;&#010;">
+            <mapper>
+                <chainedmapper>
+                    <flattenmapper/>
+                    <globmapper from="*" to="CPATH=$CPATH:Java/*"/>
+                </chainedmapper>
+            </mapper>
+            <path>
+                <fileset refid="lib.jars"/>
+            </path>
+        </pathconvert>
+
+
         <echo message="main-class: ${application.mainclass}"/>
-        <echo message="class-path: ${manifest.classpath}"/>
+
+        <echo message="manifest.classpath:"/>
+        <echo message="${manifest.classpath}" />
+
+        <echo message="plist.classpath:"/>
+        <echo message="${plist.classpath}" />
+
+        <echo message="shell.classpath:"/>
+        <echo message="${shell.classpath}" />
+
 
         <mkdir dir="${target.application.dir}"/>
         <delete file="${target.application.jar}"/>
@@ -268,12 +302,12 @@
                     <attribute name="Implementation-Version" value="${application.version} ${application.distnumber}"/>
                     <attribute name="Implementation-Vendor" value="${application.vendor}"/>
                 </section>
-                <attribute name="Class-Path" value="${manifest.classpath}"/>
+                <!-- Doesn't work inside an os x app -->
+                <!--  <attribute name="Class-Path" value="${manifest.classpath}"/> -->
             </manifest>
             <fileset dir="${target.classes.main.dir}" includes="**/*.*"/>
             <fileset dir="${src.resource.dir}"/>
         </jar>
-
 
     </target>
 
