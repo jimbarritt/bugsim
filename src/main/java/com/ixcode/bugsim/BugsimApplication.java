@@ -9,6 +9,8 @@ import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import org.apache.log4j.*;
 
+import java.io.*;
+
 /**
  * Re-work of BugsimMain to simplify.
  */
@@ -19,7 +21,7 @@ public class BugsimApplication {
     public static void main(String[] args) {
         loadLog4JConfig();
         log.info("Welcome to BugSim : Version [" + getVersion() + "]");
-
+        log.info("BugSim is running in [" + new File(".").getAbsolutePath() + "]");
         new BugsimApplication().start();
     }
 

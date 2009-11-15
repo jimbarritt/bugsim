@@ -16,6 +16,13 @@ import java.awt.event.*;
  */
 public class JFrameExtension extends JFrame {
 
+    private static final Logger log = Logger.getLogger(JFrameExtension.class);
+    private JComponent content;
+    private StatusBar statusBar = new StatusBar();
+    private Color borderBackround;
+    JPanel borderPanel;
+    private boolean systemExitOnClose = true;
+
 
     public JFrameExtension(String title) throws HeadlessException {
         this(title, null);
@@ -33,7 +40,7 @@ public class JFrameExtension extends JFrame {
 
     public JFrameExtension(String title, JComponent content, Color backgroundColor, String contentPosition, boolean border) throws HeadlessException {
         super();
-        _content = content;
+        this.content = content;
         setTitle(title);
         setSize(400, 400);
         setLocation(200, 200);
@@ -44,7 +51,7 @@ public class JFrameExtension extends JFrame {
             }
 
             public void windowClosing(WindowEvent event) {
-                if (_systemExitOnClose) {
+                if (systemExitOnClose) {
                     if (log.isInfoEnabled()) {
                         log.info("Exiting Application!");
                     }
@@ -88,47 +95,47 @@ public class JFrameExtension extends JFrame {
 
         final int BORDER_WIDTH = 100;
         Border b = BorderFactory.createEmptyBorder(BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH);
-        _borderPanel = new JPanel();
+        borderPanel = new JPanel();
 
         if (border) {
-            _borderPanel.setBorder(b);
+            borderPanel.setBorder(b);
         }
 
-        _borderPanel.setBackground(backgroundColor);
-        _borderPanel.setLayout(new GridLayout(1, 1));
-        if (_content != null) {
-            _borderPanel.add(_content);
+        borderPanel.setBackground(backgroundColor);
+        borderPanel.setLayout(new GridLayout(1, 1));
+        if (this.content != null) {
+            borderPanel.add(this.content);
         }
 
         super.getContentPane().setLayout(new BorderLayout());
-        super.getContentPane().add(_borderPanel, contentPosition);
-        super.getContentPane().add(_statusBar, BorderLayout.SOUTH);
+        super.getContentPane().add(borderPanel, contentPosition);
+        super.getContentPane().add(statusBar, BorderLayout.SOUTH);
     }
 
     public Container getContentPane() {
-        return _borderPanel;
+        return borderPanel;
     }
 
-    protected void replaceStatusBar(JComponent newStatusBar) {
-        super.getContentPane().remove(_statusBar);
+    protected void replaceStatusBarComponent(JComponent newStatusBar) {
+        super.getContentPane().remove(statusBar);
         super.getContentPane().add(newStatusBar, BorderLayout.SOUTH);
     }
 
 
     public void setStatusBar(boolean show) {
-        _statusBar.setVisible(show);
+        statusBar.setVisible(show);
     }
 
     public StatusBar getStatusBar() {
-        return _statusBar;
+        return statusBar;
     }
 
     public JComponent getContent() {
-        return _content;
+        return content;
     }
 
     public void setBorderBackground(Color color) {
-        _borderPanel.setBackground(color);
+        borderPanel.setBackground(color);
 
     }
 
@@ -161,23 +168,20 @@ public class JFrameExtension extends JFrame {
     }
 
     public boolean isSystemExitOnClose() {
-        return _systemExitOnClose;
+        return systemExitOnClose;
     }
 
     public void setSystemExitOnClose(boolean systemExitOnClose) {
-        _systemExitOnClose = systemExitOnClose;
+        this.systemExitOnClose = systemExitOnClose;
     }
-
-    private static final Logger log = Logger.getLogger(JFrameExtension.class);
-    private JComponent _content;
-    private StatusBar _statusBar = new StatusBar();
-    private Color _borderBackground;
-    JPanel _borderPanel;
-    private boolean _systemExitOnClose = true;
 
 
     protected void setCrosshairCursor() {
         setCursor(java.awt.Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+    }
+
+    public void replaceStatusBar(StatusBar statusBar) {
+        this.statusBar = statusBar;
     }
 }
 
