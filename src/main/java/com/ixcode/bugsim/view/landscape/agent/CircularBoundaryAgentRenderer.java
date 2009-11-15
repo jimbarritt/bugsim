@@ -25,9 +25,7 @@ public class CircularBoundaryAgentRenderer extends PhysicalAgentRendererBase {
     public void render(Graphics2D g, Landscape landscape, IPhysicalAgent agent, RenderContext renderContext) {
         CircularBoundaryAgent boundaryAgent = (CircularBoundaryAgent)agent;
 
-
-
-        RectangularCoordinate centre = super.getRenderCoordinate(boundaryAgent.getLocation().getCoordinate(), landscape);
+        RectangularCoordinate centre = getRenderCoordinate(boundaryAgent.getLocation().getCoordinate(), landscape);
 
         double r= boundaryAgent.getCircularBoundary().getRadius();
 
