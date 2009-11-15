@@ -49,8 +49,9 @@ public class LandscapeFrame extends JFrameExtension {
     public LandscapeFrame(Landscape landscape, OpenSimulationAction openSimAction) throws HeadlessException {
         super(TITLE, new JPanel(new BorderLayout()));
 
-        // For some versions of Mac OS X, Java will handle painting the Unified Tool Bar.
-        // Calling this method ensures that this painting is turned on if necessary.
+        FancyStatusBar bottomBar = new FancyStatusBar();
+        super.replaceStatusBarComponent(bottomBar.getComponent());
+        super.replaceStatusBar(bottomBar);
 
 
         openSimulationAction = openSimAction;
@@ -72,6 +73,8 @@ public class LandscapeFrame extends JFrameExtension {
         controls.add(new JLabel("Viewing Controls"), BorderLayout.CENTER);
         container.add(controls, BorderLayout.EAST);
 
+        // For some versions of Mac OS X, Java will handle painting the Unified Tool Bar.
+        // Calling this method ensures that this painting is turned on if necessary.
         MacUtils.makeWindowLeopardStyle(getRootPane());
         UnifiedToolBar toolBar = new UnifiedToolBar();
         JButton button = new JButton("My Button");
@@ -84,30 +87,10 @@ public class LandscapeFrame extends JFrameExtension {
 
         container.add(landscapeViewContainer, BorderLayout.CENTER);
 
-        BottomBar bottomBar = new BottomBar(BottomBarSize.SMALL);
-        bottomBar.addComponentToLeft(MacWidgetFactory.createEmphasizedLabel(" Status"));
-
-        super.replaceStatusBar(bottomBar.getComponent());
 
         super.setSystemExitOnClose(false);
     }
 
-    private static class TestPanel extends JComponent {
-        @Override
-        protected void paintComponent(Graphics g) {
-            Graphics2D g2d = (Graphics2D) g;
-            Rectangle shape = g.getClipBounds();
-            g.setColor(Color.white);
-            g.fillRect(shape.x, shape.y, shape.width, shape.height);
-
-            Rectangle test = new Rectangle(0, 0, shape.width, shape.height);
-            g.setColor(Color.blue);
-            int strokeWidth = 4;
-            int halfStrokeWidth = strokeWidth / 2;
-            g2d.setStroke(new BasicStroke(strokeWidth));
-            g.drawRect(test.x + halfStrokeWidth, test.y + halfStrokeWidth, test.width - strokeWidth, test.height - strokeWidth);
-        }
-    }
 
     public void open() {
         setVisible(true);

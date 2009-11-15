@@ -13,30 +13,30 @@ public class StatusBar extends JPanel {
 
     public StatusBar() {
         setLayout(new BorderLayout());
-        _message = new JLabel("Status bar");
+        messageLabel = new JLabel("Status bar");
 
 
-        super.add(_message, BorderLayout.WEST);
+        super.add(messageLabel, BorderLayout.WEST);
         super.setMinimumSize(new Dimension(15, 17));
         super.setPreferredSize(new Dimension(15, 17));
-        getMessageLabel().setForeground(Color.DARK_GRAY);
+        messageLabel.setForeground(Color.DARK_GRAY);
     }
 
 
     public String getMessage() {
-        return _message.getText();
+        return messageLabel.getText();
     }
 
     public void setText(String message) {
-        _message.setText(message);
+        messageLabel.setText(message);
         invalidate();
         repaint();
     }
 
     public JLabel getMessageLabel() {
-        return _message;
+        return messageLabel;
 
     }
 
-    private JLabel _message;
+    private JLabel messageLabel;
 }
