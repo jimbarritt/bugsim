@@ -3,79 +3,94 @@
  */
 package com.ixcode.bugsim.view.landscape;
 
-import com.ixcode.framework.simulation.model.landscape.Landscape;
-import com.ixcode.framework.swing.JFrameExtension;
+import com.ixcode.framework.simulation.model.landscape.*;
+import com.ixcode.framework.swing.*;
 
 import javax.swing.*;
+import static javax.swing.BorderFactory.*;
 import java.awt.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
 public class LandscapeFrame extends JFrameExtension {
-    
-
 
     public static final String TITLE = "Landscape Viewer";
+
+    private LandscapeView landscapeView;
+    private AgentTypeChoiceCombo agentTypeChoiceCombo;
+    private OpenSimulationAction openSimulationAction;
+    private LandscapeToolbar landscapeToolbar;
+
+    public LandscapeFrame(Landscape landscape) throws HeadlessException {
+        this(landscape, new OpenSimulationAction());
+    }
 
     public LandscapeFrame(OpenSimulationAction openSimAction) throws HeadlessException {
         super(TITLE, new JPanel(new BorderLayout()));
 
-        super.setSize(700, 700);
-        super.setLocation(400, 0);
+        initSizeAndLocation();
 
-        _openSimAction = openSimAction;
+        openSimulationAction = openSimAction;
 
-        super.setBorderBackground(_view.getBackground());
+        super.setBorderBackground(landscapeView.getBackground());
 
         super.setSystemExitOnClose(false);
+    }
+
+    private void initSizeAndLocation() {
+        Dimension screenSize = super.getScreenSize();
+        super.setSize(new Dimension(screenSize.height, screenSize.height));
+        super.setLocation(0, 0);
     }
 
     public LandscapeFrame(Landscape landscape, OpenSimulationAction openSimAction) throws HeadlessException {
         super(TITLE, new JPanel(new BorderLayout()));
 
-        super.setSize(700, 700);
-        super.setLocation(400, 0);
-
-        _openSimAction = openSimAction;
-
-
-
-        JPanel container = (JPanel)super.getContent();
-
-        _combo = new AgentTypeChoiceCombo(landscape.getSimulation().getAgentRegistry());
-        _view = new LandscapeView(landscape, _combo, super.getStatusBar());
-        _toolbar = new LandscapeToolbar(_view, _combo, _openSimAction);
-        //@todo tidy up the toolbar!!
-        container.add(_toolbar, BorderLayout.NORTH);
-        container.add(_view, BorderLayout.CENTER);
-
-                super.setBorderBackground(_view.getBackground());
+        initSizeAndLocation();        
         
-//       JComponent glassPane = new OverlayingGlassPane(this);
-//        super.setGlassPane(glassPane);
-//        getGlassPane().setVisible(true);
+        openSimulationAction = openSimAction;
 
+        JPanel container = (JPanel) super.getContent();
+
+        agentTypeChoiceCombo = new AgentTypeChoiceCombo(landscape.getSimulation().getAgentRegistry());
+        landscapeView = new LandscapeView(landscape, agentTypeChoiceCombo, getStatusBar());
+        landscapeToolbar = new LandscapeToolbar(landscapeView, agentTypeChoiceCombo, openSimulationAction);
+
+        JPanel landscapeViewContainer = new JPanel(new BorderLayout());
+        landscapeViewContainer.setBorder(createEmptyBorder(20, 20, 20, 20));
+        landscapeViewContainer.setBackground(Color.DARK_GRAY);
+        landscapeViewContainer.add(landscapeView, BorderLayout.CENTER);
+
+        container.add(landscapeToolbar, BorderLayout.NORTH);
+        container.add(landscapeViewContainer, BorderLayout.CENTER);
+
+        super.setBorderBackground(landscapeView.getBackground());
         super.setSystemExitOnClose(false);
-
     }
+
+    public void open() {
+        setVisible(true);
+    }
+
     public LandscapeView getLandscapeView() {
-        return _view;
+        return landscapeView;
     }
 
     public AgentTypeChoiceCombo getAgentChoiceCombo() {
-        return _combo;
+        return agentTypeChoiceCombo;
     }
 
     public void setLandscape(Landscape landscape) {
 
-        _view.setLandscape(landscape);
+        landscapeView.setLandscape(landscape);
         landscape.fireAgentsChangedEvent();
 
 
 //        _view.addPropertyChangeListener(new LandscapeStatusBarUpdater(super.getStatusBar()));
 
     }
+
     public void addActionToToolbar(Action action) {
         getToolbar().add(action);
     }
@@ -86,11 +101,8 @@ public class LandscapeFrame extends JFrameExtension {
     }
 
     public LandscapeToolbar getToolbar() {
-        return _toolbar;
+        return landscapeToolbar;
     }
 
-    private LandscapeView _view;
-    private AgentTypeChoiceCombo _combo;
-    private OpenSimulationAction _openSimAction;
-    private LandscapeToolbar _toolbar;
+
 }

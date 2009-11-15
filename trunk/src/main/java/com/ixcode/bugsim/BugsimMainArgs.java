@@ -13,8 +13,9 @@ import java.util.*;
 
 /**
  * Description : These are all the arguments that can be provided to bugsim.
- * 
+ * Depreacted - See BugsimMain
  */
+@Deprecated
 public class BugsimMainArgs extends ArgsBase {
 
     private static final String ARG_INTERACTIVE_MODE = "interactive";

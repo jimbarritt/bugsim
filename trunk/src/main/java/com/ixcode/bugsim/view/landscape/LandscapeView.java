@@ -17,6 +17,8 @@ import org.apache.log4j.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import static java.awt.Cursor.getPredefinedCursor;
+import static java.awt.Cursor.CROSSHAIR_CURSOR;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
@@ -76,7 +78,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         setGridResolution(new ScaledDistance(1, DistanceUnitRegistry.metres()));
         setGridThickness(new ScaledDistance(10, DistanceUnitRegistry.centimetres()));
 
-
+        setCursor(getPredefinedCursor(CROSSHAIR_CURSOR));
     }
 
     public static RectangularCoordinate getScreenCoord(Landscape landscape, RectangularCoordinate landscapeCoord) {

@@ -26,7 +26,9 @@ import java.net.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
+ * Deprecated: Please use BugsimApplication instead, this is here for reference only.
  */
+@Deprecated
 public class BugsimMain {
 
     public static final String VERSION = BugsimVersion.getVersion();

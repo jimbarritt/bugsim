@@ -3,13 +3,13 @@
  */
 package com.ixcode.framework.swing;
 
-import org.apache.log4j.Logger;
+import org.apache.log4j.*;
 
 import javax.swing.*;
-import javax.swing.border.Border;
+import javax.swing.border.*;
 import java.awt.*;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import static java.awt.Toolkit.getDefaultToolkit;
+import java.awt.event.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
@@ -159,14 +159,17 @@ public class JFrameExtension extends JFrame {
 
     }
 
+    public Dimension getScreenSize() {
+        return getDefaultToolkit().getScreenSize();
+    }
 
     public static void centreWindowOnScreen(Window window) {
         Dimension size = window.getSize();
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Toolkit toolkit = getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();
 
-        int x = (int)((screenSize.getWidth() / 2) - (size.getWidth() / 2));
-        int y = (int)((screenSize.getHeight() / 2) - (size.getHeight() / 2));
+        int x = (int) ((screenSize.getWidth() / 2) - (size.getWidth() / 2));
+        int y = (int) ((screenSize.getHeight() / 2) - (size.getHeight() / 2));
 
         window.setLocation(x, y);
 
@@ -198,6 +201,11 @@ public class JFrameExtension extends JFrame {
     private Color _borderBackground;
     JPanel _borderPanel;
     private boolean _systemExitOnClose = true;
+
+
+    protected void setCrosshairCursor() {
+        setCursor(java.awt.Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+    }
 }
 
 

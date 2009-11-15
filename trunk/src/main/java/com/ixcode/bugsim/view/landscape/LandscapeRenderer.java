@@ -3,20 +3,17 @@
  */
 package com.ixcode.bugsim.view.landscape;
 
-import com.ixcode.bugsim.view.landscape.agent.AgentRendererRegistry;
-import com.ixcode.bugsim.view.landscape.agent.IAgentRenderer;
-import com.ixcode.bugsim.view.landscape.agent.RenderContext;
-import com.ixcode.bugsim.view.landscape.grid.GridRenderOptions;
-import com.ixcode.bugsim.view.landscape.grid.GridRenderer;
-import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
-import com.ixcode.framework.simulation.model.landscape.Landscape;
-import com.ixcode.framework.simulation.model.landscape.grid.Grid;
+import com.ixcode.bugsim.view.landscape.agent.*;
+import com.ixcode.bugsim.view.landscape.grid.*;
+import com.ixcode.framework.simulation.model.agent.physical.*;
+import com.ixcode.framework.simulation.model.landscape.*;
+import com.ixcode.framework.simulation.model.landscape.grid.*;
+import org.apache.log4j.*;
 
 import java.awt.*;
+import static java.awt.Color.darkGray;
 import java.util.*;
 import java.util.List;
-
-import org.apache.log4j.Logger;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
@@ -68,20 +65,20 @@ public class LandscapeRenderer extends LandscapeRendererBase {
         }
 
         double scaleX = landscapeView.getLandscapeClipSizeX();
-        float strokeWidth = 6f;
+        float strokeWidth;
 
         if (scaleX <=400) {
-            strokeWidth = 0.5f;
+            strokeWidth = 0.2f;
         } else if (scaleX <=2000) {
-            strokeWidth=12f;
+            strokeWidth=6f;
         } else if (scaleX <= 10000) {
-            strokeWidth=24f;
+            strokeWidth=6f;
         } else {
-            strokeWidth=48f;
+            strokeWidth=12f;
         }
 
         g.setStroke(new BasicStroke(strokeWidth));
-        g.setColor(Color.blue);
+        g.setColor(darkGray);
         g.draw(boundaryShape);
     }
 

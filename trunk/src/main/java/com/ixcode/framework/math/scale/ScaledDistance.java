@@ -13,6 +13,11 @@ import java.util.StringTokenizer;
  * Description : Provides functionality to transform between logical and real world distances.
  */
 public class ScaledDistance {
+
+    public static ScaledDistance scaledDistanceOf(double distance, IDistanceUnit units) {
+        return new ScaledDistance(distance, units);
+    }
+
     public ScaledDistance(double distance, IDistanceUnit units) {
         _units = units;
         _distance = distance;
