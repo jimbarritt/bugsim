@@ -44,8 +44,8 @@ public class ParameterMapTreePanel extends JPanel {
 
 
     public static void main(String[] args) {
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
-        ExperimentTemplateRegistry.setInstance(new BugsimExperimentTemplateRegistry());
+        BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats();
+        ExperimentTemplateRegistry.setExperimentTemplateInstance(new BugsimExperimentTemplateRegistry());
         IExperiment experiment = (new ExperimentXFactory()).createExperiment("TrX");
         ExperimentPlan testPlan = experiment.getExperimentPlan();
 

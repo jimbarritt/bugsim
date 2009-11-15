@@ -22,7 +22,7 @@ public class ExperimentTemplateRegistry {
         return INSTANCE;
     }
 
-    public static void setInstance(ExperimentTemplateRegistry instance) {
+    public static void setExperimentTemplateInstance(ExperimentTemplateRegistry instance) {
         INSTANCE =instance;
     }
 

@@ -57,6 +57,15 @@
         <jarDirectory url="file://$MODULE_DIR$/../../../lib/test.unit/jar" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="main-resources">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../src/main/resource" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

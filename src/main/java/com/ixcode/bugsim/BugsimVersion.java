@@ -6,6 +6,7 @@ package com.ixcode.bugsim;
 import java.util.Properties;
 import java.io.InputStream;
 import java.io.IOException;
+import static java.lang.Thread.currentThread;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
@@ -25,9 +26,9 @@ public class BugsimVersion {
     private static Properties loadPropertiesFromClasspath(String propertiesFilename) {
         Properties properties = new Properties();
 
-        InputStream in =  Thread.currentThread().getContextClassLoader().getResourceAsStream(propertiesFilename);
+        InputStream in =  currentThread().getContextClassLoader().getResourceAsStream(propertiesFilename);
         if (in == null) {
-            throw new RuntimeException("No properties file 'application.application.version'");
+            throw new RuntimeException(String.format("No properties file '%s'", propertiesFilename));
         }
 
         try {

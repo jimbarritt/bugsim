@@ -79,7 +79,7 @@ class RectangularBoundaryStrategyPanel extends BoundaryStrategyPanelBase {
 
 
     public static void main(String[] args) {
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
+        BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats();
         JavaBeanModelAdapter modelAdapter = new JavaBeanModelAdapter();
         ParameterMapXML.initFormatter(modelAdapter.getFormatter());
 

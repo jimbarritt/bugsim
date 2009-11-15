@@ -18,7 +18,7 @@ public class BugsimExtensionJavaBeanValueFormats {
     private BugsimExtensionJavaBeanValueFormats() {
     }
 
-    public static void registerBugsimExtensionFormats() {
+    public static void registerBugsimJavaBeanExtensionFormats() {
         if (!JavaBeanFormatter.isExtensionFormatRegistered(Locale.UK, CabbageInitialisationParameters.class)) {
             JavaBeanFormatter.registerExtensionFormat(Locale.UK, CabbageInitialisationParameters.class,  new CabbageInitialisationParametersFormat());
         }
