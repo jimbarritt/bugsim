@@ -3,6 +3,8 @@
  */
 package com.ixcode.bugsim;
 
+import static com.ixcode.framework.io.IO.tryToClose;
+
 import java.util.Properties;
 import java.io.InputStream;
 import java.io.IOException;
@@ -16,10 +18,11 @@ public class BugsimVersion {
     public static String getVersion() {
         Properties properties = loadPropertiesFromClasspath("application/application.properties");
 
-        String version = properties.getProperty("application.version")
-                         + " dist(" + properties.getProperty("application.distnumber") +")";
-
-        return version.trim();
+        return new StringBuilder()
+                .append(properties.getProperty("application.version"))
+                .append(" dist(").append(properties.getProperty("application.distnumber")).append(")")
+                .append(" rev(").append(properties.getProperty("application.revision")).append(")")
+                .toString();
 
     }
 
@@ -41,13 +44,4 @@ public class BugsimVersion {
         return properties;
     }
 
-    private static void tryToClose(InputStream in) {
-        if (in != null) {
-            try {
-                in.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
 }

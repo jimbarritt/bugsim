@@ -30,17 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/bugsim/view/experiment/editor/boundary/BoundaryPanelMain.java" afterPath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/bugsim/view/experiment/editor/boundary/BoundaryPanelMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim-new.iws" afterPath="$PROJECT_DIR$/bugsim-new.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/simulation/experiment/ExperimentTemplateRegistry.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/simulation/experiment/ExperimentTemplateRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/parameter/view/tree/ParameterMapTreePanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/parameter/view/tree/ParameterMapTreePanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/logging/Log4JConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/resource/application/application.properties" afterPath="$PROJECT_DIR$/../src/main/resource/application/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/io/IO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimVersion.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimVersion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellij/bugsim-code/bugsim-code.iml" afterPath="$PROJECT_DIR$/intellij/bugsim-code/bugsim-code.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanEditorDialog.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanEditorDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/xml/ExperimentPlanXMLTestCase.java" afterPath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/xml/ExperimentPlanXMLTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/BugsimExtensionJavaBeanValueFormats.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/BugsimExtensionJavaBeanValueFormats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/RectangularBoundaryStrategyPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/RectangularBoundaryStrategyPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/framework/logging" />
     </list>
     <ignored path="bugsim-new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,6 +103,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java" line="164" class="com.ixcode.bugsim.BugsimMain" package="com.ixcode.bugsim">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -159,19 +171,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProducesOutputStatisticsTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java">
+      <file leaf-file-name="BugsimMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+            <state line="48" column="5" selection-start="1582" selection-end="1582" vertical-scroll-proportion="-5.769231">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BugsimMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java">
+      <file leaf-file-name="IO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/io/IO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="22" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Log4JConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/logging/Log4JConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="17" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BugsimMainArgs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMainArgs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="42" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BugsimApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="68" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/resource/application/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="27" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,70 +228,34 @@
       <file leaf-file-name="BugsimVersion.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimVersion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="99" selection-start="985" selection-end="985" vertical-scroll-proportion="0.33333334">
+            <state line="16" column="15" selection-start="324" selection-end="324" vertical-scroll-proportion="0.04761905">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BugsimExtensionJavaBeanValueFormats.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/BugsimExtensionJavaBeanValueFormats.java">
+      <file leaf-file-name="ParameterManipulationSequence.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/parameter/model/ParameterManipulationSequence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+            <state line="104" column="0" selection-start="3802" selection-end="3802" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestExperimentControllerFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/TestExperimentControllerFrame.java">
+      <file leaf-file-name="ExperimentPlanEditorDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanEditorDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="27" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+            <state line="593" column="0" selection-start="22961" selection-end="22961" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExperimentControllerTestCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java">
+      <file leaf-file-name="ExperimentXFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/experimentX/ExperimentXFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/build/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="97" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.7272725">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="go" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.8181818">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExperimentControllerFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -266,7 +278,120 @@
     <option name="LAST_EDITED_TAB_NAME" value="Libraries (Classpath)" />
   </component>
   <component name="PackagesPane">
-    <subPane />
+    <subPane>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.ixcode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="framework" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.ixcode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="framework" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="logging" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.ixcode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="framework" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="io" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.ixcode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.ixcode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="server" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </subPane>
   </component>
   <component name="PerforceChangeBrowserSettings">
     <option name="USE_CLIENT_FILTER" value="true" />
@@ -287,100 +412,13 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectPane">
-    <subPane>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-code" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-code" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-code" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-code" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-code" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="build" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
+    <subPane />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="0.11111111" version="1" splitterProportion="0.5">
+    <navigator currentView="PackagesPane" proportions="0.11111111" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers PackagesPane="true" />
       <showModules />
@@ -402,6 +440,7 @@
     <property name="cvs_file_history_treeOrder3" value="3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../guardian" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="cvs_file_history_treeWidth0" value="294" />
     <property name="cvs_file_history_treeWidth1" value="294" />
@@ -424,9 +463,15 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.BugsimMain">
-    <tempConfiguration default="false" name="BugsimMain" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
-      <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimMain" />
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.ixcode.framework.io.IO" />
+      <recent name="com.ixcode.framework.logging.Log4JConfiguration" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BugsimApplication">
+    <tempConfiguration default="false" name="BugsimApplication" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
+      <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimApplication" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -494,34 +539,8 @@
       </option>
       <envs />
     </configuration>
-    <configuration default="false" name="Bugsim - Execute Experiments" type="Application" factoryName="Application" enabled="false" merge="false" sample_coverage="true" runner="emma">
+    <configuration default="false" name="Bugsim Application" type="Application" factoryName="Application" enabled="false" merge="false" sample_coverage="true" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimMain" />
-      <option name="VM_PARAMETERS" value="-Xmx512M -Dbugsim.debug=true -Dlog4j.configuration=log4j.xml" />
-      <option name="PROGRAM_PARAMETERS" value="interactive=true exp=com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory lscp=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXLandscapeViewFactory prog=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXProgressFactory" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <RunnerSettings RunnerId="JProfiler">
-        <option name="WINDOW" value="false" />
-        <option name="JVMPI" value="false" />
-        <option name="INTERPRETED" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Profile ">
-        <option name="myExternalizedOptions" value="&#10;snapshots-dir=&#10;additional-options2=onexit\=snapshot&#10;" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="false" name="Bugsim - Experiment Editor" type="Application" factoryName="Application" enabled="false" merge="false" sample_coverage="true" runner="emma">
-      <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.view.experiment.editor.ExperimentPlanEditorDialog" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -530,60 +549,26 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <RunnerSettings RunnerId="JProfiler">
-        <option name="WINDOW" value="false" />
-        <option name="JVMPI" value="false" />
-        <option name="INTERPRETED" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Profile ">
-        <option name="myExternalizedOptions" value="&#10;snapshots-dir=&#10;additional-options2=onexit\=snapshot&#10;" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="false" name="Bugsim - Multiple Server Mode" type="Application" factoryName="Application" enabled="false" merge="false" sample_coverage="true" runner="emma">
-      <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimMain" />
-      <option name="VM_PARAMETERS" value="-Xmx512M -Dbugsim.debug=true -Dlog4j.configuration=log4j_debug.xml" />
-      <option name="PROGRAM_PARAMETERS" value="interactive=false planFile=$PROJECT_DIR$/../../../../code/bugsim/resource/experiments/chapter-03/exp-plan-exp3-TrD2.xml exp=com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory lscp=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXLandscapeViewFactory prog=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXProgressFactory multipleProcess=2of4" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+      <module name="bugsim-code" />
       <envs />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53890" />
+        <option name="DEBUG_PORT" value="60081" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="JProfiler">
-        <option name="WINDOW" value="false" />
-        <option name="JVMPI" value="false" />
-        <option name="INTERPRETED" value="false" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Profile ">
         <option name="myExternalizedOptions" value="&#10;snapshots-dir=&#10;additional-options2=onexit\=snapshot&#10;" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="JProfiler" />
       <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.Bugsim - Execute Experiments" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Bugsim - Experiment Editor" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Bugsim - Multiple Server Mode" />
-      <item index="3" class="java.lang.String" itemvalue="Application.BugsimMain" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Bugsim Application" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BugsimApplication" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -650,9 +635,9 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20632638" sideWeight="0.62051284" order="1" side_tool="false" x="-734" y="170" width="319" height="592" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43422914" sideWeight="0.5" order="1" side_tool="false" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886847" sideWeight="0.5" order="4" side_tool="false" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20632638" sideWeight="0.62051284" order="1" side_tool="false" x="-734" y="170" width="319" height="592" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43333334" sideWeight="0.5" order="1" side_tool="false" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871794" sideWeight="0.5" order="4" side_tool="false" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
@@ -664,7 +649,7 @@
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25377426" sideWeight="0.62051284" order="0" side_tool="false" x="-424" y="170" width="408" height="547" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875629" sideWeight="0.62051284" order="0" side_tool="false" x="-424" y="170" width="408" height="547" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3705128" sideWeight="0.5" order="2" side_tool="false" />
@@ -700,7 +685,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just picked up again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting from scratch with new Main class&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -722,6 +707,8 @@
     <MESSAGE value="Quite a bit of R work on tidying up graphs for thesis" />
     <MESSAGE value="Lots of tweaking of r graphs" />
     <MESSAGE value="Just picked up again" />
+    <MESSAGE value="Added some static imports and made configuration of running the app work again&#10;" />
+    <MESSAGE value="Starting from scratch with new Main class&#10;" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -799,76 +786,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../framework/src/junit/com/ixcode/framework/xml/sax/TestSaxParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="172" selection-end="172" vertical-scroll-proportion="0.02446982">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/web/taglib/TextAreaTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="363" selection-end="363" vertical-scroll-proportion="0.14681892">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/javabean/format/ToStringFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="233" selection-end="233" vertical-scroll-proportion="0.025083613">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/web/struts/StrutsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="90" selection-start="456" selection-end="456" vertical-scroll-proportion="0.045677">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/test/java/fixture/com/ixcode/bugsim/fixture/BugsimApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/test/java/functional/com/ixcode/framework/math/GaussianRandomGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/TestExperimentControllerFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.8181818">
@@ -897,16 +814,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/OpenExperimentPlanDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/experimentX/ExperimentXTrials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="6614" selection-end="6614" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/model/experiment/experimentX/ExperimentXFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanEditorDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="593" column="0" selection-start="22961" selection-end="22961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/parameter/model/ParameterManipulationSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="0" selection-start="3802" selection-end="3802" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMainArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="42" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/io/IO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="22" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.0">
+        <state line="48" column="5" selection-start="1582" selection-end="1582" vertical-scroll-proportion="-5.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/framework/logging/Log4JConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="17" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="68" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/resource/application/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="27" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimVersion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="99" selection-start="985" selection-end="985" vertical-scroll-proportion="0.33333334">
+        <state line="16" column="15" selection-start="324" selection-end="324" vertical-scroll-proportion="0.04761905">
           <folding />
         </state>
       </provider>
