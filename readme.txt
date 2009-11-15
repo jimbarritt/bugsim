@@ -16,6 +16,12 @@ This script is a wrapper for our build process.
 
 There are several commands you might want to pass it. 
 
+You can type
+
+ant -p
+
+to list these.
+
 go test             -->  compiles and executes unit tests.
 go build-osx-app    -->  compiles, tests and ends up building you a nice .app package in the /target/app directory
 

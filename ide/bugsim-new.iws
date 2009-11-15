@@ -29,20 +29,22 @@
     <option name="USER" value="" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bugsim-source.iml" afterPath="$PROJECT_DIR$/../bugsim-source.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/predefined/PredefinedResourceLayoutStrategy.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/predefined/PredefinedResourceLayoutStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanTableModel.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/ExperimentPlanTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/R/r-script-project.tmproj" afterPath="$PROJECT_DIR$/../src/R/r-script-project.tmproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/server/BugsimSocketClient.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/server/BugsimSocketClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim-new.ipr" afterPath="$PROJECT_DIR$/bugsim-new.ipr" />
+    <list default="true" readonly="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellij/bugsim.iml" afterPath="$PROJECT_DIR$/intellij/bugsim.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim-new.iws" afterPath="$PROJECT_DIR$/bugsim-new.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/OpenExperimentPlanDialog.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/OpenExperimentPlanDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/server/BugsimSocketClientFrame.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/server/BugsimSocketClientFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../resource/application/application.properties" afterPath="$PROJECT_DIR$/../resource/application/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/ResourceLayoutStrategyBase.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/ResourceLayoutStrategyBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/main/osx-app/Contents/Resources/bugsim.icns" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../readme.txt" afterPath="$PROJECT_DIR$/../readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/build/main.xml" afterPath="$PROJECT_DIR$/../src/build/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java" afterPath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellij/bugsim.ipr" afterPath="$PROJECT_DIR$/intellij/bugsim.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../build.xml" afterPath="$PROJECT_DIR$/../build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java" afterPath="$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/intellij/bugsim-code/bugsim-code.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim-new.ipr" afterPath="$PROJECT_DIR$/bugsim-new.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../go" afterPath="$PROJECT_DIR$/../go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java" afterPath="$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/intellij/bugsim-code" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellij/bugsim.iws" afterPath="$PROJECT_DIR$/intellij/bugsim.iws" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerFrame.java" afterPath="$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/TestExperimentControllerFrame.java" />
     </list>
     <ignored path="bugsim-new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,10 +145,6 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="HIDE_WARNINGS" value="false" />
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="bugsim-new" />
   </component>
@@ -165,37 +163,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StrategyDefinitionParameter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/framework/parameter/model/StrategyDefinitionParameter.java">
+      <file leaf-file-name="BugsimApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/test/java/fixture/com/ixcode/bugsim/fixture/BugsimApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="18" selection-start="490" selection-end="490" vertical-scroll-proportion="0.025083613">
+            <state line="16" column="23" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoordinateDistributorTestCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../framework/src/junit/com/ixcode/framework/math/geometry/CoordinateDistributorTestCase.java">
+      <file leaf-file-name="GaussianRandomGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/test/java/functional/com/ixcode/framework/math/GaussianRandomGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="102" selection-end="102" vertical-scroll-proportion="0.02446982">
+            <state line="9" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestSaxParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../framework/src/junit/com/ixcode/framework/xml/sax/TestSaxParser.java">
+      <file leaf-file-name="ProducesOutputStatisticsTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="32" selection-start="172" selection-end="172" vertical-scroll-proportion="0.02446982">
+            <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextAreaTag.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/web/taglib/TextAreaTag.java">
+      <file leaf-file-name="BugsimMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="363" selection-end="363" vertical-scroll-proportion="0.14681892">
+            <state line="256" column="9" selection-start="9724" selection-end="9724" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestExperimentControllerFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/TestExperimentControllerFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="27" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExperimentControllerTestCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/build/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="97" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.7272725">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="go" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,52 +238,16 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="18" selection-start="11968" selection-end="11968" vertical-scroll-proportion="0.025125628">
+            <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.8181818">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToStringFormat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/javabean/format/ToStringFormat.java">
+      <file leaf-file-name="ExperimentControllerFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="233" selection-end="233" vertical-scroll-proportion="0.025083613">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrutsHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/web/struts/StrutsHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="90" selection-start="456" selection-end="456" vertical-scroll-proportion="0.045677">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/manipulation/StrategyField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="510" selection-end="510" vertical-scroll-proportion="0.02446982">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExperimentXTrials.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/experimentX/ExperimentXTrials.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="119" selection-start="6733" selection-end="6733" vertical-scroll-proportion="0.025083613">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredefinedResourceLayoutStrategy.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/predefined/PredefinedResourceLayoutStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="26" selection-start="4936" selection-end="4936" vertical-scroll-proportion="0.27257526">
+            <state line="22" column="13" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -272,78 +270,7 @@
     <option name="LAST_EDITED_TAB_NAME" value="Libraries (Classpath)" />
   </component>
   <component name="PackagesPane">
-    <subPane>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-source" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-source" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="com.ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="framework" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-source" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="com.ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="framework" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="parameter" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-new" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bugsim-source" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="com.ixcode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
+    <subPane />
   </component>
   <component name="PerforceChangeBrowserSettings">
     <option name="USE_CLIENT_FILTER" value="true" />
@@ -363,11 +290,79 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectPane">
+    <subPane>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-new" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim-code" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bugsim" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="build" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </subPane>
+  </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="0.11111111" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="0.11111111" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers PackagesPane="true" />
       <showModules />
@@ -381,34 +376,37 @@
     </navigator>
   </component>
   <component name="PropertiesComponent">
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="cvs_file_history_treeWidth0" value="294" />
-    <property name="cvs_file_history_flatWidth2" value="294" />
-    <property name="cvs_file_history_treeOrder1" value="1" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="294" />
-    <property name="cvs_file_history_treeWidth1" value="294" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="cvs_file_history_flatOrder2" value="2" />
-    <property name="cvs_file_history_treeWidth2" value="294" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="cvs_file_history_flatOrder3" value="3" />
-    <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="RunManagerConfig.compileBeforeRunning" value="true" />
-    <property name="cvs_file_history_flatOrder0" value="0" />
-    <property name="cvs_file_history_treeOrder3" value="3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../guardian" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="cvs_file_history_treeOrder2" value="2" />
+    <property name="cvs_file_history_treeOrder1" value="1" />
+    <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
+    <property name="cvs_file_history_treeOrder3" value="3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../guardian" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="cvs_file_history_treeWidth0" value="294" />
+    <property name="cvs_file_history_treeWidth1" value="294" />
+    <property name="cvs_file_history_treeWidth2" value="294" />
+    <property name="cvs_file_history_flatWidth2" value="294" />
     <property name="cvs_file_history_treeWidth3" value="294" />
-    <property name="cvs_file_history_flatWidth0" value="294" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="cvs_file_history_flatWidth3" value="294" />
     <property name="cvs_file_history_treeOrder0" value="0" />
+    <property name="cvs_file_history_flatWidth0" value="294" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="cvs_file_history_flatWidth1" value="294" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="RunManagerConfig.compileBeforeRunning" value="true" />
+    <property name="cvs_file_history_flatOrder2" value="2" />
+    <property name="cvs_file_history_flatOrder3" value="3" />
+    <property name="cvs_file_history_flatOrder0" value="0" />
+    <property name="cvs_file_history_flatOrder1" value="1" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager" selected="Application.Bugsim - Experiment Editor">
-    <tempConfiguration default="false" name="ZebedeeMain" type="Application" factoryName="Application" enabled="false" merge="false">
+    <tempConfiguration default="false" name="ZebedeeMain" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.zebedee.ZebedeeMain" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -419,20 +417,16 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </tempConfiguration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -446,7 +440,20 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -463,15 +470,9 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <envs />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="false" name="Bugsim - Execute Experiments" type="Application" factoryName="Application" enabled="false" merge="false">
+    <configuration default="false" name="Bugsim - Execute Experiments" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimMain" />
       <option name="VM_PARAMETERS" value="-Xmx512M -Dbugsim.debug=true -Dlog4j.configuration=log4j.xml" />
       <option name="PROGRAM_PARAMETERS" value="interactive=true exp=com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory lscp=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXLandscapeViewFactory prog=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXProgressFactory" />
@@ -481,7 +482,8 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bugsim-source" />
+      <module name="" />
+      <envs />
       <RunnerSettings RunnerId="JProfiler">
         <option name="WINDOW" value="false" />
         <option name="JVMPI" value="false" />
@@ -490,7 +492,7 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </configuration>
-    <configuration default="false" name="Bugsim - Experiment Editor" type="Application" factoryName="Application" enabled="false" merge="false">
+    <configuration default="false" name="Bugsim - Experiment Editor" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.view.experiment.editor.ExperimentPlanEditorDialog" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -500,7 +502,8 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bugsim-source" />
+      <module name="" />
+      <envs />
       <RunnerSettings RunnerId="JProfiler">
         <option name="WINDOW" value="false" />
         <option name="JVMPI" value="false" />
@@ -509,7 +512,7 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </configuration>
-    <configuration default="false" name="Bugsim - Server Status" type="Application" factoryName="Application" enabled="false" merge="false">
+    <configuration default="false" name="Bugsim - Server Status" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.server.BugsimSocketClientFrame" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -519,7 +522,8 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bugsim-source" />
+      <module name="" />
+      <envs />
       <RunnerSettings RunnerId="JProfiler">
         <option name="WINDOW" value="false" />
         <option name="JVMPI" value="false" />
@@ -528,7 +532,7 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </configuration>
-    <configuration default="false" name="Bugsim - Multiple Server Mode" type="Application" factoryName="Application" enabled="false" merge="false">
+    <configuration default="false" name="Bugsim - Multiple Server Mode" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
       <option name="MAIN_CLASS_NAME" value="com.ixcode.bugsim.BugsimMain" />
       <option name="VM_PARAMETERS" value="-Xmx512M -Dbugsim.debug=true -Dlog4j.configuration=log4j_debug.xml" />
       <option name="PROGRAM_PARAMETERS" value="interactive=false planFile=$PROJECT_DIR$/../../../../code/bugsim/resource/experiments/chapter-03/exp-plan-exp3-TrD2.xml exp=com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory lscp=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXLandscapeViewFactory prog=com.ixcode.bugsim.view.experiment.experimentX.ExperimentXProgressFactory multipleProcess=2of4" />
@@ -538,7 +542,8 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bugsim-source" />
+      <module name="" />
+      <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="53890" />
         <option name="TRANSPORT" value="0" />
@@ -562,6 +567,7 @@
       <item index="4" class="java.lang.String" itemvalue="Application.Bugsim - Multiple Server Mode" />
     </list>
   </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="StarteamConfiguration">
     <option name="SERVER" value="" />
     <option name="PORT" value="49201" />
@@ -590,9 +596,13 @@
     <option name="PASSWORD" value="" />
     <option name="LAST_MERGED_REVISION" />
     <option name="UPDATE_RUN_STATUS" value="false" />
-    <option name="UPDATE_RECURSIVELY" value="true" />
     <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
     <configuration useDefault="true">$PROJECT_DIR$/../../../../.subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -615,38 +625,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="22" width="1260" height="786" extended-state="0" />
-    <editor active="true" />
+    <frame x="1" y="22" width="1440" height="874" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45499587" order="0" x="-424" y="170" width="408" height="547" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43422914" order="1" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711038" order="1" x="-415" y="719" width="403" height="475" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781956" order="15" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="10" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20644096" order="1" x="-734" y="170" width="319" height="592" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37142858" order="2" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886847" order="4" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="14" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47807637" order="8" />
-      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
-      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" order="6" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" order="11" />
-      <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
-      <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="3" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
-      <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20632638" sideWeight="0.6653846" order="1" side_tool="false" x="-734" y="170" width="319" height="592" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43422914" sideWeight="0.5" order="1" side_tool="false" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886847" sideWeight="0.5" order="4" side_tool="false" />
+      <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47807637" sideWeight="0.5" order="8" side_tool="false" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32564104" sideWeight="0.5" order="15" side_tool="false" />
+      <window_info id="CafeBabe" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711038" sideWeight="0.5" order="1" side_tool="false" x="-415" y="719" width="403" height="475" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23220704" sideWeight="0.6653846" order="0" side_tool="false" x="-424" y="170" width="408" height="547" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37142858" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" />
+      <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="11" side_tool="false" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" />
+      <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" />
     </layout>
   </component>
   <component name="VCS.FileViewConfiguration">
@@ -662,6 +678,7 @@
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="Lots of tweaking of r graphs" />
@@ -720,33 +737,48 @@
       <option name="VERSION" />
     </GetOptions>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
     <buildFile url="file://$PROJECT_DIR$/../build.xml">
       <antCommandLine value="" />
       <runInBackground value="true" />
-      <targetFilters />
+      <targetFilters>
+        <filter targetName="build-osx-app" isVisible="true" />
+        <filter targetName="clean" isVisible="true" />
+        <filter targetName="clean.everything" isVisible="true" />
+        <filter targetName="clean.lib" isVisible="true" />
+        <filter targetName="compile" isVisible="true" />
+        <filter targetName="compile.acceptance.tests" isVisible="false" />
+        <filter targetName="compile.functional.tests" isVisible="false" />
+        <filter targetName="compile.main" isVisible="false" />
+        <filter targetName="compile.test.fixtures" isVisible="false" />
+        <filter targetName="compile.unit.tests" isVisible="false" />
+        <filter targetName="create.osx.app.structure" isVisible="false" />
+        <filter targetName="package.application" isVisible="true" />
+        <filter targetName="package.application.app" isVisible="false" />
+        <filter targetName="report.config" isVisible="true" />
+        <filter targetName="run.acceptance.tests" isVisible="true" />
+        <filter targetName="run.functional.tests" isVisible="true" />
+        <filter targetName="run.unit.tests" isVisible="true" />
+        <filter targetName="test" isVisible="true" />
+        <filter targetName="update.lib" isVisible="true" />
+        <filter targetName="update.lib.if.required" isVisible="false" />
+        <filter targetName="update.lib.skipped" isVisible="false" />
+      </targetFilters>
       <treeView value="true" />
       <verbose value="true" />
       <viewClosedWhenNoErrors value="false" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/framework/parameter/model/StrategyDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="352" selection-end="352" vertical-scroll-proportion="0.3739612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/framework/parameter/model/StrategyDefinitionParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="490" selection-end="490" vertical-scroll-proportion="0.025083613">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../framework/src/junit/com/ixcode/framework/math/geometry/CoordinateDistributorTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="23" selection-start="102" selection-end="102" vertical-scroll-proportion="0.02446982">
@@ -768,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="18" selection-start="11968" selection-end="11968" vertical-scroll-proportion="0.025125628">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../framework/src/java/com/ixcode/framework/javabean/format/ToStringFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="34" selection-start="233" selection-end="233" vertical-scroll-proportion="0.025083613">
@@ -789,27 +814,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/view/experiment/editor/manipulation/StrategyField.java">
+    <entry file="file://$PROJECT_DIR$/../src/test/java/fixture/com/ixcode/bugsim/fixture/BugsimApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="510" selection-end="510" vertical-scroll-proportion="0.02446982">
+        <state line="16" column="23" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/experimentX/ExperimentXTrials.java">
+    <entry file="file://$PROJECT_DIR$/../src/test/java/functional/com/ixcode/framework/math/GaussianRandomGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="119" selection-start="6733" selection-end="6733" vertical-scroll-proportion="0.025083613">
+        <state line="9" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/java/com/ixcode/bugsim/model/experiment/parameter/resource/layout/predefined/PredefinedResourceLayoutStrategy.java">
+    <entry file="file://$PROJECT_DIR$/../src/test/java/acceptance/com/ixcode/bugsim/ProducesOutputStatisticsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="26" selection-start="4936" selection-end="4936" vertical-scroll-proportion="0.27257526">
+        <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/BugsimMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="256" column="9" selection-start="9724" selection-end="9724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/ExperimentControllerFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/TestExperimentControllerFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/test/java/unit/com/ixcode/framework/experiment/model/ExperimentControllerTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="-3.8181818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/build/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="97" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.7272725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <option name="states">
+      <map>
+        <entry key="Errors.UI">
+          <value>
+            <UIState>
+              <option name="proportions">
+                <SplitterProportionsDataImpl />
+              </option>
+            </UIState>
+          </value>
+        </entry>
+        <entry key="ScopeChooserConfigurable.UI">
+          <value>
+            <UIState>
+              <option name="proportions">
+                <SplitterProportionsDataImpl />
+              </option>
+            </UIState>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="myStates">
+      <map>
+        <entry key="Errors.UI">
+          <value>
+            <UIState>
+              <option name="proportions">
+                <SplitterProportionsDataImpl />
+              </option>
+            </UIState>
+          </value>
+        </entry>
+        <entry key="ScopeChooserConfigurable.UI">
+          <value>
+            <UIState>
+              <option name="proportions">
+                <SplitterProportionsDataImpl />
+              </option>
+            </UIState>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
 
