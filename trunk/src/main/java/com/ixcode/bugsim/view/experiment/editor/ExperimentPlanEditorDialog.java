@@ -43,7 +43,6 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -590,8 +589,8 @@ public class ExperimentPlanEditorDialog extends JFrame implements PropertyChange
             log.info("Welcome To The BugSim Experimental planeditor version " + BugsimMain.getVersion());
         }
         JFrameExtension.setSystemLookAndFeel();
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
-        ExperimentTemplateRegistry.setInstance(new BugsimExperimentTemplateRegistry());
+        BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats();
+        ExperimentTemplateRegistry.setExperimentTemplateInstance(new BugsimExperimentTemplateRegistry());
         IExperiment experiment = (new ExperimentXFactory()).createExperiment("TrX");
         ExperimentPlan testPlan = experiment.getExperimentPlan();
 

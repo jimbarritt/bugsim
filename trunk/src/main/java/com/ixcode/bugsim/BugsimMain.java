@@ -4,6 +4,7 @@
 package com.ixcode.bugsim;
 
 import com.ixcode.bugsim.model.experiment.*;
+import static com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats.*;
 import com.ixcode.bugsim.server.*;
 import com.ixcode.bugsim.view.experiment.*;
 import com.ixcode.bugsim.view.experiment.editor.*;
@@ -13,8 +14,8 @@ import com.ixcode.framework.experiment.model.xml.*;
 import com.ixcode.framework.io.*;
 import com.ixcode.framework.javabean.*;
 import com.ixcode.framework.parameter.model.*;
-import com.ixcode.framework.simulation.experiment.*;
-import com.ixcode.framework.swing.*;
+import static com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry.*;
+import static com.ixcode.framework.swing.JFrameExtension.*;
 import org.apache.log4j.*;
 import org.apache.log4j.xml.*;
 import org.w3c.dom.*;
@@ -39,14 +40,14 @@ public class BugsimMain {
             log.info("Logs will be output to : " + new File("logs").getAbsolutePath());
         }
 
-        JFrameExtension.setSystemLookAndFeel();
+        setSystemLookAndFeel();
 
-        ExperimentTemplateRegistry.setInstance(new BugsimExperimentTemplateRegistry());
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
+        setExperimentTemplateInstance(new BugsimExperimentTemplateRegistry());
+        registerBugsimJavaBeanExtensionFormats();
 
         BugsimMainArgs ba = new BugsimMainArgs(args);
 
-        BugsimMain.initialiseExperiment(ba);
+        initialiseExperiment(ba);
     }
 
     private static void loadLog4JConfig() {

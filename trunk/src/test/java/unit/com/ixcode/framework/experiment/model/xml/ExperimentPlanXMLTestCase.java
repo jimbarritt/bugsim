@@ -8,7 +8,6 @@ import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.ParameterMapDebug;
 import com.ixcode.framework.parameter.model.ParameterMapFactory;
-import com.ixcode.framework.math.geometry.*;
 import junit.framework.TestCase;
 
 import java.net.URL;
@@ -23,7 +22,7 @@ public class ExperimentPlanXMLTestCase extends TestCase {
 
     protected void setUp() throws Exception {
         FakePlanTemplate.registerTemplate();
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
+        BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats();
     }
 
     public void testLoad() throws Exception {

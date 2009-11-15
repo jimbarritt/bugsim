@@ -30,7 +30,7 @@ public class BoundaryPanelMain {
     }
 
     public static void testPanel() {
-        BugsimExtensionJavaBeanValueFormats.registerBugsimExtensionFormats();
+        BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats();
         JavaBeanModelAdapter modelAdapter = new JavaBeanModelAdapter();
         ParameterMapXML.initFormatter(modelAdapter.getFormatter());
         JFrameExtension f = new JFrameExtension("Test BoundaryPanel");
