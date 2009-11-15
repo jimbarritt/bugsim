@@ -7,7 +7,7 @@ import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
 
 import javax.swing.*;
-import static javax.swing.BorderFactory.*;
+import static javax.swing.BorderFactory.createEmptyBorder;
 import java.awt.*;
 
 /**
@@ -40,7 +40,8 @@ public class LandscapeFrame extends JFrameExtension {
 
     private void initSizeAndLocation() {
         Dimension screenSize = super.getScreenSize();
-        super.setSize(new Dimension(screenSize.height, screenSize.height));
+        int extent = (int) (screenSize.height * .6);
+        super.setSize(new Dimension(extent, extent));
         super.setLocation(0, 0);
     }
 
@@ -60,15 +61,33 @@ public class LandscapeFrame extends JFrameExtension {
         JPanel landscapeViewContainer = new JPanel(new BorderLayout());
         landscapeViewContainer.setBorder(createEmptyBorder(20, 20, 20, 20));
         landscapeViewContainer.setBackground(Color.DARK_GRAY);
+
         landscapeViewContainer.add(landscapeView, BorderLayout.CENTER);
 
         container.add(landscapeToolbar, BorderLayout.NORTH);
         container.add(landscapeViewContainer, BorderLayout.CENTER);
 
-        super.setBorderBackground(landscapeView.getBackground());
+
+        setBorderBackground(Color.green);
         super.setSystemExitOnClose(false);
     }
 
+    private static class TestPanel extends JComponent {
+        @Override
+        protected void paintComponent(Graphics g) {
+            Graphics2D g2d = (Graphics2D) g;
+            Rectangle shape = g.getClipBounds();
+            g.setColor(Color.white);
+            g.fillRect(shape.x, shape.y, shape.width, shape.height);
+
+            Rectangle test = new Rectangle(0, 0, shape.width, shape.height);
+            g.setColor(Color.blue);
+            int strokeWidth = 4;
+            int halfStrokeWidth = strokeWidth /2;
+            g2d.setStroke(new BasicStroke(strokeWidth));
+            g.drawRect(test.x + halfStrokeWidth, test.y + halfStrokeWidth, test.width - strokeWidth, test.height-strokeWidth);
+        }
+    }
     public void open() {
         setVisible(true);
     }
