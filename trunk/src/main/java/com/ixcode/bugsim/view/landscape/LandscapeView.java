@@ -93,13 +93,12 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         viewModeRegistry = registry;
         setViewMode(ViewMode.DISPLAY);
         LandscapeMouseLocationListener locationListener = new LandscapeMouseLocationListener(this, statusBar);
-        super.addMouseMotionListener(locationListener);
+        addMouseMotionListener(locationListener);
 
         LocationLineRenderer locationLineRenderer = new LocationLineRenderer(this);
-        addMouseMotionListener(locationLineRenderer);
         addOverlayRenderer(locationLineRenderer, 0);
 
-        setBackground(new Color(255, 255, 250));
+        setBackground(Color.white);
         setGridResolution(new ScaledDistance(1, DistanceUnitRegistry.metres()));
         setGridThickness(new ScaledDistance(10, DistanceUnitRegistry.centimetres()));
 
@@ -131,9 +130,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         setLandscapeClipSizeY((preScaleBounds.getHeight() / getScaleY()));
 
         g.setPaint(getBackground());
-        if (renderForPrint) {
-            g.setColor(Color.white);
-        }
         g.fill(bounds);
 
         paintBackground(g, preScaleBounds);
@@ -469,11 +465,8 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         int county = (int) (extentY / logicalGridResolution) + 1;
         int countYSide = county / 2; // number of gridlines from centre to edge.
         int minY = (int) (cy - ((logicalGridResolution * 0.5) + (logicalGridResolution * (countYSide - 1))));
-        if (log.isDebugEnabled()) {
-            log.debug("Gridlines - Min(x,y): " + minX + ", " + minY);
-        }
-
-        g.setColor(Color.darkGray);
+       
+        g.setColor(Color.lightGray);
         g.setStroke(new BasicStroke(0.025f));//logicalGridThickness
 
         int offsetx = minX;
