@@ -109,6 +109,12 @@ public class JFrameExtension extends JFrame {
         return _borderPanel;
     }
 
+    protected void replaceStatusBar(JComponent newStatusBar) {
+        super.getContentPane().remove(_statusBar);
+        super.getContentPane().add(newStatusBar, BorderLayout.SOUTH);
+    }
+
+
     public void setStatusBar(boolean show) {
         _statusBar.setVisible(show);
     }
