@@ -23,13 +23,12 @@ public abstract class LandscapeRendererBase implements ILandscapeRenderer {
     }
 
     protected Ellipse2D.Double createEllipseFromBounds(CartesianBounds b, LandscapeView view) {
-
-
         RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));
-
         return new Ellipse2D.Double(topLeft.getDoubleX(), topLeft.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight());
 
     }
+
+    
 
     protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
         return LandscapeView.getScreenCoord(view.getLandscape(), coord);

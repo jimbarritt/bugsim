@@ -8,7 +8,7 @@ import org.apache.log4j.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
-import static java.awt.Toolkit.getDefaultToolkit;
+import static java.awt.Toolkit.*;
 import java.awt.event.*;
 
 /**
@@ -86,56 +86,23 @@ public class JFrameExtension extends JFrame {
 
         );
 
-        final int BORDER_WIDTH = 10;
+        final int BORDER_WIDTH = 100;
         Border b = BorderFactory.createEmptyBorder(BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH);
-        _borderPanel = new
+        _borderPanel = new JPanel();
 
-                JPanel();
-
-        if (border)
-
-        {
+        if (border) {
             _borderPanel.setBorder(b);
         }
 
         _borderPanel.setBackground(backgroundColor);
-        _borderPanel.setLayout(new
-
-                GridLayout(1, 1)
-
-        );
-        if (_content != null)
-
-        {
+        _borderPanel.setLayout(new GridLayout(1, 1));
+        if (_content != null) {
             _borderPanel.add(_content);
         }
 
-
-        super.
-
-                getContentPane()
-
-                .
-
-                        setLayout(new BorderLayout()
-
-                        );
-        super.
-
-                getContentPane()
-
-                .
-
-                        add(_borderPanel, contentPosition);
-
-        super.
-
-                getContentPane()
-
-                .
-
-                        add(_statusBar, BorderLayout.SOUTH);
-
+        super.getContentPane().setLayout(new BorderLayout());
+        super.getContentPane().add(_borderPanel, contentPosition);
+        super.getContentPane().add(_statusBar, BorderLayout.SOUTH);
     }
 
     public Container getContentPane() {

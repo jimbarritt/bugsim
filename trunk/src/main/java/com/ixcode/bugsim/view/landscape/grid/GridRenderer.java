@@ -20,16 +20,10 @@ import java.util.Iterator;
 public class GridRenderer {
 
     public void render(Graphics2D g, Grid grid, GridRenderOptions options, LandscapeView landscapeView) {
-
-
         Composite before = g.getComposite();
         recurseChildren(g, grid, options, 1, landscapeView);
-
         renderTopLevelGrid(grid, g, options, landscapeView);
-
-
         g.setComposite(before);
-
     }
 
     private void recurseChildren(Graphics2D g, Grid grid, GridRenderOptions options, int recursionLevel, LandscapeView landscapeView) {
@@ -46,12 +40,9 @@ public class GridRenderer {
     }
 
     private void renderChildGrid(Graphics2D g, Grid grid, GridRenderOptions options, int gridLevel, LandscapeView landscapeView) {
-
         Rectangle2D.Double outerRectangle = getRectangleForGrid(grid, landscapeView);
 
         drawGridlines(g, grid, outerRectangle, options, gridLevel, landscapeView);
-
-
     }
 
     private void renderTopLevelGrid(Grid grid, Graphics2D g, GridRenderOptions options, LandscapeView landscapeView) {
@@ -98,16 +89,14 @@ public class GridRenderer {
     private void drawGridlines(Graphics2D g, Grid grid, Rectangle2D bounds, GridRenderOptions options, int gridLevel, LandscapeView landscapeView) {
 
         double scaleX = landscapeView.getLandscapeClipSizeX();
-        float magnification = 1f;
+        float magnification = 0.5f;
 
-        if (scaleX <= 400) {
+        if (scaleX >= 400) {
             magnification = 1f;
-        } else if (scaleX <= 2000) {
+        } else if (scaleX >= 2000) {
             magnification= 1f;
-        } else if (scaleX <= 10000) {
+        } else if (scaleX >= 10000) {
             magnification= 10f;
-        } else {
-            magnification= 20f;
         }
 
         g.setColor(options.getDarkColor(gridLevel, grid));

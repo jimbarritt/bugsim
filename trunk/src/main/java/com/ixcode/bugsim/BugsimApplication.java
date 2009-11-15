@@ -27,7 +27,7 @@ public class BugsimApplication {
         Simulation simulation = new Simulation();
         Landscape landscape = new Landscape(simulation);
         landscape.setScale(scaledDistanceOf(1, metres()));
-        landscape.setScaledSize(scaledDistanceOf(100, metres()));
+        landscape.setScaledSize(scaledDistanceOf(10, metres()));
 
         landscape.setCircular(true);
 
