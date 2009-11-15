@@ -23,7 +23,7 @@ public class ExperimentControllerTestCase extends TestCase {
         experimentController.setOutputResults(true);
         experimentController.reset();
 
-        final ExperimentControllerFrame f = new ExperimentControllerFrame(experimentController);
+        final TestExperimentControllerFrame f = new TestExperimentControllerFrame(experimentController);
 
         Thread t = new Thread(new Runnable() {
             public void run() {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="main">
+
     <property name="src.dir" value="${base.dir}/src"/>
     <property name="lib.dir" value="${base.dir}/lib"/>
     <property name="target.dir" value="${base.dir}/target"/>
@@ -13,6 +14,7 @@
 
     <property name="src.main.dir" value="${src.dir}/main"/>
     <property name="src.main.java.dir" value="${src.main.dir}/java"/>
+    <property name="src.main.osxapp.dir" value="${src.main.dir}/osx-app"/>
 
     <property name="src.test.dir" value="${src.dir}/test"/>
     <property name="src.test.java.dir" value="${src.test.dir}/java"/>
@@ -45,6 +47,7 @@
     <property name="target.application.jar"
               value="${target.application.dir}/${application.name}-${application.version}-${application.distnumber}.jar"/>
     <property name="target.application.lib.dir" value="${target.application.dir}/lib"/>
+    <property name="target.application.osxapp.dir" value="${target.application.dir}/${application.name}.app"/>
 
     <property name="target.report.dir" value="${target.dir}/report"/>
     <property name="target.report.test.dir" value="${target.report.dir}/test"/>
@@ -228,6 +231,13 @@
                    stylesheet.dir="${src.build.junit.stylesheet.dir}"/>
     </target>
 
+    <target name="create.osx.app.structure">
+        <mkdir dir="${target.application.dir}"/>
+        <copy todir="${target.application.osxapp.dir}">
+            <fileset dir="${src.main.osxapp.dir}" />
+        </copy>
+    </target>
+
     <target name="package.application" depends="compile.main, package.application.app"
             description="--> packages all the classes into a jar file"/>
 
@@ -239,7 +249,7 @@
             <fileset refid="lib.jars"/>
         </copy>
 
-        <pathconvert property="manifest.classpath" pathsep="&#013;&#010;">
+        <pathconvert property="manifest.classpath" pathsep="${line.separator}">
             <mapper>
                 <chainedmapper>
                     <flattenmapper/>
@@ -251,7 +261,7 @@
             </path>
         </pathconvert>
 
-        <pathconvert property="plist.classpath" pathsep="&#013;&#010;">
+        <pathconvert property="plist.classpath" pathsep="${line.separator}">
             <mapper>
                 <chainedmapper>
                     <flattenmapper/>
@@ -263,7 +273,7 @@
             </path>
         </pathconvert>
 
-        <pathconvert property="shell.classpath" pathsep="&#013;&#010;">
+        <pathconvert property="shell.classpath" pathsep="${line.separator}">
             <mapper>
                 <chainedmapper>
                     <flattenmapper/>

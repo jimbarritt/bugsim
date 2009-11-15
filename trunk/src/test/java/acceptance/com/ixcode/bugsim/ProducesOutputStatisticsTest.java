@@ -22,7 +22,4 @@ public class ProducesOutputStatisticsTest {
         assertNotNull(outputFiles);        
     }
 
-
-
-
 }

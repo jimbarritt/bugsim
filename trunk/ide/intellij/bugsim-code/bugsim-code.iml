@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/java/acceptance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/java/fixture" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/java/functional" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/java/unit" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="build-jars">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../lib/build" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/build" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="main-jars">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../lib/main/jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/log4j-1.2.15.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/jfreechart-1.0.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/servlet-api-2.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/struts-1.2.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/jcommon-1.0.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/xercesImpl-2.4.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/main/source/commons-logging-1.1.jar!/" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/main/jar" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="test-jars">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../lib/test.acceptance/jar" />
+          <root url="file://$MODULE_DIR$/../../../lib/test.unit/jar" />
+          <root url="file://$MODULE_DIR$/../../../lib/test.functional/jar" />
+          <root url="file://$MODULE_DIR$/../../../lib/test.fixture/jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../lib/test.fixture/source/junit-4.6.jar!/" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/test.acceptance/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/test.fixture/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/test.functional/jar" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../../lib/test.unit/jar" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

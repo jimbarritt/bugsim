@@ -2,6 +2,6 @@
 <project name="bugsim">
     <property name="base.dir" value="${basedir}"/>
 
-    <import file="${basedir}/src/build/main.xml"/>
+    <import file="${basedir}/src/build/main.xml" />
 
 </project>
