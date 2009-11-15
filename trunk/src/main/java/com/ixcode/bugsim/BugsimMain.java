@@ -16,13 +16,11 @@ import com.ixcode.framework.javabean.*;
 import com.ixcode.framework.parameter.model.*;
 import static com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry.*;
 import static com.ixcode.framework.swing.JFrameExtension.*;
+import com.ixcode.framework.logging.*;
 import org.apache.log4j.*;
-import org.apache.log4j.xml.*;
-import org.w3c.dom.*;
 import org.xml.sax.*;
 
 import javax.swing.*;
-import javax.xml.parsers.*;
 import java.io.*;
 import java.net.*;
 
@@ -34,7 +32,7 @@ public class BugsimMain {
     public static final String VERSION = BugsimVersion.getVersion();
 
     public static void main(String[] args) {
-        loadLog4JConfig();
+        Log4JConfiguration.loadLog4JConfig();
         if (log.isInfoEnabled()) {
             log.info("Welcome to bugsim version " + getVersion() + "");
             log.info("Logs will be output to : " + new File("logs").getAbsolutePath());
@@ -48,44 +46,6 @@ public class BugsimMain {
         BugsimMainArgs ba = new BugsimMainArgs(args);
 
         initialiseExperiment(ba);
-    }
-
-    private static void loadLog4JConfig() {
-		URL log4jUri = null;
-        InputStream inputStream = null;
-        try {
-			log4jUri = Thread.currentThread().getContextClassLoader().getResource("logging/log4j.xml");
-			inputStream = log4jUri.openConnection().getInputStream();
-
-			DocumentBuilderFactory newInstance = DocumentBuilderFactory.newInstance();
-			newInstance.setValidating(false);
-			DocumentBuilder newDocumentBuilder = newInstance.newDocumentBuilder();
-
-			Document doc = newDocumentBuilder.parse(inputStream);
-			DOMConfigurator conf = new DOMConfigurator();
-			conf.doConfigure(doc.getDocumentElement(), new Hierarchy(Logger.getRootLogger()));
-            
-            log.info("Log4J initialised with log configuration [" + log4jUri.toExternalForm() + "]");
-            log.info("Log4J Logging Level = " + Logger.getRootLogger().getLevel());
-        } catch (Exception e) {
-            e.printStackTrace();
-            String uri = (log4jUri!= null) ? log4jUri.toExternalForm() : "not found";
-			throw new RuntimeException("Could not initialise log4j @ " + uri, e);
-		} finally {
-             tryToClose(inputStream);
-        }
-
-
-    }
-
-    private static void tryToClose(InputStream inputStream) {
-        if (inputStream != null) {
-            try {
-                inputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException("Could not close input stream.", e);
-            }
-        }
     }
 
 
@@ -202,10 +162,11 @@ public class BugsimMain {
     private static ExperimentPlan editPlan(ExperimentPlan plan) {
         ExperimentPlanEditorDialog editor = new ExperimentPlanEditorDialog(true);
         editor.editPlan(plan, true);
-        ExperimentPlan editedPlan = null;
+        ExperimentPlan editedPlan = null;        
         if (!editor.isCancelled()) {
             editedPlan = editor.getPlan();     // Might have changed.
         }
+
         return editedPlan;
 
     }
