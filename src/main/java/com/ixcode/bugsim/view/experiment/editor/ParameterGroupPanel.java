@@ -3,10 +3,10 @@
  */
 package com.ixcode.bugsim.view.experiment.editor;
 
-import com.ixcode.bugsim.view.landscape.geometry.CartesianBoundsPropertyEditor;
-import com.ixcode.bugsim.view.landscape.geometry.CartesianDimensionsPropertyEditor;
-import com.ixcode.bugsim.view.landscape.geometry.RectangularCoordinatePropertyEditor;
-import com.ixcode.bugsim.view.landscape.geometry.ScaledDistancePropertyEditor;
+import com.ixcode.bugsim.view.geometry.CartesianBoundsPropertyEditor;
+import com.ixcode.bugsim.view.geometry.CartesianDimensionsPropertyEditor;
+import com.ixcode.bugsim.view.geometry.RectangularCoordinatePropertyEditor;
+import com.ixcode.bugsim.view.geometry.ScaledDistancePropertyEditor;
 import com.ixcode.framework.javabean.JavaBeanException;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.CartesianDimensions;

@@ -6,7 +6,7 @@ package com.ixcode.bugsim.view.experiment.experiment1d;
 import com.ixcode.bugsim.view.experiment.SimulationLandscapeViewFactory;
 import com.ixcode.bugsim.view.landscape.LandscapeFrame;
 import com.ixcode.bugsim.view.landscape.LandscapeView;
-import com.ixcode.bugsim.view.landscape.zoomcontrol.ZoomFrame;
+import com.ixcode.bugsim.view.zoomcontrol.ZoomFrame;
 import com.ixcode.framework.experiment.model.ExperimentController;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.math.scale.DistanceUnitRegistry;

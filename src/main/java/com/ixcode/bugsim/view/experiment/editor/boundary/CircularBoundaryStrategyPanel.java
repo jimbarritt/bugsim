@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.boundary;
 
-import com.ixcode.bugsim.view.landscape.geometry.RectangularCoordinatePropertyEditor;
+import com.ixcode.bugsim.view.geometry.RectangularCoordinatePropertyEditor;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.BoundaryStrategyBase;

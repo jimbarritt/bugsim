@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape;
 
-import com.ixcode.bugsim.view.landscape.geometry.ScaledDistancePropertyEditor;
+import com.ixcode.bugsim.view.geometry.ScaledDistancePropertyEditor;
 import com.ixcode.framework.math.scale.ScaledDistance;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 import com.ixcode.framework.swing.property.PropertyPanel;

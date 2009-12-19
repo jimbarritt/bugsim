@@ -4,8 +4,8 @@
 package com.ixcode.bugsim.view.experiment.editor.boundary;
 
 import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
-import com.ixcode.bugsim.view.landscape.geometry.CartesianDimensionsPropertyEditor;
-import com.ixcode.bugsim.view.landscape.geometry.RectangularCoordinatePropertyEditor;
+import com.ixcode.bugsim.view.geometry.CartesianDimensionsPropertyEditor;
+import com.ixcode.bugsim.view.geometry.RectangularCoordinatePropertyEditor;
 import com.ixcode.framework.javabean.JavaBeanModelAdapter;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.parameter.model.ParameterMap;
