@@ -30,56 +30,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/experiment1d/Experiment1dLandscapeViewFactory.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/experiment1d/Experiment1dLandscapeViewFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/CartesianDimensionsField.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/CartesianDimensionsField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapeRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapeRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/SimulationLandscapeViewFactory.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/SimulationLandscapeViewFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/AgentRendererRegistry.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/AgentRendererRegistry.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/PitfallAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/PitfallAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/CartesianDimensionsPropertyEditor.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/CartesianDimensionsPropertyEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/CircularBoundaryStrategyPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/CircularBoundaryStrategyPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/CircularBoundaryAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/CircularBoundaryAgentRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/OpenSimulationAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/OpenSimulationAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/CabbageAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/CabbageAgentRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/UpdateLandscapeViewAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/UpdateLandscapeViewAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ParameterGroupPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/ParameterGroupPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/ButterflyAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/ButterflyAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/CartesianBoundsPropertyEditor.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/CartesianBoundsPropertyEditor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/ScaledDistanceField.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/ScaledDistanceField.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/motile/DiscreetValueMapFunctionWrapper.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/motile/DiscreetValueMapFunctionWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/motile" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/motile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/RenderContext.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/RenderContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/forager/population/immigration/pattern/RandomPointReleaseImmigrationPatternPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/forager/population/immigration/pattern/RandomPointReleaseImmigrationPatternPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/MatchstickAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/MatchstickAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/motile/SignalBasedAgentInspector.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/motile/SignalBasedAgentInspector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/RectangularCoordinatePropertyEditor.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/RectangularCoordinatePropertyEditor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/IAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/IAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/grid/GridRenderOptions.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/grid/GridRenderOptions.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/MotileAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/MotileAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/LinearBoundaryAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/LinearBoundaryAgentRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/zoomcontrol" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/zoomcontrol" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/CartesianBoundsField.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/CartesianBoundsField.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/ScaledDistancePropertyEditor.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/ScaledDistancePropertyEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapeViewPropertiesPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapeViewPropertiesPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/zoomcontrol/ZoomGlassPaneDisplayModeStrategy.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/zoomcontrol/ZoomGlassPaneDisplayModeStrategy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/zoomcontrol/ZoomGlassPane.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/zoomcontrol/ZoomGlassPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapePropertiesPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/LandscapePropertiesPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/grid" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/grid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/RectangularBoundaryStrategyPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/boundary/RectangularBoundaryStrategyPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageView.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/EditMapOutlineModeStrategy.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/EditMapOutlineModeStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/OpenMapAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/OpenMapAction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageToolbar.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageToolbar.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapOutline.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapOutline.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/AutoRotateMapAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/AutoRotateMapAction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageViewMode.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageViewMode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageViewModeStrategeyRegistry.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageViewModeStrategeyRegistry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/SaveMapAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/SaveMapAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugsim-new.iws" afterPath="$PROJECT_DIR$/bugsim-new.iws" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/grid/GridRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/grid/GridRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/DrawingLayoutMain.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/DrawingLayoutMain.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/zoomcontrol/ZoomFrame.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/zoomcontrol/ZoomFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/RadiusOfAttractionRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/RadiusOfAttractionRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/PhysicalAgentRendererBase.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/PhysicalAgentRendererBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/agent/LineAgentRenderer.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/agent/LineAgentRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/InspectButterflyAgentAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/InspectButterflyAgentAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/RectangularCoordinateField.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/RectangularCoordinateField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/forager/population/immigration/pattern/FixedLocationImmigrationPatternPanel.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/forager/population/immigration/pattern/FixedLocationImmigrationPatternPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/resource/layout/predefined/ImportResourceListDialog.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/experiment/editor/resource/layout/predefined/ImportResourceListDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/geometry/DistanceUnitComboBox.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/geometry/DistanceUnitComboBox.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/CropMapAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/CropMapAction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/EditMapOutlineAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/EditMapOutlineAction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/FlipVerticalAction.java" afterPath="$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/FlipVerticalAction.java" />
     </list>
     <ignored path="bugsim-new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -245,27 +209,27 @@
         </entry>
       </file>
       <file leaf-file-name="AutoRotateMapAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/AutoRotateMapAction.java">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/AutoRotateMapAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="15" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="12" column="15" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MapImageToolbar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageToolbar.java">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageToolbar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="22" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+            <state line="18" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OpenMapAction.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/OpenMapAction.java">
+        <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/OpenMapAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.33268481">
+            <state line="17" column="13" selection-start="373" selection-end="373" vertical-scroll-proportion="0.33268481">
               <folding />
             </state>
           </provider>
@@ -703,7 +667,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="landscape" />
+          <option name="myItemId" value="map" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -746,10 +710,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="landscape" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="map" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1390,23 +1350,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/AutoRotateMapAction.java">
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/AutoRotateMapAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="15" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+        <state line="12" column="15" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/MapImageToolbar.java">
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/MapImageToolbar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+        <state line="18" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/landscape/map/OpenMapAction.java">
+    <entry file="file://$PROJECT_DIR$/../src/main/java/com/ixcode/bugsim/view/map/OpenMapAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.33268481">
+        <state line="17" column="13" selection-start="373" selection-end="373" vertical-scroll-proportion="0.33268481">
           <folding />
         </state>
       </provider>

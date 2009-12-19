@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.view.landscape.map;
+package com.ixcode.bugsim.view.map;
 
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 
