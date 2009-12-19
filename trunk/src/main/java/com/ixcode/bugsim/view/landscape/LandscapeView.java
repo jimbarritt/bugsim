@@ -3,18 +3,17 @@
  */
 package com.ixcode.bugsim.view.landscape;
 
+import com.ixcode.bugsim.view.landscape.action.*;
+import com.ixcode.bugsim.view.landscape.mouse.*;
+import com.ixcode.bugsim.view.landscape.viewmode.*;
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.math.scale.*;
 import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
-import com.ixcode.bugsim.view.landscape.viewmode.*;
-import com.ixcode.bugsim.view.landscape.mouse.*;
-import com.ixcode.bugsim.view.landscape.action.*;
 import org.apache.log4j.*;
 
-import static javax.imageio.ImageIO.*;
 import javax.swing.*;
 import java.awt.*;
 import static java.awt.Cursor.*;
@@ -22,9 +21,7 @@ import java.awt.geom.*;
 import java.awt.image.*;
 import java.beans.*;
 import java.io.*;
-import java.util.*;
-import java.util.List;
-import static java.lang.Math.ceil;
+import static java.lang.Math.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
@@ -43,10 +40,10 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     public static final String PROPERTY_RENDER_GRIDS = "renderGrids";
     public static final String PROPERTY_GRID_RESOLUTION = "gridResolution";
     public static final String PROPERTY_GRID_TO_SCALE = "gridToScale";
+    public static final String PROPERTY_SHOW_GRID = "showGrid";
 
     private double scaleX = 1.0d;
     private double scaleY = 1.0d;
-    private double rotateTheta = 0;//Math.PI;
     private double translateX = 0;
     private double translateY = 0;
 
@@ -68,7 +65,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
 
     private double displayWidth;
     private double displayHeight;
-    public static final String PROPERTY_SHOW_GRID = "showGrid";
+
     private LandscapeRenderer landscapeRenderer = new LandscapeRenderer();
 
     private BufferedImage image;
@@ -82,8 +79,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     private boolean listenToAgents;
 
     private static final Logger log = Logger.getLogger(LandscapeView.class);
-    private List backgroundRenderers = new ArrayList();
-    private List overlayRenderers = new ArrayList();
     private AgentTypeChoiceCombo agentTypeChoiceCombo;
     private boolean renderForPrint = false;
     private boolean renderGrids = true;
@@ -99,9 +94,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         LandscapeMouseLocationListener locationListener = new LandscapeMouseLocationListener(this, statusBar);
         addMouseMotionListener(locationListener);
 
-        LocationLineRenderer locationLineRenderer = new LocationLineRenderer(this);
-        addOverlayRenderer(locationLineRenderer, 0);
-
         setBackground(Color.white);
         setGridResolution(new ScaledDistance(1, DistanceUnitRegistry.metres()));
         setGridThickness(new ScaledDistance(10, DistanceUnitRegistry.centimetres()));
@@ -109,21 +101,25 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         setCursor(getPredefinedCursor(CROSSHAIR_CURSOR));
     }
 
+    public void setLandscape(Landscape landscape) {
+        if (this.landscape != null) {
+            this.landscape.removePropertyChangeListener(this);
+        }
+        this.landscape = landscape;
+        this.landscape.addPropertyChangeListener(this);
+        setZoomCenter(new Point2D.Double(this.landscape.getExtentX() / 2, this.landscape.getExtentY() / 2));
+    }
+
     public void paintComponent(Graphics graphics) {
+        paintComponentWith2DGraphics((Graphics2D)graphics);
+    }
 
-        Graphics2D g = (Graphics2D) graphics;
-
-        Rectangle bounds = graphics.getClipBounds();
-        double x = bounds.getWidth() / 2;
-        double y = bounds.getHeight() / 2;
-
-        g.rotate(rotateTheta, x, y);
-
-        Rectangle preScaleBounds = g.getClipBounds();
+    private void paintComponentWith2DGraphics(Graphics2D graphics2D) {
+        Rectangle preScaleBounds = graphics2D.getClipBounds();
 
         setDisplayWidth(preScaleBounds.getWidth());
         setDisplayHeight(preScaleBounds.getHeight());
-        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         if (fitToScreen) {
             setScaleX((preScaleBounds.getWidth() / (landscape.getExtentX())));
@@ -133,15 +129,15 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         setLandscapeClipSizeX((preScaleBounds.getWidth() / getScaleX()));
         setLandscapeClipSizeY((preScaleBounds.getHeight() / getScaleY()));
 
-        g.setPaint(getBackground());
-        g.fill(bounds);
+        graphics2D.setPaint(getBackground());
+        graphics2D.fill(preScaleBounds);
 
-        paintBackground(g, preScaleBounds);
+        paintBackground(graphics2D, preScaleBounds);
 
         if (showGrid && !gridToScale) {
-            drawGridLines(g, preScaleBounds.getWidth(), preScaleBounds.getHeight());
+            drawGridLines(graphics2D, preScaleBounds.getWidth(), preScaleBounds.getHeight());
         }
-        g.scale(scaleX, scaleY);
+        graphics2D.scale(scaleX, scaleY);
 
         if (zoomCenterActive) {
             setTranslateX(-(zoomCenter.getX() - landscapeClipSizeX / 2));
@@ -152,23 +148,18 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         }
 
         float offset = 0f;
-        g.translate(offset + getTranslateX(), offset + getTranslateY());
+        graphics2D.translate(offset + getTranslateX(), offset + getTranslateY());
 
         // Must be after all calculations esp translation
         double bottomX = -getTranslateX();
         double bottomY = (landscape.getExtentY() + getTranslateY()) - getLandscapeClipSizeY();
         setLandscapeOrigin(new Point2D.Double(bottomX, bottomY));
 
-        renderBackgrounds(g);
-
-        landscapeRenderer.render(g, this);
+        landscapeRenderer.render(graphics2D, this);
 
         if (showGrid && gridToScale) {
-            drawGridLines(g, landscape.getExtentX(), landscape.getExtentY());
+            drawGridLines(graphics2D, landscape.getExtentX(), landscape.getExtentY());
         }
-
-        renderOverlays(g);
-
     }
 
 
@@ -195,29 +186,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         double y = landscape.getExtentY() - landscapeCoord.getDoubleY();
         return new RectangularCoordinate(x, y);
 
-    }
-
-
-    public void saveViewAsJPeg(File file) throws IOException {
-        if (log.isInfoEnabled()) {
-            log.info("Saving landscape image as: " + file.getAbsolutePath());
-        }
-        int width = getWidth();
-        int height = getHeight();
-        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        Graphics2D g2d = bufferedImage.createGraphics();
-        paint(g2d);
-        g2d.dispose();
-        write(bufferedImage, "jpg", file);
-    }
-
-    public void setLandscape(Landscape landscape) {
-        if (this.landscape != null) {
-            this.landscape.removePropertyChangeListener(this);
-        }
-        this.landscape = landscape;
-        this.landscape.addPropertyChangeListener(this);
-        setZoomCenter(new Point2D.Double(this.landscape.getExtentX() / 2, this.landscape.getExtentY() / 2));
     }
 
     public double getDisplayWidth() {
@@ -309,14 +277,14 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         double landscapeY = (getLandscapeClipSizeY() - (screenPoint.getY() / getScaleY())) + landscapeOrigin.getY();
         return new Location(landscapeX, landscapeY);
     }
-    
+
     public Location getSnappedLandscapeLocation(Point point) {
         Location landscapeLocation = getLandscapeLocation(point);
-        double snappedX = ceil(landscapeLocation.getDoubleX())-1;
-        double snappedY = ceil(landscapeLocation.getDoubleY())-1;
+        double snappedX = ceil(landscapeLocation.getDoubleX()) - 1;
+        double snappedY = ceil(landscapeLocation.getDoubleY()) - 1;
 
-        snappedX = (snappedX < 0)? 0 : snappedX;
-        snappedY = (snappedY < 0)? 0 : snappedY;
+        snappedX = (snappedX < 0) ? 0 : snappedX;
+        snappedY = (snappedY < 0) ? 0 : snappedY;
         return new Location(snappedX, snappedY);
     }
 
@@ -351,53 +319,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
 
-    public List getBackgroundRenderers() {
-        return backgroundRenderers;
-    }
-
-
-    public List getOverlayRenderers() {
-        return overlayRenderers;
-    }
-
-    public void addBackgroundRenderer(LandscapeLayer renderer, int position) {
-        int pos = (position > backgroundRenderers.size()) ? backgroundRenderers.size() : position;
-        backgroundRenderers.add(pos, renderer);
-    }
-
-    public void removeBackgroundRenderer(LandscapeLayer renderer) {
-        backgroundRenderers.remove(renderer);
-    }
-
-    public void addOverlayRenderer(LandscapeLayer renderer, int position) {
-        int pos = (position > overlayRenderers.size()) ? overlayRenderers.size() : position;
-        overlayRenderers.add(pos, renderer);
-
-    }
-
-    public void removeOverlayRenderer(LandscapeLayer renderer) {
-        overlayRenderers.remove(renderer);
-
-    }
-
-    private void renderOverlays(Graphics2D g) {
-        for (Iterator itr = overlayRenderers.iterator(); itr.hasNext();) {
-            LandscapeLayer renderer = (LandscapeLayer) itr.next();
-            if (renderer.isVisible()) {
-                renderer.render(g, this);
-            }
-        }
-    }
-
-    private void renderBackgrounds(Graphics2D g) {
-        for (Iterator itr = backgroundRenderers.iterator(); itr.hasNext();) {
-            LandscapeLayer renderer = (LandscapeLayer) itr.next();
-            if (renderer.isVisible()) {
-                renderer.render(g, this);
-            }
-        }
-    }
-
     public void loadBackgroundImageFromFileName(File file) throws FileNotFoundException {
         rawBackgroundImage = IxImageManipulation.getBufferedImage(file, this);
         redraw();
@@ -421,39 +342,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         }
     }
 
-    private void paintBackground_old(Graphics2D g, double width, double height) {
-
-        try {
-            if (image == null) {
-                BufferedImage unprocessed = IxImageManipulation.getBufferedImage(new File("/Users/jim/Documents/msc/field results/flight.jpg"), this);
-                BufferedImage translated = new BufferedImage(unprocessed.getWidth(), unprocessed.getHeight(), BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D translateG = translated.createGraphics();
-                double translateX = -(unprocessed.getWidth() * .23);
-                double translateY = -(unprocessed.getHeight() * .425);
-                AffineTransform translateTransform = AffineTransform.getTranslateInstance(translateX, translateY);
-                translateG.drawImage(unprocessed, translateTransform, this);
-//                System.out.println("Translated : x=" + translateX + ", y=" + translateY);
-
-                BufferedImage rotated = new BufferedImage(translated.getWidth(), translated.getHeight(), BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D rotateG = rotated.createGraphics();
-                AffineTransform rotateTransform = AffineTransform.getRotateInstance(.025);
-                rotateG.drawImage(translated, rotateTransform, this);
-
-                BufferedImage scaled = new BufferedImage(rotated.getWidth(), rotated.getHeight(), BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D scaleG = scaled.createGraphics();
-                double scx = .75;
-                double scy = .75;
-                AffineTransform scaleTransform = AffineTransform.getScaleInstance(scx, scy);
-                scaleG.drawImage(rotated, scaleTransform, this);
-                image = scaled;
-
-            }
-
-            g.drawImage(image, 0, 0, this);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
 
     private void drawGridLines(Graphics2D g, double extentX, double extentY) {
@@ -468,7 +356,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         int county = (int) (extentY / logicalGridResolution) + 1;
         int countYSide = county / 2; // number of gridlines from centre to edge.
         int minY = (int) (cy - ((logicalGridResolution * 0.5) + (logicalGridResolution * (countYSide - 1))));
-       
+
         g.setColor(Color.lightGray);
         g.setStroke(new BasicStroke(0.025f));//logicalGridThickness
 

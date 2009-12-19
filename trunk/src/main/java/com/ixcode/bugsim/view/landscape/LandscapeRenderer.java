@@ -85,42 +85,6 @@ public class LandscapeRenderer implements LandscapeLayer {
 
     }
 
-    /**
-     * This doesnt seem to work at all - sunddenly everything is non anti aliased and with lots of agents it hangs up!
-     */
-    private void renderAgentsWithLayers(LandscapeView landscapeView, Graphics2D g) {
-
-        List layers = new ArrayList();
-        layers.add(new Integer(0));
-        Map renderOperations = new HashMap();
-        renderOperations.put(new Integer(0), new ArrayList());
-
-        List agents = new ArrayList(landscapeView.getLandscape().getAgents());
-        for (Iterator itr = agents.iterator(); itr.hasNext();) {
-            IPhysicalAgent agent = (IPhysicalAgent) itr.next();
-            IAgentRenderer renderer = AgentRendererRegistry.INSTANCE.getRendererForAgent(agent);
-            Integer layer = renderer.getLayer();
-            layers.add(layer);
-            if (!renderOperations.containsKey(layer)) {
-                renderOperations.put(layer, new ArrayList());
-            }
-            List operations = (List) renderOperations.get(layer);
-            operations.add(new RenderOperation(renderer, agent));
-        }
-
-        Collections.sort(layers);
-
-        for (ListIterator itr = layers.listIterator(layers.size()); itr.hasPrevious();) {
-            Integer layer = (Integer) itr.previous();
-            List operations = (List) renderOperations.get(layer);
-            for (Iterator itrOp = operations.iterator(); itrOp.hasNext();) {
-                RenderOperation op = (RenderOperation) itrOp.next();
-                op.render(g, landscapeView.getLandscape(), renderContext);
-            }
-        }
-
-
-    }
 
     protected Shape createRectangleFromBounds(CartesianBounds b, LandscapeView view) {
         RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));

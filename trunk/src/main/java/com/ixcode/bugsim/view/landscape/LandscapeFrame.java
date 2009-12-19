@@ -110,19 +110,13 @@ public class LandscapeFrame extends JFrameExtension {
         landscapeView.setLandscape(landscape);
         landscape.fireAgentsChangedEvent();
 
-
-//        _view.addPropertyChangeListener(new LandscapeStatusBarUpdater(super.getStatusBar()));
-
     }
 
     public void addActionToToolbar(Action action) {
         getToolbar().add(action);
     }
 
-    private static JComponent createContent(Landscape landscape) {
-        JPanel container = new JPanel(new BorderLayout());
-        return container;
-    }
+
 
     public LandscapeToolbar getToolbar() {
         return landscapeToolbar;

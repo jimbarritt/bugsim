@@ -6,7 +6,7 @@ package com.ixcode.bugsim.view.experiment;
 import com.ixcode.bugsim.BugsimMain;
 import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
 import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.view.landscape.LandscapeViewFactory;
+import com.ixcode.bugsim.view.experiment.LandscapeViewFactory;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.bugsim.view.agent.AgentRendererRegistry;
 import com.ixcode.bugsim.view.agent.MotileAgentRenderer;
