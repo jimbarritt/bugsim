@@ -31,5 +31,7 @@ public class BoundaryShape extends TypeSafeEnum {
         return this == RECTANGULAR;
     }
 
-
+    public boolean is(BoundaryShape shape) {
+        return this == shape;
+    }
 }

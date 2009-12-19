@@ -7,8 +7,8 @@ import com.ixcode.framework.simulation.model.agent.IAgentFactory;
 import com.ixcode.framework.simulation.model.agent.IAgentInfo;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.framework.swing.IViewModeStrategy;
-import com.ixcode.framework.swing.ViewMode;
+import com.ixcode.framework.swing.ViewModeStrategy;
+import com.ixcode.framework.swing.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -18,7 +18,7 @@ import java.awt.event.MouseMotionListener;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class AddAgentViewModeStrategy implements IViewModeStrategy, MouseListener, MouseMotionListener {
+public class AddAgentViewModeStrategy implements ViewModeStrategy, MouseListener, MouseMotionListener {
 
     public AddAgentViewModeStrategy(LandscapeView view, AgentTypeChoiceCombo combo) {
         _view = view;

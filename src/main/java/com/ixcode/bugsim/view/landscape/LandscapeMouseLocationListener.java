@@ -29,10 +29,11 @@ public class LandscapeMouseLocationListener implements MouseMotionListener {
     }
 
     public void mouseMoved(MouseEvent e) {
-        RectangularCoordinate coord = landscapeView.getSnappedLandscapeLocation(e.getPoint(), 1).getCoordinate();
+        RectangularCoordinate logicalLocation = landscapeView.getSnappedLandscapeLocation(e.getPoint()
+        ).getCoordinate();
         StringBuilder sb = new StringBuilder();
-        sb.append("Logical Location : (").append(fmt(coord.getDoubleX()))
-          .append(", ").append(fmt(coord.getDoubleY())).append(" )")
+        sb.append("Logical Location : (").append(fmt(logicalLocation.getDoubleX()))
+          .append(", ").append(fmt(logicalLocation.getDoubleY())).append(" )")
           .append(" Screen location: (").append(e.getPoint().x).append(", ").append(e.getPoint().y).append(")")
           .append(" Scale: ").append(landscapeView.getLandscape().getScale())
           .append(" Logical Extent: (").append(formatLogicalDimensions()).append(")")

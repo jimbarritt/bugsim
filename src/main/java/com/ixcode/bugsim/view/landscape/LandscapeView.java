@@ -21,6 +21,7 @@ import java.beans.*;
 import java.io.*;
 import java.util.*;
 import java.util.List;
+import static java.lang.Math.ceil;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
@@ -70,7 +71,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     private BufferedImage image;
     private BufferedImage rawBackgroundImage;
     private LandscapeViewModeStrategeyRegistry viewModeRegistry;
-    private IViewModeStrategy viewModeStrategy;
+    private ViewModeStrategy viewModeStrategy;
 
     private ScaledDistance gridResolution;
     private int logicalGridThickness;
@@ -305,15 +306,14 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         double landscapeY = (getLandscapeClipSizeY() - (screenPoint.getY() / getScaleY())) + landscapeOrigin.getY();
         return new Location(landscapeX, landscapeY);
     }
-
+    
     public Location getSnappedLandscapeLocation(Point point) {
-        return getSnappedLandscapeLocation(point, logicalGridResolution);
-    }
+        Location landscapeLocation = getLandscapeLocation(point);
+        double snappedX = ceil(landscapeLocation.getDoubleX())-1;
+        double snappedY = ceil(landscapeLocation.getDoubleY())-1;
 
-    public Location getSnappedLandscapeLocation(Point point, int resolution) {
-        Location rawLocation = getLandscapeLocation(point);
-        double snappedX = Math.round(rawLocation.getDoubleX() / resolution) * resolution;
-        double snappedY = Math.round(rawLocation.getDoubleY() / resolution) * resolution;
+        snappedX = (snappedX < 0)? 0 : snappedX;
+        snappedY = (snappedY < 0)? 0 : snappedY;
         return new Location(snappedX, snappedY);
     }
 

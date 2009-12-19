@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape.map;
 
-import com.ixcode.framework.swing.IViewModeStrategy;
+import com.ixcode.framework.swing.ViewModeStrategy;
 import com.ixcode.framework.swing.ViewMode;
 
 import java.awt.*;
@@ -15,7 +15,7 @@ import java.awt.geom.Point2D;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class EditMapOutlineModeStrategy implements IViewModeStrategy,MouseListener, MouseMotionListener {
+public class EditMapOutlineModeStrategy implements ViewModeStrategy,MouseListener, MouseMotionListener {
 
     public EditMapOutlineModeStrategy(MapImageView view) {
         _view = view;

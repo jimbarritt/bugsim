@@ -12,7 +12,7 @@ import java.awt.event.MouseMotionListener;
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class DisplayModeStrategy implements IViewModeStrategy,MouseListener, MouseMotionListener {
+public class DisplayModeStrategy implements ViewModeStrategy,MouseListener, MouseMotionListener {
 
     public DisplayModeStrategy() {
 

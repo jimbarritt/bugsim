@@ -13,6 +13,7 @@ import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.agent.*;
 import com.ixcode.framework.simulation.model.agent.physical.*;
 import com.ixcode.framework.simulation.model.landscape.boundary.*;
+import static com.ixcode.framework.simulation.model.landscape.boundary.BoundaryShape.CIRCULAR;
 import com.ixcode.framework.simulation.model.landscape.grid.*;
 import com.ixcode.framework.simulation.model.landscape.information.*;
 
@@ -77,8 +78,6 @@ public class Landscape extends ModelBase implements PropertyChangeListener {
     }
 
     public void initialise(LandscapeCategory landscapeC) {
-
-
         BoundaryStrategyBase boundaryS = landscapeC.getExtent().getOuterBoundary();
 
         Map initObjects = StrategyDefinition.createInitialisationObjects(false);
@@ -87,8 +86,7 @@ public class Landscape extends ModelBase implements PropertyChangeListener {
         CartesianBounds b = boundary.getBounds();
         BoundaryShape shape = boundary.getShape();
 
-
-        boolean isCircular = (shape == BoundaryShape.CIRCULAR);
+        boolean isCircular = shape.is(CIRCULAR);
 
         setLogicalBounds(b);
         setCircular(isCircular);
@@ -102,11 +100,8 @@ public class Landscape extends ModelBase implements PropertyChangeListener {
         releaseBoundaryGrid = GridFactory.createGrid(null, RELEASE_GRID, releaseb, 1, 1, isReleaseCircular);
         zeroBoundaryGrid = GridFactory.createGrid(null, ZERO_BOUNDARY_GRID, zeroGridBounds, 1, 1, isReleaseCircular);
 
-
         addGrid(releaseBoundaryGrid);
         addGrid(zeroBoundaryGrid);
-
-
     }
 
     public static final String PROPERTY_EXTENT_X = "extentX";
@@ -306,6 +301,5 @@ public class Landscape extends ModelBase implements PropertyChangeListener {
     public String toString() {
         return "logicalWidth: " + extentX + ", logicalHeight: " + extentY + ", scaledWidth: " + scaledWidth + ", scaledHeight: " + scaledHeight + ", scale: " + scale;
     }
-
 
 }

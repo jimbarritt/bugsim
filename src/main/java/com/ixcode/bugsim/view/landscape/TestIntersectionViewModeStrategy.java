@@ -12,8 +12,8 @@ import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.agent.diagnostic.LineAgent;
 import com.ixcode.framework.simulation.model.agent.resource.IResourceAgent;
 import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.framework.swing.IViewModeStrategy;
-import com.ixcode.framework.swing.ViewMode;
+import com.ixcode.framework.swing.ViewModeStrategy;
+import com.ixcode.framework.swing.*;
 import org.apache.log4j.Logger;
 
 import java.awt.*;
@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class TestIntersectionViewModeStrategy implements IViewModeStrategy, MouseListener, MouseMotionListener {
+public class TestIntersectionViewModeStrategy implements ViewModeStrategy, MouseListener, MouseMotionListener {
 
     public TestIntersectionViewModeStrategy(LandscapeView view) {
         _view = view;
