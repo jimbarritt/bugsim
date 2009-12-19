@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.landscape;
 
 import com.ixcode.bugsim.model.experiment.output.SimulationSerialiser;
-import com.ixcode.bugsim.view.landscape.zoomcontrol.ZoomFrame;
+import com.ixcode.bugsim.view.zoomcontrol.ZoomFrame;
 import com.ixcode.framework.swing.action.ActionBase;
 
 import javax.swing.*;

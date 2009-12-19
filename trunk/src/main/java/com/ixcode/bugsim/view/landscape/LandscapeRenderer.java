@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.landscape;
 
-import com.ixcode.bugsim.view.landscape.agent.*;
-import com.ixcode.bugsim.view.landscape.grid.*;
+import com.ixcode.bugsim.view.agent.*;
+import com.ixcode.bugsim.view.grid.*;
 import com.ixcode.framework.simulation.model.agent.physical.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.simulation.model.landscape.grid.*;

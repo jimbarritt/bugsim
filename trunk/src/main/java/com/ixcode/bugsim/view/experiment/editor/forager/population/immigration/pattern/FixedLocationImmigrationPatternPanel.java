@@ -3,13 +3,11 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager.population.immigration.pattern;
 
-import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.view.landscape.geometry.RectangularCoordinatePropertyEditor;
+import com.ixcode.bugsim.view.geometry.RectangularCoordinatePropertyEditor;
 import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.FixedLocationImmigrationStrategyDefinition;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 import com.ixcode.framework.swing.property.CheckBoxPropertyEditor;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.RectangularBoundaryStrategy;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
 
 import java.awt.event.ActionListener;

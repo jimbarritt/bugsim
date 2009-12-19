@@ -4,8 +4,8 @@
 package com.ixcode.bugsim.view.landscape;
 
 import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.view.landscape.agent.AgentRendererRegistry;
-import com.ixcode.bugsim.view.landscape.agent.MotileAgentRenderer;
+import com.ixcode.bugsim.view.agent.AgentRendererRegistry;
+import com.ixcode.bugsim.view.agent.MotileAgentRenderer;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.landscape;
 
 import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
-import com.ixcode.bugsim.view.landscape.agent.motile.SignalBasedAgentInspector;
+import com.ixcode.bugsim.view.agent.motile.SignalBasedAgentInspector;
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.landscape.Landscape;
