@@ -44,10 +44,10 @@ public class ExperimentXLandscapeViewFactory extends SimulationLandscapeViewFact
 
         double resolution =patchSize; 
 
-        view.setGridResolution(new ScaledDistance(resolution, view.getLandscape().getScale().getUnits()));
-        view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
-        view.setGridToScale(true);
-        
+//        view.setGridResolution(new ScaledDistance(resolution, view.getLandscape().getScale().getUnits()));
+//        view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
+//        view.setGridToScale(true);
+//        
 
 
 

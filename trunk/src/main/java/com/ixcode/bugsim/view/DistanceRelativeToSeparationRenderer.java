@@ -25,7 +25,7 @@ public class DistanceRelativeToSeparationRenderer extends LandscapeRenderer {
         _r = r;
     }
 
-    public void render(Graphics2D g, LandscapeView view) {
+    public void render(LandscapeView view, Graphics2D graphics2D) {
         CartesianBounds centreBounds = new CartesianBounds(_centre.getDoubleX()-_r , _centre.getDoubleY()-_r, 2*_r , 2*_r);
         Ellipse2D.Double centreCabbage = super.createEllipseFromBounds(centreBounds, view);
 
@@ -33,10 +33,10 @@ public class DistanceRelativeToSeparationRenderer extends LandscapeRenderer {
         CartesianBounds tlb = new CartesianBounds(tlc.getDoubleX()-_r , tlc.getDoubleY()-_r, 2*_r , 2*_r);
         Ellipse2D.Double topLeftCabbage = super.createEllipseFromBounds(tlb, view);
 
-        g.setColor(Color.red);
-        g.fill(centreCabbage);
-        g.setColor(Color.blue);
-        g.fill(topLeftCabbage);
+        graphics2D.setColor(Color.red);
+        graphics2D.fill(centreCabbage);
+        graphics2D.setColor(Color.blue);
+        graphics2D.fill(topLeftCabbage);
 
         if (log.isInfoEnabled()) {
             double dc = _centre.calculateDistanceTo(tlc);

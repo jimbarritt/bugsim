@@ -30,7 +30,7 @@ public class LocationLineRenderer extends LandscapeRenderer implements MouseMoti
     }
 
 
-    public void render(Graphics2D g, LandscapeView view) {
+    public void render(LandscapeView view, Graphics2D graphics2D) {
         if (_currentPoint != null) {
 
             RectangularCoordinate landscapePoint = super.getScreenCoord(_view, view.getLandscapeLocation(_currentPoint).getCoordinate());
@@ -39,10 +39,10 @@ public class LocationLineRenderer extends LandscapeRenderer implements MouseMoti
             Line2D.Double xLine = new Line2D.Double(landscapePoint.getDoubleX(), 0, landscapePoint.getDoubleX(), r.getHeight());
             Line2D.Double yLine = new Line2D.Double(0, landscapePoint.getDoubleY(), r.getWidth(), landscapePoint.getDoubleY());
 
-            g.setColor(Color.blue);
-            g.setStroke(new BasicStroke(.1f));
-            g.draw(xLine);
-            g.draw(yLine);
+            graphics2D.setColor(Color.blue);
+            graphics2D.setStroke(new BasicStroke(.1f));
+            graphics2D.draw(xLine);
+            graphics2D.draw(yLine);
         }
     }
 

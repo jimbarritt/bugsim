@@ -50,8 +50,8 @@ public class SaveLandscapeImageAction extends ActionBase {
     }
 
     public void saveImage() {
-        boolean showGrid = _view.isShowGrid();
-        _view.setRenderForPrint(true);
+//        boolean showGrid = _view.isShowGrid();
+//        _view.setRenderForPrint(true);
 //        _view.setRenderGrids(true);
 //        _view.setShowGrid(true);
         _view.redraw();
@@ -67,7 +67,7 @@ public class SaveLandscapeImageAction extends ActionBase {
             }
 
         }
-        _view.setRenderForPrint(false);
+//        _view.setRenderForPrint(false);
 //        _view.setRenderGrids(true);
 //        _view.setShowGrid(showGrid);
         _view.redraw();

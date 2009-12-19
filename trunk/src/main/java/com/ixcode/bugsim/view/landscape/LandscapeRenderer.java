@@ -30,20 +30,20 @@ public class LandscapeRenderer implements LandscapeLayer {
     /**
      * Copy the collections to prevent concurrent modification
      */
-    public void render(Graphics2D g, LandscapeView landscapeView) {
+    public void render(LandscapeView landscapeView, Graphics2D graphics2D) {
 
-        renderContext.setRenderForPrint(landscapeView.getRenderForPrint());
+//        renderContext.setRenderForPrint(landscapeView.getRenderForPrint());
         renderContext.setView(landscapeView);
         Landscape landscape = landscapeView.getLandscape();
 //        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        renderLandscapeBoundary(g, landscape, landscapeView);
+        renderLandscapeBoundary(graphics2D, landscape, landscapeView);
 
-        if (landscapeView.getRenderGrids()) {
-            renderGrids(landscapeView, g);
-        }
+//        if (landscapeView.getRenderGrids()) {
+//            renderGrids(landscapeView, graphics2D);
+//        }
 
-        renderAgentsWithoutLayers(landscape, g);
+        renderAgentsWithoutLayers(landscape, graphics2D);
 
 
     }

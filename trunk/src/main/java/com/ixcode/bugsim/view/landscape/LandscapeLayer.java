@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public interface LandscapeLayer {
 
-        void render(Graphics2D g, LandscapeView view);
+        void render(LandscapeView view, Graphics2D graphics2D);
 
     boolean isVisible();
 

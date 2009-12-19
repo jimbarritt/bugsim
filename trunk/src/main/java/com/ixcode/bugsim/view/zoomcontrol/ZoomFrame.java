@@ -26,7 +26,7 @@ public class ZoomFrame extends JFrameExtension {
     public void setLandscape(Landscape landscape) {
 
         _zoomView = new LandscapeView(_mainView.getLandscape(), _combo, super.getStatusBar());
-        _zoomView.setShowGrid(false);
+//        _zoomView.setShowGrid(false);
         super.getContentPane().removeAll();
         super.getContentPane().add(_zoomView);
         super.setGlassPane(new ZoomGlassPane(_mainView, _zoomView));

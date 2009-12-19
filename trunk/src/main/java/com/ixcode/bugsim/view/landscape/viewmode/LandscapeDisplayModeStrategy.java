@@ -30,7 +30,7 @@ public class LandscapeDisplayModeStrategy extends DisplayModeStrategy {
 
     public void mouseDragged(MouseEvent mouseEvent) {
         super.mouseDragged(mouseEvent);
-        if (!view.isFitToScreen()) {
+        if (!view.isZoomIsFitToScreen()) {
             Point currentDragPoint = mouseEvent.getPoint();
             double xIncr = view.getLandscapeDistanceX(startDragPoint.getX() - currentDragPoint.getX());
             double yIncr = view.getLandscapeDistanceY(startDragPoint.getY() - currentDragPoint.getY());

@@ -15,7 +15,7 @@ import java.awt.geom.*;
 public class ZeroBoundaryRenderer implements LandscapeLayer {
     private boolean _visible = true;
 
-    public void render(Graphics2D g, LandscapeView view) {
+    public void render(LandscapeView view, Graphics2D graphics2D) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
 

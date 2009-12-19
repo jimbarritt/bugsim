@@ -32,9 +32,9 @@ public class Experiment1dLandscapeViewFactory extends SimulationLandscapeViewFac
         f = initialiseLandscapeView(sim, experiment, experimentController);
 
           LandscapeView view = f.getLandscapeView();
-          view.setGridResolution(new ScaledDistance(20, DistanceUnitRegistry.centimetres()));
-          view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
-          view.setGridToScale(true);
+//          view.setGridResolution(new ScaledDistance(20, DistanceUnitRegistry.centimetres()));
+//          view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
+//          view.setGridToScale(true);
 
         ZoomFrame zoom = new ZoomFrame(view);
         zoom.setSize(200, 200);

@@ -4,12 +4,13 @@
 package com.ixcode.bugsim.view.landscape.action;
 
 import com.ixcode.framework.swing.action.ActionBase;
+import com.ixcode.framework.swing.*;
 import com.ixcode.bugsim.view.landscape.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.io.File;
-import java.io.IOException;
+import java.awt.image.*;
+import java.io.*;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
@@ -17,6 +18,7 @@ import java.util.prefs.Preferences;
  *  Description : ${CLASS_DESCRIPTION}
  */
 public class OpenBackgroundImageAction extends ActionBase {
+    private BufferedImage rawBackgroundImage;
 
     public OpenBackgroundImageAction(LandscapeView view) {
         super("Open Background Image", "/icons/open.gif");
@@ -37,7 +39,7 @@ public class OpenBackgroundImageAction extends ActionBase {
             if (fileChooser.getSelectedFile() != null) {
                 File file = fileChooser.getSelectedFile();
 
-                _view.loadBackgroundImageFromFileName(file);
+                loadBackgroundImageFromFileName(_view, file);
                 prefs.put(START_LOCATION, file.getParentFile().getAbsolutePath());
                 prefs.sync();
 
@@ -48,6 +50,10 @@ public class OpenBackgroundImageAction extends ActionBase {
         } catch (BackingStoreException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void loadBackgroundImageFromFileName(LandscapeView view, File file) throws FileNotFoundException {
+        rawBackgroundImage = IxImageManipulation.getBufferedImage(file, view);
+        view.redraw();
     }
 
     private LandscapeView _view
