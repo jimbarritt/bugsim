@@ -10,18 +10,24 @@ import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.bugsim.view.landscape.*;
 
 import javax.swing.*;
+import static javax.imageio.ImageIO.write;
 import java.awt.event.ActionEvent;
+import java.awt.image.*;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
+import org.apache.log4j.*;
+
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
 public class SaveLandscapeImageAction extends ActionBase {
 
+    private static final Logger log = Logger.getLogger(SaveLandscapeImageAction.class);
     public SaveLandscapeImageAction(LandscapeView view) {
         super("Save Landscape Image", "/icons/snapShot.gif");
         _view = view;
@@ -55,7 +61,7 @@ public class SaveLandscapeImageAction extends ActionBase {
         if (file != null) {
 
             try {
-                _view.saveViewAsJPeg(file);
+                saveViewAsJPeg(_view, file);
             } catch (IOException e1) {
                 throw new RuntimeException(e1);
             }
@@ -65,6 +71,19 @@ public class SaveLandscapeImageAction extends ActionBase {
 //        _view.setRenderGrids(true);
 //        _view.setShowGrid(showGrid);
         _view.redraw();
+    }
+
+    public void saveViewAsJPeg(LandscapeView view, File file) throws IOException {
+        if (log.isInfoEnabled()) {
+            log.info("Saving landscape image as: " + file.getAbsolutePath());
+        }
+        int width = view.getWidth();
+        int height = view.getHeight();
+        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = bufferedImage.createGraphics();
+        view.paint(g2d);
+        g2d.dispose();
+        write(bufferedImage, "jpg", file);
     }
 
     private File generateFile() {

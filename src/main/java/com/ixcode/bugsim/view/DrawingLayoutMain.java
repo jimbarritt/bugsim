@@ -47,7 +47,6 @@ public class DrawingLayoutMain {
         view.setLogicalGridResolution(10);
         view.setLogicalGridThickness(1);
 
-        view.addBackgroundRenderer(r, 0);
 
 
         f.show();
