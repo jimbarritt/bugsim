@@ -5,10 +5,10 @@ package com.ixcode.bugsim.view.simulation;
 
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 import com.ixcode.framework.simulation.model.Simulation;
-import com.ixcode.bugsim.view.landscape.LandscapePropertiesPanel;
+import com.ixcode.bugsim.view.landscape.properties.LandscapePropertiesPanel;
 import com.ixcode.bugsim.view.landscape.LandscapeView;
-import com.ixcode.bugsim.view.landscape.LandscapeViewPropertiesPanel;
-import com.ixcode.bugsim.view.landscape.CenterOnNextAgentAction;
+import com.ixcode.bugsim.view.landscape.properties.LandscapeViewPropertiesPanel;
+import com.ixcode.bugsim.view.landscape.action.CenterOnNextAgentAction;
 import com.ixcode.bugsim.view.simulation.action.ExecuteMultipleTimeStepsAction;
 
 import javax.swing.*;

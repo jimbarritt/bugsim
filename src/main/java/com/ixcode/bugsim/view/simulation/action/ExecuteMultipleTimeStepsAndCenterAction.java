@@ -5,7 +5,7 @@ package com.ixcode.bugsim.view.simulation.action;
 
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.bugsim.view.simulation.SimulationControlPanel;
-import com.ixcode.bugsim.view.landscape.CenterOnNextAgentAction;
+import com.ixcode.bugsim.view.landscape.action.CenterOnNextAgentAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

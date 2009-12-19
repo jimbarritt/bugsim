@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.simulation.action;
 
 import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.view.landscape.CenterOnNextAgentAction;
+import com.ixcode.bugsim.view.landscape.action.CenterOnNextAgentAction;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.landscape.Location;
 import com.ixcode.framework.simulation.model.landscape.information.GravitationalCalculator;

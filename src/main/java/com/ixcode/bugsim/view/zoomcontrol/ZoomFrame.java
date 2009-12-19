@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.zoomcontrol;
 
 import com.ixcode.framework.simulation.model.landscape.Landscape;
-import com.ixcode.bugsim.view.landscape.AgentTypeChoiceCombo;
+import com.ixcode.bugsim.view.landscape.action.AgentTypeChoiceCombo;
 import com.ixcode.bugsim.view.landscape.LandscapeView;
 import com.ixcode.framework.swing.JFrameExtension;
 
