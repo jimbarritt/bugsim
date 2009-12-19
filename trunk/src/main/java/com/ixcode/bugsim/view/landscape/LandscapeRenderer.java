@@ -8,21 +8,24 @@ import com.ixcode.bugsim.view.grid.*;
 import com.ixcode.framework.simulation.model.agent.physical.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.simulation.model.landscape.grid.*;
+import com.ixcode.framework.math.geometry.*;
 import org.apache.log4j.*;
 
 import java.awt.*;
+import java.awt.geom.*;
 import java.util.*;
 import java.util.List;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class LandscapeRenderer extends LandscapeRendererBase {
+public class LandscapeRenderer implements LandscapeLayer {
 
     private static final Logger log = Logger.getLogger(LandscapeRenderer.class);
     private RenderContext renderContext = new RenderContext();
 
     private GridRenderer gridRenderer = new GridRenderer();
+    private boolean _visible = true;
 
     /**
      * Copy the collections to prevent concurrent modification
@@ -62,7 +65,7 @@ public class LandscapeRenderer extends LandscapeRendererBase {
         if (landscape.isCircular()) {
             boundaryBorder = createEllipseFromBounds(landscape.getLogicalBounds(), landscapeView);
         } else {
-            boundaryBorder = super.createRectangleFromBounds(landscape.getLogicalBounds(), landscapeView);
+            boundaryBorder = createRectangleFromBounds(landscape.getLogicalBounds(), landscapeView);
         }
 
         g.setColor(new Color(220, 220, 220));
@@ -117,6 +120,23 @@ public class LandscapeRenderer extends LandscapeRendererBase {
         }
 
 
+    }
+
+    protected Shape createRectangleFromBounds(CartesianBounds b, LandscapeView view) {
+        RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));
+
+        return new Rectangle2D.Double(topLeft.getDoubleX(), topLeft.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight());
+
+    }
+
+    protected Ellipse2D.Double createEllipseFromBounds(CartesianBounds b, LandscapeView view) {
+        RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));
+        return new Ellipse2D.Double(topLeft.getDoubleX(), topLeft.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight());
+
+    }
+
+    protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
+        return LandscapeView.getScreenCoord(view.getLandscape(), coord);
     }
 
     private static class RenderOperation {

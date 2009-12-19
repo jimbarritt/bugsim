@@ -9,6 +9,9 @@ import com.ixcode.framework.math.scale.*;
 import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
+import com.ixcode.bugsim.view.landscape.viewmode.*;
+import com.ixcode.bugsim.view.landscape.mouse.*;
+import com.ixcode.bugsim.view.landscape.action.*;
 import org.apache.log4j.*;
 
 import static javax.imageio.ImageIO.*;
@@ -357,29 +360,29 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         return overlayRenderers;
     }
 
-    public void addBackgroundRenderer(ILandscapeRenderer renderer, int position) {
+    public void addBackgroundRenderer(LandscapeLayer renderer, int position) {
         int pos = (position > backgroundRenderers.size()) ? backgroundRenderers.size() : position;
         backgroundRenderers.add(pos, renderer);
     }
 
-    public void removeBackgroundRenderer(ILandscapeRenderer renderer) {
+    public void removeBackgroundRenderer(LandscapeLayer renderer) {
         backgroundRenderers.remove(renderer);
     }
 
-    public void addOverlayRenderer(ILandscapeRenderer renderer, int position) {
+    public void addOverlayRenderer(LandscapeLayer renderer, int position) {
         int pos = (position > overlayRenderers.size()) ? overlayRenderers.size() : position;
         overlayRenderers.add(pos, renderer);
 
     }
 
-    public void removeOverlayRenderer(ILandscapeRenderer renderer) {
+    public void removeOverlayRenderer(LandscapeLayer renderer) {
         overlayRenderers.remove(renderer);
 
     }
 
     private void renderOverlays(Graphics2D g) {
         for (Iterator itr = overlayRenderers.iterator(); itr.hasNext();) {
-            ILandscapeRenderer renderer = (ILandscapeRenderer) itr.next();
+            LandscapeLayer renderer = (LandscapeLayer) itr.next();
             if (renderer.isVisible()) {
                 renderer.render(g, this);
             }
@@ -388,7 +391,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
 
     private void renderBackgrounds(Graphics2D g) {
         for (Iterator itr = backgroundRenderers.iterator(); itr.hasNext();) {
-            ILandscapeRenderer renderer = (ILandscapeRenderer) itr.next();
+            LandscapeLayer renderer = (LandscapeLayer) itr.next();
             if (renderer.isVisible()) {
                 renderer.render(g, this);
             }

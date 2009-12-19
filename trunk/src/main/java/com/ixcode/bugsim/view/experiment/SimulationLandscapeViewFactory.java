@@ -6,9 +6,8 @@ package com.ixcode.bugsim.view.experiment;
 import com.ixcode.bugsim.BugsimMain;
 import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
 import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.view.landscape.ILandscapeViewFactory;
-import com.ixcode.bugsim.view.landscape.LandscapeFrame;
-import com.ixcode.bugsim.view.landscape.LandscapeView;
+import com.ixcode.bugsim.view.landscape.LandscapeViewFactory;
+import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.bugsim.view.agent.AgentRendererRegistry;
 import com.ixcode.bugsim.view.agent.MotileAgentRenderer;
 import com.ixcode.framework.experiment.model.*;
@@ -28,7 +27,7 @@ import java.awt.geom.Point2D;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class SimulationLandscapeViewFactory implements ILandscapeViewFactory {
+public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
 
     public JFrame initialiseLandscapeView(IExperiment experiment, ExperimentController experimentController) {
 

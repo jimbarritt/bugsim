@@ -3,21 +3,21 @@
  */
 package com.ixcode.bugsim.view;
 
-import com.ixcode.bugsim.view.landscape.LandscapeRendererBase;
-import com.ixcode.bugsim.view.landscape.LandscapeView;
+import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import org.apache.log4j.Logger;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.*;
 import java.text.DecimalFormat;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class DistanceRelativeToSeparationRenderer extends LandscapeRendererBase  {
+public class DistanceRelativeToSeparationRenderer extends LandscapeRenderer {
+    private boolean _visible = true;
 
     public DistanceRelativeToSeparationRenderer(RectangularCoordinate centre, double s, double r) {
         _centre = centre;
@@ -54,4 +54,29 @@ public class DistanceRelativeToSeparationRenderer extends LandscapeRendererBase 
     private double _s;
     private double _r;
     private static final Logger log = Logger.getLogger(DistanceRelativeToSeparationRenderer.class);
+
+    protected Shape createRectangleFromBounds(CartesianBounds b, LandscapeView view) {
+        RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));
+
+        return new Rectangle2D.Double(topLeft.getDoubleX(), topLeft.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight());
+
+    }
+
+    protected Ellipse2D.Double createEllipseFromBounds(CartesianBounds b, LandscapeView view) {
+        RectangularCoordinate topLeft = getScreenCoord(view, new RectangularCoordinate(b.getDoubleX(), b.getDoubleY() + b.getDoubleHeight()));
+        return new Ellipse2D.Double(topLeft.getDoubleX(), topLeft.getDoubleY(), b.getDoubleWidth(), b.getDoubleHeight());
+
+    }
+
+    protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
+        return LandscapeView.getScreenCoord(view.getLandscape(), coord);
+    }
+
+    public boolean isVisible() {
+        return _visible;
+    }
+
+    public void setVisible(boolean isVisible) {
+        _visible = isVisible;
+    }
 }

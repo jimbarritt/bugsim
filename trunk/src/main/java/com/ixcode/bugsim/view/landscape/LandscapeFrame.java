@@ -6,6 +6,7 @@ package com.ixcode.bugsim.view.landscape;
 import com.explodingpixels.macwidgets.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
+import com.ixcode.bugsim.view.landscape.action.*;
 
 import javax.swing.*;
 import static javax.swing.BorderFactory.*;

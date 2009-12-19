@@ -55,7 +55,7 @@ public class BugsimMain {
         try {
             IExperimentFactory experimentFactory = (IExperimentFactory)instantiateClass(ba.getExperimentFactoryName());
             IExperimentProgressFactory progressPanelFactory = (IExperimentProgressFactory)instantiateClass(ba.getProgressPanelFactoryName());
-            ILandscapeViewFactory landscapeViewFactory = (ILandscapeViewFactory)instantiateClass(ba.getLandscapeViewFactoryName());
+            LandscapeViewFactory landscapeViewFactory = (LandscapeViewFactory)instantiateClass(ba.getLandscapeViewFactoryName());
 
             IExperiment experiment = null;
             if (experimentFactory instanceof ILoadedExperimentFactory) {
@@ -217,7 +217,7 @@ public class BugsimMain {
 
     }
 
-    private static void initialiseUI(IExperimentProgressFactory progressPanelFactory, IExperiment experiment, ExperimentController controller, ILandscapeViewFactory landscapeViewFactory) throws JavaBeanException {
+    private static void initialiseUI(IExperimentProgressFactory progressPanelFactory, IExperiment experiment, ExperimentController controller, LandscapeViewFactory landscapeViewFactory) throws JavaBeanException {
         ExperimentControllerFrame experimentController = null;
         JComponent progressPanel = progressPanelFactory.createExperimentProgressPanel(experiment);
         experimentController = new ExperimentControllerFrame(controller, progressPanel);

@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model;
 
-import com.ixcode.bugsim.view.landscape.AgentInfoRegistry;
+import com.ixcode.bugsim.view.landscape.action.AgentInfoRegistry;
 import com.ixcode.framework.math.random.RandomNumberGenerator;
 import com.ixcode.framework.simulation.model.agent.IAgent;
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
