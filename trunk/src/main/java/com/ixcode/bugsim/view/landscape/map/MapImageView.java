@@ -202,7 +202,7 @@ public class MapImageView extends JComponent {
     private boolean _fitToScreen = true;
 
     private ViewModeStrategyRegistry _viewModeRegistry;
-    private IViewModeStrategy _viewModeStrategy;
+    private ViewModeStrategy _viewModeStrategy;
     private MapOutline _mapOutline;
 
 }

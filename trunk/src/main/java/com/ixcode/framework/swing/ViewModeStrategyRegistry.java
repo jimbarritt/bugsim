@@ -17,15 +17,15 @@ public class ViewModeStrategyRegistry {
 
     }
 
-    protected void addStrategy(IViewModeStrategy strategy) {
+    protected void addStrategy(ViewModeStrategy strategy) {
         _strategies.put(strategy.getViewMode(), strategy);
     }
 
-    public IViewModeStrategy getStrategy(ViewMode mode) {
+    public ViewModeStrategy getStrategy(ViewMode mode) {
         if (!_strategies.containsKey(mode))  {
             throw new IllegalArgumentException("No strategy in registry " + this.getClass().getName() + " for " + mode);
         }
-        return (IViewModeStrategy)_strategies.get(mode);
+        return (ViewModeStrategy)_strategies.get(mode);
     }
 
     private Map _strategies = new HashMap();

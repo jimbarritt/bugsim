@@ -1,0 +1,3 @@
+-Xdock:icon=../src/main/resource/icons/bugsim-logo.jpg
+-Xdock:name="BugSim"
+-Dapple.laf.useScreenMenuBar=true

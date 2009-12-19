@@ -36,7 +36,7 @@ public class LandscapeFrame extends JFrameExtension {
 
         super.setBorderBackground(landscapeView.getBackground());
 
-        super.setSystemExitOnClose(false);
+        super.setSystemExitOnClose(true);
     }
 
     private void initSizeAndLocation(int paddingTop, int paddingRight) {
