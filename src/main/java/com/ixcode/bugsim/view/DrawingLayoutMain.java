@@ -44,8 +44,8 @@ public class DrawingLayoutMain {
 
         final LandscapeFrame f = new LandscapeFrame(l, null);
         final LandscapeView view = f.getLandscapeView();
-        view.setLogicalGridResolution(10);
-        view.setLogicalGridThickness(1);
+//        view.setLogicalGridResolution(10);
+//        view.setLogicalGridThickness(1);
 
 
 
@@ -61,8 +61,8 @@ public class DrawingLayoutMain {
 
         final LandscapeFrame f = new LandscapeFrame(l, null);
         final LandscapeView view = f.getLandscapeView();
-        view.setLogicalGridResolution(10);
-        view.setLogicalGridThickness(1);
+//        view.setLogicalGridResolution(10);
+//        view.setLogicalGridThickness(1);
 
 
         f.show();

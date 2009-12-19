@@ -52,9 +52,9 @@ public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
 
 
 
-        view.setGridResolution(new ScaledDistance(80, DistanceUnitRegistry.centimetres()));
-        view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
-        view.setGridToScale(false);
+//        view.setGridResolution(new ScaledDistance(80, DistanceUnitRegistry.centimetres()));
+//        view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
+//        view.setGridToScale(false);
         view.setListenToAgents(BugsimMain.isDebug());
         view.setExperimentController(experimentController);
 
@@ -69,7 +69,7 @@ public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
                 landscapeFrame.setLandscape(simulation.getLandscape());
                 LandscapeView view = landscapeFrame.getLandscapeView();
 //                    view.setGridResolution(new ScaledDistance(80, DistanceUnitRegistry.centimetres()));
-                view.setGridThickness(new ScaledDistance(1, DistanceUnitRegistry.centimetres()));
+//                view.setGridThickness(new ScaledDistance(1, DistanceUnitRegistry.centimetres()));
                 view.setListenToAgents(BugsimMain.isDebug());
 
             }
@@ -80,7 +80,7 @@ public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
                 if (patch != null) {
                     CartesianBounds b = (CartesianBounds)patch.getValue();
                     double patchSize = b.getDoubleWidth();
-                    view.setGridResolution(new ScaledDistance(patchSize, DistanceUnitRegistry.centimetres()));
+//                    view.setGridResolution(new ScaledDistance(patchSize, DistanceUnitRegistry.centimetres()));
                 }
                 RectangularCoordinate centre = view.getLandscape().getLogicalBounds().getCentre();
                 view.setZoomCenter(new Point2D.Double(centre.getDoubleX(), centre.getDoubleY()));

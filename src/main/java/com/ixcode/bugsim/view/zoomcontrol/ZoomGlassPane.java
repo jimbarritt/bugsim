@@ -50,9 +50,9 @@ public class ZoomGlassPane extends JComponent implements PropertyChangeListener 
 
     public void propertyChange(PropertyChangeEvent evt) {
 
-        if (evt.getPropertyName().equals(LandscapeView.PROPERTY_GRID_RESOLUTION)) {
-            _zoomView.setLogicalGridResolution(_mainView.getLogicalGridResolution());
-        }
+//        if (evt.getPropertyName().equals(LandscapeView.PROPERTY_GRID_RESOLUTION)) {
+//            _zoomView.setLogicalGridResolution(_mainView.getLogicalGridResolution());
+//        }
 //        System.out.println("PropertyChanged!:" + evt);
         redraw();
 

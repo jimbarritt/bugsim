@@ -32,7 +32,7 @@ public class ZoomGlassPaneDisplayModeStrategy extends DisplayModeStrategy {
 //        Rectangle2D.Double minTarget = new Rectangle2D.Double(x, y, MIN_SIZE, MIN_SIZE) ;
 //        Rectangle2D.Double hitTarget = (zr.getDoubleHeight() < MIN_SIZE) ? minTarget : zr;
          Rectangle2D.Double hitTarget = zr;
-        if (!_mainView.isFitToScreen() && hitTarget.contains(mouseEvent.getPoint())) {
+        if (!_mainView.isZoomIsFitToScreen() && hitTarget.contains(mouseEvent.getPoint())) {
             _startDragPoint = mouseEvent.getPoint();
             _startDragZoomCentre = _mainView.getZoomCenter();
         }

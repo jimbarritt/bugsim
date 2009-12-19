@@ -61,9 +61,13 @@ public class JFrameExtension extends JFrame {
 
             }
 
-            public void windowClosed
-                    (WindowEvent
-                            event) {
+            public void windowClosed(WindowEvent event) {
+                if (systemExitOnClose) {
+                    if (log.isInfoEnabled()) {
+                        log.info("Exiting Application!");
+                    }
+                    System.exit(0);
+                }
             }
 
             public void windowIconified
