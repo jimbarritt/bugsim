@@ -31,7 +31,7 @@ public class LandscapeMouseListener implements MouseListener, MouseMotionListene
     }
 
     public void mousePressed(MouseEvent mouseEvent) {
-        Location location = _viewer.getLandscapeLocation(mouseEvent.getPoint());
+        Location location = _viewer.getLocationOnLandscapeFrom(mouseEvent.getPoint());
 //        _agent = new ButterflyAgent(location, 0, 1, 5, 23, new Random());
         _viewer.getLandscape().registerAgent(_agent);
     }
@@ -50,7 +50,7 @@ public class LandscapeMouseListener implements MouseListener, MouseMotionListene
 
     public void mouseDragged(MouseEvent mouseEvent) {
         if (_agent != null) {
-            Location location = _viewer.getLandscapeLocation(mouseEvent.getPoint());
+            Location location = _viewer.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             _agent.moveTo(null, location);
         }
     }

@@ -53,7 +53,7 @@ public class OpenBackgroundImageAction extends ActionBase {
     }
     public void loadBackgroundImageFromFileName(LandscapeView view, File file) throws FileNotFoundException {
         rawBackgroundImage = IxImageManipulation.getBufferedImage(file, view);
-        view.redraw();
+        view.forceRedraw();
     }
 
     private LandscapeView _view

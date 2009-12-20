@@ -35,11 +35,11 @@ public class ZoomControlCombo extends JComboBox implements ItemListener {
         }
         if (e.getStateChange() == ItemEvent.SELECTED) {
             if (super.getSelectedItem().equals("Fit To Screen")) {
-                _view.setZoomIsFitToScreen(true);
+                _view.setFitLandscapeToView(true);
             } else {
-                _view.setZoomIsFitToScreen(false);
+                _view.setFitLandscapeToView(false);
                 int zoom = ((Integer)super.getSelectedItem()).intValue();
-                _view.setZoomPercent((double)zoom / 100);
+//                _view.setZoomPercent((double)zoom / 100);
             }
             _view.repaint();
         }

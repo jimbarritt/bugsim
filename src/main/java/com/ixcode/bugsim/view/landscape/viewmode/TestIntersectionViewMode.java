@@ -61,14 +61,14 @@ public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseM
 
     public void mouseClicked(MouseEvent mouseEvent) {
         if (_lineAgent == null) {
-            _startLocation = _view.getLandscapeLocation(mouseEvent.getPoint());
+            _startLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             _lineAgent = new LineAgent(_startLocation);
             _view.getSimulation().addAgent(_lineAgent);
 //            _lineAgent.addPropertyChangeListener(_view);
 //            System.out.println("Adding Line Agent at " + _startLocation);
 
         } else {
-            Location endLocation = _view.getLandscapeLocation(mouseEvent.getPoint());
+            Location endLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             _lineAgent.setEndLocation(endLocation);
             List resources = _view.getSimulation().getLiveAgents(CabbageAgentFilter.INSTANCE);
             java.util.List intersectedCabbages = new ArrayList();
@@ -141,7 +141,7 @@ public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseM
     public void mouseMoved(MouseEvent mouseEvent) {
         _view.setCursor(this.getCursor());
         if (_lineAgent != null) {
-            Location moveLocation = _view.getLandscapeLocation(mouseEvent.getPoint());
+            Location moveLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             _lineAgent.setEndLocation(moveLocation);
             _view.getLandscape().fireAgentsChangedEvent(); //@todo do something about event notification - we dont want it to happen when we do all the agents in execute timestep - maybe have it turn on and offable?
         }

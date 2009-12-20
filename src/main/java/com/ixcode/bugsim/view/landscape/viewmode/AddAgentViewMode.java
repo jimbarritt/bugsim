@@ -53,7 +53,7 @@ public class AddAgentViewMode implements ViewMode, MouseListener, MouseMotionLis
 
 
     public void mouseClicked(MouseEvent mouseEvent) {
-        Location location = _view.getSnappedLandscapeLocation(mouseEvent.getPoint());
+        Location location = _view.getLocationOnLandscapeSnappedFrom(mouseEvent.getPoint());
         IAgentInfo agentInfo = _combo.getSelectedInfo();
         IAgentFactory factory = agentInfo.getFactory();
         IPhysicalAgent agent = factory.createAgent(location);

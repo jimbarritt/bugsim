@@ -11,12 +11,12 @@ import com.ixcode.framework.simulation.model.landscape.Landscape;
 import com.ixcode.framework.simulation.model.ISimulationListener;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.ITimestepListener;
+import com.ixcode.framework.math.geometry.*;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.awt.geom.Point2D;
 import java.util.List;
 
 /**
@@ -72,7 +72,7 @@ public class CenterOnNextAgentAction extends AbstractAction implements ISimulati
     private void centreOnAgent() {
 
         if (_agent != null) {
-            _view.setZoomCenter(new Point2D.Double(_agent.getLocation().getDoubleX(), _agent.getLocation().getDoubleY()));
+            _view.centerViewOnLandscapeCoordinate(new RectangularCoordinate(_agent.getLocation().getDoubleX(), _agent.getLocation().getDoubleY()));
         }
     }
 

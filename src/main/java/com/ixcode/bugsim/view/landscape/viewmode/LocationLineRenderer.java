@@ -33,7 +33,7 @@ public class LocationLineRenderer extends LandscapeRenderer implements MouseMoti
     public void render(LandscapeView view, Graphics2D graphics2D) {
         if (_currentPoint != null) {
 
-            RectangularCoordinate landscapePoint = super.getScreenCoord(_view, view.getLandscapeLocation(_currentPoint).getCoordinate());
+            RectangularCoordinate landscapePoint = super.getScreenCoord(_view, view.getLocationOnLandscapeFrom(_currentPoint).getCoordinate());
 
             Rectangle r = view.getBounds();
             Line2D.Double xLine = new Line2D.Double(landscapePoint.getDoubleX(), 0, landscapePoint.getDoubleX(), r.getHeight());

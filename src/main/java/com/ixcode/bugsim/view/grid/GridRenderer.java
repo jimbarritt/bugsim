@@ -88,7 +88,7 @@ public class GridRenderer {
 
     private void drawGridlines(Graphics2D g, Grid grid, Rectangle2D bounds, GridRenderOptions options, int gridLevel, LandscapeView landscapeView) {
 
-        double scaleX = landscapeView.getLandscapeClipSizeX();
+        double scaleX = landscapeView.getWidthOfLandscapeInView();
         float magnification = 0.5f;
 
         if (scaleX >= 400) {

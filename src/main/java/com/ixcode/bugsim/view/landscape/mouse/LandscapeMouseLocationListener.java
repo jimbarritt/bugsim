@@ -22,7 +22,7 @@ public class LandscapeMouseLocationListener implements MouseMotionListener {
     public void mouseDragged(MouseEvent e) {}
 
     public void mouseMoved(MouseEvent e) {
-        RectangularCoordinate logicalLocation = landscapeView.getSnappedLandscapeLocation(e.getPoint()).getCoordinate();
+        RectangularCoordinate logicalLocation = landscapeView.getLocationOnLandscapeSnappedFrom(e.getPoint()).getCoordinate();
         StringBuilder sb = new StringBuilder();
         sb.append("Logical Location : (").append(fmt(logicalLocation.getDoubleX()))
           .append(", ").append(fmt(logicalLocation.getDoubleY())).append(" )")

@@ -5,8 +5,6 @@ package com.ixcode.bugsim.view.landscape.action;
 
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.swing.action.ActionBase;
-import com.ixcode.framework.simulation.model.ISimulationListener;
-import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.bugsim.view.landscape.*;
 
 import javax.swing.*;
@@ -56,7 +54,7 @@ public class SaveLandscapeImageAction extends ActionBase {
 //        _view.setRenderForPrint(true);
 //        _view.setRenderGrids(true);
 //        _view.setShowGrid(true);
-        _view.redraw();
+        _view.forceRedraw();
 
 //        File file = letUserChooseFile();
         File file = generateFile();
@@ -72,7 +70,7 @@ public class SaveLandscapeImageAction extends ActionBase {
 //        _view.setRenderForPrint(false);
 //        _view.setRenderGrids(true);
 //        _view.setShowGrid(showGrid);
-        _view.redraw();
+        _view.forceRedraw();
     }
 
     public void saveViewAsJPeg(LandscapeView view, File file) throws IOException {
