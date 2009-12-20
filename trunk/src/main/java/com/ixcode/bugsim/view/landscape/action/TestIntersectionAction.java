@@ -22,10 +22,10 @@ public class TestIntersectionAction extends ActionBase {
 
     public void actionPerformed(ActionEvent actionEvent) {
         if (!_view.isViewMode(LandscapeViewMode.TEST_INTERSECTION)) {
-            _view.setViewMode(LandscapeViewMode.TEST_INTERSECTION);
+            _view.setCurrentViewMode(LandscapeViewMode.TEST_INTERSECTION);
 
         } else {
-            _view.setViewMode(LandscapeViewMode.DISPLAY);
+            _view.setCurrentViewMode(LandscapeViewMode.DISPLAY);
         }
     }
 

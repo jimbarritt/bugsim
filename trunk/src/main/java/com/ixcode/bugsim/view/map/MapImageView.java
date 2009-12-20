@@ -116,7 +116,7 @@ public class MapImageView extends JComponent {
     }
 
     public boolean isMode(ViewModeName modeName) {
-        return _viewMode.getName() == modeName;
+        return _viewMode.getViewModeName() == modeName;
     }
 
     public void setViewMode(ViewModeName modeName) {
@@ -124,7 +124,7 @@ public class MapImageView extends JComponent {
             _viewMode.end(this);
         }
 
-        _viewMode = _viewModeRegistry.getStrategy(modeName);
+        _viewMode = _viewModeRegistry.getViewMode(modeName);
 
         _viewMode.begin(this);
 
@@ -197,7 +197,7 @@ public class MapImageView extends JComponent {
     private File _imageFile;
     private boolean _fitToScreen = true;
 
-    private ViewModeStrategyRegistry _viewModeRegistry;
+    private ViewModeRegistry _viewModeRegistry;
     private ViewMode _viewMode;
     private MapOutline _mapOutline;
 

@@ -20,9 +20,9 @@ public class LandscapeView extends JComponent {
 
     private final Landscape landscape;
 
-    private final LandscapeViewModeStrategeyRegistry viewModeRegistry;
-    private ViewMode viewMode;
+    private ViewMode currentViewMode;
 
+    private final LandscapeViewModeRegistry viewModes = new LandscapeViewModeRegistry();
     private final GridLineRenderer gridLineRenderer = new GridLineRenderer();
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
     private final LandscapeRenderer landscapeRenderer = new LandscapeRenderer();
@@ -40,29 +40,30 @@ public class LandscapeView extends JComponent {
 
     public LandscapeView(Landscape landscape, StatusBar statusBar) {
         this.landscape = landscape;
-        this.viewModeRegistry = new LandscapeViewModeStrategeyRegistry(this);
 
-        setViewMode(DISPLAY);
+        setCurrentViewMode(DISPLAY);
         setBackground(Color.white);
         addMouseMotionListener(new LandscapeMouseLocationListener(this, statusBar));
 
         centreViewOnLandscape();
     }
 
-    public void setViewMode(ViewModeName modeName) {
+    public void setCurrentViewMode(ViewModeName modeName) {
+        if (!viewModes.hasMode(modeName)) {
+           throw new RuntimeException("No view mode called [" + modeName + "] !");
+        }
+
+        if (currentViewMode != null) {
+            currentViewMode.end(this);
+        }
+        currentViewMode = viewModes.getViewMode(modeName);
+        currentViewMode.begin(this);
+
+        forceRedraw();
+        
         if (log.isDebugEnabled()) {
-            log.debug("Setting View Mode to be " + modeName + " , " + viewMode);
+            log.debug("View Mode set to be " + modeName + " , " + currentViewMode);
         }
-
-        if (viewMode != null) {
-            viewMode.end(this);            
-        }
-        viewMode = viewModeRegistry.getStrategy(modeName);
-
-        viewMode.begin(this);
-
-        invalidate();
-        repaint();
     }
 
 
@@ -100,12 +101,12 @@ public class LandscapeView extends JComponent {
         graphics2D.scale(scaleX, scaleY);
     }
 
-    public ViewModeName getViewMode() {
-        return viewMode.getName();
+    public ViewModeName getCurrentViewMode() {
+        return currentViewMode.getViewModeName();
     }
 
     public boolean isViewMode(ViewModeName modeName) {
-        return viewMode.getName() == modeName;
+        return currentViewMode.getViewModeName() == modeName;
     }
 
 
@@ -170,14 +171,6 @@ public class LandscapeView extends JComponent {
         viewOriginOverLandscape = new RectangularCoordinate(0d, 0d);
         invalidate();
         repaint();
-    }
-
-    public boolean isFitLandscapeToView() {
-        return fitLandscapeToView;
-    }
-
-    public void setFitLandscapeToView(boolean fitLandscapeToView) {
-        this.fitLandscapeToView = fitLandscapeToView;
     }
 
     public double getWidthOfLandscapeInView() {

@@ -1,96 +1,70 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.landscape.viewmode;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.agent.butterfly.EggLayingForagingStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.ResourceIntersection;
-import com.ixcode.bugsim.view.landscape.*;
-import com.ixcode.framework.math.geometry.Geometry;
-import com.ixcode.framework.math.geometry.RectangularCoordinate;
-import com.ixcode.framework.simulation.model.agent.diagnostic.LineAgent;
-import com.ixcode.framework.simulation.model.agent.resource.IResourceAgent;
-import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.framework.swing.ViewMode;
+import com.ixcode.bugsim.model.agent.butterfly.*;
+import com.ixcode.bugsim.model.agent.cabbage.*;
+import com.ixcode.framework.math.geometry.*;
+import com.ixcode.framework.simulation.model.agent.diagnostic.*;
+import com.ixcode.framework.simulation.model.agent.resource.*;
+import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
-import org.apache.log4j.Logger;
+import org.apache.log4j.*;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.util.*;
 import java.util.List;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
-public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseMotionListener {
+public class TestIntersectionViewMode extends LandscapeDisplayMode {
 
-    public TestIntersectionViewMode(LandscapeView view) {
-        _view = view;
+    private static final Logger log = Logger.getLogger(TestIntersectionViewMode.class);
 
+    private Location startLocation;
+    private LineAgent lineAgent;
+
+    public TestIntersectionViewMode() {
     }
 
-    public void begin(Component parent) {
-        parent.setCursor(getCursor());
-        parent.addMouseListener(getMouseListener());
-        parent.addMouseMotionListener(getMouseMotionListener());
-    }
 
-    public void end(Component parent) {
-        parent.removeMouseListener(getMouseListener());
-        parent.removeMouseMotionListener(getMouseMotionListener());
-    }
-    
     public Cursor getCursor() {
         return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
 
-    public ViewModeName getName() {
+    @Override
+    public ViewModeName getViewModeName() {
         return LandscapeViewMode.TEST_INTERSECTION;
     }
 
-    public MouseListener getMouseListener() {
-        return this;
-    }
 
-    public MouseMotionListener getMouseMotionListener() {
-        return this;
-    }
-
-
+    @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if (_lineAgent == null) {
-            _startLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
-            _lineAgent = new LineAgent(_startLocation);
-            _view.getSimulation().addAgent(_lineAgent);
+        if (lineAgent == null) {
+            startLocation = view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
+            lineAgent = new LineAgent(startLocation);
+            view.getSimulation().addAgent(lineAgent);
 //            _lineAgent.addPropertyChangeListener(_view);
 //            System.out.println("Adding Line Agent at " + _startLocation);
 
         } else {
-            Location endLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
-            _lineAgent.setEndLocation(endLocation);
-            List resources = _view.getSimulation().getLiveAgents(CabbageAgentFilter.INSTANCE);
+            Location endLocation = view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
+            lineAgent.setEndLocation(endLocation);
+            List resources = view.getSimulation().getLiveAgents(CabbageAgentFilter.INSTANCE);
             java.util.List intersectedCabbages = new ArrayList();
             for (Iterator itr = resources.iterator(); itr.hasNext();){
                 CabbageAgent cabbage = (CabbageAgent)itr.next();
 
                 if (log.isDebugEnabled()) {
-                    log.debug("Testing intersection of line " + _startLocation.getCoordinate() + " : "+ endLocation.getCoordinate() + " with cabbage : " + cabbage.getLocation().getCoordinate());
+                    log.debug("Testing intersection of line " + startLocation.getCoordinate() + " : "+ endLocation.getCoordinate() + " with cabbage : " + cabbage.getLocation().getCoordinate());
                 }
 
 
-                if (cabbage.intersectsLine(_startLocation.getCoordinate(), endLocation.getCoordinate())) {
+                if (cabbage.intersectsLine(startLocation.getCoordinate(), endLocation.getCoordinate())) {
 
                     RectangularCoordinate cc = cabbage.getLocation().getCoordinate();
-                    RectangularCoordinate a = _startLocation.getCoordinate();
+                    RectangularCoordinate a = startLocation.getCoordinate();
                     RectangularCoordinate b = endLocation.getCoordinate();
                     java.util.List intersections = Geometry.findLineCircleIntersections(cc.getDoubleX(), cc.getDoubleY(), cabbage.getRadiusDouble(), a.getDoubleX(), a.getDoubleY(), b.getDoubleX(), b.getDoubleY() );
-                    _lineAgent.setPoints(intersections);
+                    lineAgent.setPoints(intersections);
                     intersectedCabbages.add(cabbage);
 
                 } else {
@@ -101,9 +75,9 @@ public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseM
             }
 
 //            layOnAllIntersectedCabbages(intersectedCabbages);
-            layOnClosestCabbage(resources, _startLocation, endLocation);
-            _lineAgent = null;
-            _view.getLandscape().fireAgentsChangedEvent();
+            layOnClosestCabbage(resources, startLocation, endLocation);
+            lineAgent = null;
+            view.getLandscape().fireAgentsChangedEvent();
         }
     }
 
@@ -121,39 +95,14 @@ public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseM
         }
     }
 
-    public void mousePressed(MouseEvent mouseEvent) {
-
-    }
-
-    public void mouseReleased(MouseEvent mouseEvent) {
-
-
-    }
-
-    public void mouseEntered(MouseEvent mouseEvent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public void mouseExited(MouseEvent mouseEvent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public void mouseDragged(MouseEvent mouseEvent) {
-
-    }
-
+    @Override
     public void mouseMoved(MouseEvent mouseEvent) {
-        _view.setCursor(this.getCursor());
-        if (_lineAgent != null) {
-            Location moveLocation = _view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
-            _lineAgent.setEndLocation(moveLocation);
-            _view.getLandscape().fireAgentsChangedEvent(); //@todo do something about event notification - we dont want it to happen when we do all the agents in execute timestep - maybe have it turn on and offable?
+        view.setCursor(this.getCursor());
+        if (lineAgent != null) {
+            Location moveLocation = view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
+            lineAgent.setEndLocation(moveLocation);
+            view.getLandscape().fireAgentsChangedEvent(); //@todo do something about event notification - we dont want it to happen when we do all the agents in execute timestep - maybe have it turn on and offable?
         }
     }
 
-    LandscapeView _view;
-
-    private Location _startLocation;
-    private LineAgent _lineAgent;
-    private static final Logger log = Logger.getLogger(TestIntersectionViewMode.class);
 }

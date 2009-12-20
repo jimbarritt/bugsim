@@ -22,10 +22,10 @@ public class AddAgentAction extends ActionBase {
 
     public void actionPerformed(ActionEvent actionEvent) {
         if (!_view.isViewMode(LandscapeViewMode.ADD_AGENT)) {
-            _view.setViewMode(LandscapeViewMode.ADD_AGENT);
+            _view.setCurrentViewMode(LandscapeViewMode.ADD_AGENT);
             
         } else {
-            _view.setViewMode(LandscapeViewMode.DISPLAY);
+            _view.setCurrentViewMode(LandscapeViewMode.DISPLAY);
         }
     }
 

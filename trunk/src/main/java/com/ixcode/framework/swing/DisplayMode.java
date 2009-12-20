@@ -36,7 +36,7 @@ public class DisplayMode implements ViewMode, MouseListener, MouseMotionListener
         return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
-    public ViewModeName getName() {
+    public ViewModeName getViewModeName() {
         return ViewModeName.DISPLAY;
     }
 

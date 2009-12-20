@@ -1,6 +1,3 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.landscape.viewmode;
 
 import com.ixcode.framework.swing.DisplayMode;
@@ -10,33 +7,50 @@ import com.ixcode.bugsim.view.landscape.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
 public class LandscapeDisplayMode extends DisplayMode {
     private RectangularCoordinate startDragZoomCentre;
     private Point startDragPoint;
-    private LandscapeView view;
+    protected LandscapeView view;
 
-    public LandscapeDisplayMode(LandscapeView view) {
-        this.view = view;
+    public LandscapeDisplayMode() {
     }
 
+    @Override
+    public void begin(Component parent) {
+        view = convertParentToLandscapeView(parent);
+        super.begin(parent);
+    }
+
+    @Override
+    public void end(Component parent) {
+        super.end(parent);
+        view = null;
+    }
+
+    private static LandscapeView convertParentToLandscapeView(Component parent) {
+        if (!(parent instanceof LandscapeView)) {
+            throw new RuntimeException("Cannot use the LandscapeDisplaMode with a component of type: " + parent.getClass());
+        }
+        return (LandscapeView) parent;
+    }
+
+    @Override
     public void mousePressed(MouseEvent mouseEvent) {
         super.mouseClicked(mouseEvent);
         startDragPoint = mouseEvent.getPoint();
         startDragZoomCentre = view.getCenterOfViewOnLandscape();
     }
 
+    @Override
     public void mouseDragged(MouseEvent mouseEvent) {
         super.mouseDragged(mouseEvent);
-        if (!view.isFitLandscapeToView()) {
-            Point currentDragPoint = mouseEvent.getPoint();
-            double xIncr = view.getLandscapeDistanceX(startDragPoint.getX() - currentDragPoint.getX());
-            double yIncr = view.getLandscapeDistanceY(startDragPoint.getY() - currentDragPoint.getY());
-            RectangularCoordinate newZoomCentre = new RectangularCoordinate(startDragZoomCentre.getDoubleX() + xIncr, startDragZoomCentre.getDoubleY() - yIncr);
-            view.centerViewOnLandscapeCoordinate(newZoomCentre);
-        }
+
+//            Point currentDragPoint = mouseEvent.getPoint();
+//            double xIncr = view.getLandscapeDistanceX(startDragPoint.getX() - currentDragPoint.getX());
+//            double yIncr = view.getLandscapeDistanceY(startDragPoint.getY() - currentDragPoint.getY());
+//            RectangularCoordinate newZoomCentre = new RectangularCoordinate(startDragZoomCentre.getDoubleX() + xIncr, startDragZoomCentre.getDoubleY() - yIncr);
+//            view.centerViewOnLandscapeCoordinate(newZoomCentre);
+//
     }
 
 

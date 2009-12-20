@@ -6,7 +6,7 @@ package com.ixcode.framework.swing;
 import java.awt.*;
 
 public interface ViewMode {
-    ViewModeName getName();
+    ViewModeName getViewModeName();
 
     void begin(Component parent);
 
