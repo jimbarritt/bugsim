@@ -11,12 +11,10 @@ import static java.awt.Toolkit.*;
 
 public class LandscapeFrame extends JFrameExtension {
 
-    public static final String TITLE = "Landscape Viewer";
-
     private LandscapeView landscapeView;
 
     public LandscapeFrame(Landscape landscape) throws HeadlessException {
-        super(TITLE, new JPanel(new BorderLayout()));
+        super("Bugsim - [Landscape View]", new JPanel(new BorderLayout()));
 
         initialiseStatusBar();
         landscapeView = new LandscapeView(landscape, getStatusBar());
@@ -26,8 +24,8 @@ public class LandscapeFrame extends JFrameExtension {
         JPanel container = (JPanel) super.getContent();
         makeWindowLookLikeOsx(container);
 
-        container.add(createControlPanel(), BorderLayout.EAST);
         container.add(createLandscapeViewContainer(), BorderLayout.CENTER);
+        container.add(createControlPanel(), BorderLayout.EAST);
 
         initSizeAndLocation(50, 300);        
     }

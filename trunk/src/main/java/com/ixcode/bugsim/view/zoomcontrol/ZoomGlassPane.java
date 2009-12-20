@@ -31,12 +31,12 @@ public class ZoomGlassPane extends JComponent implements PropertyChangeListener 
         super.paintComponent(graphics);
         Graphics2D g = (Graphics2D)graphics;
 
-        Point2D.Double origin = _mainView.getLandscapeOrigin();
-        double x = _zoomView.getScreenDistanceX(origin.getX());
-        double y = _zoomView.getScreenDistanceY((_mainView.getLandscape().getExtentY() - origin.getY()) - _mainView.getLandscapeClipSizeY()  );
-        double width = _zoomView.getScreenDistanceX(_mainView.getLandscapeClipSizeX());
-        double height = _zoomView.getScreenDistanceY(_mainView.getLandscapeClipSizeY());
-        _rectangle = new Rectangle.Double(x, y, width, height);
+//        Point2D.Double origin = _mainView.getViewOrigin();
+//        double x = _zoomView.getScreenDistanceX(origin.getX());
+//        double y = _zoomView.getScreenDistanceY((_mainView.getLandscape().getExtentY() - origin.getY()) - _mainView.getLandscapeClipSizeY()  );
+//        double width = _zoomView.getScreenDistanceX(_mainView.getLandscapeClipSizeX());
+//        double height = _zoomView.getScreenDistanceY(_mainView.getLandscapeClipSizeY());
+//        _rectangle = new Rectangle.Double(x, y, width, height);
 
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 

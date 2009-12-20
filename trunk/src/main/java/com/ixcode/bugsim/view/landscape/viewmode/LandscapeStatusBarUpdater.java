@@ -25,13 +25,13 @@ public class LandscapeStatusBarUpdater implements PropertyChangeListener {
         LandscapeView viewer = (LandscapeView)propertyChangeEvent.getSource();
         StringBuffer sb = new StringBuffer();
 
-        sb.append("Vw (" + F2.format(viewer.getDisplayWidth()) + ", " + F2.format(viewer.getDisplayHeight()) + ")");
-        sb.append(", Sc (" + F2.format(viewer.getScaleX()) + ", " + F2.format(viewer.getScaleY()) + ")");
-        sb.append(", Zc" + Point2DFormatter.Double.format(viewer.getZoomCenter()));
-        sb.append(", Tr(x=" + F2.format(viewer.getTranslateX()) + ", y=" + F2.format(viewer.getTranslateY()) + ")");
+//        sb.append("Vw (" + F2.format(viewer.getViewScreenWidth()) + ", " + F2.format(viewer.getViewScreenHeight()) + ")");
+//        sb.append(", Sc (" + F2.format(viewer.getScaleX()) + ", " + F2.format(viewer.getScaleY()) + ")");
+//        sb.append(", Zc" + Point2DFormatter.Double.format(viewer.getCenterOfViewOnLandscape()));
+//        sb.append(", Tr(x=" + F2.format(viewer.getTranslateX()) + ", y=" + F2.format(viewer.getTranslateY()) + ")");
 
-        sb.append(", Cl (" + F2.format(viewer.getLandscapeClipSizeX()) + ", " + F2.format(viewer.getLandscapeClipSizeY()) + ")");
-        sb.append(", Ls " + Point2DFormatter.Double.format(viewer.getLandscapeOrigin()));
+//        sb.append(", Cl (" + F2.format(viewer.getLandscapeClipSizeX()) + ", " + F2.format(viewer.getLandscapeClipSizeY()) + ")");
+//        sb.append(", Ls " + Point2DFormatter.Double.format(viewer.getViewOrigin()));
         _statusBar.setText(sb.toString());
     }
 

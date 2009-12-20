@@ -4,17 +4,17 @@
 package com.ixcode.bugsim.view.landscape.viewmode;
 
 import com.ixcode.framework.swing.DisplayMode;
+import com.ixcode.framework.math.geometry.*;
 import com.ixcode.bugsim.view.landscape.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
 public class LandscapeDisplayMode extends DisplayMode {
-    private Point2D startDragZoomCentre;
+    private RectangularCoordinate startDragZoomCentre;
     private Point startDragPoint;
     private LandscapeView view;
 
@@ -25,17 +25,17 @@ public class LandscapeDisplayMode extends DisplayMode {
     public void mousePressed(MouseEvent mouseEvent) {
         super.mouseClicked(mouseEvent);
         startDragPoint = mouseEvent.getPoint();
-        startDragZoomCentre = view.getZoomCenter();
+        startDragZoomCentre = view.getCenterOfViewOnLandscape();
     }
 
     public void mouseDragged(MouseEvent mouseEvent) {
         super.mouseDragged(mouseEvent);
-        if (!view.isZoomIsFitToScreen()) {
+        if (!view.isFitLandscapeToView()) {
             Point currentDragPoint = mouseEvent.getPoint();
             double xIncr = view.getLandscapeDistanceX(startDragPoint.getX() - currentDragPoint.getX());
             double yIncr = view.getLandscapeDistanceY(startDragPoint.getY() - currentDragPoint.getY());
-            Point2D.Double newZoomCentre = new Point2D.Double(startDragZoomCentre.getX() + xIncr, startDragZoomCentre.getY() - yIncr);
-            view.setZoomCenter(newZoomCentre);
+            RectangularCoordinate newZoomCentre = new RectangularCoordinate(startDragZoomCentre.getDoubleX() + xIncr, startDragZoomCentre.getDoubleY() - yIncr);
+            view.centerViewOnLandscapeCoordinate(newZoomCentre);
         }
     }
 

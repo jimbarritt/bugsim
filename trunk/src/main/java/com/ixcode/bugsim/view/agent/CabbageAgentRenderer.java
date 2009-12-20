@@ -22,7 +22,7 @@ public class CabbageAgentRenderer extends PhysicalAgentRendererBase {
 
         double r = cabbage.getRadiusDouble();
 
-        double scaleX = renderContext.getView().getLandscapeClipSizeX();
+        double scaleX = renderContext.getView().getWidthOfLandscapeInView();
         float radiusMagnification = 1f;
 
         if (scaleX <=2000) {

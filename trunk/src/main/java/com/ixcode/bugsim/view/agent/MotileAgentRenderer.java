@@ -166,7 +166,7 @@ public class MotileAgentRenderer extends PhysicalAgentRendererBase {
             AlphaComposite composite = AlphaComposite.getInstance(type, .8f);
             g.setComposite(composite);
 
-            double scaleX = landscapeView.getLandscapeClipSizeX();
+            double scaleX = landscapeView.getWidthOfLandscapeInView();
             float radiusMagnification = 1f;
 
             if (scaleX <= 400) {
@@ -233,7 +233,7 @@ public class MotileAgentRenderer extends PhysicalAgentRendererBase {
         GeneralPath path = generatePath(ctx, contextId, g, coordPath, landscape);
         g.setColor(getPathColor(ctx));
 
-        double scaleX = ctx.getView().getLandscapeClipSizeX();
+        double scaleX = ctx.getView().getWidthOfLandscapeInView();
         float strokeWidth = 6f;
 
         if (scaleX <= 400) {

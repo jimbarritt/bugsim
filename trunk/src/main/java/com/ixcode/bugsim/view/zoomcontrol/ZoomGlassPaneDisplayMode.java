@@ -5,6 +5,7 @@ package com.ixcode.bugsim.view.zoomcontrol;
 
 import com.ixcode.bugsim.view.landscape.LandscapeView;
 import com.ixcode.framework.swing.DisplayMode;
+import com.ixcode.framework.math.geometry.*;
 
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
@@ -32,9 +33,9 @@ public class ZoomGlassPaneDisplayMode extends DisplayMode {
 //        Rectangle2D.Double minTarget = new Rectangle2D.Double(x, y, MIN_SIZE, MIN_SIZE) ;
 //        Rectangle2D.Double hitTarget = (zr.getDoubleHeight() < MIN_SIZE) ? minTarget : zr;
          Rectangle2D.Double hitTarget = zr;
-        if (!_mainView.isZoomIsFitToScreen() && hitTarget.contains(mouseEvent.getPoint())) {
+        if (!_mainView.isFitLandscapeToView() && hitTarget.contains(mouseEvent.getPoint())) {
             _startDragPoint = mouseEvent.getPoint();
-            _startDragZoomCentre = _mainView.getZoomCenter();
+            _startDragZoomCentre = _mainView.getCenterOfViewOnLandscape();
         }
     }
 
@@ -47,8 +48,8 @@ public class ZoomGlassPaneDisplayMode extends DisplayMode {
             Point2D currentDragPoint = mouseEvent.getPoint();
             double xIncr = _zoomView.getLandscapeDistanceX(_startDragPoint.getX() - currentDragPoint.getX());
             double yIncr = _zoomView.getLandscapeDistanceY(_startDragPoint.getY() - currentDragPoint.getY());
-            Point2D.Double newZoomCentre = new Point2D.Double(_startDragZoomCentre.getX() - xIncr, _startDragZoomCentre.getY() + yIncr);
-            _mainView.setZoomCenter(newZoomCentre);
+            RectangularCoordinate newZoomCentre = new RectangularCoordinate(_startDragZoomCentre.getDoubleX() - xIncr, _startDragZoomCentre.getDoubleY() + yIncr);
+            _mainView.centerViewOnLandscapeCoordinate(newZoomCentre);
 
         }
     }
@@ -57,5 +58,5 @@ public class ZoomGlassPaneDisplayMode extends DisplayMode {
     private Point2D _startDragPoint;
     private LandscapeView _mainView;
     private LandscapeView _zoomView;
-    private Point2D _startDragZoomCentre;
+    private RectangularCoordinate _startDragZoomCentre;
 }
