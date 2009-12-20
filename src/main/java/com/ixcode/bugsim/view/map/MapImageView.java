@@ -121,16 +121,12 @@ public class MapImageView extends JComponent {
 
     public void setViewMode(ViewModeName modeName) {
         if (_viewMode != null) {
-            this.removeMouseListener(_viewMode.getMouseListener());
-            this.removeMouseMotionListener(_viewMode.getMouseMotionListener());
+            _viewMode.end(this);
         }
 
         _viewMode = _viewModeRegistry.getStrategy(modeName);
 
-        this.setCursor(_viewMode.getCursor());
-        this.addMouseListener(_viewMode.getMouseListener());
-        this.addMouseMotionListener(_viewMode.getMouseMotionListener());
-
+        _viewMode.begin(this);
 
         invalidate();
         repaint();

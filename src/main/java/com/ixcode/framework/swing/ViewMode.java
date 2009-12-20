@@ -4,21 +4,11 @@
 package com.ixcode.framework.swing;
 
 import java.awt.*;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 public interface ViewMode {
-
-    Cursor getCursor();
-
     ViewModeName getName();
 
-    MouseListener getMouseListener();
+    void begin(Component parent);
 
-    MouseMotionListener getMouseMotionListener();
-
-    void enterMode(Component parent);
-
-    void exitMode(Component parent);
-
+    void end(Component parent);
 }

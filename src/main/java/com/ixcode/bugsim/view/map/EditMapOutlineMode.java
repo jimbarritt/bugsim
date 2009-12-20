@@ -21,27 +21,31 @@ public class EditMapOutlineMode implements ViewMode,MouseListener, MouseMotionLi
         _view = view;
     }
 
-    public Cursor getCursor() {
+    private Cursor getCursor() {
         return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
-    public void enterMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public void exitMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
 
     public ViewModeName getName() {
         return MapImageViewMode.EDIT_MAP_OUTLINE;
     }
 
-    public MouseListener getMouseListener() {
+    public void begin(Component parent) {
+        parent.setCursor(getCursor());
+        parent.addMouseListener(getMouseListener());
+        parent.addMouseMotionListener(getMouseMotionListener());
+    }
+
+    public void end(Component parent) {
+        parent.removeMouseListener(getMouseListener());
+        parent.removeMouseMotionListener(getMouseMotionListener());
+    }
+
+    private MouseListener getMouseListener() {
         return this;
     }
 
-    public MouseMotionListener getMouseMotionListener() {
+    private MouseMotionListener getMouseMotionListener() {
         return this;
     }
 

@@ -34,17 +34,21 @@ public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseM
 
     }
 
+    public void begin(Component parent) {
+        parent.setCursor(getCursor());
+        parent.addMouseListener(getMouseListener());
+        parent.addMouseMotionListener(getMouseMotionListener());
+    }
+
+    public void end(Component parent) {
+        parent.removeMouseListener(getMouseListener());
+        parent.removeMouseMotionListener(getMouseMotionListener());
+    }
+    
     public Cursor getCursor() {
         return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
-    public void enterMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public void exitMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
 
     public ViewModeName getName() {
         return LandscapeViewMode.TEST_INTERSECTION;

@@ -1,25 +1,15 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.landscape.viewmode;
 
-import com.ixcode.framework.simulation.model.agent.IAgentFactory;
-import com.ixcode.framework.simulation.model.agent.IAgentInfo;
-import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
-import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.framework.swing.ViewMode;
-import com.ixcode.framework.swing.*;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.bugsim.view.landscape.action.*;
+import com.ixcode.framework.simulation.model.agent.*;
+import com.ixcode.framework.simulation.model.agent.physical.*;
+import com.ixcode.framework.simulation.model.landscape.*;
+import com.ixcode.framework.swing.*;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
 public class AddAgentViewMode implements ViewMode, MouseListener, MouseMotionListener {
 
     public AddAgentViewMode(LandscapeView view, AgentTypeChoiceCombo combo) {
@@ -31,18 +21,20 @@ public class AddAgentViewMode implements ViewMode, MouseListener, MouseMotionLis
         return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
-    public void enterMode(Component parent) {
-       
-    }
-
-    public void exitMode(Component parent) {
-
-    }
-
     public ViewModeName getName() {
         return LandscapeViewMode.ADD_AGENT;
     }
 
+    public void begin(Component parent) {
+        parent.setCursor(getCursor());
+        parent.addMouseListener(getMouseListener());
+        parent.addMouseMotionListener(getMouseMotionListener());
+    }
+
+    public void end(Component parent) {
+        parent.removeMouseListener(getMouseListener());
+        parent.removeMouseMotionListener(getMouseMotionListener());
+    }
     public MouseListener getMouseListener() {
         return this;
     }
