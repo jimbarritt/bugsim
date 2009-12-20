@@ -12,7 +12,6 @@ import org.apache.log4j.*;
 
 import javax.swing.*;
 import java.awt.*;
-import static java.awt.Cursor.*;
 import static java.lang.Math.*;
 
 public class LandscapeView extends JComponent {
@@ -32,7 +31,7 @@ public class LandscapeView extends JComponent {
     private RectangularCoordinate viewCentreOverLandscape;
 
     private boolean fitLandscapeToView = true;
-    
+
     private double scaleX = 1.0d;
     private double scaleY = 1.0d;
 
@@ -45,11 +44,27 @@ public class LandscapeView extends JComponent {
 
         setViewMode(DISPLAY);
         setBackground(Color.white);
-        setCursor(getPredefinedCursor(CROSSHAIR_CURSOR));
         addMouseMotionListener(new LandscapeMouseLocationListener(this, statusBar));
 
         centreViewOnLandscape();
     }
+
+    public void setViewMode(ViewModeName modeName) {
+        if (log.isDebugEnabled()) {
+            log.debug("Setting View Mode to be " + modeName + " , " + viewMode);
+        }
+
+        if (viewMode != null) {
+            viewMode.end(this);            
+        }
+        viewMode = viewModeRegistry.getStrategy(modeName);
+
+        viewMode.begin(this);
+
+        invalidate();
+        repaint();
+    }
+
 
     private void centreViewOnLandscape() {
         centerViewOnLandscapeCoordinate(landscape.getLogicalBounds().getCentre());
@@ -93,27 +108,10 @@ public class LandscapeView extends JComponent {
         return viewMode.getName() == modeName;
     }
 
-    public void setViewMode(ViewModeName modeName) {
-        if (viewMode != null) {
-            this.removeMouseListener(viewMode.getMouseListener());
-            this.removeMouseMotionListener(viewMode.getMouseMotionListener());
-        }
-        viewMode = viewModeRegistry.getStrategy(modeName);
-
-        if (log.isDebugEnabled()) {
-            log.debug("Setting View Mode to be " + modeName + " , " + viewMode + ", " + viewMode.getCursor());
-        }
-
-        super.setCursor(viewMode.getCursor());
-        super.addMouseListener(viewMode.getMouseListener());
-        super.addMouseMotionListener(viewMode.getMouseMotionListener());
-        invalidate();
-        repaint();
-    }
 
     public Simulation getSimulation() {
         return landscape.getSimulation();
-    }    
+    }
 
 
     public static RectangularCoordinate getScreenCoord(Landscape landscape, RectangularCoordinate landscapeCoord) {
@@ -131,7 +129,7 @@ public class LandscapeView extends JComponent {
      *
      * @return the location
      */
-    public Location getLocationOnLandscapeFrom(Point screenPoint) {        
+    public Location getLocationOnLandscapeFrom(Point screenPoint) {
         double landscapeX = (screenPoint.getX() / scaleX) + viewOriginOverLandscape.getDoubleX();
         double landscapeY = (heightOfLandscapeInView - (screenPoint.getY() / scaleY)) + viewOriginOverLandscape.getDoubleY();
         return new Location(landscapeX, landscapeY);
@@ -180,12 +178,12 @@ public class LandscapeView extends JComponent {
 
     public void setFitLandscapeToView(boolean fitLandscapeToView) {
         this.fitLandscapeToView = fitLandscapeToView;
-    }    
+    }
 
     public double getWidthOfLandscapeInView() {
         return widthOfLandscapeInView;
     }
-    
+
     public Landscape getLandscape() {
         return landscape;
     }

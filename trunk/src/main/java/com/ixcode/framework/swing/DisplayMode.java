@@ -5,41 +5,46 @@ package com.ixcode.framework.swing;
 
 
 import java.awt.*;
+import static java.awt.Cursor.getPredefinedCursor;
+import static java.awt.Cursor.CROSSHAIR_CURSOR;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 /**
- *  Description : ${CLASS_DESCRIPTION}
+ * Description : ${CLASS_DESCRIPTION}
  */
-public class DisplayMode implements ViewMode,MouseListener, MouseMotionListener {
+public class DisplayMode implements ViewMode, MouseListener, MouseMotionListener {
 
     public DisplayMode() {
 
     }
 
-    public void enterMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public void begin(Component parent) {
+        parent.setCursor(getCursor());
+        parent.addMouseListener(getMouseListener());
+        parent.addMouseMotionListener(getMouseMotionListener());
     }
 
-    public void exitMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public void end(Component parent) {
+        parent.removeMouseListener(getMouseListener());
+        parent.removeMouseMotionListener(getMouseMotionListener());
     }
 
 
-    public Cursor getCursor() {
-        return Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
+    private Cursor getCursor() {
+        return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
     public ViewModeName getName() {
         return ViewModeName.DISPLAY;
     }
 
-    public MouseListener getMouseListener() {
+    private MouseListener getMouseListener() {
         return this;
     }
 
-    public MouseMotionListener getMouseMotionListener() {
+    private MouseMotionListener getMouseMotionListener() {
         return this;
     }
 
