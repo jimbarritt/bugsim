@@ -7,10 +7,10 @@ import com.ixcode.bugsim.view.experiment.editor.resource.layout.ResourceLayoutPa
 import com.ixcode.bugsim.view.experiment.editor.boundary.BoundaryPanel;
 import com.ixcode.bugsim.view.experiment.editor.boundary.DefaultBoundaryStrategyDefinitionFactory;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyParameterBinding;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 import com.ixcode.framework.swing.property.EnumerationComboBox;

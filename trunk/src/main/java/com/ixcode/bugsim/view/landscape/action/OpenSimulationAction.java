@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape.action;
 
-import com.ixcode.bugsim.model.experiment.output.SimulationSerialiser;
+import com.ixcode.bugsim.experiment.output.SimulationSerialiser;
 import com.ixcode.bugsim.view.zoomcontrol.ZoomFrame;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.swing.action.ActionBase;

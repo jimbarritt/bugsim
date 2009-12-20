@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.experiment.editor.forager.movement.azimuth;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.WrappedCauchyAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.WrappedCauchyAzimuthStrategy;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 

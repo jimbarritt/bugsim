@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape.action;
 
-import com.ixcode.bugsim.model.experiment.input.CabbageLoader;
+import com.ixcode.bugsim.experiment.input.CabbageLoader;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.landscape.grid.Grid;

@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.input;
+package com.ixcode.bugsim.experiment.input;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
 import com.ixcode.framework.io.csv.ICSVHandler;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.math.scale.IDistanceUnit;

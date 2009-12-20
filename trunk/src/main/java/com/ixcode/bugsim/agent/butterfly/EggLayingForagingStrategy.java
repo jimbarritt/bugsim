@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.agent.cabbage.layout.PredefinedResourceLayout;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.foraging.EggLayingForagingStrategyDefinition;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.agent.cabbage.layout.PredefinedResourceLayout;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.foraging.EggLayingForagingStrategyDefinition;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;

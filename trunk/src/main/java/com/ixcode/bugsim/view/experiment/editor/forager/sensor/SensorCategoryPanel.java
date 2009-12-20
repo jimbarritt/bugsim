@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager.sensor;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.SensorCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.SensorCategory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.forager.sensor.olfactory.OlfactoryStrategyPanel;

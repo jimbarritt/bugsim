@@ -1,14 +1,14 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population;
+package com.ixcode.bugsim.experiment.parameter.forager.population;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.AdultMortalityStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.AdultMortalityStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LarvalMortalityStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LarvalMortalityStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.ImmigrationStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.AdultMortalityStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.AdultMortalityStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LarvalMortalityStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LarvalMortalityStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.ImmigrationStrategyFactory;
 import com.ixcode.framework.parameter.model.*;
 
 /**

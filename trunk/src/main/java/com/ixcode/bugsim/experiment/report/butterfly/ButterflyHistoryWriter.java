@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.butterfly;
+package com.ixcode.bugsim.experiment.report.butterfly;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgentState;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgentState;
 import com.ixcode.framework.io.csv.CSVWriter;
 import com.ixcode.framework.simulation.experiment.report.SimulationWriterBase;
 import com.ixcode.framework.simulation.model.Simulation;

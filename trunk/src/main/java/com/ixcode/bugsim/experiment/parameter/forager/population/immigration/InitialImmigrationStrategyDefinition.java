@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.InitialImmigrationStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
+import com.ixcode.bugsim.agent.butterfly.immigration.InitialImmigrationStrategy;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinition;

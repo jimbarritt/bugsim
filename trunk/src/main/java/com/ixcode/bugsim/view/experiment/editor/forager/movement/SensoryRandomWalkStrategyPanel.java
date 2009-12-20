@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager.movement;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.RandomWalkMovementStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.RandomWalkMovementStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.forager.movement.azimuth.AzimuthGeneratorPanel;
 import com.ixcode.bugsim.view.experiment.editor.forager.movement.movelength.MoveLengthGeneratorPanel;

@@ -5,7 +5,7 @@ package com.ixcode.bugsim.view.experiment.editor.Simulation;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyPanel;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.TimescaleStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.TimescaleStrategyFactory;
 import com.ixcode.framework.model.IModelAdapter;
 
 /**

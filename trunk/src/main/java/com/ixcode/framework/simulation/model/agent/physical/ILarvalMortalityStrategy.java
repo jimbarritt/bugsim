@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.agent.physical;
 
-import com.ixcode.bugsim.model.agent.cabbage.ForagerEgg;
+import com.ixcode.bugsim.agent.cabbage.ForagerEgg;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 
 /**

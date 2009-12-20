@@ -3,12 +3,12 @@
  */
 package com.ixcode.bugsim.view.experiment.editor;
 
-import com.ixcode.bugsim.model.experiment.BugsimExperimentTemplateRegistry;
-import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.experiment.BugsimExperimentTemplateRegistry;
+import com.ixcode.bugsim.experiment.BugsimExtensionJavaBeanValueFormats;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentXFactory;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
 import com.ixcode.bugsim.view.experiment.editor.forager.ForagerCategoryPanel;
 import com.ixcode.bugsim.view.experiment.editor.landscape.LandscapeCategoryPanel;
 import com.ixcode.bugsim.view.experiment.editor.manipulation.ManipulationPanel;

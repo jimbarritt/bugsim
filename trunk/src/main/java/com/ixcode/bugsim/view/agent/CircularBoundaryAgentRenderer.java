@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.agent;
 
-import com.ixcode.bugsim.model.agent.boundary.CircularBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.CircularBoundaryAgent;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Landscape;

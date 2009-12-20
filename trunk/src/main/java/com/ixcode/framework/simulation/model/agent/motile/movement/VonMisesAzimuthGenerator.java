@@ -12,8 +12,8 @@ import com.ixcode.framework.math.random.IRandom;
 import com.ixcode.framework.math.random.VonMisesRandomCircStats;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.simulation.model.agent.motile.movement.sensory.VisualSignal;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
 
 import java.util.Map;
 import java.util.Random;

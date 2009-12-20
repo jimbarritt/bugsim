@@ -8,8 +8,8 @@ import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.math.random.BetaRandom;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 
 import java.util.Map;
 

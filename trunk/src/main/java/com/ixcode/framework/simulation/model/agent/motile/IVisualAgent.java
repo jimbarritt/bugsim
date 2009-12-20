@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile;
 
-import com.ixcode.bugsim.model.agent.butterfly.IVisionStrategy;
+import com.ixcode.bugsim.agent.butterfly.IVisionStrategy;
 
 import java.util.List;
 

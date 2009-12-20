@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory;
+package com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory;
 
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.ParameterMap;

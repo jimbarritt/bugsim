@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter;
+package com.ixcode.bugsim.experiment.parameter;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.MultipleParameterManipulation;
 import com.ixcode.framework.parameter.model.Parameter;

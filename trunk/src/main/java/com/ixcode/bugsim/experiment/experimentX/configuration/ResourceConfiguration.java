@@ -1,20 +1,20 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.experimentX.configuration;
+package com.ixcode.bugsim.experiment.experimentX.configuration;
 
-import com.ixcode.bugsim.model.experiment.experimentX.IExperimentXConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentX;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.SignalStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.FunctionalSignalSurfaceStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
-import com.ixcode.bugsim.model.agent.cabbage.layout.IResourceLayout;
-import com.ixcode.bugsim.model.agent.cabbage.signal.IResourceSignalFactory;
+import com.ixcode.bugsim.experiment.experimentX.IExperimentXConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentX;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.SignalStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.FunctionalSignalSurfaceStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.agent.cabbage.layout.IResourceLayout;
+import com.ixcode.bugsim.agent.cabbage.signal.IResourceSignalFactory;
 import com.ixcode.framework.simulation.model.agent.surveyor.SignalSurveyingAgent;
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 import com.ixcode.framework.parameter.model.ParameterMap;

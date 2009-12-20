@@ -3,9 +3,9 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement.sensory;
 
-import com.ixcode.bugsim.model.agent.butterfly.ExponentialMotivationStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.SignalSensorOlfactoryStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.agent.butterfly.ExponentialMotivationStrategy;
+import com.ixcode.bugsim.agent.butterfly.SignalSensorOlfactoryStrategy;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.math.DiscreetValueMap;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;

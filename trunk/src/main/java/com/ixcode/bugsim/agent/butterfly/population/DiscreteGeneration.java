@@ -1,17 +1,17 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
 import com.ixcode.framework.simulation.model.timescale.DiscreteGenerationsTimescale;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.physical.ILarvalMortalityStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.IImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
-import com.ixcode.bugsim.model.agent.cabbage.EggCounter;
-import com.ixcode.bugsim.model.agent.cabbage.EggDistribution;
-import com.ixcode.bugsim.model.agent.cabbage.ForagerEgg;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.IImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentFilter;
+import com.ixcode.bugsim.agent.cabbage.EggCounter;
+import com.ixcode.bugsim.agent.cabbage.EggDistribution;
+import com.ixcode.bugsim.agent.cabbage.ForagerEgg;
 
 import java.util.List;
 import java.util.ArrayList;

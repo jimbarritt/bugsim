@@ -13,7 +13,7 @@ import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.ITimestepListener;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.bugsim.view.landscape.*;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentFilter;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

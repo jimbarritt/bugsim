@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement.sensory;
 
-import com.ixcode.bugsim.model.agent.butterfly.SignalSensorOlfactoryStrategy;
+import com.ixcode.bugsim.agent.butterfly.SignalSensorOlfactoryStrategy;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.motile.IOlfactoryAgent;

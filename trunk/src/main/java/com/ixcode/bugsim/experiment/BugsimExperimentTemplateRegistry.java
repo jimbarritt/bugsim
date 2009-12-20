@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment;
+package com.ixcode.bugsim.experiment;
 
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentXTrials;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentXFactory;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentXTrials;
 import com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry;
 
 /**

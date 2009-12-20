@@ -1,15 +1,15 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager;
+package com.ixcode.bugsim.experiment.parameter.forager;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.BehaviourCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.PopulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LimitedEggsAdultMortalityStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.SensorCategory;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.BehaviourCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.PopulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LimitedEggsAdultMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.SensorCategory;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
 import com.ixcode.framework.parameter.model.*;
 
 /**

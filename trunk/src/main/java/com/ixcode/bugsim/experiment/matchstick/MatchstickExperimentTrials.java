@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.matchstick;
+package com.ixcode.bugsim.experiment.matchstick;
 
-import com.ixcode.bugsim.model.experiment.parameter.MatchstickParameters;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeParameters;
+import com.ixcode.bugsim.experiment.parameter.MatchstickParameters;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeParameters;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.math.geometry.CartesianDimensions;

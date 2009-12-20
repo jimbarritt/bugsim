@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager.sensor.visual;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;

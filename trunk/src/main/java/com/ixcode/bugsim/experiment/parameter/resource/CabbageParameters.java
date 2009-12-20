@@ -1,19 +1,19 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource;
+package com.ixcode.bugsim.experiment.parameter.resource;
 
-import com.ixcode.bugsim.model.agent.cabbage.layout.CalculatedResourceLayout;
-import com.ixcode.bugsim.model.agent.cabbage.layout.PredefinedResourceLayout;
-import com.ixcode.bugsim.model.experiment.input.CabbageLoader;
-import com.ixcode.bugsim.model.experiment.parameter.EnvironmentParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.function.GaussianSignalFunctionStrategy;
+import com.ixcode.bugsim.agent.cabbage.layout.CalculatedResourceLayout;
+import com.ixcode.bugsim.agent.cabbage.layout.PredefinedResourceLayout;
+import com.ixcode.bugsim.experiment.input.CabbageLoader;
+import com.ixcode.bugsim.experiment.parameter.EnvironmentParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.function.GaussianSignalFunctionStrategy;
 import com.ixcode.framework.datatype.analysis.AnalysisCategory;
 import com.ixcode.framework.datatype.analysis.AnalysisValue;
 import com.ixcode.framework.math.geometry.CartesianBounds;

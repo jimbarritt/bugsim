@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile;
 
-import com.ixcode.bugsim.model.agent.butterfly.IOlfactionStrategy;
+import com.ixcode.bugsim.agent.butterfly.IOlfactionStrategy;
 
 /**
  * Description : ${INTERFACE_DESCRIPTION}

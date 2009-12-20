@@ -1,21 +1,21 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.BehaviourCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.PopulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.SensorCategory;
-import com.ixcode.bugsim.model.agent.cabbage.EggCounter;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.IImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.PredefinedReleaseImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.*;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.ForagerCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.BehaviourCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.PopulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.SensorCategory;
+import com.ixcode.bugsim.agent.cabbage.EggCounter;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.IImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.PredefinedReleaseImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.*;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.model.ModelBase;

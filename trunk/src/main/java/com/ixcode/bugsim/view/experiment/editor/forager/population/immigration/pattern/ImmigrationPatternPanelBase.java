@@ -4,10 +4,10 @@
 package com.ixcode.bugsim.view.experiment.editor.forager.population.immigration.pattern;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.FixedLocationImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.PredefinedReleaseImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.FixedLocationImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.PredefinedReleaseImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 import com.ixcode.framework.swing.property.CheckBoxPropertyEditor;

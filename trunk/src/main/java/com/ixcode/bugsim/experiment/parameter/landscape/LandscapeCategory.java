@@ -1,28 +1,18 @@
-/**
- * (c) planet-ix ltd 2005
- */
-package com.ixcode.bugsim.model.experiment.parameter.landscape;
+package com.ixcode.bugsim.experiment.parameter.landscape;
 
-import com.ixcode.bugsim.model.experiment.parameter.EnvironmentParameters;
-import com.ixcode.framework.math.scale.ScaledDistance;
-import com.ixcode.framework.math.scale.DistanceUnitRegistry;
-import com.ixcode.framework.math.geometry.CartesianDimensions;
-import com.ixcode.framework.math.geometry.ShapeLocationType;
-import com.ixcode.framework.math.geometry.RectangularCoordinate;
+import com.ixcode.bugsim.experiment.parameter.*;
+import com.ixcode.framework.math.geometry.*;
+import com.ixcode.framework.math.scale.*;
+import com.ixcode.framework.parameter.model.Category;
 import com.ixcode.framework.parameter.model.*;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.ExtentStrategyBase;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.FixedExtentStrategy;
+import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.*;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.*;
-import com.ixcode.framework.simulation.model.landscape.boundary.BoundaryShape;
-import org.apache.log4j.Logger;
+import com.ixcode.framework.simulation.model.landscape.boundary.*;
+import org.apache.log4j.*;
 
-import java.util.Map;
-import java.util.List;
+import java.util.*;
 
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
 public class LandscapeCategory extends CategoryDefinition {
 
     public LandscapeCategory(Category category, ParameterMap params, boolean forwardEvents) {

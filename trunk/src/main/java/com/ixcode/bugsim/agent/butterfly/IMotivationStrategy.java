@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.simulation.model.agent.physical.AgentBehaviour;
 import com.ixcode.framework.simulation.model.agent.IAgent;

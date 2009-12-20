@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage;
+package com.ixcode.bugsim.agent.cabbage;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
 import com.ixcode.framework.model.ModelBase;
 import com.ixcode.framework.simulation.model.ISimulationListener;
 import com.ixcode.framework.simulation.model.Simulation;

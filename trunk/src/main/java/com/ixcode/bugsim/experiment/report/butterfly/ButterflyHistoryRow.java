@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.butterfly;
+package com.ixcode.bugsim.experiment.report.butterfly;
 
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentBehaviour;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentBehaviour;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
 import com.ixcode.framework.io.csv.CSVRow;
 import com.ixcode.framework.simulation.experiment.report.ExperimentRow;
 import com.ixcode.framework.simulation.model.landscape.Location;

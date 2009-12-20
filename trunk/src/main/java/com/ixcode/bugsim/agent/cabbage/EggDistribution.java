@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.cabbage;
+package com.ixcode.bugsim.agent.cabbage;
 
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.agent.resource.IResourceAgent;

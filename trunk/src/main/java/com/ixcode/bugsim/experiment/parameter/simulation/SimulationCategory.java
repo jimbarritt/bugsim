@@ -1,13 +1,13 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter.simulation;
+package com.ixcode.bugsim.experiment.parameter.simulation;
 
 import com.ixcode.bugsim.BugsimMain;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.TimescaleStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.TimescaleStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.ContinuousTimescaleStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.TimescaleStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.TimescaleStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.ContinuousTimescaleStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.model.Simulation;

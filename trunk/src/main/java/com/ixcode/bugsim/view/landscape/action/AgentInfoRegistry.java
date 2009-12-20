@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.landscape.action;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgentInfo;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentInfo;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgentInfo;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentInfo;
 import com.ixcode.framework.simulation.model.agent.IAgentInfo;
 
 import java.io.Serializable;

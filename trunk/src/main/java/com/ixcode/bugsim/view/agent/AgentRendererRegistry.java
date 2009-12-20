@@ -4,11 +4,11 @@
 package com.ixcode.bugsim.view.agent;
 
 
-import com.ixcode.bugsim.model.agent.boundary.CircularBoundaryAgent;
-import com.ixcode.bugsim.model.agent.boundary.LinearBoundaryAgent;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickAgent;
+import com.ixcode.bugsim.agent.boundary.CircularBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.LinearBoundaryAgent;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.matchstick.MatchstickAgent;
 import com.ixcode.framework.simulation.model.agent.diagnostic.LineAgent;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 

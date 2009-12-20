@@ -1,16 +1,16 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager;
+package com.ixcode.bugsim.experiment.parameter.forager;
 
 import com.ixcode.framework.parameter.model.Category;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LimitedEggsAdultMortalityStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.agent.butterfly.CompetitorAgent;
-import com.ixcode.bugsim.model.agent.butterfly.ParasitoidAgent;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LimitedEggsAdultMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
+import com.ixcode.bugsim.agent.butterfly.CompetitorAgent;
+import com.ixcode.bugsim.agent.butterfly.ParasitoidAgent;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

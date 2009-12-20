@@ -1,15 +1,15 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.sensor;
+package com.ixcode.bugsim.experiment.parameter.forager.sensor;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual.VisualSensorStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual.VisualSensorStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
-import com.ixcode.bugsim.model.agent.butterfly.SignalSensorOlfactoryStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.visual.VisualSensorStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.visual.VisualSensorStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
+import com.ixcode.bugsim.agent.butterfly.SignalSensorOlfactoryStrategy;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.experiment.parameter.SensorParameters;
 

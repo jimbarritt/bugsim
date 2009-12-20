@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.simulation.timescale;
+package com.ixcode.bugsim.experiment.parameter.simulation.timescale;
 
 import com.ixcode.framework.parameter.model.StrategyRegistry;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;

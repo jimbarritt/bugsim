@@ -1,16 +1,16 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern;
 
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.DerivedParameter;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.CentredLocationDerivedCalculation;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.FixedLocationReleaseImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.RandomPointReleaseImmigrationPattern;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.FixedLocationReleaseImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.RandomPointReleaseImmigrationPattern;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
 
 import java.util.List;
 

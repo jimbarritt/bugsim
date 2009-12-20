@@ -1,14 +1,14 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage.layout;
+package com.ixcode.bugsim.agent.cabbage.layout;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutType;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
 import com.ixcode.framework.datatype.analysis.AnalysisCategory;
 import com.ixcode.framework.datatype.analysis.AnalysisValue;
 import com.ixcode.framework.math.geometry.CartesianBounds;

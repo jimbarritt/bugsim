@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout;
+package com.ixcode.bugsim.experiment.parameter.resource.layout;
 
 
 import java.io.*;

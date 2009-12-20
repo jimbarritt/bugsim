@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.immigration;
+package com.ixcode.bugsim.agent.butterfly.immigration;
 
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.IImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.IImmigrationPattern;
 
 import java.util.Map;
 

@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.agent.motile;
 
-import com.ixcode.bugsim.model.agent.butterfly.SignalSensorOlfactoryStrategy;
+import com.ixcode.bugsim.agent.butterfly.SignalSensorOlfactoryStrategy;
 import com.ixcode.bugsim.view.landscape.LandscapeView;
 import com.ixcode.framework.math.DiscreetValueMap;
 import com.ixcode.framework.math.DoubleMath;

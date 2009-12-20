@@ -4,9 +4,9 @@
 package com.ixcode.bugsim.view.experiment.editor.forager.population.mortality.adult;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.model.agent.butterfly.mortality.LimitedEggsAdultMortalityStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.mortality.LimitedAgeAdultMortalityStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LimitedAgeAdultMortalityStrategyDefinition;
+import com.ixcode.bugsim.agent.butterfly.mortality.LimitedEggsAdultMortalityStrategy;
+import com.ixcode.bugsim.agent.butterfly.mortality.LimitedAgeAdultMortalityStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LimitedAgeAdultMortalityStrategyDefinition;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 

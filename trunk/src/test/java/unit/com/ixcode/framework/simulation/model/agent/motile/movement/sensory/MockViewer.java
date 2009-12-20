@@ -3,9 +3,9 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement.sensory;
 
-import com.ixcode.bugsim.model.agent.butterfly.FieldOfViewVisualStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.IVisionStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.IForagingStrategy;
+import com.ixcode.bugsim.agent.butterfly.FieldOfViewVisualStrategy;
+import com.ixcode.bugsim.agent.butterfly.IVisionStrategy;
+import com.ixcode.bugsim.agent.butterfly.IForagingStrategy;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.motile.IVisualAgent;

@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.visual.FieldOfViewVisualStrategyDefinition;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

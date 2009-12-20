@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment;
+package com.ixcode.bugsim.experiment;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.*;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.*;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.*;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.*;
 import com.ixcode.framework.javabean.format.*;
 
 import java.util.*;

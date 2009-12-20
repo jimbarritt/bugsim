@@ -1,13 +1,13 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.report.cabbage;
+package com.ixcode.bugsim.experiment.report.cabbage;
 
 import com.ixcode.framework.simulation.experiment.report.SimulationWriterBase;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.io.csv.CSVWriter;
-import com.ixcode.bugsim.model.agent.cabbage.EggCount;
-import com.ixcode.bugsim.model.agent.cabbage.PlantCount;
+import com.ixcode.bugsim.agent.cabbage.EggCount;
+import com.ixcode.bugsim.agent.cabbage.PlantCount;
 
 import java.util.Iterator;
 

@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement;
+package com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.movelength.MoveLengthStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.movelength.MoveLengthStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.movelength.MoveLengthStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.movelength.MoveLengthStrategyFactory;
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinition;

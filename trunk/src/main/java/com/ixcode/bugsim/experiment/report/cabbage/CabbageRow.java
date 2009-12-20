@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.cabbage;
+package com.ixcode.bugsim.experiment.report.cabbage;
 
 import com.ixcode.framework.io.csv.CSVRow;
 import com.ixcode.framework.math.BigDecimalMath;

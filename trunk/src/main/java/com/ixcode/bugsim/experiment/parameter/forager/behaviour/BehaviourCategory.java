@@ -1,18 +1,18 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.behaviour;
+package com.ixcode.bugsim.experiment.parameter.forager.behaviour;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.foraging.ForagingStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.foraging.ForagingStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.foraging.EggLayingForagingStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.MovementStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.MovementStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.GaussianAzimuthStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.SimulationParameters;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.foraging.ForagingStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.foraging.ForagingStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.foraging.EggLayingForagingStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.MovementStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.MovementStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.GaussianAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.ForagerCategory;
+import com.ixcode.bugsim.experiment.parameter.SimulationParameters;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 

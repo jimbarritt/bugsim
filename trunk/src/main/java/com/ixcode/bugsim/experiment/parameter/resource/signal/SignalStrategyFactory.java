@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.signal;
+package com.ixcode.bugsim.experiment.parameter.resource.signal;
 
-import com.ixcode.bugsim.model.agent.cabbage.signal.MultipleSurfaceSignalFactory;
+import com.ixcode.bugsim.agent.cabbage.signal.MultipleSurfaceSignalFactory;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.StrategyRegistry;

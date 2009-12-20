@@ -17,8 +17,8 @@ public class LandscapeToViewModel implements Serializable {
     private double heightOfLandscapeInView;
     private Landscape landscape;
 
-    public LandscapeToViewModel(LandscapeView landscapeView) {
-        this.landscape = landscapeView.getLandscape();
+    public LandscapeToViewModel(Landscape landscape) {
+        this.landscape = landscape;
     }
 
     public void centreViewOnLandscape() {

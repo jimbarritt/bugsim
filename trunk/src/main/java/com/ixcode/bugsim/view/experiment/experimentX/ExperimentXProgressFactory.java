@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.experimentX;
 
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
 import com.ixcode.bugsim.view.experiment.IExperimentProgressFactory;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.javabean.JavaBeanException;

@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.matchstick;
+package com.ixcode.bugsim.experiment.report.matchstick;
 
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickAgent;
+import com.ixcode.bugsim.agent.matchstick.MatchstickAgent;
 import com.ixcode.framework.io.csv.CSVRow;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.experiment.report.ExperimentRow;

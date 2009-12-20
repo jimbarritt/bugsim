@@ -1,15 +1,15 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement;
+package com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement;
 
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.simulation.model.agent.motile.movement.SensoryRandomWalkStrategy;
 import com.ixcode.framework.simulation.model.agent.motile.movement.VonMisesAzimuthGenerator;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.movelength.FixedMoveLengthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.VonMisesAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.movelength.FixedMoveLengthStrategy;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

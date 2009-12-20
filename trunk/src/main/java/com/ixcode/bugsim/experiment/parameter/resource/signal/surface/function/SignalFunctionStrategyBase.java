@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.function;
+package com.ixcode.bugsim.experiment.parameter.resource.signal.surface.function;
 
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.ParameterisedStrategyFactory;

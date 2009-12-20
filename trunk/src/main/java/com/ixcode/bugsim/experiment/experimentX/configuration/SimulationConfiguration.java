@@ -1,15 +1,15 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.experimentX.configuration;
+package com.ixcode.bugsim.experiment.experimentX.configuration;
 
-import com.ixcode.bugsim.model.experiment.experimentX.IExperimentXConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentX;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentBehaviour;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
+import com.ixcode.bugsim.experiment.experimentX.IExperimentXConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentX;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentBehaviour;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentFilter;
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
 import com.ixcode.framework.simulation.model.agent.IAgent;
 import com.ixcode.framework.simulation.model.agent.dispersal.DispersalDistanceRecorder;

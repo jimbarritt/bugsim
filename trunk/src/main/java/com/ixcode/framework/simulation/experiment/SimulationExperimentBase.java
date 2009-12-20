@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.experiment;
 
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.experiment.model.IExperimentListener;
 import com.ixcode.framework.experiment.model.ExperimentProgress;

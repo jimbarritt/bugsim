@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.report.cabbage;
+package com.ixcode.bugsim.experiment.report.cabbage;
 
 import com.ixcode.framework.simulation.experiment.report.ExperimentRow;
 import com.ixcode.framework.io.csv.CSVRow;
 import com.ixcode.framework.javabean.IntrospectionUtils;
-import com.ixcode.bugsim.model.agent.cabbage.EggCount;
+import com.ixcode.bugsim.agent.cabbage.EggCount;
 
 /**
  * Description : Extends CSV Row to encapsulate all the indexes

@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern;
 
 import com.ixcode.framework.parameter.model.*;
-import com.ixcode.bugsim.model.agent.cabbage.layout.ResourceLayoutBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.agent.cabbage.layout.ResourceLayoutBase;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
 import sun.security.util.DerValue;
 
 import java.util.List;

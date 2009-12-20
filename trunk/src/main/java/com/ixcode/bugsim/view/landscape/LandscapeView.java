@@ -35,7 +35,7 @@ public class LandscapeView extends JComponent {
         setBackground(Color.white);
         addMouseMotionListener(new LandscapeMouseLocationListener(this, statusBar));
 
-        landscapeToViewModel = new LandscapeToViewModel(this);
+        landscapeToViewModel = new LandscapeToViewModel(landscape);
         landscapeToViewModel.centreViewOnLandscape();
     }
 

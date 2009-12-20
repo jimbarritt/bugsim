@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage;
+package com.ixcode.bugsim.agent.cabbage;
 
 import com.ixcode.framework.math.BigDecimalMath;
 import com.ixcode.framework.math.geometry.Geometry;

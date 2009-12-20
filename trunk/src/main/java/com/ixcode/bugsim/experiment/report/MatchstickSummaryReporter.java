@@ -1,14 +1,14 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report;
+package com.ixcode.bugsim.experiment.report;
 
 import com.ixcode.framework.experiment.model.report.IExperimentReporter;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.experiment.model.ExperimentProgress;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.simulation.experiment.ISimulationExperiment;
-import com.ixcode.bugsim.model.experiment.report.matchstick.MatchstickIntersectionsWriter;
+import com.ixcode.bugsim.experiment.report.matchstick.MatchstickIntersectionsWriter;
 
 import java.io.IOException;
 import java.io.File;

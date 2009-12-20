@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.experimentX;
+package com.ixcode.bugsim.experiment.experimentX;
 
-import com.ixcode.bugsim.model.experiment.parameter.*;
+import com.ixcode.bugsim.experiment.parameter.*;
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.model.*;

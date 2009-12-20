@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.SensoryRandomWalkMovementStrategy;
 import com.ixcode.framework.math.DiscreetValueMap;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.math.geometry.CourseChange;

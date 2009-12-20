@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement;
 
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.math.geometry.CourseChange;

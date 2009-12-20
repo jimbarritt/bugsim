@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.agent;
 
-import com.ixcode.bugsim.model.agent.cabbage.AttractionFieldAgent;
+import com.ixcode.bugsim.agent.cabbage.AttractionFieldAgent;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 

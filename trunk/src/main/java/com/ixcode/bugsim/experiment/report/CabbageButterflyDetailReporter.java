@@ -1,20 +1,20 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report;
+package com.ixcode.bugsim.experiment.report;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentFilter;
-import com.ixcode.bugsim.model.agent.butterfly.population.*;
-import com.ixcode.bugsim.model.agent.cabbage.EggCount;
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.BehaviourCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
-import com.ixcode.bugsim.model.experiment.report.butterfly.ButterflyHistoryWriter;
-import com.ixcode.bugsim.model.experiment.report.butterfly.ButterflyStatistics;
-import com.ixcode.bugsim.model.experiment.report.butterfly.ButterflyWriter;
-import com.ixcode.bugsim.model.experiment.report.cabbage.*;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentFilter;
+import com.ixcode.bugsim.agent.butterfly.population.*;
+import com.ixcode.bugsim.agent.cabbage.EggCount;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.BehaviourCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.experiment.report.butterfly.ButterflyHistoryWriter;
+import com.ixcode.bugsim.experiment.report.butterfly.ButterflyStatistics;
+import com.ixcode.bugsim.experiment.report.butterfly.ButterflyWriter;
+import com.ixcode.bugsim.experiment.report.cabbage.*;
 import com.ixcode.framework.experiment.model.ExperimentProgress;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.experiment.model.report.ISummaryStatisticsReporter;

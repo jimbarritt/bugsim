@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.immigration.pattern;
+package com.ixcode.bugsim.agent.butterfly.immigration.pattern;
 
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
@@ -15,9 +15,9 @@ import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.InitialImmigrationStrategy;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.RandomReleaseImmigrationPatternStrategyDefinition;
+import com.ixcode.bugsim.agent.butterfly.immigration.InitialImmigrationStrategy;
 
 import java.util.Map;
 import java.text.DecimalFormat;

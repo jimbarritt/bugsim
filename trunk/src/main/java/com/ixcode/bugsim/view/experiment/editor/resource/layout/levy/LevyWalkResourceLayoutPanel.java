@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.experiment.editor.resource.layout.levy;
 
 import com.ixcode.bugsim.view.experiment.editor.resource.layout.ResourceLayoutPanelBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.levy.LevyWalkResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.levy.LevyWalkResourceLayoutStrategy;
 import com.ixcode.framework.model.IModelAdapter;
 
 import javax.swing.*;

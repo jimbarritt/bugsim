@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.experiment.parameter;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 

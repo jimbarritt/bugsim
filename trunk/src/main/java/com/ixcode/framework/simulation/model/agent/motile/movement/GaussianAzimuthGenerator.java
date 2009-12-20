@@ -8,7 +8,7 @@ import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.random.GaussianRandom;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
 
 import java.util.Random;
 import java.util.Map;

@@ -3,11 +3,11 @@
  */
 package com.ixcode.framework.simulation.experiment.report;
 
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.IImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.RandomReleaseImmigrationPattern;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.IImmigrationStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.InitialImmigrationStrategy;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.IImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.RandomReleaseImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.IImmigrationStrategy;
+import com.ixcode.bugsim.agent.butterfly.immigration.InitialImmigrationStrategy;
 import com.ixcode.framework.io.csv.CSVWriter;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.agent.AgentClassIdFilter;

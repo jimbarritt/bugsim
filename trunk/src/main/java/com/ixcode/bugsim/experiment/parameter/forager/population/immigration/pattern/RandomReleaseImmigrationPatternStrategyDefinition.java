@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern;
 
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.RandomReleaseImmigrationPattern;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.RandomReleaseImmigrationPattern;
 import com.ixcode.framework.parameter.model.*;
 
 import org.apache.log4j.Logger;

@@ -8,7 +8,7 @@ import com.ixcode.framework.simulation.model.agent.motile.movement.IMovementStra
 import com.ixcode.framework.simulation.model.agent.motile.movement.Move;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.bugsim.model.agent.butterfly.IForagingStrategy;
+import com.ixcode.bugsim.agent.butterfly.IForagingStrategy;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

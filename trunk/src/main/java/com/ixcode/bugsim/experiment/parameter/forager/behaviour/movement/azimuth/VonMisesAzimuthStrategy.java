@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth;
+package com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth;
 
 import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.ParameterMap;

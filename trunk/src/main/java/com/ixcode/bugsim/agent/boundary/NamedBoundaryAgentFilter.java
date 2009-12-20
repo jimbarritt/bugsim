@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.boundary;
+package com.ixcode.bugsim.agent.boundary;
 
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
 import com.ixcode.framework.simulation.model.agent.IAgent;

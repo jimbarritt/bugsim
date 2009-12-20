@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape.action;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
 import com.ixcode.bugsim.view.agent.AgentRendererRegistry;
 import com.ixcode.bugsim.view.agent.MotileAgentRenderer;
 import com.ixcode.bugsim.view.landscape.*;

@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.input;
+package com.ixcode.bugsim.experiment.input;
 
 import com.ixcode.framework.io.csv.CSVReader;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

@@ -1,16 +1,16 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.immigration;
+package com.ixcode.bugsim.agent.butterfly.immigration;
 
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.simulation.model.landscape.grid.Grid;
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 import com.ixcode.framework.simulation.model.Simulation;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.pattern.IImmigrationPattern;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.agent.butterfly.immigration.pattern.IImmigrationPattern;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.InitialImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 
 import java.util.Map;
 import java.util.HashMap;

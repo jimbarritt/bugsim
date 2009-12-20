@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.cabbage.signal;
+package com.ixcode.bugsim.agent.cabbage.signal;
 
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 

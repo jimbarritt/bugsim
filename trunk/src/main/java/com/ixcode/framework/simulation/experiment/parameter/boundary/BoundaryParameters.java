@@ -3,9 +3,9 @@
  */
 package com.ixcode.framework.simulation.experiment.parameter.boundary;
 
-import com.ixcode.bugsim.model.agent.boundary.CircularBoundaryAgentFactory;
-import com.ixcode.bugsim.model.agent.boundary.LinearBoundaryAgentFactory;
-import com.ixcode.bugsim.model.agent.boundary.NullBoundaryFactory;
+import com.ixcode.bugsim.agent.boundary.CircularBoundaryAgentFactory;
+import com.ixcode.bugsim.agent.boundary.LinearBoundaryAgentFactory;
+import com.ixcode.bugsim.agent.boundary.NullBoundaryFactory;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.CartesianDimensions;

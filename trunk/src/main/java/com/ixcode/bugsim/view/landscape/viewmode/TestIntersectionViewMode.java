@@ -1,7 +1,7 @@
 package com.ixcode.bugsim.view.landscape.viewmode;
 
-import com.ixcode.bugsim.model.agent.butterfly.*;
-import com.ixcode.bugsim.model.agent.cabbage.*;
+import com.ixcode.bugsim.agent.butterfly.*;
+import com.ixcode.bugsim.agent.cabbage.*;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.simulation.model.agent.diagnostic.*;
 import com.ixcode.framework.simulation.model.agent.resource.*;

@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim;
 
-import com.ixcode.bugsim.model.experiment.experimentX.*;
+import com.ixcode.bugsim.experiment.experimentX.*;
 import com.ixcode.bugsim.view.experiment.experimentX.*;
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.util.*;
