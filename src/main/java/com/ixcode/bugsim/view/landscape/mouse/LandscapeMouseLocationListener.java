@@ -1,6 +1,3 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.landscape.mouse;
 
 import com.ixcode.framework.math.geometry.*;
@@ -12,9 +9,6 @@ import java.awt.event.MouseMotionListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-/**
- *  Description : ${CLASS_DESCRIPTION}
- */
 public class LandscapeMouseLocationListener implements MouseMotionListener {
 
     private LandscapeView landscapeView;
@@ -25,13 +19,10 @@ public class LandscapeMouseLocationListener implements MouseMotionListener {
         this.statusBar = statusBar;
     }
 
-    public void mouseDragged(MouseEvent e) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
+    public void mouseDragged(MouseEvent e) {}
 
     public void mouseMoved(MouseEvent e) {
-        RectangularCoordinate logicalLocation = landscapeView.getSnappedLandscapeLocation(e.getPoint()
-        ).getCoordinate();
+        RectangularCoordinate logicalLocation = landscapeView.getSnappedLandscapeLocation(e.getPoint()).getCoordinate();
         StringBuilder sb = new StringBuilder();
         sb.append("Logical Location : (").append(fmt(logicalLocation.getDoubleX()))
           .append(", ").append(fmt(logicalLocation.getDoubleY())).append(" )")

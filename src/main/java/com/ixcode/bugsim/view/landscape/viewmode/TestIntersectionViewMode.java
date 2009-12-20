@@ -13,7 +13,7 @@ import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.agent.diagnostic.LineAgent;
 import com.ixcode.framework.simulation.model.agent.resource.IResourceAgent;
 import com.ixcode.framework.simulation.model.landscape.Location;
-import com.ixcode.framework.swing.ViewModeStrategy;
+import com.ixcode.framework.swing.ViewMode;
 import com.ixcode.framework.swing.*;
 import org.apache.log4j.Logger;
 
@@ -27,9 +27,9 @@ import java.util.List;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class TestIntersectionViewModeStrategy implements ViewModeStrategy, MouseListener, MouseMotionListener {
+public class TestIntersectionViewMode implements ViewMode, MouseListener, MouseMotionListener {
 
-    public TestIntersectionViewModeStrategy(LandscapeView view) {
+    public TestIntersectionViewMode(LandscapeView view) {
         _view = view;
 
     }
@@ -46,7 +46,7 @@ public class TestIntersectionViewModeStrategy implements ViewModeStrategy, Mouse
         //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    public ViewMode getViewMode() {
+    public ViewModeName getName() {
         return LandscapeViewMode.TEST_INTERSECTION;
     }
 
@@ -64,7 +64,7 @@ public class TestIntersectionViewModeStrategy implements ViewModeStrategy, Mouse
             _startLocation = _view.getLandscapeLocation(mouseEvent.getPoint());
             _lineAgent = new LineAgent(_startLocation);
             _view.getSimulation().addAgent(_lineAgent);
-            _lineAgent.addPropertyChangeListener(_view);
+//            _lineAgent.addPropertyChangeListener(_view);
 //            System.out.println("Adding Line Agent at " + _startLocation);
 
         } else {
@@ -151,5 +151,5 @@ public class TestIntersectionViewModeStrategy implements ViewModeStrategy, Mouse
 
     private Location _startLocation;
     private LineAgent _lineAgent;
-    private static final Logger log = Logger.getLogger(TestIntersectionViewModeStrategy.class);
+    private static final Logger log = Logger.getLogger(TestIntersectionViewMode.class);
 }

@@ -28,10 +28,12 @@ import org.apache.log4j.*;
 public class SaveLandscapeImageAction extends ActionBase {
 
     private static final Logger log = Logger.getLogger(SaveLandscapeImageAction.class);
+    private ExperimentController controller;
+
     public SaveLandscapeImageAction(LandscapeView view) {
         super("Save Landscape Image", "/icons/snapShot.gif");
         _view = view;
-        _controller = view.getExperimentController();
+//        _controller = view.getExperimentController();
 
 
     }
@@ -87,7 +89,6 @@ public class SaveLandscapeImageAction extends ActionBase {
     }
 
     private File generateFile() {
-        ExperimentController controller = _view.getExperimentController();
         File root = controller.getExperimentOutputDir();
         File images = new File(root, "output/simulation-images");
         if (!images.exists()) {

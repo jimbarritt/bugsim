@@ -1,6 +1,3 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.experiment.experiment1d;
 
 import com.ixcode.bugsim.view.experiment.SimulationLandscapeViewFactory;
@@ -16,9 +13,6 @@ import com.ixcode.framework.simulation.model.Simulation;
 
 import javax.swing.*;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
 public class Experiment1dLandscapeViewFactory extends SimulationLandscapeViewFactory {
 
     public JFrame initialiseLandscapeView(IExperiment experiment, ExperimentController experimentController) {
@@ -31,14 +25,14 @@ public class Experiment1dLandscapeViewFactory extends SimulationLandscapeViewFac
 
         f = initialiseLandscapeView(sim, experiment, experimentController);
 
-          LandscapeView view = f.getLandscapeView();
+//          LandscapeView view = f.getLandscapeView();
 //          view.setGridResolution(new ScaledDistance(20, DistanceUnitRegistry.centimetres()));
 //          view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
 //          view.setGridToScale(true);
 
-        ZoomFrame zoom = new ZoomFrame(view);
-        zoom.setSize(200, 200);
-        zoom.show();
+//        ZoomFrame zoom = new ZoomFrame(view);
+//        zoom.setSize(200, 200);
+//        zoom.show();
 
         return f;
     }

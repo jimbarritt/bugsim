@@ -31,9 +31,9 @@ public class LandscapeViewPropertiesPanel extends PropertyPanel {
 
 //        super.addPropertyEditor("Show Grid ?", LandscapeView.PROPERTY_SHOW_GRID, "" + landscapeViewer.isShowGrid());
 //        super.addPropertyEditor("Grid to scale ?", LandscapeView.PROPERTY_GRID_TO_SCALE,"" + landscapeViewer.isGridToScale());
-        super.addPropertyEditor("Fit to Screen ?", LandscapeView.PROPERTY_FIT_TO_SCREEN,"" + landscapeViewer.isZoomIsFitToScreen());
-        super.addPropertyEditor("Zoom %", LandscapeView.PROPERTY_ZOOM_PERCENT,"" + landscapeViewer.getZoomPercent() * 100);
-        super.addPropertyEditor("Zoom Center", LandscapeView.PROPERTY_ZOOM_CENTER,"" + super.getPoint2dDoubleAsString(landscapeViewer.getZoomCenter()));
+//        super.addPropertyEditor("Fit to Screen ?", LandscapeView.PROPERTY_FIT_TO_SCREEN,"" + landscapeViewer.isZoomIsFitToScreen());
+//        super.addPropertyEditor("Zoom %", LandscapeView.PROPERTY_ZOOM_PERCENT,"" + landscapeViewer.getZoomPercent() * 100);
+//        super.addPropertyEditor("Zoom Center", LandscapeView.PROPERTY_ZOOM_CENTER,"" + super.getPoint2dDoubleAsString(landscapeViewer.getZoomCenter()));
 
         // @todo implement different rendering options for each agent type.
         super.addPropertyEditor("Draw Paths ?", "drawPaths", "true");

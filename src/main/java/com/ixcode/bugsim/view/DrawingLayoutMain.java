@@ -42,8 +42,8 @@ public class DrawingLayoutMain {
                 l.getLogicalBounds().getCentre(), 0, 5);
 
 
-        final LandscapeFrame f = new LandscapeFrame(l, null);
-        final LandscapeView view = f.getLandscapeView();
+        final LandscapeFrame f = new LandscapeFrame(l);
+//        final LandscapeView view = f.getLandscapeView();
 //        view.setLogicalGridResolution(10);
 //        view.setLogicalGridThickness(1);
 
@@ -59,8 +59,8 @@ public class DrawingLayoutMain {
     private static void drawExpandingRadiuses() {
         Landscape l = setupDrawing(0);
 
-        final LandscapeFrame f = new LandscapeFrame(l, null);
-        final LandscapeView view = f.getLandscapeView();
+        final LandscapeFrame f = new LandscapeFrame(l);
+//        final LandscapeView view = f.getLandscapeView();
 //        view.setLogicalGridResolution(10);
 //        view.setLogicalGridThickness(1);
 
@@ -89,7 +89,7 @@ public class DrawingLayoutMain {
 
                 int value = s.getValue();
                 Landscape l = setupDrawing(value);
-                f.setLandscape(l);
+//                f.setLandscape(l);
 
 
             }

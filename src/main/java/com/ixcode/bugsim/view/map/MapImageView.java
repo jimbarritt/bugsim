@@ -21,7 +21,7 @@ public class MapImageView extends JComponent {
 
     public MapImageView() {
         _viewModeRegistry = new MapImageViewModeStrategeyRegistry(this);
-        setViewMode(ViewMode.DISPLAY);
+        setViewMode(ViewModeName.DISPLAY);
 
     }
 
@@ -115,21 +115,21 @@ public class MapImageView extends JComponent {
 
     }
 
-    public boolean isMode(ViewMode mode) {
-        return _viewModeStrategy.getViewMode() == mode;
+    public boolean isMode(ViewModeName modeName) {
+        return _viewMode.getName() == modeName;
     }
 
-    public void setViewMode(ViewMode mode) {
-        if (_viewModeStrategy != null) {
-            this.removeMouseListener(_viewModeStrategy.getMouseListener());
-            this.removeMouseMotionListener(_viewModeStrategy.getMouseMotionListener());
+    public void setViewMode(ViewModeName modeName) {
+        if (_viewMode != null) {
+            this.removeMouseListener(_viewMode.getMouseListener());
+            this.removeMouseMotionListener(_viewMode.getMouseMotionListener());
         }
 
-        _viewModeStrategy = _viewModeRegistry.getStrategy(mode);
+        _viewMode = _viewModeRegistry.getStrategy(modeName);
 
-        this.setCursor(_viewModeStrategy.getCursor());
-        this.addMouseListener(_viewModeStrategy.getMouseListener());
-        this.addMouseMotionListener(_viewModeStrategy.getMouseMotionListener());
+        this.setCursor(_viewMode.getCursor());
+        this.addMouseListener(_viewMode.getMouseListener());
+        this.addMouseMotionListener(_viewMode.getMouseMotionListener());
 
 
         invalidate();
@@ -202,7 +202,7 @@ public class MapImageView extends JComponent {
     private boolean _fitToScreen = true;
 
     private ViewModeStrategyRegistry _viewModeRegistry;
-    private ViewModeStrategy _viewModeStrategy;
+    private ViewMode _viewMode;
     private MapOutline _mapOutline;
 
 }

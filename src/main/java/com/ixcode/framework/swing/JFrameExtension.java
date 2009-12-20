@@ -45,58 +45,6 @@ public class JFrameExtension extends JFrame {
         setSize(400, 400);
         setLocation(200, 200);
 
-        addWindowListener(new WindowListener() {
-            public void windowOpened(WindowEvent event) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            public void windowClosing(WindowEvent event) {
-                if (systemExitOnClose) {
-                    if (log.isInfoEnabled()) {
-                        log.info("Exiting Application!");
-                    }
-                    System.exit(0);
-                }
-
-
-            }
-
-            public void windowClosed(WindowEvent event) {
-                if (systemExitOnClose) {
-                    if (log.isInfoEnabled()) {
-                        log.info("Exiting Application!");
-                    }
-                    System.exit(0);
-                }
-            }
-
-            public void windowIconified
-                    (WindowEvent
-                            event) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            public void windowDeiconified
-                    (WindowEvent
-                            event) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            public void windowActivated
-                    (WindowEvent
-                            event) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            public void windowDeactivated
-                    (WindowEvent
-                            event) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-        }
-
-        );
-
         final int BORDER_WIDTH = 100;
         Border b = BorderFactory.createEmptyBorder(BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH);
         borderPanel = new JPanel();

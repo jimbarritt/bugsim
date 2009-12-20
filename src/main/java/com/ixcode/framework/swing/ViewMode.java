@@ -3,18 +3,22 @@
  */
 package com.ixcode.framework.swing;
 
-import com.ixcode.framework.datatype.TypeSafeEnum;
+import java.awt.*;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-/**
- *  Description : ${CLASS_DESCRIPTION}
- */
-public  class ViewMode extends TypeSafeEnum {
-    public static final ViewMode DISPLAY = new ViewMode("display");
+public interface ViewMode {
 
-   protected ViewMode(String name) {
-          super(name);
-    }
+    Cursor getCursor();
 
+    ViewModeName getName();
 
+    MouseListener getMouseListener();
+
+    MouseMotionListener getMouseMotionListener();
+
+    void enterMode(Component parent);
+
+    void exitMode(Component parent);
 
 }

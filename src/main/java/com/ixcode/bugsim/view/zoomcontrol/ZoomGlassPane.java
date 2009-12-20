@@ -21,7 +21,7 @@ public class ZoomGlassPane extends JComponent implements PropertyChangeListener 
         _mainView = mainView;
         _zoomView = zoomView;
         _mainView.addPropertyChangeListener(this);
-        ZoomGlassPaneDisplayModeStrategy strategy = new ZoomGlassPaneDisplayModeStrategy(this, _mainView, _zoomView);
+        ZoomGlassPaneDisplayMode strategy = new ZoomGlassPaneDisplayMode(this, _mainView, _zoomView);
         super.addMouseListener(strategy);
         super.addMouseMotionListener(strategy);
 
