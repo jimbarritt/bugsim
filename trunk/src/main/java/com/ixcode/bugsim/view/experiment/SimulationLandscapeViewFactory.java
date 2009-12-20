@@ -47,16 +47,16 @@ public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
 
     public static LandscapeFrame initialiseLandscapeView(Simulation simulation, IExperiment experiment, ExperimentController experimentController) {
 
-        final LandscapeFrame landscapeFrame = new LandscapeFrame(simulation.getLandscape(), null);
-        LandscapeView view = landscapeFrame.getLandscapeView();
+        final LandscapeFrame landscapeFrame = new LandscapeFrame(simulation.getLandscape());
+//        LandscapeView view = landscapeFrame.getLandscapeView();
 
 
 
 //        view.setGridResolution(new ScaledDistance(80, DistanceUnitRegistry.centimetres()));
 //        view.setGridThickness(new ScaledDistance(0.1, DistanceUnitRegistry.centimetres()));
 //        view.setGridToScale(false);
-        view.setListenToAgents(BugsimMain.isDebug());
-        view.setExperimentController(experimentController);
+//        view.setListenToAgents(BugsimMain.isDebug());
+//        view.setExperimentController(experimentController);
 
         MotileAgentRenderer renderer = (MotileAgentRenderer)AgentRendererRegistry.INSTANCE.getRendererForAgent(ButterflyAgent.AGENT_CLASS_ID);
         renderer.setDrawPaths(BugsimMain.isDebug());
@@ -66,24 +66,24 @@ public class SimulationLandscapeViewFactory implements LandscapeViewFactory {
 
             public void experimentInitialised(IExperiment source, ExperimentPlan plan) {
                 Simulation simulation = ((SimulationExperimentBase)source).getSimulation();
-                landscapeFrame.setLandscape(simulation.getLandscape());
-                LandscapeView view = landscapeFrame.getLandscapeView();
+//                landscapeFrame.setLandscape(simulation.getLandscape());
+//                LandscapeView view = landscapeFrame.getLandscapeView();
 //                    view.setGridResolution(new ScaledDistance(80, DistanceUnitRegistry.centimetres()));
 //                view.setGridThickness(new ScaledDistance(1, DistanceUnitRegistry.centimetres()));
-                view.setListenToAgents(BugsimMain.isDebug());
+//                view.setListenToAgents(BugsimMain.isDebug());
 
             }
 
             public void iterationInitialised(IExperiment source, ParameterMap currentParameters, ExperimentProgress experimentProgress) {
-                LandscapeView view = landscapeFrame.getLandscapeView();
+//                LandscapeView view = landscapeFrame.getLandscapeView();
                 Parameter patch = currentParameters.findParameter(CabbageParameters.LAYOUT_EDGE_EFFECT_PATCH_BOUNDS);
                 if (patch != null) {
                     CartesianBounds b = (CartesianBounds)patch.getValue();
                     double patchSize = b.getDoubleWidth();
 //                    view.setGridResolution(new ScaledDistance(patchSize, DistanceUnitRegistry.centimetres()));
                 }
-                RectangularCoordinate centre = view.getLandscape().getLogicalBounds().getCentre();
-                view.setZoomCenter(new Point2D.Double(centre.getDoubleX(), centre.getDoubleY()));
+//                RectangularCoordinate centre = view.getLandscape().getLogicalBounds().getCentre();
+//                view.setZoomCenter(new Point2D.Double(centre.getDoubleX(), centre.getDoubleY()));
 
                 landscapeFrame.getStatusBar().setText(source.getParameterSummary()); // @todo put this on the parameters instead or better, pass the parameters to the experiment as it knows what is important
             }

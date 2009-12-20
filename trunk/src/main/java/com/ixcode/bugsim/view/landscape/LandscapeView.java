@@ -1,39 +1,24 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.landscape;
 
 import com.ixcode.bugsim.view.grid.*;
-import com.ixcode.bugsim.view.landscape.action.*;
 import com.ixcode.bugsim.view.landscape.mouse.*;
 import com.ixcode.bugsim.view.landscape.viewmode.*;
-import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
+import static com.ixcode.framework.swing.ViewModeName.*;
 import org.apache.log4j.*;
 
 import javax.swing.*;
 import java.awt.*;
 import static java.awt.Cursor.*;
 import java.awt.geom.*;
-import java.beans.*;
 import static java.lang.Math.*;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
-public class LandscapeView extends JComponent implements PropertyChangeListener {
-    private static final String PROPERTY_SCALE_X = "scaleX";
-    private static final String PROPERTY_SCALE_Y = "scaleY";
-    public static final String PROPERTY_FIT_TO_SCREEN = "fitToScreen";
-    public static final String PROPERTY_ZOOM_PERCENT = "zoomPercent";
-    public static final String PROPERTY_ZOOM_CENTER = "zoomCenter";
-    private final String PROPERTY_CLIP_SIZE_X = "landscapeClipSizeX";
-    private final String PROPERTY_LANDSCAPE_ORIGIN = "landscapeOrigin";
-    private static final String PROPERTY_TRANSLATE_Y = "translateY";
-    private static final String PROPERTY_TRANSLATE_X = "translateX";
+public class LandscapeView extends JComponent {
+
+    private static final Logger log = Logger.getLogger(LandscapeView.class);
 
     private double scaleX = 1.0d;
     private double scaleY = 1.0d;
@@ -45,51 +30,35 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
 
     private double landscapeClipSizeX;
     private double landscapeClipSizeY;
+    private double displayWidth;
+    private double displayHeight;
 
     private Point2D.Double landscapeOrigin = new Point2D.Double();
 
     private boolean zoomCenterActive = false;
-
     private Point2D zoomCenter = new Point2D.Double(0, 0);
     private double zoomPercent = 1;
 
-    private double displayWidth;
-    private double displayHeight;
-
-    private LandscapeRenderer landscapeRenderer = new LandscapeRenderer();
-
     private LandscapeViewModeStrategeyRegistry viewModeRegistry;
-    private ViewModeStrategy viewModeStrategy;
+    private ViewMode viewMode;
 
-   private boolean listenToAgents;
-
-    private static final Logger log = Logger.getLogger(LandscapeView.class);
-    private AgentTypeChoiceCombo agentTypeChoiceCombo;
-    private ExperimentController experimentController;
     private GridLineRenderer gridLineRenderer = new GridLineRenderer();
     private BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
+    private LandscapeRenderer landscapeRenderer = new LandscapeRenderer();
 
-    public LandscapeView(Landscape landscape, AgentTypeChoiceCombo combo, StatusBar statusBar) {
-        agentTypeChoiceCombo = combo;
-        LandscapeViewModeStrategeyRegistry registry = new LandscapeViewModeStrategeyRegistry(this, combo);
-
+    public LandscapeView(Landscape landscape, StatusBar statusBar) {
         setLandscape(landscape);
-        viewModeRegistry = registry;
-        setViewMode(ViewMode.DISPLAY);
-        LandscapeMouseLocationListener locationListener = new LandscapeMouseLocationListener(this, statusBar);
-        addMouseMotionListener(locationListener);
-
         setBackground(Color.white);
-        
         setCursor(getPredefinedCursor(CROSSHAIR_CURSOR));
+
+        viewModeRegistry = new LandscapeViewModeStrategeyRegistry(this);
+        setViewMode(DISPLAY);
+
+        addMouseMotionListener(new LandscapeMouseLocationListener(this, statusBar));
     }
 
     public void setLandscape(Landscape landscape) {
-        if (this.landscape != null) {
-            this.landscape.removePropertyChangeListener(this);
-        }
         this.landscape = landscape;
-        this.landscape.addPropertyChangeListener(this);
         setZoomCenter(new Point2D.Double(this.landscape.getExtentX() / 2, this.landscape.getExtentY() / 2));
     }
 
@@ -150,56 +119,39 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         graphics2D.scale(scaleX, scaleY);
     }
 
-    public ExperimentController getExperimentController() {
-        return experimentController;
-    }
-
-    public void setExperimentController(ExperimentController experimentController) {
-        this.experimentController = experimentController;
-    }
-
-
     public double getDisplayWidth() {
         return displayWidth;
     }
 
-    public ViewMode getViewMode() {
-        return viewModeStrategy.getViewMode();
+    public ViewModeName getViewMode() {
+        return viewMode.getName();
     }
 
-    public boolean isViewMode(ViewMode mode) {
-        return viewModeStrategy.getViewMode() == mode;
+    public boolean isViewMode(ViewModeName modeName) {
+        return viewMode.getName() == modeName;
     }
 
-    public void setViewMode(ViewMode mode) {
-        if (viewModeStrategy != null) {
-            this.removeMouseListener(viewModeStrategy.getMouseListener());
-            this.removeMouseMotionListener(viewModeStrategy.getMouseMotionListener());
+    public void setViewMode(ViewModeName modeName) {
+        if (viewMode != null) {
+            this.removeMouseListener(viewMode.getMouseListener());
+            this.removeMouseMotionListener(viewMode.getMouseMotionListener());
         }
-        viewModeStrategy = viewModeRegistry.getStrategy(mode);
+        viewMode = viewModeRegistry.getStrategy(modeName);
 
         if (log.isDebugEnabled()) {
-            log.debug("Setting View Mode to be " + mode + " , " + viewModeStrategy + ", " + viewModeStrategy.getCursor());
+            log.debug("Setting View Mode to be " + modeName + " , " + viewMode + ", " + viewMode.getCursor());
         }
 
-        super.setCursor(viewModeStrategy.getCursor());
-        super.addMouseListener(viewModeStrategy.getMouseListener());
-        super.addMouseMotionListener(viewModeStrategy.getMouseMotionListener());
+        super.setCursor(viewMode.getCursor());
+        super.addMouseListener(viewMode.getMouseListener());
+        super.addMouseMotionListener(viewMode.getMouseMotionListener());
         invalidate();
         repaint();
     }
 
     public Simulation getSimulation() {
         return landscape.getSimulation();
-    }
-
-    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-        if (propertyChangeEvent.getPropertyName().equals(Landscape.PROPERTY_AGENTS) && !listenToAgents) {
-            return;
-        }
-        invalidate();
-        repaint();
-    }
+    }    
 
     public void setDisplayWidth(double displayWidth) {
         this.displayWidth = displayWidth;
@@ -284,9 +236,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setScaleX(double scaleX) {
-        double oldScaleX = this.scaleX;
         this.scaleX = scaleX;
-        firePropertyChange(PROPERTY_SCALE_X, oldScaleX, this.scaleX);
     }
 
     public double getScaleY() {
@@ -294,9 +244,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setScaleY(double scaleY) {
-        double oldScaleY = this.scaleY;
         this.scaleY = scaleY;
-        firePropertyChange(PROPERTY_SCALE_Y, oldScaleY, this.scaleY);
     }
 
     public double getDisplayHeight() {
@@ -312,9 +260,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setTranslateX(double translateX) {
-        double old = this.translateX;
         this.translateX = translateX;
-        firePropertyChange(PROPERTY_TRANSLATE_X, old, this.translateX);
     }
 
     public double getTranslateY() {
@@ -322,9 +268,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setTranslateY(double translateY) {
-        double old = this.translateY;
         this.translateY = translateY;
-        firePropertyChange(PROPERTY_TRANSLATE_Y, old, this.translateY);
     }
 
     public Point2D getZoomCenter() {
@@ -332,9 +276,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setZoomCenter(Point2D zoomCenter) {
-        Point2D oldZoomCenter = this.zoomCenter;
         this.zoomCenter = zoomCenter;
-        firePropertyChange(PROPERTY_ZOOM_CENTER, oldZoomCenter, this.zoomCenter);
         invalidate();
         repaint();
     }
@@ -352,7 +294,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
         translateY = 0;
 
         zoomCenterActive = !zoomIsFitToScreen;
-        firePropertyChange(PROPERTY_FIT_TO_SCREEN, oldFitToScreen, this.zoomIsFitToScreen);
     }
 
     public double getZoomPercent() {
@@ -360,11 +301,9 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     public void setZoomPercent(double zoomPercent) {
-        double oldZoomPercent = this.zoomPercent;
         this.zoomPercent = zoomPercent;
         setScaleX(this.zoomPercent);
         setScaleY(this.zoomPercent);
-        firePropertyChange(PROPERTY_ZOOM_PERCENT, oldZoomPercent, this.zoomPercent);
     }
 
     public double getLandscapeClipSizeX() {
@@ -384,9 +323,7 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     private void setLandscapeClipSizeX(double landscapeClipSizeX) {
-        double oldClipSizeX = this.landscapeClipSizeX;
         this.landscapeClipSizeX = landscapeClipSizeX;
-        firePropertyChange(PROPERTY_CLIP_SIZE_X, oldClipSizeX, this.landscapeClipSizeX);
     }
 
     private void setLandscapeClipSizeY(double landscapeClipSizeY) {
@@ -394,23 +331,6 @@ public class LandscapeView extends JComponent implements PropertyChangeListener 
     }
 
     private void setLandscapeOrigin(Point2D.Double landscapeOrigin) {
-        Point2D.Double oldOrigin = this.landscapeOrigin;
         this.landscapeOrigin = landscapeOrigin;
-        firePropertyChange(PROPERTY_LANDSCAPE_ORIGIN, oldOrigin, this.landscapeOrigin);
     }
-
-
-    public boolean isListenToAgents() {
-        return listenToAgents;
-    }
-
-    public void setListenToAgents(boolean listenToAgents) {
-        this.listenToAgents = listenToAgents;
-    }
-
-    public AgentTypeChoiceCombo getAgentTypeChoiceCombo() {
-        return agentTypeChoiceCombo;
-    }
-
-
 }

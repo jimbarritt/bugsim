@@ -1,21 +1,28 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.framework.swing;
+package com.ixcode.bugsim.view.map;
 
+import com.ixcode.framework.swing.ViewModeName;
+import com.ixcode.framework.swing.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.geom.Point2D;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class DisplayModeStrategy implements ViewModeStrategy,MouseListener, MouseMotionListener {
+public class EditMapOutlineMode implements ViewMode,MouseListener, MouseMotionListener {
 
-    public DisplayModeStrategy() {
+    public EditMapOutlineMode(MapImageView view) {
+        _view = view;
+    }
 
+    public Cursor getCursor() {
+        return Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR);
     }
 
     public void enterMode(Component parent) {
@@ -26,13 +33,8 @@ public class DisplayModeStrategy implements ViewModeStrategy,MouseListener, Mous
         //To change body of implemented methods use File | Settings | File Templates.
     }
 
-
-    public Cursor getCursor() {
-        return Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
-    }
-
-    public ViewMode getViewMode() {
-        return ViewMode.DISPLAY;
+    public ViewModeName getName() {
+        return MapImageViewMode.EDIT_MAP_OUTLINE;
     }
 
     public MouseListener getMouseListener() {
@@ -45,7 +47,15 @@ public class DisplayModeStrategy implements ViewModeStrategy,MouseListener, Mous
 
 
     public void mouseClicked(MouseEvent mouseEvent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        double sx = _view.getScaleX();
+        double sy = _view.getScaleY();
+        double screenX = mouseEvent.getPoint().getX();
+        double screenY = mouseEvent.getPoint().getY();
+        Point2D.Double rawPoint = new Point2D.Double(screenX / sx, screenY / sy);
+
+        _view.getMapOutline().addPoint(rawPoint);
+//        System.out.println("Added Point at " + rawPoint + " mouse at " + mouseEvent.getPoint());
+        _view.redraw();
     }
 
     public void mousePressed(MouseEvent mouseEvent) {
@@ -72,5 +82,5 @@ public class DisplayModeStrategy implements ViewModeStrategy,MouseListener, Mous
         //To change body of implemented methods use File | Settings | File Templates.
     }
 
-
+    MapImageView _view;
 }

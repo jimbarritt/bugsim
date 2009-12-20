@@ -29,7 +29,7 @@ public class CenterOnNextAgentAction extends AbstractAction implements ISimulati
         super(ID);
         _view = view;
         _landscape = view.getLandscape();
-        _typeCombo = view.getAgentTypeChoiceCombo();
+//        _typeCombo = view.getAgentTypeChoiceCombo();
 
          _landscape.getSimulation().addSimulationListener(this);
         _landscape.getSimulation().addTimestepListener(this);

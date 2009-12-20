@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.landscape.viewmode;
 
-import com.ixcode.framework.swing.*;
+import com.ixcode.framework.swing.DisplayMode;
 import com.ixcode.bugsim.view.landscape.*;
 
 import java.awt.*;
@@ -13,12 +13,12 @@ import java.awt.geom.*;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class LandscapeDisplayModeStrategy extends DisplayModeStrategy {
+public class LandscapeDisplayMode extends DisplayMode {
     private Point2D startDragZoomCentre;
     private Point startDragPoint;
     private LandscapeView view;
 
-    public LandscapeDisplayModeStrategy(LandscapeView view) {
+    public LandscapeDisplayMode(LandscapeView view) {
         this.view = view;
     }
 

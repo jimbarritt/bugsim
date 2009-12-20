@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.map;
 
-import com.ixcode.framework.swing.DisplayModeStrategy;
+import com.ixcode.framework.swing.DisplayMode;
 import com.ixcode.framework.swing.ViewModeStrategyRegistry;
 
 /**
@@ -12,7 +12,7 @@ import com.ixcode.framework.swing.ViewModeStrategyRegistry;
 public class MapImageViewModeStrategeyRegistry extends ViewModeStrategyRegistry {
 
     public MapImageViewModeStrategeyRegistry(MapImageView view) {
-        addStrategy(new DisplayModeStrategy());
-        addStrategy(new EditMapOutlineModeStrategy(view));
+        addStrategy(new DisplayMode());
+        addStrategy(new EditMapOutlineMode(view));
     }
 }

@@ -4,7 +4,7 @@
 package com.ixcode.bugsim.view.zoomcontrol;
 
 import com.ixcode.bugsim.view.landscape.LandscapeView;
-import com.ixcode.framework.swing.DisplayModeStrategy;
+import com.ixcode.framework.swing.DisplayMode;
 
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
@@ -13,11 +13,11 @@ import java.awt.geom.Rectangle2D;
 /**
  * Description : ${CLASS_DESCRIPTION}
  */
-public class ZoomGlassPaneDisplayModeStrategy extends DisplayModeStrategy {
+public class ZoomGlassPaneDisplayMode extends DisplayMode {
 
     public static final double MIN_SIZE = 100;
 
-    public ZoomGlassPaneDisplayModeStrategy(ZoomGlassPane glassPane, LandscapeView mainView, LandscapeView zoomView) {
+    public ZoomGlassPaneDisplayMode(ZoomGlassPane glassPane, LandscapeView mainView, LandscapeView zoomView) {
         _glassPane = glassPane;
         _mainView = mainView;
         _zoomView = zoomView;

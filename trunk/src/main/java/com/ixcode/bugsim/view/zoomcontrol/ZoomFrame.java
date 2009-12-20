@@ -18,14 +18,14 @@ public class ZoomFrame extends JFrameExtension {
         super("Overview");
         super.getStatusBar().setText("");
           _mainView = mainView;
-        _combo = mainView.getAgentTypeChoiceCombo();
+//        _combo = mainView.getAgentTypeChoiceCombo();
         setLandscape(mainView.getLandscape());
 
     }
 
     public void setLandscape(Landscape landscape) {
 
-        _zoomView = new LandscapeView(_mainView.getLandscape(), _combo, super.getStatusBar());
+        _zoomView = new LandscapeView(_mainView.getLandscape(),super.getStatusBar());
 //        _zoomView.setShowGrid(false);
         super.getContentPane().removeAll();
         super.getContentPane().add(_zoomView);

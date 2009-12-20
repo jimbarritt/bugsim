@@ -3,12 +3,12 @@
  */
 package com.ixcode.bugsim.view.map;
 
-import com.ixcode.framework.swing.ViewMode;
+import com.ixcode.framework.swing.ViewModeName;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class MapImageViewMode extends ViewMode {
+public class MapImageViewMode extends ViewModeName {
 
     
     public static final MapImageViewMode EDIT_MAP_OUTLINE = new MapImageViewMode("edit-map-outline");

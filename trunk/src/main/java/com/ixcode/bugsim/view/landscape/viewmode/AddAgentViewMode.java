@@ -1,24 +1,30 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.view.map;
+package com.ixcode.bugsim.view.landscape.viewmode;
 
-import com.ixcode.framework.swing.ViewModeStrategy;
+import com.ixcode.framework.simulation.model.agent.IAgentFactory;
+import com.ixcode.framework.simulation.model.agent.IAgentInfo;
+import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
+import com.ixcode.framework.simulation.model.landscape.Location;
 import com.ixcode.framework.swing.ViewMode;
+import com.ixcode.framework.swing.*;
+import com.ixcode.bugsim.view.landscape.*;
+import com.ixcode.bugsim.view.landscape.action.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.awt.geom.Point2D;
 
 /**
- *  Description : ${CLASS_DESCRIPTION}
+ * Description : ${CLASS_DESCRIPTION}
  */
-public class EditMapOutlineModeStrategy implements ViewModeStrategy,MouseListener, MouseMotionListener {
+public class AddAgentViewMode implements ViewMode, MouseListener, MouseMotionListener {
 
-    public EditMapOutlineModeStrategy(MapImageView view) {
+    public AddAgentViewMode(LandscapeView view, AgentTypeChoiceCombo combo) {
         _view = view;
+        _combo = combo;//@todo make this part of LandscapeView so you can just access it from here rather than passing it
     }
 
     public Cursor getCursor() {
@@ -26,15 +32,15 @@ public class EditMapOutlineModeStrategy implements ViewModeStrategy,MouseListene
     }
 
     public void enterMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+       
     }
 
     public void exitMode(Component parent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
     }
 
-    public ViewMode getViewMode() {
-        return MapImageViewMode.EDIT_MAP_OUTLINE;
+    public ViewModeName getName() {
+        return LandscapeViewMode.ADD_AGENT;
     }
 
     public MouseListener getMouseListener() {
@@ -47,15 +53,11 @@ public class EditMapOutlineModeStrategy implements ViewModeStrategy,MouseListene
 
 
     public void mouseClicked(MouseEvent mouseEvent) {
-        double sx = _view.getScaleX();
-        double sy = _view.getScaleY();
-        double screenX = mouseEvent.getPoint().getX();
-        double screenY = mouseEvent.getPoint().getY();
-        Point2D.Double rawPoint = new Point2D.Double(screenX / sx, screenY / sy);
-
-        _view.getMapOutline().addPoint(rawPoint);
-//        System.out.println("Added Point at " + rawPoint + " mouse at " + mouseEvent.getPoint());
-        _view.redraw();
+        Location location = _view.getSnappedLandscapeLocation(mouseEvent.getPoint());
+        IAgentInfo agentInfo = _combo.getSelectedInfo();
+        IAgentFactory factory = agentInfo.getFactory();
+        IPhysicalAgent agent = factory.createAgent(location);
+        _view.getSimulation().addAgent(agent);
     }
 
     public void mousePressed(MouseEvent mouseEvent) {
@@ -79,8 +81,11 @@ public class EditMapOutlineModeStrategy implements ViewModeStrategy,MouseListene
     }
 
     public void mouseMoved(MouseEvent mouseEvent) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        _view.setCursor(this.getCursor());
+
+
     }
 
-    MapImageView _view;
+    LandscapeView _view;
+    private AgentTypeChoiceCombo _combo;
 }
