@@ -29,7 +29,7 @@ public class SaveCabbageExperimentResultAction extends ActionBase {
 
 
     public void actionPerformed(ActionEvent e) {
-       Simulation simulation =  _view.getSimulation();
+       Simulation simulation =  null;//_view.getSimulation();
 
          Preferences prefs = Preferences.userNodeForPackage(this.getClass());
         String startLocation = prefs.get(SaveCabbageExperimentResultAction.START_LOCATION, "");

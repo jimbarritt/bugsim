@@ -1,6 +1,3 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim.view.map;
 
 import com.ixcode.framework.swing.ViewModeName;
@@ -12,9 +9,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.geom.Point2D;
 
-/**
- *  Description : ${CLASS_DESCRIPTION}
- */
 public class EditMapOutlineMode implements ViewMode,MouseListener, MouseMotionListener {
 
     public EditMapOutlineMode(MapImageView view) {
@@ -39,6 +33,10 @@ public class EditMapOutlineMode implements ViewMode,MouseListener, MouseMotionLi
     public void end(Component parent) {
         parent.removeMouseListener(getMouseListener());
         parent.removeMouseMotionListener(getMouseMotionListener());
+    }
+
+    public boolean is(ViewModeName modeName) {
+        return this.equals(modeName);
     }
 
     private MouseListener getMouseListener() {

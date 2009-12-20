@@ -33,7 +33,7 @@ public class AddAgentViewMode extends LandscapeDisplayMode {
         IAgentInfo agentInfo = combo.getSelectedInfo();
         IAgentFactory factory = agentInfo.getFactory();
         IPhysicalAgent agent = factory.createAgent(location);
-        view.getSimulation().addAgent(agent);
+//        view.getSimulation().addAgent(agent);
     }
 
 

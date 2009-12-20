@@ -41,41 +41,41 @@ public class TestIntersectionViewMode extends LandscapeDisplayMode {
         if (lineAgent == null) {
             startLocation = view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             lineAgent = new LineAgent(startLocation);
-            view.getSimulation().addAgent(lineAgent);
+//            view.getSimulation().addAgent(lineAgent);
 //            _lineAgent.addPropertyChangeListener(_view);
 //            System.out.println("Adding Line Agent at " + _startLocation);
 
         } else {
             Location endLocation = view.getLocationOnLandscapeFrom(mouseEvent.getPoint());
             lineAgent.setEndLocation(endLocation);
-            List resources = view.getSimulation().getLiveAgents(CabbageAgentFilter.INSTANCE);
+//            List resources = view.getSimulation().getLiveAgents(CabbageAgentFilter.INSTANCE);
             java.util.List intersectedCabbages = new ArrayList();
-            for (Iterator itr = resources.iterator(); itr.hasNext();){
-                CabbageAgent cabbage = (CabbageAgent)itr.next();
-
-                if (log.isDebugEnabled()) {
-                    log.debug("Testing intersection of line " + startLocation.getCoordinate() + " : "+ endLocation.getCoordinate() + " with cabbage : " + cabbage.getLocation().getCoordinate());
-                }
-
-
-                if (cabbage.intersectsLine(startLocation.getCoordinate(), endLocation.getCoordinate())) {
-
-                    RectangularCoordinate cc = cabbage.getLocation().getCoordinate();
-                    RectangularCoordinate a = startLocation.getCoordinate();
-                    RectangularCoordinate b = endLocation.getCoordinate();
-                    java.util.List intersections = Geometry.findLineCircleIntersections(cc.getDoubleX(), cc.getDoubleY(), cabbage.getRadiusDouble(), a.getDoubleX(), a.getDoubleY(), b.getDoubleX(), b.getDoubleY() );
-                    lineAgent.setPoints(intersections);
-                    intersectedCabbages.add(cabbage);
-
-                } else {
-                    cabbage.resetEggCount();
-                }
-
-
-            }
+//            for (Iterator itr = resources.iterator(); itr.hasNext();){
+//                CabbageAgent cabbage = (CabbageAgent)itr.next();
+//
+//                if (log.isDebugEnabled()) {
+//                    log.debug("Testing intersection of line " + startLocation.getCoordinate() + " : "+ endLocation.getCoordinate() + " with cabbage : " + cabbage.getLocation().getCoordinate());
+//                }
+//
+//
+//                if (cabbage.intersectsLine(startLocation.getCoordinate(), endLocation.getCoordinate())) {
+//
+//                    RectangularCoordinate cc = cabbage.getLocation().getCoordinate();
+//                    RectangularCoordinate a = startLocation.getCoordinate();
+//                    RectangularCoordinate b = endLocation.getCoordinate();
+//                    java.util.List intersections = Geometry.findLineCircleIntersections(cc.getDoubleX(), cc.getDoubleY(), cabbage.getRadiusDouble(), a.getDoubleX(), a.getDoubleY(), b.getDoubleX(), b.getDoubleY() );
+//                    lineAgent.setPoints(intersections);
+//                    intersectedCabbages.add(cabbage);
+//
+//                } else {
+//                    cabbage.resetEggCount();
+//                }
+//
+//
+//            }
 
 //            layOnAllIntersectedCabbages(intersectedCabbages);
-            layOnClosestCabbage(resources, startLocation, endLocation);
+//            layOnClosestCabbage(resources, startLocation, endLocation);
             lineAgent = null;
             view.getLandscape().fireAgentsChangedEvent();
         }
