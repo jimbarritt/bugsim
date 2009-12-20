@@ -4,12 +4,12 @@
 package com.ixcode.bugsim.view.map;
 
 import com.ixcode.framework.swing.DisplayMode;
-import com.ixcode.framework.swing.ViewModeStrategyRegistry;
+import com.ixcode.framework.swing.ViewModeRegistry;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}
  */
-public class MapImageViewModeStrategeyRegistry extends ViewModeStrategyRegistry {
+public class MapImageViewModeStrategeyRegistry extends ViewModeRegistry {
 
     public MapImageViewModeStrategeyRegistry(MapImageView view) {
         addStrategy(new DisplayMode());

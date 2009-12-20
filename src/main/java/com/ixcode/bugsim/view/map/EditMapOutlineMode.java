@@ -26,7 +26,7 @@ public class EditMapOutlineMode implements ViewMode,MouseListener, MouseMotionLi
     }
 
 
-    public ViewModeName getName() {
+    public ViewModeName getViewModeName() {
         return MapImageViewMode.EDIT_MAP_OUTLINE;
     }
 
