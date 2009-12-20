@@ -9,4 +9,7 @@ public class ViewModeName extends TypeSafeEnum {
         super(name);
     }
 
+    public boolean is(ViewModeName modeName) {
+        return this.equals(modeName);
+    }
 }

@@ -33,7 +33,7 @@ public class ZeroBoundaryRenderer implements LandscapeLayer {
     }
 
     protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
-        return LandscapeView.getScreenCoord(view.getLandscape(), coord);
+        return LandscapeToViewModel.getScreenCoord(view.getLandscape(), coord);
     }
 
     public boolean isVisible() {

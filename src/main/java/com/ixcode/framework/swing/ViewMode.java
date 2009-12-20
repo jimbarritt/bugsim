@@ -1,6 +1,3 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.framework.swing;
 
 import java.awt.*;
@@ -11,4 +8,6 @@ public interface ViewMode {
     void begin(Component parent);
 
     void end(Component parent);
+
+    boolean is(ViewModeName modeName);
 }

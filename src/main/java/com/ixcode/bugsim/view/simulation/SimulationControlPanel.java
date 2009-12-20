@@ -24,7 +24,7 @@ public class SimulationControlPanel extends JPanel {
     public SimulationControlPanel(LandscapeView view) {
         _view = view;
         _landscape = view.getLandscape();
-        setSimulation(view.getSimulation());
+//        setSimulation(view.getSimulation());
 
     }
 
