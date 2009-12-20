@@ -7,7 +7,7 @@ import com.ixcode.framework.parameter.model.StrategyDefinition;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.model.IModelAdapter;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyFactory;
 import com.ixcode.bugsim.view.experiment.editor.resource.layout.ResourceLayoutPanel;
 import com.ixcode.bugsim.view.experiment.editor.resource.layout.DefaultLayoutStrategyFactory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;

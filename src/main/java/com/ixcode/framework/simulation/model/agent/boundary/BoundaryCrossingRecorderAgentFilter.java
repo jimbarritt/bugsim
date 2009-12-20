@@ -5,7 +5,7 @@ package com.ixcode.framework.simulation.model.agent.boundary;
 
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
 import com.ixcode.framework.simulation.model.agent.IAgent;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
 
 /**
  * Description : ${CLASS_DESCRIPTION}

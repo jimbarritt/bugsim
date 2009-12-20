@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.manipulation;
 
-import com.ixcode.bugsim.model.agent.cabbage.layout.PredefinedResourceLayout;
+import com.ixcode.bugsim.agent.cabbage.layout.PredefinedResourceLayout;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.framework.model.IModelAdapter;
 

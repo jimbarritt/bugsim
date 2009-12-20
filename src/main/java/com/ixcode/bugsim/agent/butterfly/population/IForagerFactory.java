@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
-import com.ixcode.bugsim.model.agent.butterfly.ForagerAgentStrategies;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentBehaviour;
+import com.ixcode.bugsim.agent.butterfly.ForagerAgentStrategies;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentBehaviour;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.physical.AgentBehaviour;
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;

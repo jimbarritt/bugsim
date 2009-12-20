@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.layout.predefined;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceListFile;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceListFile;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;

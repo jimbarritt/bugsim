@@ -1,13 +1,13 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentBehaviour;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.model.agent.cabbage.EggDistribution;
-import com.ixcode.bugsim.model.agent.cabbage.ForagerEgg;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentBehaviour;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.cabbage.EggDistribution;
+import com.ixcode.bugsim.agent.cabbage.ForagerEgg;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.motile.movement.IAzimuthGenerator;

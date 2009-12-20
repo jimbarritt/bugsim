@@ -1,17 +1,17 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource;
+package com.ixcode.bugsim.experiment.parameter.resource;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.SignalStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.SignalStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.SignalStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.SignalStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.MultipleSurfaceSignalStrategy;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
 import com.ixcode.framework.parameter.model.*;
 
 /**

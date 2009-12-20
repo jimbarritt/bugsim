@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.simulation.model.landscape.information.function;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;

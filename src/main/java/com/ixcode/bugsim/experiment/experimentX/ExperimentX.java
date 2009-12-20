@@ -1,23 +1,23 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.experimentX;
+package com.ixcode.bugsim.experiment.experimentX;
 
 import com.ixcode.bugsim.BugsimMain;
-import com.ixcode.bugsim.model.agent.butterfly.population.IPopulationWeb;
-import com.ixcode.bugsim.model.agent.butterfly.population.DiscreteGenerationPopulationWeb;
-import com.ixcode.bugsim.model.agent.butterfly.population.DiscreteGeneration;
-import com.ixcode.bugsim.model.agent.butterfly.population.IPopulation;
-import com.ixcode.bugsim.model.agent.cabbage.layout.IResourceLayout;
-import com.ixcode.bugsim.model.agent.cabbage.EggCounter;
-import com.ixcode.bugsim.model.experiment.BugsimExperimentBase;
-import com.ixcode.bugsim.model.experiment.experimentX.configuration.LandscapeConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.configuration.SimulationConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.configuration.ResourceConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.configuration.PopulationWebConfiguration;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.report.CabbageButterflyDetailReporter;
-import com.ixcode.bugsim.model.experiment.report.ExperimentXSummaryReporter;
+import com.ixcode.bugsim.agent.butterfly.population.IPopulationWeb;
+import com.ixcode.bugsim.agent.butterfly.population.DiscreteGenerationPopulationWeb;
+import com.ixcode.bugsim.agent.butterfly.population.DiscreteGeneration;
+import com.ixcode.bugsim.agent.butterfly.population.IPopulation;
+import com.ixcode.bugsim.agent.cabbage.layout.IResourceLayout;
+import com.ixcode.bugsim.agent.cabbage.EggCounter;
+import com.ixcode.bugsim.experiment.BugsimExperimentBase;
+import com.ixcode.bugsim.experiment.experimentX.configuration.LandscapeConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.configuration.SimulationConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.configuration.ResourceConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.configuration.PopulationWebConfiguration;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.report.CabbageButterflyDetailReporter;
+import com.ixcode.bugsim.experiment.report.ExperimentXSummaryReporter;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.experiment.model.ExperimentProgress;
 import com.ixcode.framework.math.scale.DistanceUnitRegistry;

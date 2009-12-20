@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.output;
+package com.ixcode.bugsim.experiment.output;
 
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.io.csv.CSVWriter;

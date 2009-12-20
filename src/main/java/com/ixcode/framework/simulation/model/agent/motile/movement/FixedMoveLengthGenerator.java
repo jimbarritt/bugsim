@@ -7,7 +7,7 @@ import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
 
 import java.util.Map;
 import java.text.DecimalFormat;

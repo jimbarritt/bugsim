@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout;
+package com.ixcode.bugsim.experiment.parameter.resource.layout;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.BoundaryStrategyBase;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.CentredBoundaryLocationDerivedCalculation;

@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.matchstick;
+package com.ixcode.bugsim.experiment.report.matchstick;
 
-import com.ixcode.bugsim.model.agent.boundary.BoundaryAgentIntersection;
-import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgent;
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickAgent;
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickAgentFilter;
+import com.ixcode.bugsim.agent.boundary.BoundaryAgentIntersection;
+import com.ixcode.bugsim.agent.boundary.IBoundaryAgent;
+import com.ixcode.bugsim.agent.matchstick.MatchstickAgent;
+import com.ixcode.bugsim.agent.matchstick.MatchstickAgentFilter;
 import com.ixcode.framework.io.csv.CSVWriter;
 import com.ixcode.framework.simulation.experiment.report.SimulationWriterBase;
 import com.ixcode.framework.simulation.model.Simulation;

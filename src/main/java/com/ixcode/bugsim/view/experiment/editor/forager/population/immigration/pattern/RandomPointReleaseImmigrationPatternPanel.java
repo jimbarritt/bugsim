@@ -7,7 +7,7 @@ import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 import com.ixcode.framework.swing.property.CheckBoxPropertyEditor;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.RandomPointReleaseImmigrationStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.RandomPointReleaseImmigrationStrategyDefinition;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;

@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.release;
 
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.release.RandomBoundaryReleaseStrategy;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.release.RandomBoundaryReleaseStrategy;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

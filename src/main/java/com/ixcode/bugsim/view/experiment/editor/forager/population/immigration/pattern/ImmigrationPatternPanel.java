@@ -5,7 +5,7 @@ package com.ixcode.bugsim.view.experiment.editor.forager.population.immigration.
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyPanel;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.pattern.ImmigrationPatternStrategyFactory;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.parameter.model.StrategyRegistry;
 

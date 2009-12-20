@@ -9,9 +9,9 @@ import com.ixcode.framework.simulation.experiment.ExperimentTemplateRegistry;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.swing.JFrameExtension;
-import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
-import com.ixcode.bugsim.model.experiment.BugsimExperimentTemplateRegistry;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentXFactory;
+import com.ixcode.bugsim.experiment.BugsimExtensionJavaBeanValueFormats;
+import com.ixcode.bugsim.experiment.BugsimExperimentTemplateRegistry;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentXFactory;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionListener;

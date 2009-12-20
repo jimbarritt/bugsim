@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage;
+package com.ixcode.bugsim.agent.cabbage;
 
 import com.ixcode.framework.simulation.model.agent.AgentInfoBase;
 import com.ixcode.framework.simulation.model.agent.IAgentInfo;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFactory;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFactory;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

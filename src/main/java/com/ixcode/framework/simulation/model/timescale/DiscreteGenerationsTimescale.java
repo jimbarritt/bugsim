@@ -5,7 +5,7 @@ package com.ixcode.framework.simulation.model.timescale;
 
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
 
 import java.util.Map;
 

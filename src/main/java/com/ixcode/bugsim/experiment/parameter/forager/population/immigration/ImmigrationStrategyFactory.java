@@ -1,15 +1,15 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration;
 
 import com.ixcode.framework.parameter.model.StrategyRegistry;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.InitialImmigrationStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.ScheduledImmigrationStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.TimedImmigrationStrategy;
+import com.ixcode.bugsim.agent.butterfly.immigration.InitialImmigrationStrategy;
+import com.ixcode.bugsim.agent.butterfly.immigration.ScheduledImmigrationStrategy;
+import com.ixcode.bugsim.agent.butterfly.immigration.TimedImmigrationStrategy;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

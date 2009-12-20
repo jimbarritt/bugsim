@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.experimentX;
+package com.ixcode.bugsim.experiment.experimentX;
 
 import com.ixcode.framework.simulation.model.Simulation;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
 
 /**
  * Description : ${INTERFACE_DESCRIPTION}

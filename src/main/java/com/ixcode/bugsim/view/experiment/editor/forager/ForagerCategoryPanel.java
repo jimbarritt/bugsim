@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.BehaviourCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.ForagerCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.BehaviourCategory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.forager.foraging.ForagingStrategyPanel;

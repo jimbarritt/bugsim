@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage.signal;
+package com.ixcode.bugsim.agent.cabbage.signal;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.CabbageParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.CabbageParameters;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.ParameterisedStrategyFactory;

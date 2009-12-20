@@ -3,9 +3,9 @@
  */
 package com.ixcode.bugsim.view;
 
-import com.ixcode.bugsim.model.agent.cabbage.AttractionFieldAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.agent.cabbage.AttractionFieldAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
 import com.ixcode.bugsim.view.landscape.LandscapeFrame;
 import com.ixcode.bugsim.view.landscape.LandscapeView;
 import com.ixcode.bugsim.view.agent.AgentRendererRegistry;

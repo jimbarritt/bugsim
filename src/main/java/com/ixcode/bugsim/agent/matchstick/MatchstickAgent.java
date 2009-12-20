@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.matchstick;
+package com.ixcode.bugsim.agent.matchstick;
 
-import com.ixcode.bugsim.model.agent.boundary.BoundaryAgentFilter;
-import com.ixcode.bugsim.model.agent.boundary.BoundaryAgentIntersection;
-import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.BoundaryAgentFilter;
+import com.ixcode.bugsim.agent.boundary.BoundaryAgentIntersection;
+import com.ixcode.bugsim.agent.boundary.IBoundaryAgent;
 import com.ixcode.framework.math.DoubleMath;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.math.geometry.Geometry;

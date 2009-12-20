@@ -1,12 +1,12 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.simulation.model.landscape.Location;
 import com.ixcode.framework.simulation.model.agent.motile.movement.Move;
-import com.ixcode.bugsim.model.agent.butterfly.ForagingAgentBehaviour;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.butterfly.ForagingAgentBehaviour;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

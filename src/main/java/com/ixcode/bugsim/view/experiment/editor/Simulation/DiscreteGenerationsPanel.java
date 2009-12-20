@@ -4,8 +4,8 @@
 package com.ixcode.bugsim.view.experiment.editor.Simulation;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.ContinuousTimescaleStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.ContinuousTimescaleStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.simulation.timescale.DiscreteTimescaleStrategyDefinition;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;
 

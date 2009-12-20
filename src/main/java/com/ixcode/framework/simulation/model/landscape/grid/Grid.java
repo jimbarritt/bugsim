@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.model.landscape.grid;
 
-import com.ixcode.bugsim.model.agent.boundary.CircularBoundaryAgent;
-import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.CircularBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.IBoundaryAgent;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.geometry.Intersection;

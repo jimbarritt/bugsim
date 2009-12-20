@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter;
+package com.ixcode.bugsim.experiment.parameter;
 
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickFactory;
-import com.ixcode.bugsim.model.agent.matchstick.RandomMatchstickFactory;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeParameters;
+import com.ixcode.bugsim.agent.matchstick.MatchstickFactory;
+import com.ixcode.bugsim.agent.matchstick.RandomMatchstickFactory;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeParameters;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.math.geometry.CartesianDimensions;
 import com.ixcode.framework.parameter.model.*;

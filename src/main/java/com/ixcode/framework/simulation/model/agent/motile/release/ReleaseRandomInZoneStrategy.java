@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.release;
 
-import com.ixcode.bugsim.model.agent.boundary.CircularBoundaryAgent;
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.agent.boundary.CircularBoundaryAgent;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

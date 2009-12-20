@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.immigration.pattern;
+package com.ixcode.bugsim.agent.butterfly.immigration.pattern;
 
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

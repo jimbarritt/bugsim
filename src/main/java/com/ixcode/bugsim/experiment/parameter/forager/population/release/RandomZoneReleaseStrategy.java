@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.release;
+package com.ixcode.bugsim.experiment.parameter.forager.population.release;
 
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinition;

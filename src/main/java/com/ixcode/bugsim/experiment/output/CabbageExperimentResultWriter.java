@@ -1,14 +1,14 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.output;
+package com.ixcode.bugsim.experiment.output;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageRow;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatisticEntry;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatisticRow;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatistics;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.experiment.report.cabbage.CabbageRow;
+import com.ixcode.bugsim.experiment.report.cabbage.CabbageStatisticEntry;
+import com.ixcode.bugsim.experiment.report.cabbage.CabbageStatisticRow;
+import com.ixcode.bugsim.experiment.report.cabbage.CabbageStatistics;
 import com.ixcode.framework.datatype.analysis.AnalysisCategory;
 import com.ixcode.framework.datatype.analysis.AnalysisValue;
 import com.ixcode.framework.io.csv.CSVWriter;

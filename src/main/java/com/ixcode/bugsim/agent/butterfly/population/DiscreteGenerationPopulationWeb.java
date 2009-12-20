@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.simulation.model.timescale.DiscreteGenerationsTimescale;
 import org.apache.log4j.Logger;

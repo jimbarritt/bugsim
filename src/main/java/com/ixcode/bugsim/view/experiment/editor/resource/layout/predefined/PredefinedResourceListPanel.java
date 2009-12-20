@@ -3,9 +3,9 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.layout.predefined;
 
-import com.ixcode.bugsim.model.experiment.input.CabbageLoader;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.input.CabbageLoader;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
 import com.ixcode.framework.math.scale.IDistanceUnit;

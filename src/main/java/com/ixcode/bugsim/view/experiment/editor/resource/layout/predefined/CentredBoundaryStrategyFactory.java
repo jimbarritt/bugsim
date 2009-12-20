@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.layout.predefined;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.boundary.IStrategyDefinitionFactory;
 import com.ixcode.framework.parameter.model.StrategyDefinition;

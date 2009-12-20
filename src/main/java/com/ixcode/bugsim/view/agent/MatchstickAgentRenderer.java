@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.agent;
 
-import com.ixcode.bugsim.model.agent.boundary.BoundaryAgentIntersection;
-import com.ixcode.bugsim.model.agent.matchstick.MatchstickAgent;
+import com.ixcode.bugsim.agent.boundary.BoundaryAgentIntersection;
+import com.ixcode.bugsim.agent.matchstick.MatchstickAgent;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Landscape;

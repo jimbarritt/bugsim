@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.experimentX.configuration;
+package com.ixcode.bugsim.experiment.experimentX.configuration;
 
-import com.ixcode.bugsim.model.experiment.experimentX.IExperimentXConfiguration;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentX;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.experimentX.IExperimentXConfiguration;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentX;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
 import com.ixcode.framework.simulation.model.landscape.Landscape;
 
 /**

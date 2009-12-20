@@ -1,9 +1,5 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.framework.simulation.model.landscape;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.*;
 import com.ixcode.framework.math.geometry.*;
 import com.ixcode.framework.math.scale.*;
 import com.ixcode.framework.model.*;
@@ -16,13 +12,11 @@ import com.ixcode.framework.simulation.model.landscape.boundary.*;
 import static com.ixcode.framework.simulation.model.landscape.boundary.BoundaryShape.CIRCULAR;
 import com.ixcode.framework.simulation.model.landscape.grid.*;
 import com.ixcode.framework.simulation.model.landscape.information.*;
+import com.ixcode.bugsim.experiment.parameter.landscape.*;
 
 import java.beans.*;
 import java.util.*;
 
-/**
- * Description : ${CLASS_DESCRIPTION}
- */
 public class Landscape extends ModelBase implements PropertyChangeListener {
 
     private List<IAgent> agents = new ArrayList<IAgent>();
@@ -62,6 +56,10 @@ public class Landscape extends ModelBase implements PropertyChangeListener {
         setScaledHeight(height);
         this.simulation = simulation;
         logicalBounds = new CartesianBounds(0, 0, getExtentX(), getExtentY());
+    }
+
+    public Landscape(ScaledDistance extent) {
+        this(extent, extent);
     }
 
     public Landscape(ScaledDistance width, ScaledDistance height) {

@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.forager.sensor.olfactory;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
 import com.ixcode.framework.javabean.JavaBeanModelAdapter;
 import com.ixcode.framework.model.IModelAdapter;

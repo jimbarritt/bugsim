@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.signal.surface;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.SignalSurfaceStrategyFactory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyPanel;
 import com.ixcode.framework.model.IModelAdapter;

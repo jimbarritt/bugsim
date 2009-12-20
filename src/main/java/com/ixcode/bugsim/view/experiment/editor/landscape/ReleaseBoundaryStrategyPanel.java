@@ -15,7 +15,7 @@ import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.boundary.BoundaryPanel;
 import com.ixcode.bugsim.view.experiment.editor.boundary.DefaultBoundaryStrategyDefinitionFactory;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyParameterBinding;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
 
 import javax.swing.*;
 import java.awt.*;

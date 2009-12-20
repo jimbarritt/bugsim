@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.signal.surface.function;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.function.GaussianSignalFunctionStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.function.GaussianSignalFunctionStrategy;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
 import com.ixcode.framework.model.IModelAdapter;
 import com.ixcode.framework.swing.property.IPropertyValueEditor;

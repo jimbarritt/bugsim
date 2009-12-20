@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.agent.butterfly.population;
+package com.ixcode.bugsim.agent.butterfly.population;
 
 import com.ixcode.framework.model.ModelBase;
 import com.ixcode.framework.simulation.model.Simulation;
@@ -12,18 +12,18 @@ import com.ixcode.framework.simulation.model.agent.physical.ILarvalMortalityStra
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterisedStrategyFactory;
-import com.ixcode.bugsim.model.agent.butterfly.*;
-import com.ixcode.bugsim.model.agent.butterfly.immigration.IImmigrationStrategy;
-import com.ixcode.bugsim.model.agent.cabbage.EggCounter;
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgentFilter;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.PopulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.SensorCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.BehaviourCategory;
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.agent.butterfly.*;
+import com.ixcode.bugsim.agent.butterfly.immigration.IImmigrationStrategy;
+import com.ixcode.bugsim.agent.cabbage.EggCounter;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgentFilter;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.ForagerCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.PopulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.ImmigrationStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.SensorCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.BehaviourCategory;
+import com.ixcode.bugsim.experiment.parameter.BugsimParameterMap;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
 
 import java.util.Map;
 import java.util.List;

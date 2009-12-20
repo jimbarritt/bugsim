@@ -7,7 +7,7 @@ import com.ixcode.framework.parameter.model.Parameter;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.simulation.model.agent.motile.movement.sensory.MixedModelSignalAndDesireRandomWalk;
 import com.ixcode.framework.simulation.model.agent.physical.AgentBehaviour;
-import com.ixcode.bugsim.model.experiment.parameter.ButterflyParameters;
+import com.ixcode.bugsim.experiment.parameter.ButterflyParameters;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

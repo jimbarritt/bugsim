@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter;
+package com.ixcode.bugsim.experiment.parameter;
 
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.Category;

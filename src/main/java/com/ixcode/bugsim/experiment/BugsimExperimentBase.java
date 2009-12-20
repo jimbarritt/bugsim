@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment;
+package com.ixcode.bugsim.experiment;
 
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.experiment.model.report.IExperimentReporter;

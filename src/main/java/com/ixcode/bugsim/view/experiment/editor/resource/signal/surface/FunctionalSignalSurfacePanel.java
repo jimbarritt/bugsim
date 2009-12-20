@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.signal.surface;
 
-import com.ixcode.bugsim.model.experiment.parameter.resource.signal.surface.FunctionalSignalSurfaceStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.signal.surface.FunctionalSignalSurfaceStrategy;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.resource.signal.surface.function.SignalFunctionPanel;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;

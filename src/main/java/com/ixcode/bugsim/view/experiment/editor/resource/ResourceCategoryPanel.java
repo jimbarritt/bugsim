@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.experiment.parameter.resource.ResourceCategory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.ParameterGroupPanel;
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyParameterBinding;

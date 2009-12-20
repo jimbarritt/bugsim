@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.landscape.action;
 
-import com.ixcode.bugsim.model.experiment.output.CabbageExperimentResultWriter;
-import com.ixcode.bugsim.model.experiment.output.SimulationResultWriter;
+import com.ixcode.bugsim.experiment.output.CabbageExperimentResultWriter;
+import com.ixcode.bugsim.experiment.output.SimulationResultWriter;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.simulation.model.Simulation;
 import com.ixcode.framework.swing.action.ActionBase;

@@ -1,13 +1,13 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.matchstick;
+package com.ixcode.bugsim.agent.matchstick;
 
-import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgent;
-import com.ixcode.bugsim.model.agent.boundary.IBoundaryAgentFactory;
-import com.ixcode.bugsim.model.agent.boundary.NamedBoundaryAgentFilter;
-import com.ixcode.bugsim.model.experiment.parameter.MatchstickParameters;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.agent.boundary.IBoundaryAgent;
+import com.ixcode.bugsim.agent.boundary.IBoundaryAgentFactory;
+import com.ixcode.bugsim.agent.boundary.NamedBoundaryAgentFilter;
+import com.ixcode.bugsim.experiment.parameter.MatchstickParameters;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.Geometry;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;

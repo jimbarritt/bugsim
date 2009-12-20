@@ -16,7 +16,7 @@ import com.ixcode.bugsim.view.experiment.editor.forager.population.mortality.lar
 import com.ixcode.bugsim.view.experiment.editor.forager.population.mortality.larval.DefaultLarvalMortalityStrategyDefinitionFactory;
 import com.ixcode.bugsim.view.experiment.editor.forager.population.immigration.ImmigrationPanel;
 import com.ixcode.bugsim.view.experiment.editor.forager.population.immigration.DefaultImmigrationStrategyDefinitionFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.PopulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.PopulationCategory;
 
 import javax.swing.*;
 import java.awt.*;

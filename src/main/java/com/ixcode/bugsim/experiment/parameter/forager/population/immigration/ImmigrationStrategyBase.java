@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration;
+package com.ixcode.bugsim.experiment.parameter.forager.population.immigration;
 
 import com.ixcode.framework.parameter.model.*;
 

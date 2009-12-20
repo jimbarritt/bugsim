@@ -3,9 +3,9 @@
  */
 package com.ixcode.framework.simulation.model.agent.physical;
 
-import com.ixcode.bugsim.model.agent.cabbage.ForagerEgg;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
+import com.ixcode.bugsim.agent.cabbage.ForagerEgg;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.simulation.model.Simulation;

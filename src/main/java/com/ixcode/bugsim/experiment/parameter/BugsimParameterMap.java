@@ -1,16 +1,13 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter;
+package com.ixcode.bugsim.experiment.parameter;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.ForagerCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.CompetitorCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.ParasitoidCategory;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.ResourceCategory;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.framework.parameter.model.Category;
-import com.ixcode.framework.parameter.model.ParameterMap;
+import com.ixcode.bugsim.experiment.parameter.forager.*;
+import com.ixcode.bugsim.experiment.parameter.landscape.*;
+import com.ixcode.bugsim.experiment.parameter.resource.*;
+import com.ixcode.bugsim.experiment.parameter.simulation.*;
+import com.ixcode.framework.parameter.model.*;
 
 
 /**

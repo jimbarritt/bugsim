@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated;
+package com.ixcode.bugsim.experiment.parameter.resource.layout.calculated;
 
-import com.ixcode.bugsim.model.agent.cabbage.layout.CalculatedResourceLayout;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.agent.cabbage.layout.CalculatedResourceLayout;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.math.geometry.CoordinateDistributor;
 import com.ixcode.framework.math.geometry.CartesianDimensions;

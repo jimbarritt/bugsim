@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.simulation.model.agent.IAgent;
 import com.ixcode.framework.simulation.model.agent.IAgentFilter;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
 
 /**
  * Description : Filters only cabbages

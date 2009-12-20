@@ -3,7 +3,7 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.boundary;
 
-import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
+import com.ixcode.bugsim.experiment.BugsimExtensionJavaBeanValueFormats;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.framework.javabean.JavaBeanModelAdapter;
 import com.ixcode.framework.parameter.model.*;

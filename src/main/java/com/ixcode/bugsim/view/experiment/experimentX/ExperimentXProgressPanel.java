@@ -4,10 +4,10 @@
 package com.ixcode.bugsim.view.experiment.experimentX;
 
 
-import com.ixcode.bugsim.model.agent.butterfly.population.*;
-import com.ixcode.bugsim.model.agent.cabbage.EggCounter;
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
-import com.ixcode.bugsim.model.experiment.experimentX.ExperimentX;
+import com.ixcode.bugsim.agent.butterfly.population.*;
+import com.ixcode.bugsim.agent.cabbage.EggCounter;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.experiment.experimentX.ExperimentX;
 import com.ixcode.framework.javabean.JavaBeanException;
 import com.ixcode.framework.javabean.JavaBeanModelAdapter;
 import com.ixcode.framework.model.IModelAdapter;

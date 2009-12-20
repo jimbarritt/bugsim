@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report;
+package com.ixcode.bugsim.experiment.report;
 
 import com.ixcode.framework.simulation.experiment.report.BoundaryCrossingWriter;
 import com.ixcode.framework.experiment.model.report.ExperimentReportController;
@@ -10,7 +10,7 @@ import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.experiment.model.ExperimentProgress;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.simulation.model.Simulation;
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
 import org.apache.log4j.Logger;
 
 import java.io.File;

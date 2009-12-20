@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;
@@ -10,8 +10,8 @@ import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.motile.IOlfactoryAgent;
 import com.ixcode.framework.simulation.model.agent.motile.movement.sensory.SignalSensor;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.SignalSensorOlfactoryStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.sensor.olfactory.OlfactorySensorStrategy;
 
 import java.util.ArrayList;
 import java.util.Iterator;

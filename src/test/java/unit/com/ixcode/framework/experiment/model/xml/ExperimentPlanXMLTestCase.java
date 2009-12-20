@@ -3,7 +3,7 @@
  */
 package com.ixcode.framework.experiment.model.xml;
 
-import com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats;
+import com.ixcode.bugsim.experiment.BugsimExtensionJavaBeanValueFormats;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.ParameterMapDebug;

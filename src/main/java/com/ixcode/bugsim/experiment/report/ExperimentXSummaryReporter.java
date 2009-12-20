@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report;
+package com.ixcode.bugsim.experiment.report;
                                                                                         
-import com.ixcode.bugsim.model.experiment.IBugsimExperiment;
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.IBugsimExperiment;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
 import com.ixcode.framework.experiment.model.ExperimentProgress;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.experiment.model.report.ExperimentReportController;

@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly.mortality;
+package com.ixcode.bugsim.agent.butterfly.mortality;
 
 import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
-import com.ixcode.bugsim.model.agent.butterfly.mortality.LimitedAgeAdultMortalityStrategy;
+import com.ixcode.bugsim.agent.butterfly.mortality.LimitedAgeAdultMortalityStrategy;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

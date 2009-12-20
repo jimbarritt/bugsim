@@ -1,13 +1,11 @@
-/**
- * (c) planet-ix ltd 2005
- */
 package com.ixcode.bugsim;
 
-import com.ixcode.bugsim.model.experiment.*;
-import static com.ixcode.bugsim.model.experiment.BugsimExtensionJavaBeanValueFormats.*;
+
 import com.ixcode.bugsim.server.*;
 import com.ixcode.bugsim.view.experiment.*;
 import com.ixcode.bugsim.view.experiment.editor.*;
+import com.ixcode.bugsim.experiment.*;
+import static com.ixcode.bugsim.experiment.BugsimExtensionJavaBeanValueFormats.registerBugsimJavaBeanExtensionFormats;
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.experiment.model.xml.*;
 import com.ixcode.framework.io.*;

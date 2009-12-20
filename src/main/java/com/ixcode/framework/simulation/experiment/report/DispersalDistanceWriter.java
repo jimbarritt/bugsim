@@ -3,8 +3,8 @@
  */
 package com.ixcode.framework.simulation.experiment.report;
 
-import com.ixcode.bugsim.model.experiment.report.butterfly.ButterflyDispersalRow;
-import com.ixcode.bugsim.model.experiment.report.butterfly.ButterflyStatistics;
+import com.ixcode.bugsim.experiment.report.butterfly.ButterflyDispersalRow;
+import com.ixcode.bugsim.experiment.report.butterfly.ButterflyStatistics;
 import com.ixcode.framework.io.csv.CSVWriter;
 import com.ixcode.framework.math.stats.DescriptiveStatistics;
 import com.ixcode.framework.simulation.model.Simulation;

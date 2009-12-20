@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.simulation.model.agent.AgentInfoBase;
 import com.ixcode.framework.simulation.model.agent.IAgentInfo;
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgentFactory;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgentFactory;
 
 /**
  *  Description : ${CLASS_DESCRIPTION}

@@ -3,9 +3,9 @@
  */
 package com.ixcode.framework.simulation.model.agent.motile.movement;
 
-import com.ixcode.bugsim.model.experiment.parameter.simulation.SimulationCategory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyBase;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.simulation.SimulationCategory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyBase;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
 import com.ixcode.framework.math.geometry.CourseChange;
 import com.ixcode.framework.math.geometry.DirectionOfChange;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;

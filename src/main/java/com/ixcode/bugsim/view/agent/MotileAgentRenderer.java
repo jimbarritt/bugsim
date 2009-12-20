@@ -3,9 +3,9 @@
  */
 package com.ixcode.bugsim.view.agent;
 
-import com.ixcode.bugsim.model.agent.butterfly.FieldOfViewVisualStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.IForagingStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.EggLayingForagingStrategy;
+import com.ixcode.bugsim.agent.butterfly.FieldOfViewVisualStrategy;
+import com.ixcode.bugsim.agent.butterfly.IForagingStrategy;
+import com.ixcode.bugsim.agent.butterfly.EggLayingForagingStrategy;
 import com.ixcode.bugsim.view.landscape.*;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.math.geometry.ICoordinatePath;

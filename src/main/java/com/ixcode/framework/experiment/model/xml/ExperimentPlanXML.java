@@ -4,7 +4,7 @@
 package com.ixcode.framework.experiment.model.xml;
 
 import com.ixcode.bugsim.*;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.*;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.*;
 import com.ixcode.framework.experiment.model.*;
 import com.ixcode.framework.javabean.format.*;
 import com.ixcode.framework.math.geometry.*;

@@ -6,8 +6,8 @@ package com.ixcode.bugsim.view.experiment.editor.forager.population.immigration;
 import com.ixcode.bugsim.view.experiment.editor.boundary.IStrategyDefinitionFactory;
 import com.ixcode.bugsim.view.experiment.editor.IParameterMapLookup;
 import com.ixcode.bugsim.view.experiment.editor.forager.population.mortality.adult.DefaultAdultMortalityStrategyDefinitionFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.AdultMortalityStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.immigration.ImmigrationStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.AdultMortalityStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.population.immigration.ImmigrationStrategyFactory;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
 
 /**

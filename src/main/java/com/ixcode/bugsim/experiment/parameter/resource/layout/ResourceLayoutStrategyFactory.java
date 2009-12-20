@@ -1,16 +1,16 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout;
+package com.ixcode.bugsim.experiment.parameter.resource.layout;
 
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.StrategyRegistry;
 import com.ixcode.framework.parameter.model.StrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
-import com.ixcode.bugsim.model.agent.cabbage.layout.PredefinedResourceLayout;
-import com.ixcode.bugsim.model.agent.cabbage.layout.CalculatedResourceLayout;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.calculated.CalculatedResourceLayoutStrategy;
+import com.ixcode.bugsim.agent.cabbage.layout.PredefinedResourceLayout;
+import com.ixcode.bugsim.agent.cabbage.layout.CalculatedResourceLayout;
 
 import java.lang.reflect.Constructor;
 

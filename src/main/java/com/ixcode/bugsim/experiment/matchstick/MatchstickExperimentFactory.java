@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.matchstick;
+package com.ixcode.bugsim.experiment.matchstick;
 
 import com.ixcode.bugsim.BugsimMain;
-import com.ixcode.bugsim.model.experiment.parameter.EnvironmentParameters;
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeParameters;
+import com.ixcode.bugsim.experiment.parameter.EnvironmentParameters;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeParameters;
 import com.ixcode.framework.experiment.model.ExperimentPlan;
 import com.ixcode.framework.experiment.model.IExperiment;
 import com.ixcode.framework.experiment.model.IExperimentFactory;

@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.release;
+package com.ixcode.bugsim.experiment.parameter.forager.population.release;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
 import com.ixcode.framework.math.geometry.ShapeLocationType;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.*;

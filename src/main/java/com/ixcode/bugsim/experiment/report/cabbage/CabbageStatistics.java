@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.cabbage;
+package com.ixcode.bugsim.experiment.report.cabbage;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.experiment.report.cabbage.CabbageStatisticEntry;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.experiment.report.cabbage.CabbageStatisticEntry;
 import com.ixcode.framework.datatype.analysis.AnalysisCategory;
 import com.ixcode.framework.datatype.analysis.AnalysisValue;
 

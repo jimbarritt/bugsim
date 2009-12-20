@@ -4,8 +4,8 @@
 package com.ixcode.bugsim.view.experiment.editor.forager.population.mortality.larval;
 
 import com.ixcode.bugsim.view.experiment.editor.strategy.StrategyDetailsPanel;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.CompetitiveLarvalMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.DirectLarvalMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.CompetitiveLarvalMortalityStrategyDefinition;
 import com.ixcode.framework.model.IModelAdapter;
 
 /**

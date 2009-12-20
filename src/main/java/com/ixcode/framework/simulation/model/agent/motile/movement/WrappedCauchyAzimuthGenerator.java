@@ -12,8 +12,8 @@ import com.ixcode.framework.math.random.WrappedCauchyRandom;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.simulation.model.agent.motile.movement.sensory.VisualSignal;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
-import com.ixcode.bugsim.model.experiment.parameter.forager.behaviour.movement.azimuth.WrappedCauchyAzimuthStrategy;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.AzimuthStrategyFactory;
+import com.ixcode.bugsim.experiment.parameter.forager.behaviour.movement.azimuth.WrappedCauchyAzimuthStrategy;
 
 import java.util.Random;
 import java.util.Map;

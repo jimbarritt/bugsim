@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.sensor.visual;
+package com.ixcode.bugsim.experiment.parameter.forager.sensor.visual;
 
-import com.ixcode.bugsim.model.agent.butterfly.FieldOfViewVisualStrategy;
+import com.ixcode.bugsim.agent.butterfly.FieldOfViewVisualStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;
 import com.ixcode.framework.parameter.model.StrategyRegistry;

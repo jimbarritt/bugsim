@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly;
+package com.ixcode.bugsim.agent.butterfly;
 
 import com.ixcode.framework.simulation.model.agent.IAgentFactory;
 import com.ixcode.framework.simulation.model.agent.motile.movement.RandomWalkStrategy;
@@ -9,7 +9,7 @@ import com.ixcode.framework.simulation.model.agent.physical.IPhysicalAgent;
 import com.ixcode.framework.simulation.model.landscape.Location;
 import com.ixcode.framework.simulation.model.landscape.information.GravitationalCalculator;
 import com.ixcode.framework.simulation.model.landscape.information.function.ExponentialDecaySignalFunction;
-import com.ixcode.bugsim.model.agent.butterfly.mortality.LimitedEggsAdultMortalityStrategy;
+import com.ixcode.bugsim.agent.butterfly.mortality.LimitedEggsAdultMortalityStrategy;
 
 import java.util.ArrayList;
 import java.util.Random;

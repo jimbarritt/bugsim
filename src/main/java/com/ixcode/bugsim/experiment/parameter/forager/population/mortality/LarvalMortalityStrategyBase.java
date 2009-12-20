@@ -1,7 +1,7 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality;
+package com.ixcode.bugsim.experiment.parameter.forager.population.mortality;
 
 import com.ixcode.framework.parameter.model.StrategyDefinition;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;

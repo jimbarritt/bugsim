@@ -1,11 +1,11 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.cabbage.layout;
+package com.ixcode.bugsim.agent.cabbage.layout;
 
-import com.ixcode.bugsim.model.agent.cabbage.CabbageAgent;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
+import com.ixcode.bugsim.agent.cabbage.CabbageAgent;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.PredefinedResourceLayoutStrategy;
 import com.ixcode.framework.math.geometry.CartesianBounds;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
 import com.ixcode.framework.math.stats.SummaryStatistics;

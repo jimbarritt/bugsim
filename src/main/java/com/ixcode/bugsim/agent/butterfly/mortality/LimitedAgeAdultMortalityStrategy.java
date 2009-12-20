@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.agent.butterfly.mortality;
+package com.ixcode.bugsim.agent.butterfly.mortality;
 
-import com.ixcode.bugsim.model.experiment.parameter.forager.population.mortality.LimitedAgeAdultMortalityStrategyDefinition;
+import com.ixcode.bugsim.experiment.parameter.forager.population.mortality.LimitedAgeAdultMortalityStrategyDefinition;
 import com.ixcode.framework.parameter.model.IParameterisedStrategy;
 import com.ixcode.framework.parameter.model.ParameterMap;
 import com.ixcode.framework.parameter.model.StrategyDefinitionParameter;

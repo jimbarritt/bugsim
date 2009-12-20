@@ -1,9 +1,9 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.report.butterfly;
+package com.ixcode.bugsim.experiment.report.butterfly;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
 import com.ixcode.framework.math.stats.DescriptiveStatistics;
 
 import java.util.ArrayList;

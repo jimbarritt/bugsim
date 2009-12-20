@@ -1,10 +1,10 @@
 /**
  * (c) planet-ix ltd 2007
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined;
+package com.ixcode.bugsim.experiment.parameter.resource.layout.predefined;
 
-import com.ixcode.bugsim.model.agent.cabbage.layout.PredefinedResourceLayout;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
+import com.ixcode.bugsim.agent.cabbage.layout.PredefinedResourceLayout;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceLayoutStrategyBase;
 import com.ixcode.framework.math.geometry.CartesianDimensions;
 import com.ixcode.framework.parameter.model.*;
 import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.RectangularBoundaryStrategy;

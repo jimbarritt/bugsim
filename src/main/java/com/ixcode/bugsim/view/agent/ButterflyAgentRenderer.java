@@ -3,9 +3,9 @@
  */
 package com.ixcode.bugsim.view.agent;
 
-import com.ixcode.bugsim.model.agent.butterfly.ButterflyAgent;
-import com.ixcode.bugsim.model.agent.butterfly.IOlfactionStrategy;
-import com.ixcode.bugsim.model.agent.butterfly.SignalSensorOlfactoryStrategy;
+import com.ixcode.bugsim.agent.butterfly.ButterflyAgent;
+import com.ixcode.bugsim.agent.butterfly.IOlfactionStrategy;
+import com.ixcode.bugsim.agent.butterfly.SignalSensorOlfactoryStrategy;
 import com.ixcode.framework.math.geometry.AzimuthCoordinate;
 import com.ixcode.framework.simulation.model.agent.motile.IMotileAgent;
 import com.ixcode.framework.simulation.model.agent.motile.IOlfactoryAgent;

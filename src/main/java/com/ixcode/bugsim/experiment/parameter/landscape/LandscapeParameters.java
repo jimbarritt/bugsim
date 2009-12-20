@@ -1,25 +1,22 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter.landscape;
+package com.ixcode.bugsim.experiment.parameter.landscape;
 
-import com.ixcode.bugsim.model.experiment.parameter.BugsimParameterMap;
-import com.ixcode.bugsim.model.experiment.parameter.EnvironmentParameters;
-import com.ixcode.framework.experiment.model.ExperimentPlan;
-import com.ixcode.framework.math.geometry.CartesianBounds;
-import com.ixcode.framework.math.geometry.RectangularCoordinate;
+import com.ixcode.bugsim.experiment.parameter.*;
+import com.ixcode.framework.experiment.model.*;
+import com.ixcode.framework.math.geometry.*;
+import com.ixcode.framework.parameter.model.Category;
 import com.ixcode.framework.parameter.model.*;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.BoundaryParameters;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.DistancedExtentStrategy;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.FixedExtentStrategy;
-import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.BoundaryStrategyBase;
-import com.ixcode.framework.simulation.model.landscape.Landscape;
-import com.ixcode.framework.simulation.model.landscape.boundary.BoundaryBase;
-import com.ixcode.framework.simulation.model.landscape.boundary.BoundaryShape;
-import org.apache.log4j.Logger;
+import com.ixcode.framework.simulation.experiment.parameter.boundary.*;
+import com.ixcode.framework.simulation.experiment.parameter.boundary.extent.*;
+import com.ixcode.framework.simulation.experiment.parameter.boundary.strategy.*;
+import com.ixcode.framework.simulation.model.landscape.*;
+import com.ixcode.framework.simulation.model.landscape.boundary.*;
+import org.apache.log4j.*;
 
-import java.text.DecimalFormat;
-import java.util.Map;
+import java.text.*;
+import java.util.*;
 
 /**
  * Description : ${CLASS_DESCRIPTION}

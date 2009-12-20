@@ -3,8 +3,8 @@
  */
 package com.ixcode.bugsim.view.experiment.editor.resource.layout.predefined;
 
-import com.ixcode.bugsim.model.experiment.parameter.landscape.LandscapeCategory;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.ResourceListFile;
+import com.ixcode.bugsim.experiment.parameter.landscape.LandscapeCategory;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.ResourceListFile;
 import com.ixcode.framework.math.scale.ScaledDistance;
 import com.ixcode.framework.swing.action.ActionBase;
 

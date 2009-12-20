@@ -1,14 +1,14 @@
 /**
  * (c) planet-ix ltd 2005
  */
-package com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined;
+package com.ixcode.bugsim.experiment.parameter.resource.layout.predefined;
 
 import com.ixcode.framework.javabean.format.DoubleFormat;
 import com.ixcode.framework.javabean.format.IJavaBeanValueFormat;
 import com.ixcode.framework.javabean.format.JavaBeanParseException;
 import com.ixcode.framework.javabean.format.LongFormat;
 import com.ixcode.framework.math.geometry.RectangularCoordinate;
-import com.ixcode.bugsim.model.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
+import com.ixcode.bugsim.experiment.parameter.resource.layout.predefined.CabbageInitialisationParameters;
 
 import java.util.HashMap;
 import java.util.Map;
