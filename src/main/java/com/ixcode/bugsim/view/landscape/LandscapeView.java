@@ -4,7 +4,6 @@ import com.ixcode.bugsim.view.grid.*;
 import com.ixcode.bugsim.view.landscape.mouse.*;
 import com.ixcode.bugsim.view.landscape.viewmode.*;
 import com.ixcode.framework.math.geometry.*;
-import com.ixcode.framework.simulation.model.*;
 import com.ixcode.framework.simulation.model.landscape.*;
 import com.ixcode.framework.swing.*;
 import static com.ixcode.framework.swing.ViewModeName.*;
@@ -26,7 +25,7 @@ public class LandscapeView extends JComponent {
     private final GridLineRenderer gridLineRenderer = new GridLineRenderer();
     private final LandscapeRenderer landscapeRenderer = new LandscapeRenderer();
 
-    private final LandscapeToViewModel landscapeToViewModel;
+    private final LandscapeToViewTranslation landscapeToViewTranslation;
 
     public LandscapeView(Landscape landscape, StatusBar statusBar) {
         this.landscape = landscape;
@@ -35,8 +34,8 @@ public class LandscapeView extends JComponent {
         setBackground(Color.white);
         addMouseMotionListener(new LandscapeMouseLocationListener(this, statusBar));
 
-        landscapeToViewModel = new LandscapeToViewModel(landscape);
-        landscapeToViewModel.centreViewOnLandscape();
+        landscapeToViewTranslation = new LandscapeToViewTranslation(landscape);
+        landscapeToViewTranslation.centreViewOnLandscape();
     }
 
     public void setCurrentViewMode(ViewModeName modeName) {
@@ -67,7 +66,8 @@ public class LandscapeView extends JComponent {
 
         backgroundRenderer.render(graphics2D, getBackgroundColor());
 
-        landscapeToViewModel.scaleView(graphics2D);
+        landscapeToViewTranslation.scaleToFitInView(graphics2D.getClipBounds());
+        graphics2D.scale(landscapeToViewTranslation.scaleX(), landscapeToViewTranslation.scaleY());
 
         landscapeRenderer.render(this, graphics2D);
 
@@ -98,39 +98,39 @@ public class LandscapeView extends JComponent {
     }
 
     public Location getLocationOnLandscapeFrom(Point screenPoint) {
-        return landscapeToViewModel.getLocationOnLandscapeFrom(screenPoint);
+        return landscapeToViewTranslation.landscapeLocationFromViewPoint(screenPoint);
     }
 
     public Location getLocationOnLandscapeSnappedFrom(Point point) {
-        return landscapeToViewModel.getLocationOnLandscapeSnappedFrom(point);
+        return landscapeToViewTranslation.getLocationOnLandscapeSnappedFrom(point);
     }
 
     public double getLandscapeDistanceX(double screenDistance) {
-        return landscapeToViewModel.getLandscapeDistanceX(screenDistance);
+        return landscapeToViewTranslation.getLandscapeDistanceX(screenDistance);
     }
 
     public double getLandscapeDistanceY(double screenDistance) {
-        return landscapeToViewModel.getLandscapeDistanceY(screenDistance);
+        return landscapeToViewTranslation.getLandscapeDistanceY(screenDistance);
     }
 
     public double getScreenDistanceX(double landscapeDistance) {
-        return landscapeToViewModel.getScreenDistanceX(landscapeDistance);
+        return landscapeToViewTranslation.getScreenDistanceX(landscapeDistance);
     }
 
     public double getScreenDistanceY(double landscapeDistance) {
-        return landscapeToViewModel.getScreenDistanceY(landscapeDistance);
+        return landscapeToViewTranslation.getScreenDistanceY(landscapeDistance);
     }
 
     public RectangularCoordinate getCenterOfViewOnLandscape() {
-        return landscapeToViewModel.getCenterOfViewOnLandscape();
+        return landscapeToViewTranslation.getCenterOfViewOnLandscape();
     }
 
     public void centerViewOnLandscapeCoordinate(RectangularCoordinate landscapeCoordinate) {
-        landscapeToViewModel.centerViewOnLandscapeCoordinate(landscapeCoordinate);
+        landscapeToViewTranslation.centerViewOnLandscapeCoordinate(landscapeCoordinate);
     }
 
     public double getWidthOfLandscapeInView() {
-        return landscapeToViewModel.getWidthOfLandscapeInView();
+        return landscapeToViewTranslation.getWidthOfLandscapeInView();
     }
 
 }

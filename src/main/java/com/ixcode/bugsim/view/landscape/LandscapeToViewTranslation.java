@@ -6,8 +6,8 @@ import com.ixcode.framework.simulation.model.landscape.*;
 import java.io.*;
 import java.awt.*;
 
-public class LandscapeToViewModel implements Serializable {
-    
+public class LandscapeToViewTranslation implements Serializable {
+
     private RectangularCoordinate viewOriginOverLandscape;
     private RectangularCoordinate viewCentreOverLandscape;
     private boolean fitLandscapeToView = true;
@@ -17,25 +17,34 @@ public class LandscapeToViewModel implements Serializable {
     private double heightOfLandscapeInView;
     private Landscape landscape;
 
-    public LandscapeToViewModel(Landscape landscape) {
+    public LandscapeToViewTranslation(Landscape landscape) {
         this.landscape = landscape;
+        centreViewOnLandscape();
     }
 
     public void centreViewOnLandscape() {
         centerViewOnLandscapeCoordinate(landscape.getLogicalBounds().getCentre());
     }
 
-    public void scaleView(Graphics2D graphics2D) {
-        Rectangle graphicsBounds = graphics2D.getClipBounds();
-        if (fitLandscapeToView) {
-            scaleX = (graphicsBounds.getWidth() / (landscape.getExtentX()));
-            scaleY = (graphicsBounds.getHeight() / (landscape.getExtentY()));
-        }
+    public void scaleToFitInView(Rectangle viewClipBounds) {
+        scaleX = (viewClipBounds.getWidth() / (landscape.getExtentX()));
+        scaleY = (viewClipBounds.getHeight() / (landscape.getExtentY()));
+        
+        widthOfLandscapeInView = (viewClipBounds.getWidth() / scaleX);
+        heightOfLandscapeInView = (viewClipBounds.getHeight() / scaleY);
+    }
 
-        widthOfLandscapeInView = (graphicsBounds.getWidth() / scaleX);
-        heightOfLandscapeInView = (graphicsBounds.getHeight() / scaleY);
+    public void centerViewOnLandscapeCoordinate(RectangularCoordinate landscapeCoordinate) {
+        viewCentreOverLandscape = landscapeCoordinate;
+        viewOriginOverLandscape = new RectangularCoordinate(0d, 0d);
+    }    
 
-        graphics2D.scale(scaleX, scaleY);
+    public double scaleX() {
+        return scaleX;
+    }
+
+    public double scaleY() {
+        return scaleY;
     }
 
     public static RectangularCoordinate getScreenCoord(Landscape landscape, RectangularCoordinate landscapeCoord) {
@@ -53,14 +62,14 @@ public class LandscapeToViewModel implements Serializable {
      *
      * @return the location
      */
-    public Location getLocationOnLandscapeFrom(Point screenPoint) {
+    public Location landscapeLocationFromViewPoint(Point screenPoint) {
         double landscapeX = (screenPoint.getX() / scaleX) + viewOriginOverLandscape.getDoubleX();
         double landscapeY = (heightOfLandscapeInView - (screenPoint.getY() / scaleY)) + viewOriginOverLandscape.getDoubleY();
         return new Location(landscapeX, landscapeY);
     }
 
     public Location getLocationOnLandscapeSnappedFrom(Point point) {
-        Location landscapeLocation = getLocationOnLandscapeFrom(point);
+        Location landscapeLocation = landscapeLocationFromViewPoint(point);
         double snappedX = Math.ceil(landscapeLocation.getDoubleX()) - 1;
         double snappedY = Math.ceil(landscapeLocation.getDoubleY()) - 1;
 
@@ -89,12 +98,10 @@ public class LandscapeToViewModel implements Serializable {
         return viewCentreOverLandscape;
     }
 
-    public void centerViewOnLandscapeCoordinate(RectangularCoordinate landscapeCoordinate) {
-        viewCentreOverLandscape = landscapeCoordinate;
-        viewOriginOverLandscape = new RectangularCoordinate(0d, 0d);
-    }
 
     public double getWidthOfLandscapeInView() {
         return widthOfLandscapeInView;
     }
+
+
 }

@@ -41,7 +41,7 @@ public class BugsimMain {
 
         setExperimentTemplateInstance(new BugsimExperimentTemplateRegistry());
         registerBugsimJavaBeanExtensionFormats();
-
+                                                                
         BugsimMainArgs ba = new BugsimMainArgs(args);
 
         initialiseExperiment(ba);

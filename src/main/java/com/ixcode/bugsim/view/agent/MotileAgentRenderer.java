@@ -35,7 +35,7 @@ public class MotileAgentRenderer extends PhysicalAgentRendererBase {
         MotileAgentBase bug = (MotileAgentBase)agent;
         double r = bug.getRadius();
 
-        RectangularCoordinate c = LandscapeToViewModel.getScreenCoord(landscape, agent.getLocation().getCoordinate());
+        RectangularCoordinate c = LandscapeToViewTranslation.getScreenCoord(landscape, agent.getLocation().getCoordinate());
 
         String contextId = "MotileAgentRenderer." + agent.getId();
 
@@ -218,7 +218,7 @@ public class MotileAgentRenderer extends PhysicalAgentRendererBase {
     private void drawBoundaryIntersections(Graphics2D g, List boundaryIntersections, Landscape landscape, RenderContext renderContext) {
         for (Iterator itr = boundaryIntersections.iterator(); itr.hasNext();) {
             RectangularCoordinate coordinate = (RectangularCoordinate)itr.next();
-            RectangularCoordinate lscpCoord = LandscapeToViewModel.getScreenCoord(landscape, coordinate);
+            RectangularCoordinate lscpCoord = LandscapeToViewTranslation.getScreenCoord(landscape, coordinate);
 
             Ellipse2D.Double ixCircle = new Ellipse2D.Double(lscpCoord.getDoubleX() - 1, lscpCoord.getDoubleY() - 1, 2, 2);
             g.setColor(Color.blue);
