@@ -69,7 +69,7 @@ public class DistanceRelativeToSeparationRenderer extends LandscapeRenderer {
     }
 
     protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
-        return LandscapeToViewModel.getScreenCoord(view.getLandscape(), coord);
+        return LandscapeToViewTranslation.getScreenCoord(view.getLandscape(), coord);
     }
 
     public boolean isVisible() {

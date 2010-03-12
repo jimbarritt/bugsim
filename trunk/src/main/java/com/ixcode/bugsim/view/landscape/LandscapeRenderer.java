@@ -100,7 +100,7 @@ public class LandscapeRenderer implements LandscapeLayer {
     }
 
     protected RectangularCoordinate getScreenCoord(LandscapeView view, RectangularCoordinate coord) {
-        return LandscapeToViewModel.getScreenCoord(view.getLandscape(), coord);
+        return LandscapeToViewTranslation.getScreenCoord(view.getLandscape(), coord);
     }
 
     private static class RenderOperation {

@@ -27,6 +27,7 @@ public class LandscapeMouseLocationListener implements MouseMotionListener {
         sb.append("Logical Location : (").append(fmt(logicalLocation.getDoubleX()))
           .append(", ").append(fmt(logicalLocation.getDoubleY())).append(" )")
           .append(" Screen location: (").append(e.getPoint().x).append(", ").append(e.getPoint().y).append(")")
+          .append(" Screen Clip Bounds : (").append(landscapeView.getBounds().getSize()).append(")")
           .append(" Scale: ").append(landscapeView.getLandscape().getScale())
           .append(" Logical Extent: (").append(formatLogicalDimensions()).append(")")
           .append(" Scaled Extent: (").append(landscapeView.getLandscape().getScaledHeight()).append(", ").append(landscapeView.getLandscape().getScaledWidth()).append(")");
