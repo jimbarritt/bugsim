@@ -25,9 +25,11 @@ public class ViewClipBoundsDemonstration extends JPanel {
         MovingBlock movingBlock = new MovingBlock(new Point(150, 150), new Dimension(100, 100));
 
         ViewClipBoundsDemonstration boundsDemonstration = new ViewClipBoundsDemonstration(statusBar, movingBlock);
+
         MovingBlockMouseHandler movingBlockMouseHandler = new MovingBlockMouseHandler(statusBar, movingBlock);
         boundsDemonstration.addMouseListener(movingBlockMouseHandler);
         boundsDemonstration.addMouseMotionListener(movingBlockMouseHandler);
+        boundsDemonstration.addComponentListener(new MovingBlockComponentListener(movingBlock));
 
         container.add(boundsDemonstration, CENTER);
         f.getRootPane().add(container, CENTER);
@@ -138,6 +140,10 @@ public class ViewClipBoundsDemonstration extends JPanel {
             }
         }
 
+        public void keepWithinBounds(Rectangle containingBounds) {
+            this.topLeft = keepWithinBounds(this.topLeft, containingBounds);                
+        }
+
         private Point keepWithinBounds(Point newTopLeftPosition, Rectangle containingBounds) {
             int x = limitToRange(newTopLeftPosition.x, 0, (containingBounds.width) - size.width);
             int y = limitToRange(newTopLeftPosition.y, 0, (containingBounds.height) - size.height);
@@ -212,5 +218,18 @@ public class ViewClipBoundsDemonstration extends JPanel {
             statusBar.setStatusText("Current Location:" + e.getPoint() + ", ClipBounds:" + e.getComponent().getBounds() + ", " + movingBlock);
         }
 
+    }
+
+    private static class MovingBlockComponentListener extends ComponentAdapter {
+        private final MovingBlock movingBlock;
+
+        public MovingBlockComponentListener(MovingBlock movingBlock) {
+            this.movingBlock = movingBlock;
+        }
+
+        @Override
+        public void componentResized(ComponentEvent e) {
+            movingBlock.keepWithinBounds(e.getComponent().getBounds());
+        }
     }
 }
