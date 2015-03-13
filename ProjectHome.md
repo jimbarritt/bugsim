@@ -1,0 +1,10 @@
+<p>This application provides an environment in which you can simulate animal movement with a correlated random walk. It consists of a 2D "world" in which "animals" may move around. The world contains "resources" which are indicated by a radius of attraction. Once an animal enters the radius of attraction, it is assumed that it visits that resource. Visits to resources are recorded as csv files. The simulation has previously been used to model the oviposition behaviour of Cabbage white butterflies (<i>Pieris rapae</i>), each visit representing an oviposition event. The simulation can be limited based on number of visits before dying, number of timesteps before dying or number of total timesteps.</p>
+<p>So for example you could run 100 animals each which will visit a maximum number of times</p>
+
+<p>An important concept in the "world" is that there is a boundary. This is representative of the area being an experimentally observed section of the real world (perhaps a field). Animals are imagined to be wondering the "extra-world" outside the boundary and to be entering at random. The boundary is circular around a "patch" of resources.</p>
+
+<p>The resources may be loaded up from a CSV file of (x,y) cartesian coordinates which allows for input of experimental layouts that have been studied in the field.</p>
+
+<p>The movement of the animals is simulated using a Von-Mises circular distribution which provides a correlated random walk. The main parameters are <b><i>k</i></b> which controls the strength of direction, and <b><i>L</i></b> which is the step length. It is also possible to simulate a "pure" random walk (even distribution of direction each move) for comparision and diagnostic.</p>
+
+<p>Several statistical tests have been made of the output of the simulation to provide confidence in the results.</p>
